@@ -1,0 +1,170 @@
+{
+  "overall_status": "PASS",
+  "passed": 18,
+  "failed": 0,
+  "total": 18,
+  "checks": [
+    {
+      "group": "provenance",
+      "check": "public_result_file_hashes",
+      "status": "PASS",
+      "detail": "All 11 result files match the provenance manifest.",
+      "computed": "11",
+      "expected": "11",
+      "tolerance": ""
+    },
+    {
+      "group": "main_th_shrc",
+      "check": "oof_design",
+      "status": "PASS",
+      "detail": "503 unique records, 30 CowKey values, and five within-cow random OOF folds.",
+      "computed": "rows=503, cows=30",
+      "expected": "rows=503, cows=30, folds=1..5",
+      "tolerance": ""
+    },
+    {
+      "group": "main_th_shrc",
+      "check": "official_oof_metrics",
+      "status": "PASS",
+      "detail": "R2, RMSE, MAE, and 0.5 C coverage recomputed from all OOF predictions.",
+      "computed": "{\"MAE\": 0.1345534257161156, \"R2\": 0.8551359051012453, \"RMSE\": 0.25195565941200593, \"Within_0_5C\": 0.9423459244532804}",
+      "expected": "{\"MAE\": 0.1345534257161156, \"R2\": 0.8551359051012453, \"RMSE\": 0.25195565941200593, \"Within_0_5C\": 0.9423459244532804}",
+      "tolerance": "1e-12"
+    },
+    {
+      "group": "main_th_shrc",
+      "check": "stored_residuals",
+      "status": "PASS",
+      "detail": "Every stored residual equals Actual - Predicted.",
+      "computed": "7.202571872255703e-15",
+      "expected": "0.0",
+      "tolerance": "1e-12"
+    },
+    {
+      "group": "benchmark",
+      "check": "benchmark_shape",
+      "status": "PASS",
+      "detail": "All 33 models contain one prediction for each of 503 records.",
+      "computed": "rows=16599, models=33",
+      "expected": "rows=16599, models=33",
+      "tolerance": ""
+    },
+    {
+      "group": "benchmark",
+      "check": "benchmark_record_identity",
+      "status": "PASS",
+      "detail": "Each model uses the same RowID and Actual values as the official OOF table.",
+      "computed": "0",
+      "expected": "0",
+      "tolerance": ""
+    },
+    {
+      "group": "benchmark",
+      "check": "benchmark_metrics",
+      "status": "PASS",
+      "detail": "All displayed benchmark metrics recomputed from row-level predictions.",
+      "computed": "4.440892098500626e-16",
+      "expected": "0.0",
+      "tolerance": "1e-10"
+    },
+    {
+      "group": "benchmark",
+      "check": "proposed_model_matches_official_oof",
+      "status": "PASS",
+      "detail": "TH_SHRC benchmark predictions match the OOF reference.",
+      "computed": "0.0",
+      "expected": "0.0",
+      "tolerance": "1e-12"
+    },
+    {
+      "group": "ablation",
+      "check": "ablation_record_identity",
+      "status": "PASS",
+      "detail": "Ablation rows and the full A+B+C prediction match the official OOF table.",
+      "computed": "rows=503, max_diff=0.0",
+      "expected": "rows=503, max_diff=0",
+      "tolerance": "1e-12"
+    },
+    {
+      "group": "ablation",
+      "check": "ablation_metrics",
+      "status": "PASS",
+      "detail": "All four mechanism-level configurations were recomputed from 503 OOF rows.",
+      "computed": "6.661338147750939e-16",
+      "expected": "0.0",
+      "tolerance": "1e-10"
+    },
+    {
+      "group": "ablation",
+      "check": "ablation_bootstrap_reference_summary",
+      "status": "PASS",
+      "detail": "The 10,000-replicate summary has valid intervals and point deltas consistent with the recalculated metrics.",
+      "computed": "rows=3, max_point_diff=1.6653345369377348e-16",
+      "expected": "rows=3, max_point_diff=0",
+      "tolerance": "1e-12"
+    },
+    {
+      "group": "shap",
+      "check": "shap_record_identity",
+      "status": "PASS",
+      "detail": "SHAP rows match the anonymous identity and measurement fields.",
+      "computed": "rows=503, max_diff=0.0",
+      "expected": "rows=503, max_diff=0",
+      "tolerance": "1e-12"
+    },
+    {
+      "group": "shap",
+      "check": "shap_four_group_summary",
+      "status": "PASS",
+      "detail": "Four displayed SHAP group summaries and their ranking were recomputed from 503 rows.",
+      "computed": "max_diff=5.551115123125783e-17, rank=['Time_diurnal', 'Ear_temperature', 'Cow_identity', 'Ambient_temperature']",
+      "expected": "max_diff=0, rank=['Time_diurnal', 'Ear_temperature', 'Cow_identity', 'Ambient_temperature']",
+      "tolerance": "1e-12"
+    },
+    {
+      "group": "shap",
+      "check": "shap_internal_additivity",
+      "status": "PASS",
+      "detail": "Technical baseline plus four conditional SHAP groups reconstructs the conditional full-pipeline value.",
+      "computed": "0.0",
+      "expected": "0.0",
+      "tolerance": "1e-12"
+    },
+    {
+      "group": "shap",
+      "check": "shap_official_oof_boundary",
+      "status": "PASS",
+      "detail": "The conditional SHAP table reconstructs the conditional full-pipeline value; reported accuracy metrics are recomputed from the OOF predictions.",
+      "computed": "max_abs_conditional_vs_official=0.14352658317555722",
+      "expected": "max_abs_conditional_vs_official=0.14352658317555722",
+      "tolerance": "1e-12"
+    },
+    {
+      "group": "lora",
+      "check": "packet_test_design",
+      "status": "PASS",
+      "detail": "The packet table contains 5 distances x 8 directions x 100 packets.",
+      "computed": "rows=4000, cells=40, counts=[100]",
+      "expected": "rows=4000, cells=40, counts=[100]",
+      "tolerance": ""
+    },
+    {
+      "group": "lora",
+      "check": "packet_delivery_ratio",
+      "status": "PASS",
+      "detail": "PDR values were recomputed from all packet-level Received flags.",
+      "computed": "{\"200m\": 0.93875, \"250m\": 0.83125, \"lost\": 249, \"overall\": 0.93775, \"received\": 3751}",
+      "expected": "{\"received\": 3751, \"lost\": 249, \"overall\": 0.93775, \"200m\": 0.93875, \"250m\": 0.83125}",
+      "tolerance": ""
+    },
+    {
+      "group": "lora",
+      "check": "packet_signal_consistency",
+      "status": "PASS",
+      "detail": "Received and packet-loss flags are complementary; the 249 lost-packet 91 sentinels are preserved only in SourceSentinelValue and excluded from RSSI/SNR.",
+      "computed": "",
+      "expected": "",
+      "tolerance": ""
+    }
+  ]
+}

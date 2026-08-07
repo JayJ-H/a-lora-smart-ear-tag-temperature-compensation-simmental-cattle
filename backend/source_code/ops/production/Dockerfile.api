@@ -1,0 +1,24 @@
+ARG NODE_IMAGE=docker.m.daocloud.io/library/node:24-alpine
+FROM ${NODE_IMAGE} AS deps
+
+WORKDIR /app
+RUN corepack enable && corepack prepare pnpm@8.15.9 --activate
+COPY package.json pnpm-lock.yaml ./
+RUN pnpm install --prod --frozen-lockfile --ignore-scripts
+
+FROM ${NODE_IMAGE}
+WORKDIR /app
+ENV NODE_ENV=production
+
+COPY --from=deps /app/node_modules ./node_modules
+COPY package.json ./
+COPY .env.production.example ./.env.production
+COPY scripts/mysql-backend-server.mjs ./scripts/mysql-backend-server.mjs
+COPY scripts/health-alert-rules.mjs ./scripts/health-alert-rules.mjs
+COPY scripts/cattle-breeds.mjs ./scripts/cattle-breeds.mjs
+COPY scripts/th-shrc-runtime.mjs ./scripts/th-shrc-runtime.mjs
+COPY scripts/assets/th-shrc ./scripts/assets/th-shrc
+COPY database/mysql/migrations ./database/mysql/migrations
+
+EXPOSE 9192
+CMD ["node", "scripts/mysql-backend-server.mjs"]

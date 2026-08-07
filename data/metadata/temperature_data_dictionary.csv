@@ -1,0 +1,48 @@
+table,field,unit,role,source_field,description
+raw_anonymized/paired_temperature_raw_anonymized.csv,RecordID,none,identifier,RowID,Stable public record identifier derived from RowID.
+raw_anonymized/paired_temperature_raw_anonymized.csv,CowKey,none,group,CowKey,Neutral public animal identity C001-C030; farm-ID mapping omitted.
+raw_anonymized/paired_temperature_raw_anonymized.csv,Source,none,provenance,Source,Neutral public collection-stratum code.
+raw_anonymized/paired_temperature_raw_anonymized.csv,RowID,none,provenance,RowID,Stable row key in the 1129-row candidate input pool.
+raw_anonymized/paired_temperature_raw_anonymized.csv,SourceRowID,none,provenance,SourceRowID,Row key within the reference source stratum.
+raw_anonymized/paired_temperature_raw_anonymized.csv,EarTemperature_C,degree C,measurement,EarTemperature_C,Measured ear-surface temperature.
+raw_anonymized/paired_temperature_raw_anonymized.csv,CoreReferenceTemperature_C,degree C,measurement,RectalTemperature_C (legacy mislabeled header),Intravaginal core-reference measurement. The reference source header incorrectly called this rectal temperature; values are unchanged.
+raw_anonymized/paired_temperature_raw_anonymized.csv,AmbientTemperature_C,degree C,measurement,AmbientTemperature_C,Local ambient temperature measured by the ear tag.
+raw_anonymized/paired_temperature_raw_anonymized.csv,MeasurementTime_hour,hour,measurement,MeasurementTime_hour,Hour of day used by the fixed model; not a calendar timestamp.
+processed/paired_temperature_records.csv,RecordID,none,identifier,RowID,Stable public record identifier derived from RowID.
+processed/paired_temperature_records.csv,CowKey,none,group,CowKey,Neutral public animal identity C001-C030; farm-ID mapping omitted.
+processed/paired_temperature_records.csv,Source,none,provenance,Source,Neutral public collection-stratum code.
+processed/paired_temperature_records.csv,RowID,none,provenance,RowID,Stable row key in the 1129-row candidate input pool.
+processed/paired_temperature_records.csv,SourceRowID,none,provenance,SourceRowID,Row key within the reference source stratum.
+processed/paired_temperature_records.csv,EarTemperature_C,degree C,measurement,EarTemperature_C,Measured ear-surface temperature.
+processed/paired_temperature_records.csv,CoreReferenceTemperature_C,degree C,measurement,RectalTemperature_C (legacy mislabeled header),Intravaginal core-reference measurement. The reference source header incorrectly called this rectal temperature; values are unchanged.
+processed/paired_temperature_records.csv,AmbientTemperature_C,degree C,measurement,AmbientTemperature_C,Local ambient temperature measured by the ear tag.
+processed/paired_temperature_records.csv,MeasurementTime_hour,hour,measurement,MeasurementTime_hour,Hour of day used by the fixed model; not a calendar timestamp.
+processed/paired_temperature_records.csv,SourceType,none,provenance,SourceType,Anonymous two-level source stratum preserving the fixed model partition.
+processed/paired_temperature_records.csv,EarStatus,none,provenance,EarStatus,Anonymous two-level measurement-status code preserving the fixed model partition.
+processed/paired_temperature_records.csv,SourceWeight,none,model input,SourceWeight,Fixed source weight.
+processed/paired_temperature_records.csv,SeqInCowSource,count,feature,SeqInCowSource,Sequence number within animal and source.
+processed/paired_temperature_records.csv,CowSourceN,count,feature,CowSourceN,Record count within animal and source.
+processed/paired_temperature_records.csv,EarLag1_C,degree C,feature,EarLag1,First lag of ear temperature.
+processed/paired_temperature_records.csv,EarLag2_C,degree C,feature,EarLag2,Second lag of ear temperature.
+processed/paired_temperature_records.csv,AmbientLag1_C,degree C,feature,AirLag1,First lag of ambient temperature.
+processed/paired_temperature_records.csv,EarDelta1_C,degree C,feature,EarDelta1,First difference of ear temperature.
+processed/paired_temperature_records.csv,AmbientDelta1_C,degree C,feature,AirDelta1,First difference of ambient temperature.
+processed/paired_temperature_records.csv,TimeSin,none,feature,TimeSin,Sine encoding of hour of day.
+processed/paired_temperature_records.csv,TimeCos,none,feature,TimeCos,Cosine encoding of hour of day.
+processed/paired_temperature_records.csv,ThermalLoad,none,feature,ThermalLoad,Fixed thermal-load feature.
+processed/paired_temperature_records.csv,EarAirGap_C,degree C,feature,EarAirGap,Ear-minus-ambient temperature gap.
+processed/paired_temperature_records.csv,HotFlag,binary,feature,HotFlag,Fixed hot-condition indicator.
+processed/paired_temperature_records.csv,NightFlag,binary,feature,NightFlag,Fixed night-period indicator.
+metadata/temperature_candidate_row_status.csv,RecordID,none,identifier,RowID,Stable public identifier for one of the 1129 candidate rows.
+metadata/temperature_candidate_row_status.csv,CandidateCowKey,none,group,CowKey,Neutral candidate animal code; included animals use C001-C030 and excluded animals use X001-X031.
+metadata/temperature_candidate_row_status.csv,Source,none,provenance,Source,Neutral public collection-stratum code S01-S05.
+metadata/temperature_candidate_row_status.csv,CandidateValueClass,none,provenance,SourceType/EarStatus,"Declares whether the candidate contains real reference measurements, estimated references, or case/compensated values."
+metadata/temperature_candidate_row_status.csv,RequiredNumericValuesValid,binary,quality control,four required numeric fields,1 when all required values are finite and inside the fixed physical/input bounds.
+metadata/temperature_candidate_row_status.csv,EligibleRecordsForAnimal,count,quality control,computed after source and numeric QC,Number of eligible real-measurement rows for this candidate animal.
+metadata/temperature_candidate_row_status.csv,IncludedInAnalysis,binary,selection,fixed selection rule,1 exactly for the 503 rows in the fixed OOF analysis set.
+metadata/temperature_candidate_row_status.csv,SelectionReason,none,selection,fixed selection rule,Deterministic inclusion or exclusion reason.
+metadata/temperature_selection_summary.csv,StageOrder,count,selection,fixed selection rule,Order of the deterministic selection stage.
+metadata/temperature_selection_summary.csv,Stage,none,selection,fixed selection rule,Selection stage name.
+metadata/temperature_selection_summary.csv,RowsRemoved,count,selection,candidate row status,Rows removed at this stage.
+metadata/temperature_selection_summary.csv,RowsRemaining,count,selection,candidate row status,Rows remaining after this stage.
+metadata/temperature_selection_summary.csv,Rule,none,selection,fixed selection rule,Executable rule represented by the stage.

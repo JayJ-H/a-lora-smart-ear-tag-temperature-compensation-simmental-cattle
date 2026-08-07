@@ -1,0 +1,28 @@
+{
+  "status": "PASS",
+  "validation_design": "same-cow random five-fold OOF",
+  "rows": 503,
+  "cows": 30,
+  "bootstrap_seed": 20260723,
+  "bootstrap_replicates": 10000,
+  "full_alignment_max_abs_difference": 0.0,
+  "saved_branch_alignment_max_abs_difference_C": 0.0,
+  "metric_table_max_abs_difference": 7.771561172376096e-16,
+  "bootstrap_table_max_abs_difference": 2.949029909160572e-16,
+  "without_a_prediction_max_abs_difference_C": 9.491998298472026e-10,
+  "without_b_prediction_max_abs_difference_C": 2.844302571247681e-10,
+  "without_c_prediction_max_abs_difference_C": 2.213802474670956e-09,
+  "input_sha256": {
+    "candidate_predictions": "9fa8dad0104c619add2789028b13ca05ad34b51f1aa91048e09486d62bd326e3",
+    "branch_inputs": "cdd3dec8c47a48af1bb69d7c416f470011a05a66fab2b2eb4b10a250fe399326",
+    "mechanism_choices": "e936fa54beb0cee1922ce8d9719c6b50790867a6b2397508cdb942a3b287b7f4"
+  },
+  "table_tolerance": 1e-12,
+  "prediction_tolerance_C": 1e-08,
+  "scope": {
+    "full": "metrics are recalculated from the 503 OOF rows",
+    "without_c": "A+B nested ridge is refitted",
+    "without_a": "ridge/XGBoost candidates are reselected and nested ridge is refitted",
+    "without_b": "nested ridge is refitted from PureMemory and GlobalThermalCells candidates"
+  }
+}

@@ -1,0 +1,109 @@
+services:
+  mysql:
+    image: ${MYSQL_IMAGE:-cattle-management-mysql:8.4}
+    container_name: ${MYSQL_CONTAINER_NAME:-benniu-mysql}
+    restart: unless-stopped
+    environment:
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD:?set MYSQL_ROOT_PASSWORD in .env.prod}
+      MYSQL_DATABASE: ${MYSQL_DATABASE:-cattle_management}
+      MYSQL_USER: ${MYSQL_USER:-cattle_user}
+      MYSQL_PASSWORD: ${MYSQL_PASSWORD:?set MYSQL_PASSWORD in .env.prod}
+      TZ: Asia/Shanghai
+    command:
+      - --character-set-server=utf8mb4
+      - --collation-server=utf8mb4_unicode_ci
+      - --explicit_defaults_for_timestamp=1
+    ports:
+      - '127.0.0.1:${MYSQL_HOST_PORT:-9193}:3306'
+    volumes:
+      - mysql_prod_data:/var/lib/mysql
+      - ../../database/mysql/init/001_init_schema.sql:/docker-entrypoint-initdb.d/001_init_schema.sql:ro
+      - ../../database/mysql/init/002_event_sync_triggers.sql:/docker-entrypoint-initdb.d/002_event_sync_triggers.sql:ro
+    healthcheck:
+      test: ['CMD-SHELL', 'mysqladmin ping -uroot -p$${MYSQL_ROOT_PASSWORD} --silent']
+      interval: 10s
+      timeout: 5s
+      retries: 12
+      start_period: 30s
+
+  api:
+    image: ${API_IMAGE:-cattle-management-api:latest}
+    build:
+      context: ../..
+      dockerfile: ops/production/Dockerfile.api
+      args:
+        NODE_IMAGE: ${NODE_IMAGE:-docker.m.daocloud.io/library/node:24-alpine}
+        BUILD_VERSION: ${BUILD_VERSION:-1.0.1}
+        BUILD_REF: ${BUILD_REF:-v1.0.1}
+        BUILD_SOURCE: ${BUILD_SOURCE:-production-api}
+    container_name: ${API_CONTAINER_NAME:-benniu-api}
+    restart: unless-stopped
+    environment:
+      NODE_ENV: production
+      TZ: Asia/Shanghai
+      MYSQL_HOST: mysql
+      MYSQL_PORT: 3306
+      MYSQL_USER: ${MYSQL_USER:-cattle_user}
+      MYSQL_PASSWORD: ${MYSQL_PASSWORD:?set MYSQL_PASSWORD in .env.prod}
+      MYSQL_DATABASE: ${MYSQL_DATABASE:-cattle_management}
+      MYSQL_POOL_LIMIT: ${MYSQL_POOL_LIMIT:-10}
+      MYSQL_API_PORT: 9192
+      AUTH_MODE: ${AUTH_MODE:-strict}
+      ADMIN_USER: ${ADMIN_USER:-admin}
+      ADMIN_PASSWORD: ${ADMIN_PASSWORD:?set ADMIN_PASSWORD in .env.prod}
+      AUTH_SESSION_TTL_MS: ${AUTH_SESSION_TTL_MS:-43200000}
+      MQTT_ENABLED: ${MQTT_ENABLED:-true}
+      MQTT_HOST: ${MQTT_HOST:-0.0.0.0}
+      MQTT_PORT: ${MQTT_PORT:-1883}
+      MQTT_TOPIC: ${MQTT_TOPIC:-cattle/+/temperature}
+      MQTT_USERNAME: ${MQTT_USERNAME:?set MQTT_USERNAME in .env.prod}
+      MQTT_PASSWORD: ${MQTT_PASSWORD:?set MQTT_PASSWORD in .env.prod}
+      TH_SHRC_ENABLED: ${TH_SHRC_ENABLED:-true}
+      OMICS_SERVICE_URL: ${OMICS_SERVICE_URL:-http://127.0.0.1:8090}
+      SKIP_STARTUP_DB_ENSURE: ${SKIP_STARTUP_DB_ENSURE:-false}
+    command: ['node', 'scripts/mysql-backend-server.mjs']
+    depends_on:
+      mysql:
+        condition: service_healthy
+    ports:
+      - '${API_HOST_PORT:-9192}:9192'
+      - '${MQTT_HOST_PORT:-9195}:1883'
+    healthcheck:
+      test:
+        [
+          'CMD-SHELL',
+          'node -e "fetch(''http://127.0.0.1:9192/api/health'').then(r=>process.exit(r.ok?0:1)).catch(()=>process.exit(1))"'
+        ]
+      interval: 30s
+      timeout: 5s
+      retries: 5
+      start_period: 20s
+
+  web:
+    image: ${WEB_IMAGE:-cattle-management-web:latest}
+    build:
+      context: ../..
+      dockerfile: ops/production/Dockerfile.web
+      args:
+        NODE_IMAGE: ${NODE_IMAGE:-docker.m.daocloud.io/library/node:24-alpine}
+        NGINX_IMAGE: ${NGINX_IMAGE:-docker.m.daocloud.io/library/nginx:1.27-alpine}
+        BUILD_VERSION: ${BUILD_VERSION:-1.0.1}
+        BUILD_REF: ${BUILD_REF:-v1.0.1}
+        BUILD_SOURCE: ${BUILD_SOURCE:-production-web}
+    container_name: ${WEB_CONTAINER_NAME:-benniu-web}
+    restart: unless-stopped
+    ports:
+      - '127.0.0.1:${WEB_HOST_PORT:-19191}:80'
+    depends_on:
+      api:
+        condition: service_healthy
+    healthcheck:
+      test: ['CMD-SHELL', 'wget -qO- http://127.0.0.1/health >/dev/null || exit 1']
+      interval: 30s
+      timeout: 5s
+      retries: 5
+      start_period: 10s
+
+
+volumes:
+  mysql_prod_data:

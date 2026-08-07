@@ -1,0 +1,77 @@
+{
+  "ok": true,
+  "results": [
+    {
+      "test_id": "protocol_known_vectors",
+      "status": "PASS",
+      "required": true,
+      "detail": "3 fixed vectors matched"
+    },
+    {
+      "test_id": "protocol_roundtrips",
+      "status": "PASS",
+      "required": true,
+      "detail": "1715 roundtrips matched"
+    },
+    {
+      "test_id": "radio_parameter_alignment",
+      "status": "PASS",
+      "required": true,
+      "detail": "frequency bandwidth spreading factor coding rate sync preamble header and CRC agree"
+    },
+    {
+      "test_id": "firmware_sources",
+      "status": "PASS",
+      "required": true,
+      "detail": "ear-tag and gateway ESP-IDF sources and configuration constants verified"
+    },
+    {
+      "test_id": "system_asset_manifest",
+      "status": "PASS",
+      "required": true,
+      "detail": "562 asset hashes verified"
+    },
+    {
+      "test_id": "backend_reference",
+      "status": "PASS",
+      "required": true,
+      "detail": "scoped backend schema and interface files verified"
+    },
+    {
+      "test_id": "backend_platform",
+      "status": "PASS",
+      "required": true,
+      "detail": "12 full-platform source entry points verified"
+    },
+    {
+      "test_id": "mysql_bootstrap",
+      "status": "PASS",
+      "required": true,
+      "detail": "single cattle_management bootstrap chain verified"
+    },
+    {
+      "test_id": "node_syntax",
+      "status": "PASS",
+      "required": true,
+      "detail": "Node syntax passed for 69 files"
+    },
+    {
+      "test_id": "th_shrc_runtime_timezone",
+      "status": "PASS",
+      "required": true,
+      "detail": "TH-SHRC runtime validation passed in UTC and Asia/Shanghai"
+    },
+    {
+      "test_id": "package_script_paths",
+      "status": "PASS",
+      "required": true,
+      "detail": "36 package scripts checked"
+    },
+    {
+      "test_id": "production_template",
+      "status": "PASS",
+      "required": true,
+      "detail": "deployment configuration verified"
+    }
+  ]
+}

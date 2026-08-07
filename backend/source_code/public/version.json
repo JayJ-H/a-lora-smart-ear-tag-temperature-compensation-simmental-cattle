@@ -1,0 +1,17 @@
+{
+  "name": "cattle-management-platform",
+  "version": "1.0.1",
+  "build": {
+    "target": "web",
+    "source": "release-source-metadata",
+    "ref": "v1.0.1",
+    "createdAt": "2026-07-14T00:00:00.000Z"
+  },
+  "hash": "de08f89db0f210f90a4f804456dbe59f6243f8c59f46365f179411645091d159",
+  "buildHash": "de08f89db0f210f90a4f804456dbe59f6243f8c59f46365f179411645091d159",
+  "builtAt": "2026-07-14T00:00:00.000Z",
+  "hashAlgorithm": "sha256-dist-tree-v1",
+  "hashExcludes": ["version.json", "*.gz"],
+  "files": 274,
+  "bytes": 7411431
+}

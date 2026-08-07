@@ -1,0 +1,7 @@
+"Check","Status","Detail"
+"dataset_scope","PASS","Analysis rows: N=503; cattle=30."
+"same_outer_fold_for_two_components","PASS","Thermal-memory and individual/session components use the same within-cow outer-fold assignment."
+"fixed_component_weight","PASS","The component average is fixed at 0.50/0.50; held-out labels are not used to select the weight."
+"component_fold_separation","PASS","Each component uses outer-training rows for fitting and inner OOF evaluation for configuration selection."
+"training_match_context","INFO","Exact training-feature matches: thermal-memory=327/503; individual/session=327/503."
+"validation_protocol","INFO","Validation protocol: row-level within-cow OOF with fixed outer folds."

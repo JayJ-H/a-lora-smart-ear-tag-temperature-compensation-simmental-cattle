@@ -1,0 +1,11 @@
+menu "LoRa offline storage"
+
+config LORA_ENABLE_USB_MSC_STORAGE
+    bool "Enable USB flash drive offline log storage"
+    default y
+    help
+        Enable USB Host MSC storage and append received LoRa frames to a log
+        file in the USB flash drive root directory. This requires the
+        usb_host_msc managed component to be available.
+
+endmenu

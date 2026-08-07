@@ -1,0 +1,614 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="_图层_1" data-name="图层_1" xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 750.61 372.34">
+  <!-- Generator: Adobe Illustrator 30.0.0, SVG Export Plug-In . SVG Version: 2.1.1 Build 123)  -->
+  <defs>
+    <style>
+      .st0, .st1, .st2, .st3, .st4, .st5, .st6, .st7, .st8, .st9, .st10, .st11, .st12, .st13, .st14, .st15, .st16, .st17, .st18 {
+        isolation: isolate;
+      }
+
+      .st0, .st19 {
+        fill: gray;
+        stroke: gray;
+      }
+
+      .st0, .st11, .st13, .st15, .st17 {
+        opacity: .22;
+      }
+
+      .st1, .st5, .st20, .st7, .st21, .st22, .st23, .st24, .st18 {
+        stroke-width: .9px;
+      }
+
+      .st1, .st5, .st7, .st18 {
+        opacity: .85;
+      }
+
+      .st1, .st20, .st9, .st17 {
+        fill: #243fa5;
+      }
+
+      .st1, .st20, .st17 {
+        stroke: #243fa5;
+      }
+
+      .st2, .st3, .st4, .st8, .st9, .st10, .st12, .st16 {
+        font-family: TimesNewRomanPSMT, 'Times New Roman';
+      }
+
+      .st2, .st3, .st6, .st9, .st10, .st12, .st14 {
+        font-size: 10px;
+      }
+
+      .st2, .st7, .st22, .st15 {
+        fill: #b51230;
+      }
+
+      .st25 {
+        clip-path: url(#clippath-21);
+      }
+
+      .st3, .st23, .st13, .st18 {
+        fill: #3fb4cb;
+      }
+
+      .st26 {
+        clip-path: url(#clippath-6);
+      }
+
+      .st27 {
+        clip-path: url(#clippath-7);
+      }
+
+      .st28 {
+        clip-path: url(#clippath-17);
+      }
+
+      .st29 {
+        clip-path: url(#clippath-15);
+      }
+
+      .st30 {
+        clip-path: url(#clippath-18);
+      }
+
+      .st4 {
+        font-size: 12px;
+      }
+
+      .st31 {
+        clip-path: url(#clippath-4);
+      }
+
+      .st5, .st21, .st10, .st11 {
+        fill: #d45a78;
+      }
+
+      .st5, .st21, .st11 {
+        stroke: #d45a78;
+      }
+
+      .st32 {
+        clip-path: url(#clippath-22);
+      }
+
+      .st33 {
+        stroke-opacity: .25;
+      }
+
+      .st33, .st34, .st24, .st35 {
+        fill: none;
+      }
+
+      .st33, .st36, .st35 {
+        stroke-linejoin: round;
+        stroke-width: .8px;
+      }
+
+      .st33, .st35 {
+        stroke: #b0b0b0;
+        stroke-dasharray: 2.96 1.28;
+      }
+
+      .st6, .st37 {
+        fill: #fff;
+      }
+
+      .st6, .st14 {
+        font-family: TimesNewRomanPS-BoldMT, 'Times New Roman';
+        font-weight: 700;
+      }
+
+      .st38 {
+        clip-path: url(#clippath-9);
+      }
+
+      .st39 {
+        clip-path: url(#clippath-10);
+      }
+
+      .st7, .st22, .st15 {
+        stroke: #b51230;
+      }
+
+      .st40 {
+        clip-path: url(#clippath-11);
+      }
+
+      .st41 {
+        clip-path: url(#clippath-1);
+      }
+
+      .st8 {
+        font-size: 11px;
+      }
+
+      .st42 {
+        clip-path: url(#clippath-5);
+      }
+
+      .st43 {
+        clip-path: url(#clippath-20);
+      }
+
+      .st44 {
+        clip-path: url(#clippath-8);
+      }
+
+      .st45 {
+        clip-path: url(#clippath-3);
+      }
+
+      .st46 {
+        clip-path: url(#clippath-12);
+      }
+
+      .st23, .st13, .st18 {
+        stroke: #3fb4cb;
+      }
+
+      .st47 {
+        clip-path: url(#clippath-14);
+      }
+
+      .st48 {
+        clip-path: url(#clippath-19);
+      }
+
+      .st24 {
+        stroke-linecap: square;
+      }
+
+      .st24, .st36 {
+        stroke: #000;
+      }
+
+      .st35 {
+        stroke-opacity: .2;
+      }
+
+      .st49 {
+        clip-path: url(#clippath-16);
+      }
+
+      .st50 {
+        clip-path: url(#clippath-2);
+      }
+
+      .st11, .st13, .st15, .st17 {
+        stroke-width: 1.3px;
+      }
+
+      .st51 {
+        clip-path: url(#clippath-13);
+      }
+
+      .st52 {
+        clip-path: url(#clippath);
+      }
+
+      .st16 {
+        font-size: 9px;
+      }
+    </style>
+    <clipPath id="clippath">
+      <rect class="st34" x="59.12" y="21.65" width="606.53" height="314.35"/>
+    </clipPath>
+    <clipPath id="clippath-1">
+      <rect class="st34" x="59.12" y="21.65" width="606.53" height="314.35"/>
+    </clipPath>
+    <clipPath id="clippath-2">
+      <rect class="st34" x="59.12" y="21.65" width="606.53" height="314.35"/>
+    </clipPath>
+    <clipPath id="clippath-3">
+      <rect class="st34" x="59.12" y="21.65" width="606.53" height="314.35"/>
+    </clipPath>
+    <clipPath id="clippath-4">
+      <rect class="st34" x="59.12" y="21.65" width="606.53" height="314.35"/>
+    </clipPath>
+    <clipPath id="clippath-5">
+      <rect class="st34" x="59.12" y="21.65" width="606.53" height="314.35"/>
+    </clipPath>
+    <clipPath id="clippath-6">
+      <rect class="st34" x="59.12" y="21.65" width="606.53" height="314.35"/>
+    </clipPath>
+    <clipPath id="clippath-7">
+      <rect class="st34" x="59.12" y="21.65" width="606.53" height="314.35"/>
+    </clipPath>
+    <clipPath id="clippath-8">
+      <rect class="st34" x="59.12" y="21.65" width="606.53" height="314.35"/>
+    </clipPath>
+    <clipPath id="clippath-9">
+      <rect class="st34" x="59.12" y="21.65" width="606.53" height="314.35"/>
+    </clipPath>
+    <clipPath id="clippath-10">
+      <rect class="st34" x="59.12" y="21.65" width="606.53" height="314.35"/>
+    </clipPath>
+    <clipPath id="clippath-11">
+      <rect class="st34" x="59.12" y="21.65" width="606.53" height="314.35"/>
+    </clipPath>
+    <clipPath id="clippath-12">
+      <rect class="st34" x="59.12" y="21.65" width="606.53" height="314.35"/>
+    </clipPath>
+    <clipPath id="clippath-13">
+      <rect class="st34" x="59.12" y="21.65" width="606.53" height="314.35"/>
+    </clipPath>
+    <clipPath id="clippath-14">
+      <rect class="st34" x="572.54" y="201.41" width="171.07" height="97.7"/>
+    </clipPath>
+    <clipPath id="clippath-15">
+      <rect class="st34" x="572.54" y="201.41" width="171.07" height="97.7"/>
+    </clipPath>
+    <clipPath id="clippath-16">
+      <rect class="st34" x="572.54" y="201.41" width="171.07" height="97.7"/>
+    </clipPath>
+    <clipPath id="clippath-17">
+      <rect class="st34" x="572.54" y="201.41" width="171.07" height="97.7"/>
+    </clipPath>
+    <clipPath id="clippath-18">
+      <rect class="st34" x="572.54" y="201.41" width="171.07" height="97.7"/>
+    </clipPath>
+    <clipPath id="clippath-19">
+      <rect class="st34" x="572.54" y="201.41" width="171.07" height="97.7"/>
+    </clipPath>
+    <clipPath id="clippath-20">
+      <rect class="st34" x="572.54" y="201.41" width="171.07" height="97.7"/>
+    </clipPath>
+    <clipPath id="clippath-21">
+      <rect class="st34" x="572.54" y="201.41" width="171.07" height="97.7"/>
+    </clipPath>
+    <clipPath id="clippath-22">
+      <rect class="st34" x="572.54" y="201.41" width="171.07" height="97.7"/>
+    </clipPath>
+  </defs>
+  <g id="figure_1">
+    <g id="patch_1">
+      <path class="st37" d="M0,372.34h750.61V0H0v372.34Z"/>
+    </g>
+    <g id="axes_1">
+      <g id="patch_2">
+        <path class="st37" d="M59.12,336h606.53V21.65H59.12v314.35Z"/>
+      </g>
+      <g id="patch_3">
+        <g class="st52">
+          <path class="st15" d="M-480.02,83.57H578.42v-47.63H-480.02v47.63Z"/>
+        </g>
+      </g>
+      <g id="patch_4">
+        <g class="st41">
+          <path class="st11" d="M-480.02,162.95H560.56v-47.63H-480.02v47.63Z"/>
+        </g>
+      </g>
+      <g id="patch_5">
+        <g class="st50">
+          <path class="st13" d="M-480.02,242.33H486.87v-47.63H-480.02v47.63Z"/>
+        </g>
+      </g>
+      <g id="patch_6">
+        <g class="st45">
+          <path class="st17" d="M-480.02,321.71H417.65v-47.63H-480.02v47.63Z"/>
+        </g>
+      </g>
+      <g id="matplotlib.axis_1">
+        <g id="xtick_1">
+          <g id="line2d_1">
+            <g class="st31">
+              <path class="st33" d="M81.58,336V21.65"/>
+            </g>
+          </g>
+          <g id="line2d_2">
+            <path id="m796dafaa66" class="st36" d="M81.58,336v3.5"/>
+          </g>
+          <g id="text_1">
+            <text class="st16" transform="translate(75.96 349.25)"><tspan x="0" y="0">0.5</tspan></text>
+          </g>
+        </g>
+        <g id="xtick_2">
+          <g id="line2d_3">
+            <g class="st42">
+              <path class="st33" d="M193.9,336V21.65"/>
+            </g>
+          </g>
+          <g id="line2d_4">
+            <path id="m796dafaa661" data-name="m796dafaa66" class="st36" d="M193.9,336v3.5"/>
+          </g>
+          <g id="text_2">
+            <text class="st16" transform="translate(188.28 349.25)"><tspan x="0" y="0">0.6</tspan></text>
+          </g>
+        </g>
+        <g id="xtick_3">
+          <g id="line2d_5">
+            <g class="st26">
+              <path class="st33" d="M306.22,336V21.65"/>
+            </g>
+          </g>
+          <g id="line2d_6">
+            <path id="m796dafaa662" data-name="m796dafaa66" class="st36" d="M306.22,336v3.5"/>
+          </g>
+          <g id="text_3">
+            <text class="st16" transform="translate(300.6 349.25)"><tspan x="0" y="0">0.7</tspan></text>
+          </g>
+        </g>
+        <g id="xtick_4">
+          <g id="line2d_7">
+            <g class="st27">
+              <path class="st33" d="M418.54,336V21.65"/>
+            </g>
+          </g>
+          <g id="line2d_8">
+            <path id="m796dafaa663" data-name="m796dafaa66" class="st36" d="M418.54,336v3.5"/>
+          </g>
+          <g id="text_4">
+            <text class="st16" transform="translate(412.92 349.25)"><tspan x="0" y="0">0.8</tspan></text>
+          </g>
+        </g>
+        <g id="xtick_5">
+          <g id="line2d_9">
+            <g class="st44">
+              <path class="st33" d="M530.86,336V21.65"/>
+            </g>
+          </g>
+          <g id="line2d_10">
+            <path id="m796dafaa664" data-name="m796dafaa66" class="st36" d="M530.86,336v3.5"/>
+          </g>
+          <g id="text_5">
+            <text class="st16" transform="translate(525.24 349.25)"><tspan x="0" y="0">0.9</tspan></text>
+          </g>
+        </g>
+        <g id="xtick_6">
+          <g id="line2d_11">
+            <g class="st38">
+              <path class="st33" d="M643.18,336V21.65"/>
+            </g>
+          </g>
+          <g id="line2d_12">
+            <path id="m796dafaa665" data-name="m796dafaa66" class="st36" d="M643.18,336v3.5"/>
+          </g>
+          <g id="text_6">
+            <text class="st16" transform="translate(637.56 349.25)"><tspan x="0" y="0">1.0</tspan></text>
+          </g>
+        </g>
+        <g id="text_7">
+          <text class="st8" transform="translate(321.92 362.8)"><tspan x="0" y="0">Performance scale</tspan></text>
+        </g>
+      </g>
+      <g id="matplotlib.axis_2">
+        <g id="ytick_1">
+          <g id="line2d_13">
+            <path id="maa28eddc05" class="st36" d="M59.12,59.75h-3.5"/>
+          </g>
+          <g id="text_8">
+            <text class="st16" transform="translate(7.2 62.87)"><tspan x="0" y="0">Full A+B+C</tspan></text>
+          </g>
+        </g>
+        <g id="ytick_2">
+          <g id="line2d_14">
+            <path id="maa28eddc051" data-name="maa28eddc05" class="st36" d="M59.12,139.13h-3.5"/>
+          </g>
+          <g id="text_9">
+            <text class="st16" transform="translate(34.54 142.26)"><tspan x="0" y="0">A+B</tspan></text>
+          </g>
+        </g>
+        <g id="ytick_3">
+          <g id="line2d_15">
+            <path id="maa28eddc052" data-name="maa28eddc05" class="st36" d="M59.12,218.52h-3.5"/>
+          </g>
+          <g id="text_10">
+            <text class="st16" transform="translate(34.54 221.64)"><tspan x="0" y="0">A+C</tspan></text>
+          </g>
+        </g>
+        <g id="ytick_4">
+          <g id="line2d_16">
+            <path id="maa28eddc053" data-name="maa28eddc05" class="st36" d="M59.12,297.9h-3.5"/>
+          </g>
+          <g id="text_11">
+            <text class="st16" transform="translate(35.04 301.02)"><tspan x="0" y="0">B+C</tspan></text>
+          </g>
+        </g>
+      </g>
+      <g id="patch_7">
+        <g class="st39">
+          <path class="st22" d="M-480.02,74.04H480.47v-28.58H-480.02v28.58Z"/>
+        </g>
+      </g>
+      <g id="patch_8">
+        <g class="st40">
+          <path class="st21" d="M-480.02,153.42H464.21v-28.58H-480.02v28.58Z"/>
+        </g>
+      </g>
+      <g id="patch_9">
+        <g class="st46">
+          <path class="st23" d="M-480.02,232.8H313.14v-28.58H-480.02v28.58Z"/>
+        </g>
+      </g>
+      <g id="patch_10">
+        <g class="st51">
+          <path class="st20" d="M-480.02,312.19H127.41v-28.58H-480.02v28.58Z"/>
+        </g>
+      </g>
+      <g id="patch_11">
+        <path class="st24" d="M59.12,336V21.65"/>
+      </g>
+      <g id="patch_12">
+        <path class="st24" d="M59.12,336h606.53"/>
+      </g>
+      <g id="text_12">
+        <text class="st6" transform="translate(428.4 62.16)"><tspan x="0" y="0">R² 0.855</tspan></text>
+      </g>
+      <g id="text_13">
+        <text class="st6" transform="translate(412.14 141.54)"><tspan x="0" y="0">R² 0.841</tspan></text>
+      </g>
+      <g id="text_14">
+        <text class="st6" transform="translate(261.07 220.92)"><tspan x="0" y="0">R² 0.706</tspan></text>
+      </g>
+      <g id="text_15">
+        <text class="st14" transform="translate(75.34 300.3)"><tspan x="0" y="0">R² 0.541</tspan></text>
+      </g>
+      <g id="text_16">
+        <text class="st2" transform="translate(591.9 62.16)"><tspan x="0" y="0">≤0.5°C 94.2%</tspan></text>
+      </g>
+      <g id="text_17">
+        <text class="st10" transform="translate(574.04 141.54)"><tspan x="0" y="0">≤0.5°C 92.6%</tspan></text>
+      </g>
+      <g id="text_18">
+        <text class="st3" transform="translate(500.35 220.92)"><tspan x="0" y="0">≤0.5°C 86.1%</tspan></text>
+      </g>
+      <g id="text_19">
+        <text class="st9" transform="translate(431.13 300.3)"><tspan x="0" y="0">≤0.5°C 79.9%</tspan></text>
+      </g>
+      <g id="text_20">
+        <text class="st4" transform="translate(205.97 15.65)"><tspan x="0" y="0">Nested performance view: explained variance and error coverage</tspan></text>
+      </g>
+      <g id="legend_1">
+        <g id="patch_13">
+          <path class="st0" d="M7.2,12.08h20v-7H7.2v7Z"/>
+        </g>
+        <g id="text_21">
+          <text class="st12" transform="translate(35.2 12.08)"><tspan x="0" y="0">Records within ±0.5°C</tspan></text>
+        </g>
+        <g id="patch_14">
+          <path class="st19" d="M7.2,26.21h20v-7H7.2v7Z"/>
+        </g>
+        <g id="text_22">
+          <text class="st12" transform="translate(35.2 26.21)"><tspan x="0" y="0">R²</tspan></text>
+        </g>
+      </g>
+    </g>
+    <g id="axes_2">
+      <g id="patch_15">
+        <path class="st37" d="M572.54,299.11h171.07v-97.7h-171.07v97.7Z"/>
+      </g>
+      <g id="patch_16">
+        <g class="st47">
+          <path class="st7" d="M572.54,220.65h0v-14.8h0v14.8Z"/>
+        </g>
+      </g>
+      <g id="patch_17">
+        <g class="st29">
+          <path class="st5" d="M572.54,245.33h9.06v-14.8h-9.06v14.8Z"/>
+        </g>
+      </g>
+      <g id="patch_18">
+        <g class="st49">
+          <path class="st18" d="M572.54,270h78.81v-14.8h-78.81v14.8Z"/>
+        </g>
+      </g>
+      <g id="patch_19">
+        <g class="st28">
+          <path class="st1" d="M572.54,294.67h144.98v-14.8h-144.98v14.8Z"/>
+        </g>
+      </g>
+      <g id="matplotlib.axis_3">
+        <g id="xtick_7">
+          <g id="line2d_17">
+            <g class="st30">
+              <path class="st35" d="M572.54,299.11v-97.7"/>
+            </g>
+          </g>
+          <g id="line2d_18">
+            <path id="m796dafaa666" data-name="m796dafaa66" class="st36" d="M572.54,299.11v3.5"/>
+          </g>
+          <g id="text_23">
+            <text class="st16" transform="translate(564.66 312.36)"><tspan x="0" y="0">0.00</tspan></text>
+          </g>
+        </g>
+        <g id="xtick_8">
+          <g id="line2d_19">
+            <g class="st48">
+              <path class="st35" d="M609.4,299.11v-97.7"/>
+            </g>
+          </g>
+          <g id="line2d_20">
+            <path id="m796dafaa667" data-name="m796dafaa66" class="st36" d="M609.4,299.11v3.5"/>
+          </g>
+          <g id="text_24">
+            <text class="st16" transform="translate(601.53 312.36)"><tspan x="0" y="0">0.05</tspan></text>
+          </g>
+        </g>
+        <g id="xtick_9">
+          <g id="line2d_21">
+            <g class="st43">
+              <path class="st35" d="M646.27,299.11v-97.7"/>
+            </g>
+          </g>
+          <g id="line2d_22">
+            <path id="m796dafaa668" data-name="m796dafaa66" class="st36" d="M646.27,299.11v3.5"/>
+          </g>
+          <g id="text_25">
+            <text class="st16" transform="translate(638.39 312.36)"><tspan x="0" y="0">0.10</tspan></text>
+          </g>
+        </g>
+        <g id="xtick_10">
+          <g id="line2d_23">
+            <g class="st25">
+              <path class="st35" d="M683.13,299.11v-97.7"/>
+            </g>
+          </g>
+          <g id="line2d_24">
+            <path id="m796dafaa669" data-name="m796dafaa66" class="st36" d="M683.13,299.11v3.5"/>
+          </g>
+          <g id="text_26">
+            <text class="st16" transform="translate(675.26 312.36)"><tspan x="0" y="0">0.15</tspan></text>
+          </g>
+        </g>
+        <g id="xtick_11">
+          <g id="line2d_25">
+            <g class="st32">
+              <path class="st35" d="M720,299.11v-97.7"/>
+            </g>
+          </g>
+          <g id="line2d_26">
+            <path id="m796dafaa6610" data-name="m796dafaa66" class="st36" d="M720,299.11v3.5"/>
+          </g>
+          <g id="text_27">
+            <text class="st16" transform="translate(712.12 312.36)"><tspan x="0" y="0">0.20</tspan></text>
+          </g>
+        </g>
+        <g id="text_28">
+          <text class="st8" transform="translate(628.65 325.91)"><tspan x="0" y="0">ΔRMSE (°C)</tspan></text>
+        </g>
+      </g>
+      <g id="patch_20">
+        <path class="st24" d="M572.54,299.11v-97.7"/>
+      </g>
+      <g id="patch_21">
+        <path class="st24" d="M572.54,299.11h171.07"/>
+      </g>
+      <g id="text_29">
+        <text class="st16" transform="translate(575.48 215.42)"><tspan x="0" y="0">0.000</tspan></text>
+      </g>
+      <g id="text_30">
+        <text class="st16" transform="translate(584.55 240.09)"><tspan x="0" y="0">0.012</tspan></text>
+      </g>
+      <g id="text_31">
+        <text class="st16" transform="translate(654.29 264.76)"><tspan x="0" y="0">0.107</tspan></text>
+      </g>
+      <g id="text_32">
+        <text class="st16" transform="translate(720.46 289.44)"><tspan x="0" y="0">0.197</tspan></text>
+      </g>
+      <g id="text_33">
+        <text class="st8" transform="translate(628.9 195.41)"><tspan x="0" y="0">Error penalty</tspan></text>
+      </g>
+    </g>
+  </g>
+</svg>

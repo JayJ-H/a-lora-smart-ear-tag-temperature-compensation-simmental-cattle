@@ -1,0 +1,12 @@
+Dataset,KeyColumns,RowCount,Description,ReproductionNotes
+model_benchmark_oof_predictions.csv,Model;RowID,16599,OOF predictions for 33 benchmark models on 503 records,Metrics are calculated from row-level predictions
+model_benchmark_metrics.csv,Model,33,Benchmark metrics used by the final comparison figure,Paired with row-level prediction tables
+th_shrc_ablation_oof_predictions.csv,RecordID,503,OOF predictions for full A+B+C and three leave-one-branch-out configurations,Metrics are calculated from row-level predictions
+th_shrc_ablation_metrics.csv,Configuration,4,Mechanism-level ablation metrics,Paired with row-level prediction tables
+th_shrc_ablation_bootstrap.csv,Configuration,3,10000-replicate paired-bootstrap interval summary,Includes point deltas and interval limits
+th_shrc_shap_values.csv,RecordID,503,Four-group conditional SHAP values and additivity fields,Summary values are calculated from row-level SHAP values
+th_shrc_shap_summary.csv,FeatureGroup,4,Four-group SHAP summary,Calculated from 503 row-level SHAP values
+th_shrc_conditional_shap_stack_choices.csv,FoldID,5,Fold-specific coefficients for the conditional SHAP replay,Used only for conditional SHAP replay and not for OOF metric calculation
+th_shrc_mechanism_candidate_oof_predictions.csv,RecordID,503,Anonymized candidate OOF predictions for mechanism-ablation replay,Row-level w/o A replay tolerance: 1e-8 C
+th_shrc_mechanism_branch_inputs.csv,RecordID,503,Anonymized measurement-branch predictions and saved PureMemory and GlobalThermalCells states,Inputs for mechanism replay
+th_shrc_mechanism_choices.csv,Method;FoldID;Source,90,Anonymized fold/source candidate choices and fitted coefficients,W/o A/B selection replay tolerance: 1e-8 C

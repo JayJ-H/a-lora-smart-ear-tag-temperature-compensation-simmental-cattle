@@ -1,0 +1,34 @@
+table,field,unit,role,source_field,description
+raw_anonymized/lora_packet_level_raw.csv,PacketRecordID,none,identifier,distance/direction/packet sequence,Stable packet identifier.
+raw_anonymized/lora_packet_level_raw.csv,TestDayCode,none,anonymized provenance,测试日期,Relative test-day code; exact date removed.
+raw_anonymized/lora_packet_level_raw.csv,TestRound,count,design,测试轮次,Test round retained from the source workbook.
+raw_anonymized/lora_packet_level_raw.csv,Distance_m,m,design,距离_m,Gateway-to-transmitter test distance.
+raw_anonymized/lora_packet_level_raw.csv,Direction,none,design,方向,Compass direction mapped to an English abbreviation.
+raw_anonymized/lora_packet_level_raw.csv,Azimuth_deg,degree,design,方位角_度,Direction azimuth.
+raw_anonymized/lora_packet_level_raw.csv,PacketSequence,count,design,包序号,Packet sequence within a distance-direction cell.
+raw_anonymized/lora_packet_level_raw.csv,Received,binary,outcome,是否接收,"Packet reception status; 1 received, 0 lost. PDR uses only this field."
+raw_anonymized/lora_packet_level_raw.csv,RSSI_dBm,dBm,measurement,RSSI_dBm,Valid received-packet RSSI; blank for lost packets whose source cells contained the sentinel 91.
+raw_anonymized/lora_packet_level_raw.csv,SNR_dB,dB,measurement,SNR_dB,Valid received-packet SNR; blank for lost packets whose source cells contained the sentinel 91.
+raw_anonymized/lora_packet_level_raw.csv,ObstructionClass,none,design,遮挡条件,English class mapped from the source obstruction category.
+raw_anonymized/lora_packet_level_raw.csv,GatewaySiteCode,none,anonymized provenance,网关位置,Exact gateway position replaced by an anonymous code.
+raw_anonymized/lora_packet_level_raw.csv,TransmitterSiteCode,none,anonymized provenance,发射端位置,Exact transmitter position replaced by distance-direction code.
+raw_anonymized/lora_packet_level_raw.csv,SourceSentinelValue,none,quality control,RSSI_dBm/SNR_dB,Original source sentinel value for a lost packet; blank when no sentinel was removed.
+raw_anonymized/lora_packet_level_raw.csv,SignalMetricValid,binary,quality control,是否接收/RSSI_dBm/SNR_dB,1 only when RSSI and SNR are valid received-packet measurements.
+processed/lora_packet_level_records.csv,PacketRecordID,none,identifier,distance/direction/packet sequence,Stable packet identifier.
+processed/lora_packet_level_records.csv,TestDayCode,none,anonymized provenance,测试日期,Relative test-day code; exact date removed.
+processed/lora_packet_level_records.csv,TestRound,count,design,测试轮次,Test round retained from the source workbook.
+processed/lora_packet_level_records.csv,Distance_m,m,design,距离_m,Gateway-to-transmitter test distance.
+processed/lora_packet_level_records.csv,Direction,none,design,方向,Compass direction mapped to an English abbreviation.
+processed/lora_packet_level_records.csv,Azimuth_deg,degree,design,方位角_度,Direction azimuth.
+processed/lora_packet_level_records.csv,PacketSequence,count,design,包序号,Packet sequence within a distance-direction cell.
+processed/lora_packet_level_records.csv,Received,binary,outcome,是否接收,"Packet reception status; 1 received, 0 lost. PDR uses only this field."
+processed/lora_packet_level_records.csv,RSSI_dBm,dBm,measurement,RSSI_dBm,Valid received-packet RSSI; blank for lost packets whose source cells contained the sentinel 91.
+processed/lora_packet_level_records.csv,SNR_dB,dB,measurement,SNR_dB,Valid received-packet SNR; blank for lost packets whose source cells contained the sentinel 91.
+processed/lora_packet_level_records.csv,ObstructionClass,none,design,遮挡条件,English class mapped from the source obstruction category.
+processed/lora_packet_level_records.csv,GatewaySiteCode,none,anonymized provenance,网关位置,Exact gateway position replaced by an anonymous code.
+processed/lora_packet_level_records.csv,TransmitterSiteCode,none,anonymized provenance,发射端位置,Exact transmitter position replaced by distance-direction code.
+processed/lora_packet_level_records.csv,SourceSentinelValue,none,quality control,RSSI_dBm/SNR_dB,Original source sentinel value for a lost packet; blank when no sentinel was removed.
+processed/lora_packet_level_records.csv,SignalMetricValid,binary,quality control,是否接收/RSSI_dBm/SNR_dB,1 only when RSSI and SNR are valid received-packet measurements.
+processed/lora_packet_level_records.csv,PacketLoss,binary,derived outcome,Received,One minus Received.
+processed/lora_packet_level_records.csv,DistanceDirectionCell,none,derived design key,Distance_m/Direction,Stable distance-direction analysis cell identifier.
+processed/lora_packet_level_records.csv,SignalMetricStatus,none,quality control,Received/RSSI_dBm/SNR_dB,Distinguishes valid received-packet metrics from lost-packet source sentinels removed from analysis fields.

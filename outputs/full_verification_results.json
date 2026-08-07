@@ -1,0 +1,61 @@
+{
+  "ok": true,
+  "passed": 9,
+  "failed": 0,
+  "checks": [
+    {
+      "label": "temperature_selection_trace",
+      "command": "python scripts/verify_temperature_selection.py",
+      "returncode": 0,
+      "status": "PASS"
+    },
+    {
+      "label": "temperature_stack_reproduction",
+      "command": "python scripts/run_temperature_analysis.py --verify-docs",
+      "returncode": 0,
+      "status": "PASS"
+    },
+    {
+      "label": "mechanism_ablation_reproduction",
+      "command": "python analysis/ablation/run_ablation.py",
+      "returncode": 0,
+      "status": "PASS"
+    },
+    {
+      "label": "benchmark_fixed_choice_refit",
+      "command": "python analysis/benchmark_models/replay_benchmark.py",
+      "returncode": 0,
+      "status": "PASS"
+    },
+    {
+      "label": "native_stack_shap",
+      "command": "python analysis/interpretability/run_native_stack_shap.py",
+      "returncode": 0,
+      "status": "PASS"
+    },
+    {
+      "label": "conditional_shap_verification",
+      "command": "python analysis/interpretability/verify_conditional_shap.py",
+      "returncode": 0,
+      "status": "PASS"
+    },
+    {
+      "label": "fig15_17_generation",
+      "command": "python analysis/figures/plot_fig15_17_public.py",
+      "returncode": 0,
+      "status": "PASS"
+    },
+    {
+      "label": "unified_result_verification",
+      "command": "python scripts/verify_results.py",
+      "returncode": 0,
+      "status": "PASS"
+    },
+    {
+      "label": "system_software_static_tests",
+      "command": "python system_tests/run_system_tests.py",
+      "returncode": 0,
+      "status": "PASS"
+    }
+  ]
+}

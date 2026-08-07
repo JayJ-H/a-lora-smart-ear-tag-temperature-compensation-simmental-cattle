@@ -1,0 +1,7 @@
+"Check","Status","Detail"
+"dataset_scope","PASS","Loaded fixed_real_measurement_analysis_set strict real rows only: N=503, cows=30."
+"same_outer_fold_for_two_components","PASS","Source-memory and batch-session components are regenerated on the same within-cow outer fold assignment before averaging."
+"alpha_is_preregistered","PASS","The ensemble uses a fixed 0.50/0.50 average; no alpha is selected from outer-test labels."
+"component_strictness","PASS","Each component computes held-out predictions using only its outer-training rows; component scripts provide their own inner OOF selection/audit logic."
+"training_match_context","INFO","Training-feature match counts are reported in the accompanying prediction table."
+"validation_protocol","INFO","Strict row-level within-cow OOF for the observed collection stream."

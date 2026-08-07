@@ -1,0 +1,2 @@
+Model,FullName,Validation,N,CowCount,R2,RMSE,MAE,Bias,ErrorSD,AbsoluteErrorLE0_5,MaxPredictionAbsDifference,MaxStackSettingAbsDifference,MaxExpectedMetricAbsDifference,Status
+TH-SHRC,Thermal-Hysteresis-aware Stacked Hierarchical Residual Compensation,row-level within-cow random five-fold OOF,503,30,0.8551359051012453,0.25195565941200593,0.1345534257161157,0.0010513101999986892,0.25220429087072904,0.9423459244532804,7.105427357601002e-15,2.220446049250313e-16,1.1102230246251565e-16,PASS

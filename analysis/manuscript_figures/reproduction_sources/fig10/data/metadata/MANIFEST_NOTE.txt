@@ -1,0 +1,1 @@
+file_manifest.csv intentionally excludes its own checksum.

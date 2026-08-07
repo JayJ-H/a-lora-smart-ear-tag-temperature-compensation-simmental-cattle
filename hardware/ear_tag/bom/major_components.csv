@@ -1,0 +1,7 @@
+function,model,description,assembly,evidence
+Data processing,ESP32-S3,MCU,Ear tag,Engineering record and firmware source
+Temperature sensing,M1820Z,1-Wire digital sensor,Ear tag,Study record and firmware source
+Temperature sensing,TMP117,I2C digital sensor,Ear tag,Firmware source
+LoRa radio,Ai-Thinker Ra-02 / SX1278,433 MHz LoRa module,Ear tag,Engineering record and firmware driver
+Power regulation,HCZZ0032-2,Power-management/regulator module,Ear tag,Engineering record
+Battery,Unspecified model,200 mAh lithium battery,Ear tag,Engineering record

@@ -1,0 +1,82 @@
+{
+  "status": "PASS",
+  "validation": "same-cow random five-fold OOF",
+  "shap_mode": "smoke",
+  "rscript": "Rscript.exe",
+  "output_root": "outputs",
+  "passed": 10,
+  "failed": 0,
+  "planned": 10,
+  "stages": [
+    {
+      "label": "official_nested_stack",
+      "command": "python scripts/run_temperature_analysis.py --output-dir outputs --verify-docs",
+      "returncode": 0,
+      "status": "PASS",
+      "elapsed_seconds": 4.141
+    },
+    {
+      "label": "complete_th_shrc_retrain",
+      "command": "python analysis/th_shrc/reproduce_full_pipeline.py --output-dir outputs/analysis --rscript Rscript",
+      "returncode": 0,
+      "status": "PASS",
+      "elapsed_seconds": 497.64
+    },
+    {
+      "label": "model_benchmark_33",
+      "command": "python analysis/benchmark_models/run_benchmark.py --output-dir outputs/analysis/benchmark",
+      "returncode": 0,
+      "status": "PASS",
+      "elapsed_seconds": 1116.813
+    },
+    {
+      "label": "model_benchmark_figure",
+      "command": "python analysis/benchmark_models/plot_benchmark.py --benchmark-output-dir outputs/analysis/benchmark",
+      "returncode": 0,
+      "status": "PASS",
+      "elapsed_seconds": 12.625
+    },
+    {
+      "label": "ablation_and_bootstrap",
+      "command": "python analysis/ablation/run_ablation.py --output-dir outputs/analysis/ablation",
+      "returncode": 0,
+      "status": "PASS",
+      "elapsed_seconds": 2.469
+    },
+    {
+      "label": "native_stack_shap",
+      "command": "python analysis/interpretability/run_native_stack_shap.py --output-dir outputs/analysis/interpretability/native_stack",
+      "returncode": 0,
+      "status": "PASS",
+      "elapsed_seconds": 1.453
+    },
+    {
+      "label": "frozen_conditional_shap_verification",
+      "command": "python analysis/interpretability/verify_conditional_shap.py --output-dir outputs/analysis/interpretability/conditional_shap",
+      "returncode": 0,
+      "status": "PASS",
+      "elapsed_seconds": 1.156
+    },
+    {
+      "label": "conditional_shap_smoke",
+      "command": "Rscript analysis/interpretability/run_full_pipeline_shap.R --output-dir outputs/analysis/interpretability/full_pipeline_shap --target-limit-per-fold 1",
+      "returncode": 0,
+      "status": "PASS",
+      "elapsed_seconds": 330.547
+    },
+    {
+      "label": "publication_figures",
+      "command": "Rscript analysis/interpretability/plot_publication_figures.R --output-dir outputs/analysis/interpretability/figures",
+      "returncode": 0,
+      "status": "PASS",
+      "elapsed_seconds": 32.422
+    },
+    {
+      "label": "unified_result_verification",
+      "command": "python scripts/verify_results.py --output-dir outputs",
+      "returncode": 0,
+      "status": "PASS",
+      "elapsed_seconds": 0.765
+    }
+  ]
+}

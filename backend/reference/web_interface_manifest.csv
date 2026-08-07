@@ -1,0 +1,8 @@
+Interface,Purpose,EvidenceInPaper
+Herd overview,Current herd counts and review queue,Fig. 7a
+Animal profile,Animal information and active tag assignment,Fig. 7b
+Thermal history,Individual temperature time series,Fig. 8a
+MQTT records,Message topic receive time link metadata and parsed temperatures,Fig. 8b
+Service status,Frontend backend database and MQTT status,Fig. 9a
+Gateway control,MQTT downlink restart command,Fig. 9b
+Alert review,Temperature-rule review queue,Fig. 9b

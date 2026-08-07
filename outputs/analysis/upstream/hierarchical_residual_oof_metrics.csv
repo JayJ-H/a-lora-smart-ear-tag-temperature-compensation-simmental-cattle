@@ -1,0 +1,2 @@
+"Dataset","FoldMode","Model","N","CowCount","R2","RMSE","MAE","Bias","ErrorSD","ImprovesOnThermalMemoryReference","ReferenceR2","ReferenceRMSE"
+"fixed_real_measurement_analysis_set","within_cow_random5","StrictHierarchicalEBResidualXGB",503,30,0.843634315240021,0.261766740222554,0.145250321425483,-0.0127928933757885,0.261714233116104,TRUE,0.83890921111252,0.265692376504112
