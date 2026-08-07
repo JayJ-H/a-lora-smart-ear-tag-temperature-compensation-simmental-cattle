@@ -1,0 +1,6 @@
+StageOrder,Stage,RowsRemoved,RowsRemaining,Rule
+0,candidate_pool,0,1129,All rows in the candidate input pool.
+1,remove_estimated_reference_source,326,803,Exclude the source stratum whose reference values are estimated rather than measured.
+2,remove_case_or_compensated_source,270,533,Exclude the source stratum containing case or already compensated values.
+3,required_numeric_qc,0,533,"Require finite measurements, Ear > 25 C, 35 < core reference < 42 C, -40 < ambient < 60 C, and hour in [0, 24]."
+4,minimum_records_per_animal,30,503,"After source and numeric QC, retain animals with at least eight eligible records."

@@ -1,0 +1,31 @@
+table,field,unit,role,source_field,description
+处理数据/th_shrc_oof_predictions.csv,RecordID,none,provenance/model parameter,RowID,Stable public record identifier derived from RowID.
+处理数据/th_shrc_oof_predictions.csv,Dataset,none,provenance/model parameter,Dataset,Neutral public name for the fixed 503-row analysis set.
+处理数据/th_shrc_oof_predictions.csv,FoldMode,none,provenance/model parameter,FoldMode,Value retained verbatim from the fixed TH-SHRC OOF result.
+处理数据/th_shrc_oof_predictions.csv,FoldID,none,provenance/model parameter,FoldID,Outer same-cow random five-fold OOF assignment.
+处理数据/th_shrc_oof_predictions.csv,RowID,none,provenance/model parameter,RowID,Value retained verbatim from the fixed TH-SHRC OOF result.
+处理数据/th_shrc_oof_predictions.csv,SourceRowID,none,provenance/model parameter,SourceRowID,Value retained verbatim from the fixed TH-SHRC OOF result.
+处理数据/th_shrc_oof_predictions.csv,CowKey,none,provenance/model parameter,CowKey,Neutral public animal identity C001-C030.
+处理数据/th_shrc_oof_predictions.csv,Source,none,provenance/model parameter,Source,Neutral collection-stratum code used consistently across public files.
+处理数据/th_shrc_oof_predictions.csv,SourceType,none,provenance/model parameter,SourceType,Anonymous two-level source stratum preserving the fixed model partition.
+处理数据/th_shrc_oof_predictions.csv,EarStatus,none,provenance/model parameter,EarStatus,Anonymous two-level measurement-status code preserving the fixed model partition.
+处理数据/th_shrc_oof_predictions.csv,HeatSegment,none,provenance/model parameter,HeatSegment,Neutral thermal-segment code preserving the fixed model partition.
+处理数据/th_shrc_oof_predictions.csv,SessionID,none,provenance/model parameter,SessionID,Neutral session code preserving the fixed model partition.
+处理数据/th_shrc_oof_predictions.csv,Ear,degree C,provenance/model parameter,Ear,Measured ear-surface temperature.
+处理数据/th_shrc_oof_predictions.csv,Air,degree C,provenance/model parameter,Air,Measured local ambient temperature.
+处理数据/th_shrc_oof_predictions.csv,Time,none,provenance/model parameter,Time,Hour-of-day model input.
+处理数据/th_shrc_oof_predictions.csv,Actual,degree C,result,Actual,Observed core-reference temperature.
+处理数据/th_shrc_oof_predictions.csv,SourceMemoryPredicted,degree C,result,SourceMemoryPredicted,OOF prediction from the source-memory branch.
+处理数据/th_shrc_oof_predictions.csv,BatchSessionPredicted,degree C,result,BatchSessionPredicted,OOF prediction from the batch/session branch.
+处理数据/th_shrc_oof_predictions.csv,FoldID_HierarchicalResidual,none,provenance/model parameter,FoldID_HierarchicalResidual,Fold assignment stored by the hierarchical-residual branch.
+处理数据/th_shrc_oof_predictions.csv,HierarchicalResidualPredicted,degree C,result,HierarchicalResidualPredicted,OOF prediction from the hierarchical-residual branch.
+处理数据/th_shrc_oof_predictions.csv,HierarchicalResidualInnerChoiceRMSE,degree C,provenance/model parameter,HierarchicalResidualInnerChoiceRMSE,Value retained verbatim from the fixed TH-SHRC OOF result.
+处理数据/th_shrc_oof_predictions.csv,Model,none,provenance/model parameter,Model,Value retained verbatim from the fixed TH-SHRC OOF result.
+处理数据/th_shrc_oof_predictions.csv,SelectedLambda,none,provenance/model parameter,SelectedLambda,Value retained verbatim from the fixed TH-SHRC OOF result.
+处理数据/th_shrc_oof_predictions.csv,InnerChoiceRMSE,degree C,provenance/model parameter,InnerChoiceRMSE,Value retained verbatim from the fixed TH-SHRC OOF result.
+处理数据/th_shrc_oof_predictions.csv,StackIntercept,degree C,provenance/model parameter,StackIntercept,Value retained verbatim from the fixed TH-SHRC OOF result.
+处理数据/th_shrc_oof_predictions.csv,StackWeightSourceMemory,none,provenance/model parameter,StackWeightSourceMemory,Value retained verbatim from the fixed TH-SHRC OOF result.
+处理数据/th_shrc_oof_predictions.csv,StackWeightBatchSession,none,provenance/model parameter,StackWeightBatchSession,Value retained verbatim from the fixed TH-SHRC OOF result.
+处理数据/th_shrc_oof_predictions.csv,StackWeightHierarchicalResidual,none,provenance/model parameter,StackWeightHierarchicalResidual,Value retained verbatim from the fixed TH-SHRC OOF result.
+处理数据/th_shrc_oof_predictions.csv,Predicted,degree C,result,Predicted,Final TH-SHRC stacked OOF prediction.
+处理数据/th_shrc_oof_predictions.csv,Residual,degree C,result,Residual,Actual minus final prediction.

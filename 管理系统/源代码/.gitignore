@@ -1,0 +1,43 @@
+node_modules
+.DS_Store
+dist
+dist-ssr
+*.local
+
+# Local environment and deployment secrets
+.env
+.env.*
+!.env.example
+!.env.*.example
+!ops/production/.env.prod.example
+frpc.ini
+
+# Runtime, generated, and local artifacts
+reports/
+artifacts/
+.codegraph/
+.vscode/
+_offline_bundle/
+cattle-management-static/
+logs/
+tmp/
+.tmp*
+backups/
+artifacts/
+screenshots*/
+prototype/**/screenshots/
+information-export-*.json
+information-export-*.png
+tmp_smart_alert_numbered.txt
+*.log
+*.tmp
+*.bak
+*.backup
+*.old
+*.zip
+
+# Auto-generated files
+src/types/import/auto-imports.d.ts
+src/types/import/components.d.ts
+.auto-import.json
+.cattle-management/

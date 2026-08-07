@@ -1,0 +1,9 @@
+﻿method,path,purpose,notes
+POST,/api/auth/login,User authentication,Public entry; credentials omitted
+POST,/api/auth/register,User registration,Deployment policy dependent
+GET,/api/user/info,Current user metadata,Authentication context
+GET,/api/health,Service health,No model-performance semantics
+GET,/api/version,Software/数据库 version,Deployment version response
+GET,/api/system/status,System-service status,Operational endpoint
+POST,/api/db/rpc,Generic database RPC,Authentication required
+POST,/api/cow/:scope/:method,Cow-domain RPC,Authentication required

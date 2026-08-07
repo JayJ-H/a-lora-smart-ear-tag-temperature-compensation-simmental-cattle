@@ -1,0 +1,94 @@
+{
+  "package_name": "LoRa_Fig10_bcd_reproducibility_package",
+  "created_utc": "2026-07-22T14:47:39.478427+00:00",
+  "source_workbook": "数据/SAT_RSSI_SNR.xlsx",
+  "source_workbook_preserved_unchanged": true,
+  "source_sheets": {
+    "CN_S6_RSSI原始4000行": {
+      "rows": 4000,
+      "columns": [
+        "测试日期",
+        "测试轮次",
+        "距离_m",
+        "方向",
+        "方位角_度",
+        "包序号",
+        "是否接收",
+        "RSSI_dBm",
+        "SNR_dB",
+        "遮挡条件",
+        "网关位置",
+        "发射端位置"
+      ],
+      "role": "Packet-level raw communication records"
+    },
+    "CN_Table4_RSSI汇总": {
+      "rows": 41,
+      "columns": [
+        "测试日期",
+        "测试地点",
+        "距离_m",
+        "方向",
+        "方位角_度",
+        "发送包数",
+        "接收包数",
+        "丢包率",
+        "RSSI均值_dBm",
+        "RSSI标准差",
+        "RSSI最小值",
+        "RSSI最大值",
+        "RSSI_5th",
+        "RSSI_95th",
+        "SNR均值_dB",
+        "SNR标准差",
+        "SNR最小值",
+        "SNR最大值",
+        "遮挡条件",
+        "网关位置",
+        "发射端位置",
+        "天线",
+        "发射功率"
+      ],
+      "role": "Original distance-by-direction summary table"
+    }
+  },
+  "test_dates_as_recorded": [
+    "2026-01-01"
+  ],
+  "gateway_locations_as_recorded": [
+    "兽医室西北角网关"
+  ],
+  "antenna_as_recorded": [
+    "433 MHz LoRa天线"
+  ],
+  "transmit_power_as_recorded": [
+    "22db"
+  ],
+  "distances_m": [
+    50,
+    100,
+    150,
+    200,
+    250
+  ],
+  "directions": [
+    "东",
+    "东北",
+    "东南",
+    "北",
+    "南",
+    "西",
+    "西北",
+    "西南"
+  ],
+  "total_packets_sent": 4000,
+  "total_packets_received": 3751,
+  "overall_PDR_percent": 93.77499999999999,
+  "notes": [
+    "RSSI and SNR figures and summaries use successfully received packets only.",
+    "Packet delivery ratio is calculated as received packets divided by transmitted packets.",
+    "The PDR error bars in panel b are 95% confidence intervals across the eight direction-level PDR values at each distance.",
+    "The workbook records the test date as 2026-01-01.",
+    "Rows marked 是否接收=否 are excluded from RSSI and SNR calculations."
+  ]
+}

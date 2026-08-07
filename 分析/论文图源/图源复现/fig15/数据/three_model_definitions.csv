@@ -1,0 +1,4 @@
+﻿Model,Name_CN,Name_EN,Role,StrictRemoval
+A,热状态记忆模型,Thermal-state memory model,利用耳表温度、环境温度与时间条件下的历史相似热状态进行基础核心温度估计。,关闭热状态检索、经验贝叶斯热状态单元及会话记忆路径。
+B,个体—时段校准模型,Individual–session calibration model,校正牛只个体、采集时段及会话条件造成的系统性偏差。,关闭CowKey及个体/会话目标校准，仅保留非个体化热状态信息。
+C,层级残差修正模型,Hierarchical residual-correction model,对A和B未解释的层级性及非线性剩余误差进行修正。,移除完整C分支，并仅使用A和B重新拟合最终融合器。

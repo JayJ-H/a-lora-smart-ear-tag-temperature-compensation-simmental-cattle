@@ -1,0 +1,8 @@
+/node_modules/*
+/dist/*
+/src/main.ts
+
+# Root-level temporary Playwright/debug helpers, not source or build inputs.
+/deep_analysis.cjs
+/screenshot.cjs
+/screenshot.mjs

@@ -1,0 +1,6 @@
+cmake_minimum_required(VERSION 3.16)
+include($ENV{IDF_PATH}/tools/cmake/project.cmake)
+idf_build_set_property(CXX_COMPILE_OPTIONS "-Wno-error=overloaded-virtual" APPEND)
+idf_build_set_property(COMPILE_DEFINITIONS "RADIOLIB_DEBUG_BASIC=1" APPEND)
+idf_build_set_property(COMPILE_DEFINITIONS "RADIOLIB_VERBOSE_ASSERT=1" APPEND)
+project(lora4g14pro)

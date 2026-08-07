@@ -1,0 +1,49 @@
+{
+  "figure_group": "Fig. 10b-d",
+  "intended_manuscript_section": "3.2 LoRa communication performance",
+  "panels": {
+    "b": {
+      "title": "Packet delivery ratio at different transmission distances",
+      "x_variable": "Transmission distance (m)",
+      "y_variable": "Packet delivery ratio (%)",
+      "raw_points": "Eight direction-level PDR values per distance",
+      "central_summary": "Overall PDR across 800 packets per distance",
+      "uncertainty": "95% confidence interval across direction-level PDR values",
+      "numeric_labels": "Overall PDR rounded to one decimal place"
+    },
+    "c": {
+      "title": "RSSI distributions at different transmission distances",
+      "x_variable": "Transmission distance (m)",
+      "y_variable": "RSSI (dBm)",
+      "records_used": "Successfully received packets only",
+      "distribution_layer": "Right-half violin based on packet-level RSSI",
+      "boxplot_layer": "Median and interquartile range; whiskers use matplotlib defaults",
+      "point_layer": "Eight direction-level mean RSSI values"
+    },
+    "d": {
+      "title": "SNR distributions at different transmission distances",
+      "x_variable": "Transmission distance (m)",
+      "y_variable": "SNR (dB)",
+      "records_used": "Successfully received packets only",
+      "distribution_layer": "Right-half violin based on packet-level SNR",
+      "boxplot_layer": "Median and interquartile range; whiskers use matplotlib defaults",
+      "point_layer": "Eight direction-level mean SNR values",
+      "reference_line": "Horizontal line at 0 dB"
+    }
+  },
+  "style": {
+    "font_family": "Arial/Helvetica with DejaVu Sans fallback",
+    "panel_labels": "Bold lowercase b, c and d",
+    "colour_usage": "One blue accent plus neutral greys",
+    "grid": "Light horizontal grid only",
+    "raster_resolution_dpi": 600,
+    "vector_outputs": [
+      "PDF",
+      "SVG"
+    ]
+  },
+  "software": {
+    "python_script": "code/plot_lora_communication_nature_style.py",
+    "dependencies": "code/requirements_lora_plot.txt"
+  }
+}

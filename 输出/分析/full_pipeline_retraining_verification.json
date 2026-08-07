@@ -1,0 +1,39 @@
+{
+  "status": "PASS",
+  "validation": "row-level same-animal random five-fold OOF",
+  "checks": {
+    "source_memory_branch": true,
+    "batch_session_branch": true,
+    "hierarchical_residual_branch": true,
+    "final_prediction": true,
+    "final_metrics": true
+  },
+  "branch_max_abs_difference_C": {
+    "SourceMemoryPredicted": 0.03308915338990204,
+    "BatchSessionPredicted": 0.0,
+    "NewAlgorithmPredicted": 0.0
+  },
+  "final_prediction_max_abs_difference_C": 0.010196760888675271,
+  "metric_differences": {
+    "R2": 1.2885324565226064e-05,
+    "RMSE": 1.1205186006280066e-05,
+    "MAE": 2.2847347509291627e-05,
+    "AbsoluteErrorLE0_5": 0.0
+  },
+  "metrics": {
+    "N": 503,
+    "CowCount": 30,
+    "R2": 0.85512301977668,
+    "RMSE": 0.2519668645980122,
+    "MAE": 0.1345305783686063,
+    "Bias": 0.0010407862180519005,
+    "ErrorSD": 0.25221555104387255,
+    "AbsoluteErrorLE0_5": 0.9423459244532804
+  },
+  "tolerances": {
+    "source_memory_C": 0.05,
+    "exact_branch_C": 1e-08,
+    "final_prediction_C": 0.02,
+    "final_metric": 0.0005
+  }
+}

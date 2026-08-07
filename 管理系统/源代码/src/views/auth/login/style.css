@@ -1,0 +1,188 @@
+@reference '@styles/core/tailwind.css';
+
+/* 授权页右侧区域 */
+.auth-right-wrap {
+  @apply absolute inset-0 w-[456px] h-[650px] p-[28px] m-auto overflow-hidden
+    max-sm:px-7 max-sm:w-full
+    animate-[slideInRight_0.6s_cubic-bezier(0.25,0.46,0.45,0.94)_forwards]
+    max-md:animate-none;
+
+  max-height: calc(100dvh - 32px);
+  overflow: hidden auto;
+  overscroll-behavior: contain;
+  background:
+    linear-gradient(180deg, rgb(255 255 255 / 96%), rgb(247 252 245 / 92%)),
+    radial-gradient(circle at 18% 0%, rgb(var(--fluent-primary-rgb) / 16%), transparent 42%),
+    radial-gradient(circle at 100% 8%, rgb(0 166 166 / 10%), transparent 34%);
+  border: 1px solid rgb(var(--fluent-primary-rgb) / 26%);
+  border-radius: 8px;
+  box-shadow:
+    0 1px 0 rgb(255 255 255 / 82%) inset,
+    0 34px 90px rgb(54 105 39 / 16%),
+    0 0 0 1px rgb(255 255 255 / 52%);
+  backdrop-filter: blur(28px) saturate(1.45);
+  -webkit-backdrop-filter: blur(28px) saturate(1.45);
+
+  &::before {
+    position: absolute;
+    inset: 0 0 auto;
+    height: 3px;
+    content: '';
+    background: linear-gradient(
+      90deg,
+      var(--el-color-primary),
+      var(--fluent-teal),
+      rgb(245 165 36 / 76%)
+    );
+  }
+
+  &::after {
+    position: absolute;
+    inset: 3px 0 auto;
+    height: 92px;
+    pointer-events: none;
+    content: '';
+    background:
+      linear-gradient(180deg, rgb(255 255 255 / 42%), rgb(255 255 255 / 0%)),
+      repeating-linear-gradient(
+        90deg,
+        rgb(var(--fluent-primary-rgb) / 8%) 0 1px,
+        transparent 1px 42px
+      );
+    mask-image: linear-gradient(180deg, #000, transparent);
+  }
+
+  .form {
+    position: relative;
+    z-index: 1;
+    @apply h-full py-[18px];
+  }
+
+  .title {
+    @apply text-g-900 text-4xl font-semibold max-md:text-3xl max-sm:pt-8;
+
+    letter-spacing: 0;
+    color: var(--fluent-text);
+    font-weight: 780;
+    line-height: 1.15;
+  }
+
+  .sub-title {
+    @apply mt-[10px] text-g-600 text-sm;
+
+    color: var(--fluent-text-soft);
+    line-height: 1.7;
+  }
+
+  .custom-height {
+    @apply !h-[44px];
+  }
+
+  :deep(.el-input__wrapper),
+  :deep(.el-select__wrapper) {
+    background: linear-gradient(180deg, rgb(255 255 255 / 84%), rgb(249 253 247 / 74%)) !important;
+    border-radius: 7px;
+    box-shadow:
+      0 1px 0 rgb(255 255 255 / 78%) inset,
+      0 0 0 1px rgb(var(--fluent-primary-rgb) / 22%) inset !important;
+  }
+
+  :deep(.el-input__wrapper:hover),
+  :deep(.el-select__wrapper:hover),
+  :deep(.el-input__wrapper.is-focus),
+  :deep(.el-select__wrapper.is-focused) {
+    box-shadow:
+      0 1px 0 rgb(255 255 255 / 82%) inset,
+      0 0 0 1px rgb(var(--fluent-primary-rgb) / 44%) inset,
+      0 0 0 3px rgb(var(--fluent-primary-rgb) / 12%) !important;
+  }
+
+  :deep(.el-button--primary) {
+    background:
+      linear-gradient(180deg, rgb(255 255 255 / 18%), rgb(255 255 255 / 0%)),
+      linear-gradient(135deg, var(--fluent-interactive), var(--fluent-interactive-hover));
+    border: 0;
+    border-radius: 7px;
+    box-shadow:
+      0 1px 0 rgb(255 255 255 / 42%) inset,
+      0 16px 30px rgb(var(--fluent-primary-rgb) / 30%);
+  }
+
+  :deep(.el-button--primary:hover) {
+    filter: brightness(1.04);
+    box-shadow:
+      0 1px 0 rgb(255 255 255 / 48%) inset,
+      0 20px 38px rgb(var(--fluent-primary-rgb) / 34%);
+  }
+
+  :deep(.el-form-item) {
+    margin-bottom: 18px;
+  }
+
+  :deep(.el-checkbox__input.is-checked .el-checkbox__inner) {
+    background-color: var(--fluent-interactive);
+    border-color: var(--fluent-interactive);
+  }
+
+  :deep(.el-checkbox__label),
+  .text-gray-600 {
+    color: var(--fluent-text-soft) !important;
+  }
+
+  .text-theme {
+    color: var(--fluent-interactive) !important;
+    font-weight: 650;
+  }
+}
+
+.dark .auth-right-wrap {
+  border-color: rgb(255 255 255 / 12%);
+  background:
+    linear-gradient(180deg, rgb(18 25 38 / 92%), rgb(11 18 32 / 90%)),
+    radial-gradient(circle at 12% 0%, rgb(var(--fluent-primary-rgb) / 18%), transparent 38%);
+  box-shadow:
+    0 1px 0 rgb(255 255 255 / 10%) inset,
+    0 30px 90px rgb(0 0 0 / 34%);
+
+  .title {
+    color: var(--fluent-text);
+  }
+
+  .sub-title {
+    color: var(--fluent-text-soft);
+  }
+}
+
+@media (max-width: 1180px) {
+  .auth-right-wrap {
+    width: min(456px, calc(100vw - 40px));
+    max-height: calc(100dvh - 40px);
+  }
+}
+
+@media (height <= 720px) {
+  .auth-right-wrap {
+    padding-top: 18px;
+    padding-bottom: 18px;
+
+    .form {
+      height: auto;
+      min-height: 100%;
+      padding-top: 8px;
+      padding-bottom: 8px;
+    }
+  }
+}
+
+/* 滑入动画 */
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}

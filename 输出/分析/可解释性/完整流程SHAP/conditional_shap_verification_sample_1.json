@@ -1,0 +1,18 @@
+{
+  "status": "PASS",
+  "method": "native full-pipeline replay followed by exact four-group conditional Shapley values",
+  "validation": "same-animal random five-fold OOF",
+  "stack_parameter_scope": "conditional-SHAP coefficients; accuracy uses the OOF prediction table",
+  "rows": 5,
+  "coalitions_per_row": 64,
+  "displayed_groups": ["Cow_identity", "Ear_temperature", "Ambient_temperature", "Time_diurnal"],
+  "conditioned_technical_groups": ["Source_technical", "Row_order_technical"],
+  "tolerance_C": 0.050000000000000003,
+  "reference_comparison": {
+    "rows": 5,
+    "by_column": [2.7755575615628914e-17, 0, 0, 0, 0, 0],
+    "maximum": 2.7755575615628914e-17
+  },
+  "additivity_max_abs_difference_C": 0,
+  "full_run": false
+}

@@ -1,0 +1,47 @@
+{
+  "status": "source_record",
+  "capture_mode": "direct Playwright page viewport screenshot; no composition or element cropping",
+  "capture_time_local": "2026-07-21 22:59-23:01 CST",
+  "viewport": {
+    "width": 1920,
+    "height": 1080
+  },
+  "panels": [
+    {
+      "panel": "dashboard_overview",
+      "file": "components/dashboard_overview.png",
+      "route": "/#/dashboard",
+      "sha256": "A5AB731D19E4EB609A5092DDAF560126515A92DDCB5801395A059EE4870AA744"
+    },
+    {
+      "panel": "cattle_profile_management",
+      "file": "components/cattle_profile_management.png",
+      "route": "/#/germplasm-resources/individual-profile",
+      "sha256": "3DAF7E55921E75E455A60F8FCDA83C1DC913F8E4C4E255A0F9E7676A027FB54E"
+    },
+    {
+      "panel": "temperature_monitoring",
+      "file": "../fig08/components/temperature_monitoring.png",
+      "route": "/#/germplasm-resources/individual-query",
+      "sha256": "9AA5AA60BE175AE7567A13AFDB57242644FD273CD7BA209574B65C7565BA7E62"
+    },
+    {
+      "panel": "device_gateway_status",
+      "file": "../fig08/components/device_gateway_status.png",
+      "route": "/#/platform-management/service-status",
+      "sha256": "32B988AC1944E8E8BD0EBCD8308D32BACEBE4EBD3EF04A32883A525529C6CC51"
+    },
+    {
+      "panel": "mqtt_uplink_records",
+      "file": "../fig08/components/mqtt_uplink_records.png",
+      "route": "/#/data-and-devices/ear-tag-uplinks",
+      "sha256": "6E75E38BFDDC6B5543E501A2BA60C9602BB8691CE7A302C6F1863EFA9E7463BE"
+    },
+    {
+      "panel": "abnormal_alert_handling",
+      "file": "../fig09/components/abnormal_alert_handling.png",
+      "route": "/#/germplasm-resources/individual-filter",
+      "sha256": "E5DD90174AAE876C3B62673F726847019622EA388FFCCE6274412D8D068AD966"
+    }
+  ]
+}

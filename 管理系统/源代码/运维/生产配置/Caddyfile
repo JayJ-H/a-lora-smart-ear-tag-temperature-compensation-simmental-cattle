@@ -1,0 +1,4 @@
+{$PUBLIC_HOST:localhost} {
+  encode zstd gzip
+  reverse_proxy web:80
+}

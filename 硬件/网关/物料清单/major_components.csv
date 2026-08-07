@@ -1,0 +1,6 @@
+function,model,description,evidence
+Gateway controller,ESP32-S3,MCU,Firmware source and schematic
+LoRa receiver,Ai-Thinker Ra-02 / SX1278,433 MHz module,Firmware source and engineering record
+Cellular uplink,ML307R-DC,4G module,Firmware source and engineering record
+External power,Unspecified adapter,5 V input,Engineering record
+Offline storage,USB mass-storage device,Optional removable logging,Gateway firmware source

@@ -1,0 +1,28 @@
+services:
+  mysql:
+    image: mysql:8.4
+    container_name: cattle-mysql-local
+    restart: unless-stopped
+    environment:
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD:-REDACTED_DB_ROOT_PASSWORD}
+      MYSQL_DATABASE: cattle_management
+      MYSQL_USER: ${MYSQL_USER:-REDACTED_DB_USER}
+      MYSQL_PASSWORD: ${MYSQL_PASSWORD:-REDACTED_DB_PASSWORD}
+      TZ: Asia/Shanghai
+    ports:
+      - "9193:3306"
+    command:
+      - --character-set-server=utf8mb4
+      - --collation-server=utf8mb4_unicode_ci
+      - --explicit_defaults_for_timestamp=1
+    volumes:
+      - mysql_local_data:/var/lib/mysql
+      - ./init:/docker-entrypoint-initdb.d:ro
+    healthcheck:
+      test: ["CMD-SHELL", "mysqladmin ping -uroot -p$$MYSQL_ROOT_PASSWORD --silent"]
+      interval: 10s
+      timeout: 5s
+      retries: 10
+
+volumes:
+  mysql_local_data:

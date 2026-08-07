@@ -1,0 +1,11 @@
+domain,metric,value,unit
+temperature,records,503,rows
+temperature,animals,30,CowKey
+temperature,r2,0.8551359051012453,fraction
+temperature,rmse,0.25195565941200593,degree C
+temperature,mae,0.1345534257161156,degree C
+temperature,absolute_error_le_0.5,0.9423459244532804,fraction
+lora,packets,4000,rows
+lora,overall_pdr,0.93775,fraction
+lora,pdr_200m,0.93875,fraction
+lora,pdr_250m,0.83125,fraction

@@ -1,0 +1,82 @@
+{
+  "status": "PASS",
+  "validation": "same-cow random five-fold OOF",
+  "shap_mode": "smoke",
+  "rscript": "Rscript.exe",
+  "output_root": "输出",
+  "passed": 10,
+  "failed": 0,
+  "planned": 10,
+  "stages": [
+    {
+      "label": "official_nested_stack",
+      "command": "python 脚本/run_temperature_analysis.py --output-dir outputs --verify-docs",
+      "returncode": 0,
+      "status": "PASS",
+      "elapsed_seconds": 4.141
+    },
+    {
+      "label": "complete_th_shrc_retrain",
+      "command": "python 分析/TH-SHRC/reproduce_full_pipeline.py --output-dir 输出/分析 --rscript Rscript",
+      "returncode": 0,
+      "status": "PASS",
+      "elapsed_seconds": 497.64
+    },
+    {
+      "label": "model_benchmark_33",
+      "command": "python 分析/基准模型/run_benchmark.py --output-dir 输出/分析/基准模型",
+      "returncode": 0,
+      "status": "PASS",
+      "elapsed_seconds": 1116.813
+    },
+    {
+      "label": "model_benchmark_figure",
+      "command": "python 分析/基准模型/plot_benchmark.py --benchmark-output-dir 输出/分析/基准模型",
+      "returncode": 0,
+      "status": "PASS",
+      "elapsed_seconds": 12.625
+    },
+    {
+      "label": "ablation_and_bootstrap",
+      "command": "python 分析/消融/run_ablation.py --output-dir 输出/分析/消融",
+      "returncode": 0,
+      "status": "PASS",
+      "elapsed_seconds": 2.469
+    },
+    {
+      "label": "native_stack_shap",
+      "command": "python 分析/可解释性/run_native_stack_shap.py --output-dir 输出/分析/可解释性/原生堆叠SHAP",
+      "returncode": 0,
+      "status": "PASS",
+      "elapsed_seconds": 1.453
+    },
+    {
+      "label": "frozen_conditional_shap_verification",
+      "command": "python 分析/可解释性/verify_conditional_shap.py --output-dir 输出/分析/可解释性/条件SHAP",
+      "returncode": 0,
+      "status": "PASS",
+      "elapsed_seconds": 1.156
+    },
+    {
+      "label": "conditional_shap_smoke",
+      "command": "Rscript 分析/可解释性/run_full_pipeline_shap.R --output-dir 输出/分析/可解释性/完整流程SHAP --target-limit-per-fold 1",
+      "returncode": 0,
+      "status": "PASS",
+      "elapsed_seconds": 330.547
+    },
+    {
+      "label": "publication_figures",
+      "command": "Rscript 分析/可解释性/plot_publication_figures.R --output-dir 输出/分析/可解释性/图件",
+      "returncode": 0,
+      "status": "PASS",
+      "elapsed_seconds": 32.422
+    },
+    {
+      "label": "unified_result_verification",
+      "command": "python 脚本/verify_results.py --output-dir outputs",
+      "returncode": 0,
+      "status": "PASS",
+      "elapsed_seconds": 0.765
+    }
+  ]
+}

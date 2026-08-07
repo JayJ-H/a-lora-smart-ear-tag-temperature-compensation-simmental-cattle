@@ -1,0 +1,13 @@
+{
+  "status": "PASS",
+  "rows": 16599,
+  "models": 33,
+  "seed": 20260709,
+  "method": "model refit with fixed evolutionary search choices",
+  "elapsed_seconds": 26.056,
+  "maximum_prediction_abs_difference": 7.105427357601002e-15,
+  "maximum_r2_abs_difference": 8.881784197001252e-16,
+  "maximum_rmse_abs_difference": 3.3306690738754696e-16,
+  "maximum_mae_abs_difference": 3.3306690738754696e-16,
+  "metric_tolerance": 0.025
+}

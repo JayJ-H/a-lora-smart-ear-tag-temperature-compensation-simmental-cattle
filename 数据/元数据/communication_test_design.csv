@@ -1,0 +1,9 @@
+parameter,value,unit,notes
+packet_rows,4000,packets,Packet-sheet rows.
+distances,50;100;150;200;250,m,Five tested distances.
+directions,N;NE;E;SE;S;SW;W;NW,none,Eight directions per distance.
+packets_per_cell,100,packets,Packets per distance-direction cell.
+overall_pdr,0.93775,fraction,Calculated strictly from Received.
+pdr_200m,0.93875,fraction,Calculated strictly from Received at 200 m.
+pdr_250m,0.83125,fraction,Calculated strictly from Received at 250 m.
+lost_rows_with_source_sentinel,249,rows,The source sentinel 91 was moved out of RSSI/SNR and is never analyzed as a signal measurement.
