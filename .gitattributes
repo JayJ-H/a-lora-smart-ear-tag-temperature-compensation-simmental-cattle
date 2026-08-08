@@ -1,1 +1,2 @@
 # Binary source and CAD assets are committed as ordinary Git files.
+*.pdf binary
