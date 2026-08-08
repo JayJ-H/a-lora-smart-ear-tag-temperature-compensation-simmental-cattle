@@ -1,10 +1,10 @@
 {
   "name": "cattle-management-platform",
-  "version": "1.0.1",
+  "version": "1.0.0",
   "build": {
     "target": "web",
     "source": "release-source-metadata",
-    "ref": "v1.0.1",
+    "ref": "v1.0.0",
     "createdAt": "2026-07-14T00:00:00.000Z"
   },
   "hash": "de08f89db0f210f90a4f804456dbe59f6243f8c59f46365f179411645091d159",

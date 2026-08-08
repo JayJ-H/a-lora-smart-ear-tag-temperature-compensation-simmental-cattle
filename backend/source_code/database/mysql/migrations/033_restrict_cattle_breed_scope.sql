@@ -1,4 +1,4 @@
--- Restrict active cattle data to the two breeds supported by release 1.0.1.
+-- Restrict active cattle data to the two breeds supported by release 1.0.0.
 -- The migration is idempotent: aliases are normalized and all legacy values
 -- deterministically converge to the default supported breed.
 
@@ -77,6 +77,6 @@ INSERT IGNORE INTO schema_version_metadata (
   '033_restrict_cattle_breed_scope.sql',
   NULL,
   'sha256',
-  'release-1.0.1',
+  'release-1.0.0',
   'Normalized cattle species and restricted active breed data to 西门塔尔牛 and 华西牛.'
 );
