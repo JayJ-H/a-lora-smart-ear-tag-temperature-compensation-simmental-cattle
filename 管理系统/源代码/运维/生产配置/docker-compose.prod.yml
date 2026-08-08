@@ -33,8 +33,8 @@ services:
       dockerfile: 运维/生产配置/Dockerfile.api
       args:
         NODE_IMAGE: ${NODE_IMAGE:-docker.m.daocloud.io/library/node:24-alpine}
-        BUILD_VERSION: ${BUILD_VERSION:-1.0.1}
-        BUILD_REF: ${BUILD_REF:-v1.0.1}
+        BUILD_VERSION: ${BUILD_VERSION:-1.0.0}
+        BUILD_REF: ${BUILD_REF:-v1.0.0}
         BUILD_SOURCE: ${BUILD_SOURCE:-production-api}
     container_name: ${API_CONTAINER_NAME:-benniu-api}
     restart: unless-stopped
@@ -87,8 +87,8 @@ services:
       args:
         NODE_IMAGE: ${NODE_IMAGE:-docker.m.daocloud.io/library/node:24-alpine}
         NGINX_IMAGE: ${NGINX_IMAGE:-docker.m.daocloud.io/library/nginx:1.27-alpine}
-        BUILD_VERSION: ${BUILD_VERSION:-1.0.1}
-        BUILD_REF: ${BUILD_REF:-v1.0.1}
+        BUILD_VERSION: ${BUILD_VERSION:-1.0.0}
+        BUILD_REF: ${BUILD_REF:-v1.0.0}
         BUILD_SOURCE: ${BUILD_SOURCE:-production-web}
     container_name: ${WEB_CONTAINER_NAME:-benniu-web}
     restart: unless-stopped

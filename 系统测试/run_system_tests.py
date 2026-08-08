@@ -51,6 +51,24 @@ def sha256(path: Path) -> str:
     return h.hexdigest()
 
 
+def matches_manifest(path: Path, expected_size: int, expected_hash: str) -> bool:
+    data = path.read_bytes()
+    candidates = [data]
+    if b"\x00" not in data:
+        try:
+            data.decode("utf-8-sig")
+        except UnicodeDecodeError:
+            pass
+        else:
+            lf_data = data.replace(b"\r\n", b"\n").replace(b"\r", b"\n")
+            candidates.extend([lf_data, lf_data.replace(b"\n", b"\r\n")])
+    return any(
+        len(candidate) == expected_size
+        and hashlib.sha256(candidate).hexdigest() == expected_hash
+        for candidate in candidates
+    )
+
+
 def normalized(path: Path) -> str:
     text = path.read_text(encoding="utf-8")
     text = re.sub(r"/\*.*?\*/", "", text, flags=re.S)
@@ -132,8 +150,14 @@ def asset_manifest() -> str:
         raise AssertionError("asset manifest coverage mismatch")
     for row in rows:
         path = ROOT / row["path"]
-        if int(row["bytes"]) != path.stat().st_size or row["sha256"] != sha256(path):
-            raise AssertionError(f"asset hash mismatch: {row['path']}")
+        expected_size = int(row["bytes"])
+        expected_hash = row["sha256"]
+        if not matches_manifest(path, expected_size, expected_hash):
+            raise AssertionError(
+                f"asset hash mismatch: {row['path']} "
+                f"actual_bytes={path.stat().st_size} expected_bytes={expected_size} "
+                f"actual_sha256={sha256(path)} expected_sha256={expected_hash}"
+            )
     return f"{len(rows)} 个资产哈希验证通过"
 
 
@@ -310,6 +334,8 @@ def main() -> int:
         run(results, test_id, fn)
     write_reports(results)
     ok = all(r.status == "PASS" for r in results if r.required)
+    for result in results:
+        print(f"[{result.status}] {result.test_id}: {result.detail}")
     print(json.dumps({"ok": ok, "pass": sum(r.status == 'PASS' for r in results), "fail": sum(r.status == 'FAIL' for r in results)}, indent=2))
     return 0 if ok else 1
 

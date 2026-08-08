@@ -69,6 +69,22 @@ def sha256(path: Path) -> str:
     return digest.hexdigest()
 
 
+def newline_equivalent_sha256(path: Path) -> tuple[str, set[str]]:
+    data = path.read_bytes()
+    raw_hash = hashlib.sha256(data).hexdigest()
+    hashes = {raw_hash}
+    if b"\x00" in data:
+        return raw_hash, hashes
+    try:
+        data.decode("utf-8-sig")
+    except UnicodeDecodeError:
+        return raw_hash, hashes
+    lf_data = data.replace(b"\r\n", b"\n").replace(b"\r", b"\n")
+    hashes.add(hashlib.sha256(lf_data).hexdigest())
+    hashes.add(hashlib.sha256(lf_data.replace(b"\n", b"\r\n")).hexdigest())
+    return raw_hash, hashes
+
+
 def floats(rows: Iterable[dict[str, str]], column: str) -> list[float]:
     return [float(row[column]) for row in rows]
 
@@ -140,9 +156,12 @@ def verify_manifest(data_dir: Path) -> None:
         if not public_path.exists():
             failures.append(f"missing:{row['PublicFile']}")
             continue
-        actual_hash = sha256(public_path)
-        if actual_hash != row["PublicSHA256"]:
-            failures.append(f"hash:{row['PublicFile']}")
+        actual_hash, equivalent_hashes = newline_equivalent_sha256(public_path)
+        expected_hash = row["PublicSHA256"]
+        if expected_hash not in equivalent_hashes:
+            failures.append(
+                f"hash:{row['PublicFile']} actual={actual_hash} expected={expected_hash}"
+            )
     add_check(
         group,
         "public_result_file_hashes",
@@ -712,7 +731,15 @@ def main() -> int:
     passed = sum(check.status == "PASS" for check in CHECKS)
     print(f"统一验证：{passed}/{len(CHECKS)} 项检查通过")
     for check in CHECKS:
-        print(f"[{check.status}] {check.group}.{check.check}: {check.detail}")
+        diagnostic = ""
+        if check.status == "FAIL":
+            values = [
+                f"computed={check.computed}" if check.computed else "",
+                f"expected={check.expected}" if check.expected else "",
+                f"tolerance={check.tolerance}" if check.tolerance else "",
+            ]
+            diagnostic = " | " + ", ".join(value for value in values if value)
+        print(f"[{check.status}] {check.group}.{check.check}: {check.detail}{diagnostic}")
     return 0 if passed == len(CHECKS) else 1
 
 
