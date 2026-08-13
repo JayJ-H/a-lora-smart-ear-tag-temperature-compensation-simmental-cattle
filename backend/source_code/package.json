@@ -1,6 +1,6 @@
 {
-  "name": "cattle-management-platform",
-  "version": "1.0.0",
+  "name": "nzh-control-platform",
+  "version": "1.0.1",
   "type": "module",
   "engines": {
     "node": ">=20.19.0",
@@ -16,6 +16,8 @@
     "db:local": "docker compose -f database/mysql/docker-compose.local.yml up -d",
     "check:local": "node scripts/check-local-system.mjs",
     "check:prod": "node scripts/check-production-system.mjs",
+    "audit:db": "node scripts/audit-real-db-coverage.mjs",
+    "audit:relationships": "node scripts/audit-data-relationship-integrity.mjs",
     "test:acceptance": "node scripts/validate-production-acceptance.mjs",
     "test:security": "node scripts/validate-security-permissions.mjs",
     "test:traceability": "node scripts/validate-page-db-traceability.mjs",
@@ -42,6 +44,7 @@
     "lint:lint-staged": "lint-staged",
     "prepare": "husky",
     "commit": "git-cz",
+    "clean:dev": "tsx scripts/clean-dev.ts",
     "test:th-shrc-runtime": "node scripts/validate-th-shrc-exact-reference.mjs && node scripts/validate-th-shrc-runtime.mjs"
   },
   "config": {

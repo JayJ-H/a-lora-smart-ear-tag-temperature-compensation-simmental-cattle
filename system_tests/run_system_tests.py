@@ -27,7 +27,7 @@ class Result:
 def encode(device_id: int, ear: int, ambient: int) -> bytes:
     if not 51 <= device_id <= 85:
         raise ValueError("device id outside public range")
-    if not 0 <= ear <= 400 or not 0 <= ambient <= 400:
+    if not 0 <= ear <= 450 or not 0 <= ambient <= 450:
         raise ValueError("temperature code outside public range")
     packed = ((device_id - 51) << 18) | (ear << 9) | ambient
     return packed.to_bytes(3, "big")
@@ -51,24 +51,6 @@ def sha256(path: Path) -> str:
     return h.hexdigest()
 
 
-def matches_manifest(path: Path, expected_size: int, expected_hash: str) -> bool:
-    data = path.read_bytes()
-    candidates = [data]
-    if b"\x00" not in data:
-        try:
-            data.decode("utf-8-sig")
-        except UnicodeDecodeError:
-            pass
-        else:
-            lf_data = data.replace(b"\r\n", b"\n").replace(b"\r", b"\n")
-            candidates.extend([lf_data, lf_data.replace(b"\n", b"\r\n")])
-    return any(
-        len(candidate) == expected_size
-        and hashlib.sha256(candidate).hexdigest() == expected_hash
-        for candidate in candidates
-    )
-
-
 def normalized(path: Path) -> str:
     text = path.read_text(encoding="utf-8")
     text = re.sub(r"/\*.*?\*/", "", text, flags=re.S)
@@ -86,17 +68,17 @@ def run(results: list[Result], test_id: str, fn: Callable[[], str]) -> None:
 
 
 def known_vectors() -> str:
-    vectors = [(51, 0, 0, "000000"), (83, 386, 398, "83058e"), (85, 400, 400, "8b2190")]
+    vectors = [(51, 0, 0, "000000"), (83, 386, 398, "83058e"), (85, 400, 400, "8b2190"), (85, 450, 450, "8b85c2")]
     for device, ear, ambient, expected in vectors:
         if encode(device, ear, ambient).hex() != expected:
             raise AssertionError(f"vector mismatch: {device}")
         if decode(bytes.fromhex(expected)) != (device, ear, ambient):
             raise AssertionError(f"decode mismatch: {device}")
-    return "3 fixed vectors matched"
+    return "4 fixed vectors matched"
 
 
 def roundtrips() -> str:
-    values = [0, 1, 37, 123, 250, 399, 400]
+    values = [0, 1, 37, 123, 250, 400, 449, 450]
     n = 0
     for device in range(51, 86):
         for ear in values:
@@ -126,6 +108,8 @@ def firmware_boundary() -> str:
         raise AssertionError("example device ID 51 missing")
     if not re.search(r"^#define\s+WAKEUP_SEC\s+\d+\b", source, flags=re.M):
         raise AssertionError("wake interval constant missing")
+    if not re.search(r"^#define\s+TEMP_TENTHS_MAX\s+450\b", source, flags=re.M):
+        raise AssertionError("45.0 C protocol limit missing")
     required = [
         ROOT / "firmware/ear_tag/CMakeLists.txt",
         ROOT / "firmware/ear_tag/main/CMakeLists.txt",
@@ -135,6 +119,24 @@ def firmware_boundary() -> str:
     if any(not path.is_file() for path in required):
         raise AssertionError("ESP-IDF project files missing")
     return "ear-tag and gateway ESP-IDF sources and configuration constants verified"
+
+def exclusions() -> str:
+    blocked_names = {".env", ".env.prod", "sdkconfig", "minimal_tx.cpp", "minimal_rx.cpp"}
+    blocked_suffixes = {".db", ".dump", ".log", ".sqlite", ".step", ".max", ".psd"}
+    violations = []
+    for folder in ("hardware", "firmware", "backend"):
+        for path in (ROOT / folder).rglob("*"):
+            relative_parts = path.relative_to(ROOT).parts
+            manufacturing_source = "manufacturing" in relative_parts
+            blocked_type = path.suffix.lower() in blocked_suffixes
+            if manufacturing_source and path.suffix.lower() in {".max", ".step", ".stp"}:
+                blocked_type = False
+            if path.is_file() and (path.name in blocked_names or blocked_type):
+                violations.append(path.relative_to(ROOT).as_posix())
+    if violations:
+        raise AssertionError("blocked files: " + ", ".join(violations[:5]))
+    return "blocked runtime and proprietary files absent"
+
 
 def asset_manifest() -> str:
     manifest = ROOT / "system_asset_manifest.csv"
@@ -150,14 +152,8 @@ def asset_manifest() -> str:
         raise AssertionError("asset manifest coverage mismatch")
     for row in rows:
         path = ROOT / row["path"]
-        expected_size = int(row["bytes"])
-        expected_hash = row["sha256"]
-        if not matches_manifest(path, expected_size, expected_hash):
-            raise AssertionError(
-                f"asset hash mismatch: {row['path']} "
-                f"actual_bytes={path.stat().st_size} expected_bytes={expected_size} "
-                f"actual_sha256={sha256(path)} expected_sha256={expected_hash}"
-            )
+        if int(row["bytes"]) != path.stat().st_size or row["sha256"] != sha256(path):
+            raise AssertionError(f"asset hash mismatch: {row['path']}")
     return f"{len(rows)} asset hashes verified"
 
 
@@ -192,7 +188,7 @@ def backend_platform() -> str:
         "backend/source_code/scripts/mysql-backend-server.mjs",
         "backend/source_code/scripts/th-shrc-runtime.mjs",
         "backend/source_code/scripts/validate-th-shrc-runtime.mjs",
-        "backend/source_code/scripts/assets/th-shrc/runtime-model-v2-exact.json",
+        "backend/source_code/scripts/assets/th-shrc/runtime-model-v3-exact.json",
         "backend/source_code/database/mysql/init/001_init_schema.sql",
         "backend/source_code/database/mysql/init/002_event_sync_triggers.sql",
         "backend/source_code/ops/production/docker-compose.prod.yml",
@@ -209,7 +205,9 @@ def mysql_bootstrap() -> str:
     sql_files = sorted(path.name for path in init_dir.glob("*.sql"))
     expected_sql = {
         "001_init_schema.sql",
+        "001_init_schema_niushuju.sql",
         "002_event_sync_triggers.sql",
+        "002_event_sync_triggers_niushuju.sql",
     }
     if set(sql_files) != expected_sql:
         raise AssertionError(f"unexpected bootstrap SQL files: {sql_files}")
@@ -300,7 +298,9 @@ def production_template() -> str:
     caddy = (root / "ops/production/Caddyfile").read_text(encoding="utf-8")
     if "{$PUBLIC_HOST:localhost}" not in caddy:
         raise AssertionError("Caddy host is not environment-configurable")
-    return "deployment configuration verified"
+    if (root / "scripts/migrate-events-to-cow-events.mjs").exists():
+        raise AssertionError("stale event migration script remains")
+    return "public deployment templates and stale-script cleanup verified"
 
 def write_reports(results: list[Result]) -> None:
     OUTPUT.mkdir(parents=True, exist_ok=True)
@@ -321,7 +321,8 @@ def main() -> int:
         ("protocol_known_vectors", known_vectors),
         ("protocol_roundtrips", roundtrips),
         ("radio_parameter_alignment", radio_alignment),
-        ("firmware_sources", firmware_boundary),
+        ("firmware_release_boundary", firmware_boundary),
+        ("release_exclusions", exclusions),
         ("system_asset_manifest", asset_manifest),
         ("backend_reference", backend_reference),
         ("backend_platform", backend_platform),
@@ -334,8 +335,6 @@ def main() -> int:
         run(results, test_id, fn)
     write_reports(results)
     ok = all(r.status == "PASS" for r in results if r.required)
-    for result in results:
-        print(f"[{result.status}] {result.test_id}: {result.detail}")
     print(json.dumps({"ok": ok, "pass": sum(r.status == 'PASS' for r in results), "fail": sum(r.status == 'FAIL' for r in results)}, indent=2))
     return 0 if ok else 1
 

@@ -1,4 +1,7 @@
-# Fig. 8 reproduction
+# Fig. 8 provenance
 
-- Assets: individual-temperature and MQTT interface captures and editable source.
-- Panels: Fig. 8a and Fig. 8b.
+Status: `manual_only` authenticated browser capture plus Illustrator. The
+temperature-monitoring, gateway-status, and MQTT-uplink screenshots are
+retained as panel components. The capture itself is not a numerical plot
+generator and requires the management platform state used for the original
+screen capture.

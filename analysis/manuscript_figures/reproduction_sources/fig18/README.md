@@ -1,5 +1,3 @@
-# Fig. 18 reproduction
+# Fig. 18
 
-- Command: `code/reproduce_all_shap_figures.py`.
-- Input: SHAP tables in `data/`.
-- Output: standalone and composite SVG, PDF, and PNG files.
+Data, plotting code, and standalone panels are supplied here. Final Illustrator assembly is supplied.

@@ -1,2 +1,0 @@
-"Dataset","FoldMode","Model","N","CowCount","R2","RMSE","MAE","Bias","ErrorSD"
-"fixed_real_measurement_analysis_set","within_cow_random5","StrictSourceAwareMemoryFusion",503,30,0.838693273191467,0.265870393651859,0.142889077268702,0.00916723150906016,0.265976825248552

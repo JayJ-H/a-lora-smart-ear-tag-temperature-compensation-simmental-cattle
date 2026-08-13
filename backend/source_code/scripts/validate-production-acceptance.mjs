@@ -1,4 +1,4 @@
-import fs from 'node:fs'
+﻿import fs from 'node:fs'
 import path from 'node:path'
 import { createHash } from 'node:crypto'
 import * as XLSX from 'xlsx'
@@ -486,7 +486,7 @@ function writeReports(summary) {
   const mdPath = path.join(artifactDir, 'production-acceptance.md')
   fs.writeFileSync(jsonPath, JSON.stringify(summary, null, 2), 'utf8')
   const lines = [
-    '# 牛只健康管理系统生产验收报告',
+    '# 水牛畜牧管理系统生产验收报告',
     '',
     `- Base URL: ${summary.baseUrl}`,
     `- 运行时间: ${summary.generatedAt}`,
@@ -625,3 +625,4 @@ main()
     console.error(JSON.stringify({ ...summary, artifacts: paths }, null, 2))
     process.exitCode = 1
   })
+

@@ -1,4 +1,3 @@
 # Temperature alert rules
 
-The backend applies single-record thresholds for temperature review. Thresholds
-are defined in `backend/documentation/ABNORMAL_STATE_LOGIC.md`.
+The reference backend defines single-record thresholds for high-temperature review. These software thresholds are screening rules, not diagnoses. The analysis package and the backend reference are separate components.

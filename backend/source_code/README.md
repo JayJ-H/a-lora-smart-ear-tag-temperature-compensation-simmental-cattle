@@ -1,6 +1,6 @@
 # Benniu cattle health management system
 
-This directory contains the management-platform source. The application
+This directory contains the complete management-platform source. The application
 combines a Vue 3/TypeScript Web client, Node.js/Express API, MySQL, MQTT ingestion,
 and the TH-SHRC temperature-compensation runtime.
 
@@ -54,7 +54,10 @@ cp ops/production/.env.prod.example ops/production/.env.prod
 corepack pnpm run prod:up
 ```
 
-## Directories
+The public configuration uses environment-variable placeholders and contains no
+production database, live domain, or credentials.
+
+## Main directories
 
 ```text
 src/                         Vue/TypeScript Web client

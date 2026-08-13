@@ -688,7 +688,7 @@
     type ImportDryRunResult,
     type ImportProgressEvent
   } from '@/services/import-adapter'
-  import { downloadImportErrorReport, getImportAudits } from '@/services/import-records'
+  import { downloadImportErrorReport, getImportAudits } from '@/services/import-audit'
   import {
     EVENT_OPTIONS,
     getImportTemplate,

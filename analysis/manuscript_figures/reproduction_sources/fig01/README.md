@@ -1,4 +1,7 @@
-# Fig. 1 reproduction
+# Fig. 1 provenance
 
-- Assets: STEP/3ds Max models, rendered components, and vector source.
-- Editable master: `analysis/manuscript_figures/source_assets/fig01/fig01_final_editable.svg`.
+Status: `manual_only` final composition. The public trace contains the supplied
+STEP/3ds Max model sources, rendered components, and the lightweight vector
+revision. The final page is the Illustrator source in
+`../source_assets/fig01/fig01_illustrator_source.ai`; no surviving Python/R
+plot generator exists for this CAD/Illustrator figure.

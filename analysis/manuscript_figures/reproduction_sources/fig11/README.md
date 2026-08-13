@@ -1,5 +1,3 @@
-# Fig. 11 reproduction
+# Fig. 11
 
-- Project: `components/fig11_origin_project.opju`.
-- Input: `data/Fig11_true3D_plot_data.csv`.
-- Output: three-dimensional temperature-distribution figure and preview.
+`data/` supplies the 520-row Origin input. The author-editable Illustrator source is included, while the final Origin export still requires author confirmation.

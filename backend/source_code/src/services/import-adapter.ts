@@ -23,7 +23,7 @@ import {
   getTemplateDictionaryValueOptions,
   resolveTemplateDictionaryValue
 } from './import-template-dictionaries'
-import { createImportJobId, hashFile, recordImportAudit, type ImportRowError } from './import-records'
+import { createImportJobId, hashFile, recordImportAudit, type ImportRowError } from './import-audit'
 import { scheduleProductionFactRebuild } from './production-facts'
 import {
   ensureAnimalForV2Fk,

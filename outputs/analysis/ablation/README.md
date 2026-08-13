@@ -1,15 +1,22 @@
-# TH-SHRC mechanism ablation
+# Strict TH-SHRC Mechanism Ablation
 
-| Item | Value |
-|---|---:|
-| Status | PASS |
-| Rows | 503 |
-| Bootstrap replicates | 10,000 |
-| Seed | 20260723 |
-| Maximum metric difference | 7.77156117238e-16 |
-| Maximum bootstrap difference | 2.94902990916e-16 |
-| Maximum w/o-A prediction difference (C) | 9.49199829847e-10 |
-| Maximum w/o-B prediction difference (C) | 2.84430257125e-10 |
-| Maximum w/o-C prediction difference (C) | 2.21380247467e-09 |
+This analysis disables each mechanism before downstream selection and
+refitting. It is not a post-hoc deletion of one saved branch-prediction column.
 
-All configurations use the fixed same-cow outer folds.
+- A: thermal-state memory/retrieval. Disabling A removes lookup,
+  empirical-Bayes, and session-memory routes; only direct Ridge and direct
+  XGBoost routes remain.
+- B: individual/session calibration. Disabling B removes cow- and
+  session-conditioned routes; only non-cow pure thermal memory and global
+  thermal cells remain.
+- C: hierarchical residual correction. Disabling C removes the complete C
+  route and refits the final nested Ridge learner using A and B.
+
+Each configuration is rerun on five fixed outer OOF assignments. Candidate
+and Ridge choices are learned from outer-training rows, then the five complete
+OOF prediction streams are combined with the declared rowwise median rule.
+The full configuration matches the frozen prediction within 1e-10 C.
+
+The public Fig. 15 interval table uses 10,000 paired-record bootstrap
+replicates to match the Chinese GitHub plotting package. A separate robustness
+table uses 10,000 paired cow-cluster replicates to retain within-cow dependence.

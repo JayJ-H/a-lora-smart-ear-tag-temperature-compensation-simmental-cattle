@@ -88,8 +88,8 @@ function maybeFixMojibake(value) {
   const known = new Map([
     ['æ³Œä¹³', '泌乳'],
     ['æ¯', '母'],
-    ['æ‘©æ‹‰æ°´ç‰›', '西门塔尔牛'],
-    ['å°¼é‡Œæ‹‰è²æ°´ç‰›', '西门塔尔牛']
+    ['æ‘©æ‹‰æ°´ç‰›', '摩拉水牛'],
+    ['å°¼é‡Œæ‹‰è²æ°´ç‰›', '尼里拉菲水牛']
   ])
   return known.get(raw) || raw
 }
@@ -122,7 +122,7 @@ function animalToCow(row, resolveUnitName) {
     mother_number: null,
     grandfather_number: null,
     grandmother_number: null,
-    breed: maybeFixMojibake(row.breed) || '西门塔尔牛',
+    breed: maybeFixMojibake(row.breed) || '广西水牛',
     gender: maybeFixMojibake(row.sex) || '母',
     birth_date: row.birth_date || null,
     cow_type: maybeFixMojibake(row.production_purpose || row.current_stage_id) || null,
@@ -147,8 +147,8 @@ function cowToAnimal(row, resolveUnitId) {
     ear_tag_number: text(row.ear_tag_number) || null,
     electronic_tag: null,
     name: number,
-    species: '牛',
-    breed: maybeFixMojibake(row.breed) || '西门塔尔牛',
+    species: '水牛',
+    breed: maybeFixMojibake(row.breed) || '广西水牛',
     sex: maybeFixMojibake(row.gender) || '母',
     birth_date: row.birth_date || null,
     entry_date: null,

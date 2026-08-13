@@ -1,13 +1,14 @@
 test_id,status,required,detail
-protocol_known_vectors,PASS,True,3 fixed vectors matched
-protocol_roundtrips,PASS,True,1715 roundtrips matched
+protocol_known_vectors,PASS,True,4 fixed vectors matched
+protocol_roundtrips,PASS,True,2240 roundtrips matched
 radio_parameter_alignment,PASS,True,frequency bandwidth spreading factor coding rate sync preamble header and CRC agree
-firmware_sources,PASS,True,ear-tag and gateway ESP-IDF sources and configuration constants verified
-system_asset_manifest,PASS,True,562 asset hashes verified
+firmware_release_boundary,PASS,True,ear-tag and gateway ESP-IDF sources and configuration constants verified
+release_exclusions,PASS,True,blocked runtime and proprietary files absent
+system_asset_manifest,PASS,True,612 asset hashes verified
 backend_reference,PASS,True,scoped backend schema and interface files verified
 backend_platform,PASS,True,12 full-platform source entry points verified
 mysql_bootstrap,PASS,True,single cattle_management bootstrap chain verified
-node_syntax,PASS,True,Node syntax passed for 69 files
+node_syntax,PASS,True,Node syntax passed for 84 files
 th_shrc_runtime_timezone,PASS,True,TH-SHRC runtime validation passed in UTC and Asia/Shanghai
-package_script_paths,PASS,True,36 package scripts checked
-production_template,PASS,True,deployment configuration verified
+package_script_paths,PASS,True,39 package scripts checked
+production_template,PASS,True,public deployment templates and stale-script cleanup verified

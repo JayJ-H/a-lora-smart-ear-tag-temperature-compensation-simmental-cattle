@@ -1,5 +1,3 @@
-# Fig. 19 reproduction
+# Fig. 19
 
-- Input: SHAP dependence data.
-- Output: three dependence plots in SVG, PDF, and PNG formats.
-- Plotting workflow: the Fig. 18 SHAP reproduction script.
+The shared code and data entry point is in `fig18/code/`. Standalone panels are supplied here; final Illustrator assembly is supplied.

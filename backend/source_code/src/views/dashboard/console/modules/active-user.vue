@@ -81,6 +81,7 @@
       list[2].num = exitCows.toString()
       list[3].num = `${healthRate}%`
 
+      // 暂无真实月度历史时，仅展示当前月真实在群数
       chartData.value = [0, 0, 0, 0, 0, 0, 0, 0, inPenCows]
     } catch (error) {
       console.error('计算统计数据失败:', error)

@@ -1,4 +1,6 @@
-# Fig. 5 reproduction
+# Fig. 5 provenance
 
-- Assets: TH-SHRC diagram components and vector source covering the features, three branches, stack, and output.
-- Editable master: `analysis/manuscript_figures/source_assets/fig05/fig05_final_editable.svg`.
+Status: `manual_only` asset workflow. The cattle cutouts, feature-icon panel,
+and vector revision are provided. The final TH-SHRC diagram combines generated
+or edited bitmap assets with Illustrator; no pixel-equivalent Python/R script
+survives in the public work tree.

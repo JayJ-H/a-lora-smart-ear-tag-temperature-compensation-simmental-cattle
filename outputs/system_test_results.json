@@ -5,13 +5,13 @@
       "test_id": "protocol_known_vectors",
       "status": "PASS",
       "required": true,
-      "detail": "3 fixed vectors matched"
+      "detail": "4 fixed vectors matched"
     },
     {
       "test_id": "protocol_roundtrips",
       "status": "PASS",
       "required": true,
-      "detail": "1715 roundtrips matched"
+      "detail": "2240 roundtrips matched"
     },
     {
       "test_id": "radio_parameter_alignment",
@@ -20,16 +20,22 @@
       "detail": "frequency bandwidth spreading factor coding rate sync preamble header and CRC agree"
     },
     {
-      "test_id": "firmware_sources",
+      "test_id": "firmware_release_boundary",
       "status": "PASS",
       "required": true,
       "detail": "ear-tag and gateway ESP-IDF sources and configuration constants verified"
     },
     {
+      "test_id": "release_exclusions",
+      "status": "PASS",
+      "required": true,
+      "detail": "blocked runtime and proprietary files absent"
+    },
+    {
       "test_id": "system_asset_manifest",
       "status": "PASS",
       "required": true,
-      "detail": "562 asset hashes verified"
+      "detail": "612 asset hashes verified"
     },
     {
       "test_id": "backend_reference",
@@ -53,7 +59,7 @@
       "test_id": "node_syntax",
       "status": "PASS",
       "required": true,
-      "detail": "Node syntax passed for 69 files"
+      "detail": "Node syntax passed for 84 files"
     },
     {
       "test_id": "th_shrc_runtime_timezone",
@@ -65,13 +71,13 @@
       "test_id": "package_script_paths",
       "status": "PASS",
       "required": true,
-      "detail": "36 package scripts checked"
+      "detail": "39 package scripts checked"
     },
     {
       "test_id": "production_template",
       "status": "PASS",
       "required": true,
-      "detail": "deployment configuration verified"
+      "detail": "public deployment templates and stale-script cleanup verified"
     }
   ]
 }

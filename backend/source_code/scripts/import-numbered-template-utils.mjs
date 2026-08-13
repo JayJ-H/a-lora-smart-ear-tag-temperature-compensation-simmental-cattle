@@ -1,4 +1,4 @@
-import fs from 'node:fs'
+﻿import fs from 'node:fs'
 import path from 'node:path'
 import mysql from 'mysql2/promise'
 
@@ -24,10 +24,10 @@ const REQUIRED_TRANSFER_REASONS = [
 ]
 
 const REQUIRED_BREEDS = [
-  ['西门塔尔牛', '乳用', '引进'],
-  ['西门塔尔牛', '乳用', '引进'],
-  ['本地牛', '兼用', '本地'],
-  ['西门塔尔牛', '乳用', '广西']
+  ['摩拉水牛', '乳用', '引进'],
+  ['尼里-拉菲水牛', '乳用', '引进'],
+  ['本地水牛', '兼用', '本地'],
+  ['广西水牛', '乳用', '广西']
 ]
 
 const MEDICINE_ROUTE_OPTIONS = ['肌肉注射', '皮下注射', '口服', '外用', '静脉注射']
@@ -621,3 +621,4 @@ export function unresolvedSelectValue(issues, templateCode, fieldLabel, rawValue
   issues.push({ templateCode, fieldLabel, rawValue: raw, rowKey: text(rowKey) })
   return ''
 }
+

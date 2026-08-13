@@ -995,7 +995,7 @@ export interface ModelTrainingJob {
   }
 }
 
-// Health-alert interfaces
+// AI健康预警系统接口
 export interface HealthScore {
   id: string
   cowId: string

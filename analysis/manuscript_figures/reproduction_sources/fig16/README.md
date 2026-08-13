@@ -1,4 +1,3 @@
-# Fig. 16 reproduction
+# Fig. 16
 
-- Input: representative OOF trajectories, OOF predictions, and ablation tables.
-- Plotting entry point: the Fig. 15–17 plotting script.
+The shared code and data entry point is in `fig15/code/`. Standalone panels are supplied here; final Illustrator assembly is supplied.

@@ -1,4 +1,3 @@
-# Fig. 17 reproduction
+# Fig. 17
 
-- Input: relative-performance values.
-- Output: SVG, PNG, and PDF files.
+The shared code and data entry point is in `fig15/code/`. Standalone panels are supplied here; final Illustrator assembly is supplied.

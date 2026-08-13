@@ -1,4 +1,6 @@
-# Fig. 4 reproduction
+# Fig. 4 provenance
 
-- Assets: backend architecture components.
-- Editable master: `analysis/manuscript_figures/source_assets/fig04/fig04_final_editable.svg`.
+Status: `manual_only` architecture drawing. The vector and raster evidence is
+included beside the final Illustrator source. The previously mentioned
+`make_Fig4_backend_layered_architecture_final.executed.py` was not located in
+the available local files and is therefore not claimed as public code.

@@ -1,4 +1,6 @@
-# Fig. 2 reproduction
+# Fig. 2 provenance
 
-- Assets: PCB-side images, wearing photograph, operating-flow source, and vector output.
-- Editable master: `analysis/manuscript_figures/source_assets/fig02/fig02_final_editable.svg`.
+Status: `manual_only` vector assembly. PCB sides, wearing photograph, flowchart
+source, and the recovered editable SVG are retained. The historical generator
+named in old notes was not found in the local work tree, so the editable SVG,
+not an invented script, is the reproducible source boundary.

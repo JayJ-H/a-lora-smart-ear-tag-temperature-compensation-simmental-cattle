@@ -3,7 +3,7 @@ POST,/api/auth/login,User authentication,Public entry; credentials omitted
 POST,/api/auth/register,User registration,Deployment policy dependent
 GET,/api/user/info,Current user metadata,Authentication context
 GET,/api/health,Service health,No model-performance semantics
-GET,/api/version,Software/database version,Deployment version response
+GET,/api/version,Software/database version,For deployment audit
 GET,/api/system/status,System-service status,Operational endpoint
 POST,/api/db/rpc,Generic database RPC,Authentication required
 POST,/api/cow/:scope/:method,Cow-domain RPC,Authentication required

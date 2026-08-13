@@ -30,4 +30,4 @@ information-export-*.png
 ops/production/.env.prod
 reports/
 artifacts/
-.cattle-management/
+.nzh-control/

@@ -1,3 +1,6 @@
-# Fig. 9 reproduction
+# Fig. 9 provenance
 
-- Assets: system-status, gateway-control, and temperature-alert interface captures and editable source.
+Status: `manual_only` authenticated browser capture plus Illustrator. The MQTT
+uplink and abnormal-alert screenshots are retained. The historical
+`capture-fig7-native-pages.mjs` name is recorded in the manifest, but no such
+source file is present in the local work tree.

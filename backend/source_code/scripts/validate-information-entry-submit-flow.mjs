@@ -1,4 +1,4 @@
-import path from 'node:path'
+﻿import path from 'node:path'
 import { createServer } from 'vite'
 import { webcrypto } from 'node:crypto'
 
@@ -41,7 +41,7 @@ const validationCases = [
         入群原因: '购入入群',
         sex: '母',
         gender: '母',
-        breed: '西门塔尔牛',
+        breed: '摩拉水牛',
         birth_date: '2025-08-18',
         father_number: `${RUN_ID}-SIRE-EXT`,
         mother_number: `${RUN_ID}-DAM-EXT`,
@@ -469,8 +469,8 @@ async function seedCow(cow, now) {
         cow_number: cow.number,
         earTagNumber: cow.earTag,
         ear_tag_number: cow.earTag,
-        species: '牛',
-        breed: '西门塔尔牛',
+        species: '水牛',
+        breed: '摩拉水牛',
         sex: '母',
         birthDate: '2022-01-02',
         birth_date: '2022-01-02',
@@ -504,7 +504,7 @@ async function seedCow(cow, now) {
         animal_number: cow.number,
         earTagNumber: cow.earTag,
         ear_tag_number: cow.earTag,
-        breed: '西门塔尔牛',
+        breed: '摩拉水牛',
         gender: '母',
         sex: '母',
         birthDate: '2022-01-02',
@@ -1258,3 +1258,4 @@ main().catch((error) => {
   console.error(error?.stack || error?.message || String(error))
   process.exitCode = 1
 })
+

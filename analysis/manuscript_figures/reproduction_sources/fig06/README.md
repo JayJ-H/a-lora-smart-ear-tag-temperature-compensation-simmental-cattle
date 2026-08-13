@@ -1,4 +1,5 @@
-# Fig. 6 reproduction
+# Fig. 6 provenance
 
-- Assets: two field photographs.
-- Editable master: `analysis/manuscript_figures/source_assets/fig06/fig06_final_editable.svg`.
+Status: `manual_only` photograph workflow. The two source photographs are
+provided; cropping, labels, and the final two-panel export are preserved in
+the editable Illustrator source. No separate plotting generator is applicable.

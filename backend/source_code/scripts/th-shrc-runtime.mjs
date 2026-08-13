@@ -4,7 +4,7 @@ import { fileURLToPath } from 'node:url'
 
 const __filename = fileURLToPath(import.meta.url)
 const __dirname = path.dirname(__filename)
-const DEFAULT_MODEL_PATH = path.join(__dirname, 'assets', 'th-shrc', 'runtime-model-v2-exact.json')
+const DEFAULT_MODEL_PATH = path.join(__dirname, 'assets', 'th-shrc', 'runtime-model-v3-exact.json')
 
 let cachedModel = null
 

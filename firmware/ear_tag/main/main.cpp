@@ -19,7 +19,7 @@
 
 #define TAG "APP"
 
-/* ========== Configuration ========== */
+/* ========== 用户参数 ========== */
 #define WAKEUP_SEC     25
 #define ONE_WIRE_GPIO  GPIO_NUM_5
 #define DEVICE_ID      51  // Public example; configure per device
@@ -38,7 +38,7 @@
 static_assert((DEVICE_ID_MAX - DEVICE_ID_MIN) <= DEVICE_CODE_MASK,
               "DEVICE_ID range exceeds LoRa packet device-code field");
 
-/* ========== TMP117 parameters ========== */
+/* ========== TMP117 参数 ========== */
 #define TMP117_I2C_PORT       I2C_NUM_0
 #define TMP117_SDA_GPIO       GPIO_NUM_35
 #define TMP117_SCL_GPIO       GPIO_NUM_34
@@ -50,18 +50,18 @@ static_assert((DEVICE_ID_MAX - DEVICE_ID_MIN) <= DEVICE_CODE_MASK,
 
 #define LORA_BINARY_PACKET_LEN 3
 #define TEMP_TENTHS_MIN 0
-#define TEMP_TENTHS_MAX 400
+#define TEMP_TENTHS_MAX 450
 
-/* ========== RadioLib pins ========== */
+/* ========== RadioLib 引脚 ========== */
 #define LORA_SCK    GPIO_NUM_11     // SCK
 #define LORA_MISO   GPIO_NUM_10     // MISO
 #define LORA_MOSI   GPIO_NUM_9      // MOSI
 #define LORA_CS     GPIO_NUM_8      // NSS
-#define LORA_DIO0   GPIO_NUM_7      // DIO0, connected
+#define LORA_DIO0   GPIO_NUM_7      // DIO0，必须接
 #define LORA_RST    GPIO_NUM_6      // RESET
-#define LORA_DIO1   RADIOLIB_NC     // DIO1 not connected
+#define LORA_DIO1   RADIOLIB_NC     // 没接 DIO1
 
-/* ========== RadioLib instance ========== */
+/* ========== RadioLib 实例 ========== */
 static EspHal radioHal(
     LORA_SCK,
     LORA_MISO,
@@ -290,7 +290,7 @@ static bool radio_shutdown_for_deep_sleep(bool radio_ready) {
     return sleep_verified;
 }
 
-/* ========== TMP117 readout ========== */
+/* ========== TMP117 读取 ========== */
 static i2c_master_bus_handle_t tmp117_bus = NULL;
 static i2c_master_dev_handle_t tmp117_dev = NULL;
 
@@ -408,7 +408,7 @@ static void encode_lora_packet(uint8_t* out, uint8_t device_id, uint16_t temp1_t
     out[2] = (uint8_t)(packed & 0xFF);
 }
 
-/* ========== 1-Wire / M1820Z interface ========== */
+/* ========== 你的 1-Wire / M1820Z 函数（一字不改） ========== */
 static void ow_gpio_init(void) {
     gpio_config_t io_conf = {
         .pin_bit_mask = (1ULL << ONE_WIRE_GPIO),
@@ -511,9 +511,9 @@ extern "C" void app_main(void) {
     bool radio_ready = false;
     int state = RADIOLIB_ERR_UNKNOWN;
 
-    // Initialize with receiver settings to keep link parameters aligned.
+    // 按 lora14pro 接收端使用的参数初始化，确保链路参数一致
     state = radio.begin(
-        433.0,     // Frequency in MHz
+        433.0,     // 频率 MHz
         31.25,     // BW kHz
         12,        // SF=12
         7,         // CR=4/7

@@ -1,9 +1,3 @@
 # Data files
 
-- `raw_anonymized/`: 503 paired temperature records and 4,000 packet-level LoRa records;
-- `processed/`: OOF predictions, benchmark tables, mechanism inputs/results, SHAP values, and link-quality records;
-- `metadata/`: dictionaries, hashes, selection counts, and source-to-package transformations.
-
-Research tables use anonymous `CowKey` values. The core-temperature reference is
-intravaginal thermometry. Field definitions, selection counts, and source
-transformations are in `metadata/`.
+The package contains 520 paired temperature records from 30 anonymous cattle. All records use source S01 and unit weight. `AcquisitionSession` is an anonymized acquisition-session identifier (0-5) used to preserve within-session temporal ordering without exposing calendar dates. Processed outputs cover the five-seed TH-SHRC model, 33-model benchmark, strict ablation, robustness checks, and four-domain conditional SHAP.

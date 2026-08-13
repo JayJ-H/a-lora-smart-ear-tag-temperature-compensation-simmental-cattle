@@ -1,4 +1,4 @@
--- Cattle management platform database schema
+-- 水牛育种平台 v2 数据库全量结构
 -- MySQL 8 / InnoDB / utf8mb4
 
 CREATE TABLE IF NOT EXISTS animal (
@@ -7,7 +7,7 @@ CREATE TABLE IF NOT EXISTS animal (
   ear_tag_number VARCHAR(64) NULL,
   electronic_tag VARCHAR(64) NULL,
   name VARCHAR(128) NULL,
-  species VARCHAR(64) NOT NULL DEFAULT '牛',
+  species VARCHAR(64) NOT NULL DEFAULT '水牛',
   breed VARCHAR(128) NULL,
   sex VARCHAR(16) NOT NULL,
   birth_date DATE NULL,

@@ -1,8 +1,0 @@
-"Check","Status","Detail"
-"source_row_unique_S01","PASS","SourceRowID is unique within each source."
-"source_row_unique_S03","PASS","SourceRowID is unique within each source."
-"source_row_unique_S04","PASS","SourceRowID is unique within each source."
-"outer_fold_mode","PASS","Outer validation uses same-animal within_cow_random5 folds."
-"test_reference_not_used_for_features","PASS","Held-out reference temperature is restored only for scoring."
-"validation_protocol","INFO","Validation protocol: row-level same-animal OOF with fixed outer folds."
-"nearest_observable_match","INFO","Exact Ear/Air/Time training-row matches in the selected memory component: 341/503; median nearest distance=0.0000."

@@ -5,4 +5,4 @@
  * @author Art Design Pro Team
  */
 
-export {}
+export * from './links'

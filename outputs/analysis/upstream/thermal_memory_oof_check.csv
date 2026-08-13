@@ -1,7 +1,0 @@
-"Check","Status","Detail"
-"dataset_scope","PASS","Analysis rows: N=503; cattle=30."
-"outer_fold_is_held_out","PASS","Predictions correspond to outer held-out rows; no augmented or simulated rows are evaluated."
-"inner_oof_model_selection","PASS","Source-level configurations are selected by inner OOF evaluation within each outer-training split."
-"memory_predictor_uses_train_rows_only","PASS","Nearest-neighbour searches use training rows only; held-out reference temperatures are excluded from prediction inputs."
-"source_aware_weights","PASS","Separate source-level fusion weights are fitted for S01, S03, and S04 within each outer-training split."
-"training_match_context","INFO","Training-feature match counts are reported separately; exact matches=327/503."

@@ -1,8 +1,8 @@
-# ESP-IDF build-system reference: https://docs.espressif.com/projects/esp-idf/en/v5.4.2/esp32s3/api-guides/build-system.html#minimal-cmake
+# 官方文档依据：https://docs.espressif.com/projects/esp-idf/zh_CN/v5.4.2/esp32s3/api-guides/build-system.html#minimal-cmake
 cmake_minimum_required(VERSION 3.16)
 
-# Include the ESP-IDF build system.
+# 包含ESP-IDF构建系统
 include($ENV{IDF_PATH}/tools/cmake/project.cmake)
 
-# Set the project name.
+# 设置项目名称
 project(eps14pro)

@@ -7,7 +7,7 @@ import path from 'node:path'
 
 const repoRoot = process.cwd()
 const envPath = path.join(repoRoot, 'ops', 'production', '.env.prod')
-const backupDir = path.join(os.homedir(), '.cattle-management', 'secure-backups')
+const backupDir = path.join(os.homedir(), '.nzh-control', 'secure-backups')
 let mysqlContainer = process.env.MYSQL_CONTAINER_NAME || 'benniu-mysql'
 
 const secretKeys = ['MYSQL_ROOT_PASSWORD', 'MYSQL_PASSWORD', 'ADMIN_PASSWORD', 'MQTT_PASSWORD']

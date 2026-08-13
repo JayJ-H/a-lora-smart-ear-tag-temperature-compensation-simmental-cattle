@@ -3,6 +3,7 @@ node_modules
 dist
 dist-ssr
 *.local
+.cursorrules
 
 # Local environment and deployment secrets
 .env
@@ -12,7 +13,7 @@ dist-ssr
 !ops/production/.env.prod.example
 frpc.ini
 
-# Runtime, generated, and local artifacts
+# Runtime, generated, and local-agent artifacts
 reports/
 artifacts/
 .codegraph/
@@ -40,4 +41,4 @@ tmp_smart_alert_numbered.txt
 src/types/import/auto-imports.d.ts
 src/types/import/components.d.ts
 .auto-import.json
-.cattle-management/
+.nzh-control/

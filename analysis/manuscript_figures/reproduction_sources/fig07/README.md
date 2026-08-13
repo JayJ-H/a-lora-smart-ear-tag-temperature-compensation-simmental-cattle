@@ -1,4 +1,6 @@
-# Fig. 7 reproduction
+# Fig. 7 provenance
 
-- Assets: herd-monitoring and cattle-profile interface captures and editable source.
-- Panels: Fig. 7a and Fig. 7b.
+Status: `manual_only` authenticated browser capture plus Illustrator. The
+dashboard and cattle-profile screenshots are the panels assigned to Fig. 7 by
+content. The original capture manifest contained a workstation path, so the
+public `capture_manifest.json` is a sanitized relative-path record.

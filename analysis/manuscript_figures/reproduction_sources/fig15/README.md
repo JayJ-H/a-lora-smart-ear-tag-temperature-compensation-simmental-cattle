@@ -1,5 +1,3 @@
-# Fig. 15 reproduction
+# Fig. 15
 
-- Command: run `python analysis/figures/plot_fig15_17_public.py` from the repository root.
-- Input: mechanism-ablation table.
-- Output: mechanism-ablation comparison and editable vector file.
+Data, plotting code, and standalone panels are supplied here. Final Illustrator assembly is supplied.

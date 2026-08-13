@@ -99,6 +99,7 @@
         return (healthScore !== null && healthScore >= 80) || normalizeStatus(cow.status) === '健康'
       }).length
 
+      // 暂无真实历史基线时变化率保持为0
       dataList[0].num = totalCows
       dataList[0].change = '+0%'
 

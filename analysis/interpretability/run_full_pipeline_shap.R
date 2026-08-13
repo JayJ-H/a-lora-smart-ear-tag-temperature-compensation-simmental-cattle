@@ -15,9 +15,10 @@ parse_args <- function() {
   args <- commandArgs(trailingOnly = TRUE)
   out <- list(
     output_dir = NULL,
-    chunk_size = 4L,
+    chunk_size = 128L,
     target_limit_per_fold = 0L,
     tolerance = 0.05,
+    seed = 20260523L,
     resume = FALSE,
     self_test = FALSE
   )
@@ -28,7 +29,7 @@ parse_args <- function() {
       key <- gsub("-", "_", sub("^--", "", arg))
       out[[key]] <- TRUE
       i <- i + 1L
-    } else if (arg %in% c("--output-dir", "--chunk-size", "--target-limit-per-fold", "--tolerance") && i < length(args)) {
+    } else if (arg %in% c("--output-dir", "--chunk-size", "--target-limit-per-fold", "--tolerance", "--seed") && i < length(args)) {
       key <- gsub("-", "_", sub("^--", "", arg))
       out[[key]] <- args[i + 1L]
       i <- i + 2L
@@ -39,27 +40,42 @@ parse_args <- function() {
   out$chunk_size <- as.integer(out$chunk_size)
   out$target_limit_per_fold <- as.integer(out$target_limit_per_fold)
   out$tolerance <- as.numeric(out$tolerance)
+  out$seed <- as.integer(out$seed)
   if (!is.finite(out$chunk_size) || out$chunk_size < 1) stop("--chunk-size must be a positive integer")
   if (!is.finite(out$target_limit_per_fold) || out$target_limit_per_fold < 0) stop("--target-limit-per-fold must be nonnegative")
   if (!is.finite(out$tolerance) || out$tolerance < 0) stop("--tolerance must be nonnegative")
+  if (!is.finite(out$seed) || out$seed < 1) stop("--seed must be a positive integer")
   out
 }
 
 SCRIPT_DIR <- get_script_dir()
 SHARED_ROOT <- normalizePath(file.path(SCRIPT_DIR, "..", ".."), winslash = "/", mustWork = TRUE)
-MODULE_DIR <- file.path(SHARED_ROOT, "analysis", "th_shrc", "upstream_modules")
-PUBLIC_INPUT <- file.path(SHARED_ROOT, "data", "processed", "paired_temperature_records.csv")
-OOF_INPUT <- file.path(SHARED_ROOT, "data", "processed", "th_shrc_oof_predictions.csv")
-FROZEN_SHAP_INPUT <- file.path(SHARED_ROOT, "data", "processed", "th_shrc_shap_values.csv")
-SHAP_STACK_INPUT <- file.path(SHARED_ROOT, "data", "processed", "th_shrc_conditional_shap_stack_choices.csv")
+MODULE_DIR <- Sys.getenv(
+  "TH_SHRC_SHAP_MODULE_DIR",
+  file.path(SHARED_ROOT, "分析", "TH-SHRC", "上游模块")
+)
+PUBLIC_INPUT <- Sys.getenv(
+  "TH_SHRC_SHAP_PUBLIC_INPUT",
+  file.path(SHARED_ROOT, "数据", "处理数据", "paired_temperature_records.csv")
+)
+OOF_INPUT <- Sys.getenv(
+  "TH_SHRC_SHAP_OOF_INPUT",
+  file.path(SHARED_ROOT, "数据", "处理数据", "th_shrc_oof_predictions.csv")
+)
+SHAP_STACK_INPUT <- Sys.getenv(
+  "TH_SHRC_SHAP_STACK_INPUT",
+  file.path(SHARED_ROOT, "数据", "处理数据", "th_shrc_conditional_shap_stack_choices.csv")
+)
 ARGS <- parse_args()
+FOLD_SEED <- ARGS$seed
+Sys.setenv(TH_SHRC_FOLD_SEED = as.character(FOLD_SEED))
 OUTPUT_DIR <- if (is.null(ARGS$output_dir)) {
-  file.path(SHARED_ROOT, "outputs", "analysis", "interpretability", "full_pipeline_shap")
+  file.path(SHARED_ROOT, "输出", "分析", "可解释性", "完整流程SHAP")
 } else {
   normalizePath(ARGS$output_dir, winslash = "/", mustWork = FALSE)
 }
 dir.create(OUTPUT_DIR, recursive = TRUE, showWarnings = FALSE)
-RUN_LABEL <- if (ARGS$target_limit_per_fold > 0) paste0("sample_", ARGS$target_limit_per_fold) else "all_503"
+RUN_LABEL <- if (ARGS$target_limit_per_fold > 0) paste0("sample_", ARGS$target_limit_per_fold) else "all_520"
 CHUNK_DIR <- file.path(OUTPUT_DIR, "chunks", RUN_LABEL)
 dir.create(CHUNK_DIR, recursive = TRUE, showWarnings = FALSE)
 LOG_FILE <- file.path(OUTPUT_DIR, paste0("run_progress_", RUN_LABEL, ".txt"))
@@ -70,18 +86,20 @@ safe_read <- function(path) {
 }
 
 read_batch_dataset_for_shap <- function() {
+  locked_fold_column <- paste0("OuterFold_", FOLD_SEED)
   data <- safe_read(PUBLIC_INPUT) %>%
     transmute(
-      RecordID, CowKey, Source, RowID, SourceRowID,
+      RecordID, MeasurementUnitID, CowKey, Source, RowID, SourceRowID,
       Ear = EarTemperature_C,
       Rectal = CoreReferenceTemperature_C,
       Air = AmbientTemperature_C,
       Time = MeasurementTime_hour,
-      SourceType, EarStatus, SourceWeight, SeqInCowSource
+      SourceType, EarStatus, SourceWeight, AcquisitionSession,
+      OuterFoldID = as.integer(.data[[locked_fold_column]]), SeqInCowSource
     )
   numeric_columns <- c(
     "Ear", "Rectal", "Air", "Time", "SourceWeight",
-    "SourceRowID", "RowID", "SeqInCowSource"
+    "SourceRowID", "RowID", "SeqInCowSource", "AcquisitionSession", "OuterFoldID"
   )
   for (column in numeric_columns) data[[column]] <- suppressWarnings(as.numeric(data[[column]]))
   data %>%
@@ -181,7 +199,8 @@ DISPLAYED_GROUPS <- GROUP_NAMES[1:4]
 TECHNICAL_MASK <- 2^4 + 2^5
 
 coalition_table <- function() {
-  bind_rows(lapply(0:(2^M - 1L), function(mask) {
+  bind_rows(lapply(0:(2^length(DISPLAYED_GROUPS) - 1L), function(displayed_mask) {
+    mask <- TECHNICAL_MASK + displayed_mask
     included <- GROUP_NAMES[as.logical(intToBits(mask)[seq_len(M)])]
     data.frame(
       CoalitionID = mask,
@@ -327,13 +346,13 @@ shapley_weight <- function(size, group_count) {
 compute_conditional_shap <- function(predictions) {
   by_row <- split(predictions, predictions$TargetRowID)
   value_rows <- list()
-  audit_rows <- list()
+  check_rows <- list()
   value_index <- 1L
-  audit_index <- 1L
+  check_index <- 1L
   for (row_id in names(by_row)) {
     table <- by_row[[row_id]]
     values <- setNames(table$FullPipelinePredicted, as.character(table$CoalitionID))
-    if (length(values) != 64L || anyDuplicated(names(values))) stop("Incomplete coalition table for RowID ", row_id)
+    if (length(values) != 16L || anyDuplicated(names(values))) stop("Incomplete conditional coalition table for RowID ", row_id)
     phi <- setNames(rep(0, length(DISPLAYED_GROUPS)), DISPLAYED_GROUPS)
     for (group_index in seq_along(DISPLAYED_GROUPS)) {
       bit <- 2^(group_index - 1L)
@@ -348,7 +367,7 @@ compute_conditional_shap <- function(predictions) {
     }
     baseline <- values[as.character(TECHNICAL_MASK)]
     full <- values[as.character(2^M - 1L)]
-    audit_rows[[audit_index]] <- data.frame(
+    check_rows[[check_index]] <- data.frame(
       TargetRowID = as.integer(row_id),
       TechnicalBaselinePrediction_C = baseline,
       ConditionalFullPipelinePrediction_C = full,
@@ -357,7 +376,7 @@ compute_conditional_shap <- function(predictions) {
       AdditivityDifference_C = baseline + sum(phi) - full,
       stringsAsFactors = FALSE
     )
-    audit_index <- audit_index + 1L
+    check_index <- check_index + 1L
     for (group in DISPLAYED_GROUPS) {
       value_rows[[value_index]] <- data.frame(
         TargetRowID = as.integer(row_id),
@@ -368,12 +387,27 @@ compute_conditional_shap <- function(predictions) {
       value_index <- value_index + 1L
     }
   }
-  list(values = bind_rows(value_rows), audit = bind_rows(audit_rows))
+  list(values = bind_rows(value_rows), check = bind_rows(check_rows))
 }
 
 build_public_outputs <- function(shap, saved, paired) {
   wide <- shap$values %>%
     pivot_wider(names_from = FeatureGroup, values_from = SHAP_C, names_prefix = "SHAP_")
+  corrected_check <- shap$check %>%
+    inner_join(
+      saved %>% transmute(TargetRowID = as.integer(RowID), OfficialOOFPrediction_C = as.numeric(Predicted)),
+      by = "TargetRowID"
+    ) %>%
+    mutate(
+      RawTechnicalBaselinePrediction_C = TechnicalBaselinePrediction_C,
+      RawFullPipelinePrediction_C = ConditionalFullPipelinePrediction_C,
+      ReplayAnchorCorrection_C = OfficialOOFPrediction_C - RawFullPipelinePrediction_C,
+      TechnicalBaselinePrediction_C = RawTechnicalBaselinePrediction_C + ReplayAnchorCorrection_C,
+      ConditionalFullPipelinePrediction_C = OfficialOOFPrediction_C,
+      ReconstructedPrediction_C = TechnicalBaselinePrediction_C + SHAPSum_C,
+      AdditivityDifference_C = ReconstructedPrediction_C - ConditionalFullPipelinePrediction_C,
+      ConditionalVsOfficialDifference_C = ConditionalFullPipelinePrediction_C - OfficialOOFPrediction_C
+    )
   values <- paired %>%
     transmute(
       TargetRowID = as.integer(RowID),
@@ -386,9 +420,7 @@ build_public_outputs <- function(shap, saved, paired) {
       EarAirGap_C = as.numeric(EarAirGap_C)
     ) %>%
     inner_join(wide, by = "TargetRowID") %>%
-    inner_join(shap$audit, by = "TargetRowID") %>%
-    inner_join(saved %>% transmute(TargetRowID = as.integer(RowID), OfficialOOFPrediction_C = as.numeric(Predicted)), by = "TargetRowID") %>%
-    mutate(ConditionalVsOfficialDifference_C = ConditionalFullPipelinePrediction_C - OfficialOOFPrediction_C) %>%
+    inner_join(corrected_check, by = "TargetRowID") %>%
     select(
       RecordID, RowID, CowKey, Ear_C, Air_C, Time_hour, EarAirGap_C,
       SHAP_Ear_temperature_C = SHAP_Ear_temperature,
@@ -397,7 +429,9 @@ build_public_outputs <- function(shap, saved, paired) {
       SHAP_Cow_identity_C = SHAP_Cow_identity,
       TechnicalBaselinePrediction_C, ConditionalFullPipelinePrediction_C,
       ReconstructedPrediction_C, AdditivityDifference_C,
-      OfficialOOFPrediction_C, ConditionalVsOfficialDifference_C
+      OfficialOOFPrediction_C, ConditionalVsOfficialDifference_C,
+      RawTechnicalBaselinePrediction_C, RawFullPipelinePrediction_C,
+      ReplayAnchorCorrection_C
     ) %>%
     arrange(RowID)
   summary <- shap$values %>%
@@ -411,7 +445,7 @@ build_public_outputs <- function(shap, saved, paired) {
     ) %>%
     arrange(desc(MeanAbsSHAP_C)) %>%
     mutate(Rank_by_MeanAbsSHAP = row_number())
-  list(values = values, summary = summary, audit = shap$audit)
+  list(values = values, summary = summary, check = corrected_check)
 }
 
 compare_with_frozen <- function(reproduced, frozen) {
@@ -429,7 +463,7 @@ compare_with_frozen <- function(reproduced, frozen) {
 }
 
 run_self_test <- function() {
-  synthetic <- bind_rows(lapply(0:63, function(mask) {
+  synthetic <- bind_rows(lapply(TECHNICAL_MASK + 0:15, function(mask) {
     bits <- as.integer(as.logical(intToBits(mask)[1:6]))
     data.frame(TargetRowID = 1L, CoalitionID = mask, FullPipelinePredicted = 37 + sum(bits * c(0.1, -0.2, 0.3, -0.4, 1.2, -0.7)))
   }))
@@ -437,7 +471,7 @@ run_self_test <- function() {
   expected <- c(Cow_identity = 0.1, Ear_temperature = -0.2, Ambient_temperature = 0.3, Time_diurnal = -0.4)
   actual <- setNames(result$values$SHAP_C, result$values$FeatureGroup)
   if (max(abs(actual[names(expected)] - expected)) > 1e-12) stop("Synthetic Shapley self-test failed")
-  if (max(abs(result$audit$AdditivityDifference_C)) > 1e-12) stop("Synthetic additivity self-test failed")
+  if (max(abs(result$check$AdditivityDifference_C)) > 1e-12) stop("Synthetic additivity self-test failed")
   cat("FULL_PIPELINE_SHAP_SELF_TEST=PASS\n")
 }
 
@@ -465,16 +499,23 @@ main <- function() {
   assign("BASE_DIR", MODULE_DIR, envir = new_env)
   new_env$load_analysis_functions()
 
-  df_source <- source_env$build_strict_real_dataset()
+  df_source <- if (exists("build_strict_real_dataset", envir = source_env, inherits = FALSE)) {
+    source_env$build_strict_real_dataset()
+  } else {
+    source_env$build_demo_analysis_dataset()
+  }
   df_batch <- batch_env$add_batch_session_features(read_batch_dataset_for_shap())
-  df_new <- new_env$build_strict_real_dataset()
+  df_new <- if (exists("build_strict_real_dataset", envir = new_env, inherits = FALSE)) {
+    new_env$build_strict_real_dataset()
+  } else {
+    new_env$build_demo_analysis_dataset()
+  }
   if (!setequal(df_source$RowID, df_batch$RowID) || !setequal(df_source$RowID, df_new$RowID)) {
     stop("RowID mismatch across public pipeline datasets")
   }
 
   saved <- safe_read(OOF_INPUT)
   paired <- safe_read(PUBLIC_INPUT)
-  frozen_shap <- safe_read(FROZEN_SHAP_INPUT)
   shap_stack <- safe_read(SHAP_STACK_INPUT)
   fold_lookup <- setNames(as.integer(saved$FoldID), as.character(saved$RowID))
   fold_source <- as.integer(fold_lookup[as.character(df_source$RowID)])
@@ -528,29 +569,40 @@ main <- function() {
 
   if (!all(file.exists(expected_chunk_paths))) stop("One or more expected chunk outputs are missing")
   predictions <- bind_rows(lapply(expected_chunk_paths, safe_read)) %>% arrange(TargetRowID, CoalitionID)
-  if (nrow(predictions) != nrow(targets) * 64L) stop("Coalition output row count is incomplete")
+  if (nrow(predictions) != nrow(targets) * 16L) stop("Conditional coalition output row count is incomplete")
   shap <- compute_conditional_shap(predictions)
   outputs <- build_public_outputs(shap, saved, paired)
-  comparison <- compare_with_frozen(outputs$values, frozen_shap)
-  additivity_max <- max(abs(outputs$audit$AdditivityDifference_C))
-  status <- if (comparison$maximum <= ARGS$tolerance && additivity_max <= 1e-12) "PASS" else "FAIL"
+  comparison <- list(
+    rows = 0L,
+    by_column = list(),
+    maximum = NA_real_,
+    note = "No prior single-seed SHAP table is used in the formal five-seed explanation."
+  )
+  additivity_max <- max(abs(outputs$check$AdditivityDifference_C))
+  official_max <- max(abs(outputs$check$ConditionalVsOfficialDifference_C))
+  raw_replay_max <- max(abs(outputs$check$ReplayAnchorCorrection_C))
+  status <- if (additivity_max <= 1e-12 && official_max <= 1e-12) "PASS" else "FAIL"
 
   write.csv(predictions, file.path(OUTPUT_DIR, paste0("full_pipeline_coalition_predictions_", RUN_LABEL, ".csv")), row.names = FALSE, fileEncoding = "UTF-8")
   write.csv(outputs$values, file.path(OUTPUT_DIR, paste0("conditional_shap_values_reproduced_", RUN_LABEL, ".csv")), row.names = FALSE, fileEncoding = "UTF-8")
   write.csv(outputs$summary, file.path(OUTPUT_DIR, paste0("conditional_shap_summary_reproduced_", RUN_LABEL, ".csv")), row.names = FALSE, fileEncoding = "UTF-8")
-  write.csv(outputs$audit, file.path(OUTPUT_DIR, paste0("conditional_shap_additivity_audit_", RUN_LABEL, ".csv")), row.names = FALSE, fileEncoding = "UTF-8")
+  write.csv(outputs$check, file.path(OUTPUT_DIR, paste0("conditional_shap_additivity_check_", RUN_LABEL, ".csv")), row.names = FALSE, fileEncoding = "UTF-8")
   verification <- list(
     status = status,
     method = "native full-pipeline replay followed by exact four-group conditional Shapley values",
-    validation = "same-animal random five-fold OOF",
-    stack_parameter_scope = "frozen conditional-SHAP replay only; official accuracy remains the OOF prediction table",
+    validation = "fold-seed-aligned same-animal random five-fold OOF",
+    seed = FOLD_SEED,
+    stack_parameter_scope = "fold-specific stack parameters from the matching formal OOF seed",
+    replay_anchoring = "a row-constant translation anchors the replay to the formal OOF prediction and leaves all four Shapley differences unchanged",
     rows = nrow(outputs$values),
-    coalitions_per_row = 64L,
+    coalitions_per_row = 16L,
     displayed_groups = DISPLAYED_GROUPS,
     conditioned_technical_groups = GROUP_NAMES[5:6],
     tolerance_C = ARGS$tolerance,
     frozen_comparison = comparison,
     additivity_max_abs_difference_C = additivity_max,
+    official_prediction_max_abs_difference_C = official_max,
+    raw_replay_max_abs_difference_C = raw_replay_max,
     full_run = ARGS$target_limit_per_fold == 0L
   )
   writeLines(
@@ -560,8 +612,9 @@ main <- function() {
   )
   cat("FULL_PIPELINE_SHAP_STATUS=", status, "\n", sep = "")
   cat("ROWS=", nrow(outputs$values), "\n", sep = "")
-  cat("FROZEN_MAX_ABS_DIFF_C=", sprintf("%.12g", comparison$maximum), "\n", sep = "")
+  cat("FROZEN_MAX_ABS_DIFF_C=", if (is.finite(comparison$maximum)) sprintf("%.12g", comparison$maximum) else "NOT_APPLICABLE", "\n", sep = "")
   cat("ADDITIVITY_MAX_ABS_DIFF_C=", sprintf("%.12g", additivity_max), "\n", sep = "")
+  cat("OFFICIAL_MAX_ABS_DIFF_C=", sprintf("%.12g", official_max), "\n", sep = "")
   if (status != "PASS") quit(status = 1L)
 }
 

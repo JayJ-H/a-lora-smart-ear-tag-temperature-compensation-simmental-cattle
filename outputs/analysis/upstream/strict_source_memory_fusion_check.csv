@@ -1,7 +1,0 @@
-"Check","Status","Detail"
-"dataset_scope","PASS","Loaded the fixed public real-measurement analysis set: N=503, cows=30."
-"outer_fold_is_held_out","PASS","Every reported prediction is for an original outer held-out row; no augmented or simulated rows are evaluated."
-"inner_oof_model_selection","PASS","For each outer fold, source-level alpha/config choices are selected from inner OOF predictions generated only inside the outer-training rows."
-"memory_predictor_uses_train_rows_only","PASS","Nearest-neighbour memory predictions search only the current training split; the outer test Rectal value is never read."
-"source_aware_weights","PASS","The method learns separate per-source MetaFusion-versus-memory weights for S01, S03, and S04 inside each outer-training fold."
-"training_match_context","INFO","Training-feature match counts are reported in the accompanying prediction table."

@@ -130,7 +130,7 @@
   import { ElMessage, ElMessageBox, type FormInstance, type FormRules } from 'element-plus'
   import { useUserStore } from '@/store/modules/user'
   import { mittBus } from '@/utils/sys'
-  import defaultAvatar from '@/assets/images/user/avatar-cattle.svg'
+  import defaultAvatar from '@/assets/images/user/avatar-buffalo.svg'
   import { changePassword } from '@/api/account'
   import { HOME_PAGE_PATH } from '@/router'
 

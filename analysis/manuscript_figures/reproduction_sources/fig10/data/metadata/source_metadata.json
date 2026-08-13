@@ -1,7 +1,7 @@
 {
   "package_name": "LoRa_Fig10_bcd_reproducibility_package",
   "created_utc": "2026-07-22T14:47:39.478427+00:00",
-  "source_workbook": "data/SAT_RSSI_SNR.xlsx",
+  "source_workbook": "数据/SAT_RSSI_SNR.xlsx",
   "source_workbook_preserved_unchanged": true,
   "source_sheets": {
     "CN_S6_RSSI原始4000行": {
@@ -89,6 +89,7 @@
     "Packet delivery ratio is calculated as received packets divided by transmitted packets.",
     "The PDR error bars in panel b are 95% confidence intervals across the eight direction-level PDR values at each distance.",
     "The workbook records the test date as 2026-01-01.",
+    "The workbook summary records transmit power as '22db'; the manuscript currently states 20 dBm. This discrepancy must be resolved before publication.",
     "Rows marked 是否接收=否 are excluded from RSSI and SNR calculations."
   ]
 }
