@@ -1,0 +1,32 @@
+{
+  "status": "PASS",
+  "scenario": "all_measured_520",
+  "validation": "measurement-unit-grouped same-animal five-fold OOF",
+  "input_rows": 520,
+  "input_cows": 30,
+  "measurement_units": 520,
+  "analysis_rows": 520,
+  "analysis_cows": 30,
+  "folds": [
+    1,
+    2,
+    3,
+    4,
+    5
+  ],
+  "minimum_records_setting": 7,
+  "fold_seed": 20260701,
+  "input_sha256": "deb5a59c823c9594324522b4bb61814ec43874a459a5e3614a87760713e5a2d2",
+  "metrics": {
+    "N": 520,
+    "CowCount": 30,
+    "R2": 0.8499401556845451,
+    "RMSE": 0.2954777552329774,
+    "MAE": 0.1675958967011845,
+    "Bias": 0.000759746917591628,
+    "ErrorSD": 0.29576130120420746,
+    "AbsoluteErrorLE0_5": 0.9211538461538461
+  },
+  "elapsed_seconds": 211.703,
+  "rscript": "Rscript.exe"
+}

@@ -1,0 +1,88 @@
+[model 1/26] MeanTrain
+[model 2/26] EarOnlyLinear
+[model 3/26] MultipleLinear
+[model 4/26] Ridge
+[model 5/26] Lasso
+[model 6/26] ElasticNet
+[model 7/26] BayesianRidge
+[model 8/26] HuberRegressor
+[model 9/26] PolynomialRidge
+[model 10/26] SplineRidge_GAMLike
+[model 11/26] SGD_Huber
+[model 12/26] KNN_k5
+[model 13/26] SVR_RBF
+[model 14/26] LinearSVR
+[model 15/26] KernelRidge_RBF
+[model 16/26] DecisionTree
+[model 17/26] RandomForest
+[model 18/26] ExtraTrees
+[model 19/26] BaggedTree
+[model 20/26] AdaBoostTree
+[model 21/26] GradientBoosting
+[model 22/26] HistGradientBoosting
+[model 23/26] MLP
+[model 24/26] GaussianProcess_RBF
+[model 25/26] XGBoost
+[model 26/26] LightGBM
+[evolution model 1/6] GA_SVR_RBF
+[evolution] GA_SVR_RBF fold 1: inner_rmse=0.3990 evals=32 params={"C": 3.782739, "epsilon": 0.0296, "gamma": 0.06156913}
+[evolution] GA_SVR_RBF fold 2: inner_rmse=0.3975 evals=32 params={"C": 2.994318, "epsilon": 0.1401, "gamma": 0.04765537}
+[evolution] GA_SVR_RBF fold 3: inner_rmse=0.3909 evals=32 params={"C": 16.386034, "epsilon": 0.1636, "gamma": 0.01529529}
+[evolution] GA_SVR_RBF fold 4: inner_rmse=0.3844 evals=32 params={"C": 59.125533, "epsilon": 0.0864, "gamma": 0.00986575}
+[evolution] GA_SVR_RBF fold 5: inner_rmse=0.3673 evals=32 params={"C": 19.382426, "epsilon": 0.01, "gamma": 0.02357539}
+[evolution model 2/6] PSO_RandomForest
+[evolution] PSO_RandomForest fold 1: inner_rmse=0.4310 evals=32 params={"max_depth": 11, "max_features": 0.395, "min_samples_leaf": 1, "n_estimators": 60}
+[evolution] PSO_RandomForest fold 2: inner_rmse=0.4257 evals=36 params={"max_depth": 11, "max_features": 0.9, "min_samples_leaf": 1, "n_estimators": 100}
+[evolution] PSO_RandomForest fold 3: inner_rmse=0.4332 evals=35 params={"max_depth": 16, "max_features": 0.677, "min_samples_leaf": 1, "n_estimators": 60}
+[evolution] PSO_RandomForest fold 4: inner_rmse=0.4527 evals=36 params={"max_depth": 11, "max_features": 0.517, "min_samples_leaf": 3, "n_estimators": 220}
+[evolution] PSO_RandomForest fold 5: inner_rmse=0.4125 evals=28 params={"max_depth": 16, "max_features": 0.35, "min_samples_leaf": 1, "n_estimators": 170}
+[evolution model 3/6] DE_GradientBoosting
+[evolution] DE_GradientBoosting fold 1: inner_rmse=0.4195 evals=60 params={"learning_rate": 0.186976, "max_depth": 2, "min_samples_leaf": 1, "n_estimators": 100, "subsample": 0.992}
+[evolution] DE_GradientBoosting fold 2: inner_rmse=0.4014 evals=60 params={"learning_rate": 0.135905, "max_depth": 4, "min_samples_leaf": 5, "n_estimators": 150, "subsample": 0.999}
+[evolution] DE_GradientBoosting fold 3: inner_rmse=0.4183 evals=60 params={"learning_rate": 0.09417, "max_depth": 3, "min_samples_leaf": 1, "n_estimators": 140, "subsample": 0.93}
+[evolution] DE_GradientBoosting fold 4: inner_rmse=0.4166 evals=60 params={"learning_rate": 0.060793, "max_depth": 4, "min_samples_leaf": 2, "n_estimators": 180, "subsample": 0.813}
+[evolution] DE_GradientBoosting fold 5: inner_rmse=0.3921 evals=60 params={"learning_rate": 0.102764, "max_depth": 3, "min_samples_leaf": 3, "n_estimators": 180, "subsample": 0.95}
+[evolution model 4/6] SA_KNN
+[evolution] SA_KNN fold 1: inner_rmse=0.5640 evals=17 params={"n_neighbors": 8, "p": 2, "weights": "uniform"}
+[evolution] SA_KNN fold 2: inner_rmse=0.5027 evals=18 params={"n_neighbors": 16, "p": 1, "weights": "distance"}
+[evolution] SA_KNN fold 3: inner_rmse=0.4692 evals=24 params={"n_neighbors": 7, "p": 1, "weights": "distance"}
+[evolution] SA_KNN fold 4: inner_rmse=0.5060 evals=25 params={"n_neighbors": 7, "p": 1, "weights": "uniform"}
+[evolution] SA_KNN fold 5: inner_rmse=0.4984 evals=17 params={"n_neighbors": 9, "p": 1, "weights": "uniform"}
+[evolution model 5/6] GWO_ExtraTrees
+[evolution] GWO_ExtraTrees fold 1: inner_rmse=0.4222 evals=31 params={"max_depth": 15, "max_features": 0.44, "min_samples_leaf": 3, "n_estimators": 170}
+[evolution] GWO_ExtraTrees fold 2: inner_rmse=0.4111 evals=31 params={"max_depth": 13, "max_features": 0.429, "min_samples_leaf": 3, "n_estimators": 160}
+[evolution] GWO_ExtraTrees fold 3: inner_rmse=0.4101 evals=31 params={"max_depth": 15, "max_features": 0.756, "min_samples_leaf": 3, "n_estimators": 70}
+[evolution] GWO_ExtraTrees fold 4: inner_rmse=0.4388 evals=31 params={"max_depth": 9, "max_features": 0.479, "min_samples_leaf": 3, "n_estimators": 200}
+[evolution] GWO_ExtraTrees fold 5: inner_rmse=0.3903 evals=31 params={"max_depth": 14, "max_features": 0.502, "min_samples_leaf": 2, "n_estimators": 170}
+[evolution model 6/6] DE_XGBoost
+[evolution] DE_XGBoost fold 1: inner_rmse=0.4201 evals=54 params={"colsample_bytree": 0.689, "learning_rate": 0.184378, "max_depth": 3, "n_estimators": 170, "reg_lambda": 4.164, "subsample": 0.98}
+[evolution] DE_XGBoost fold 2: inner_rmse=0.3996 evals=54 params={"colsample_bytree": 0.574, "learning_rate": 0.065522, "max_depth": 5, "n_estimators": 240, "reg_lambda": 2.196, "subsample": 0.872}
+[evolution] DE_XGBoost fold 3: inner_rmse=0.4163 evals=54 params={"colsample_bytree": 0.841, "learning_rate": 0.104451, "max_depth": 3, "n_estimators": 150, "reg_lambda": 0.896, "subsample": 0.916}
+[evolution] DE_XGBoost fold 4: inner_rmse=0.4185 evals=54 params={"colsample_bytree": 0.778, "learning_rate": 0.114066, "max_depth": 4, "n_estimators": 230, "reg_lambda": 1.831, "subsample": 0.989}
+[evolution] DE_XGBoost fold 5: inner_rmse=0.3904 evals=54 params={"colsample_bytree": 0.601, "learning_rate": 0.127389, "max_depth": 4, "n_estimators": 160, "reg_lambda": 0.356, "subsample": 0.98}
+Wrote outputs/analysis/benchmark33\seeds\20260523\tables\14_full_model_benchmark_summary.csv
+Wrote outputs/analysis/benchmark33\seeds\20260523\tables\14_full_model_benchmark_fold_metrics.csv
+Wrote outputs/analysis/benchmark33\seeds\20260523\tables\14_full_model_benchmark_predictions.csv
+Wrote outputs/analysis/benchmark33\seeds\20260523\tables\14_full_model_benchmark_model_inventory.csv
+Wrote outputs/analysis/benchmark33\seeds\20260523\tables\14_evolutionary_search_choices.csv
+Wrote outputs/analysis/benchmark33\seeds\20260523\tables\15_model_metrics_by_data_class.csv
+Wrote outputs/analysis/benchmark33\seeds\20260523\benchmark_reproduction_report.md
+Wrote outputs/analysis/benchmark33\seeds\20260523\benchmark_verification.json
+Wrote outputs/analysis/benchmark33\seeds\20260523\runtime_environment.json
+              Model            BenchmarkGroup       R2     RMSE      MAE
+            TH-SHRC  proposed_model_reference 0.836993 0.307961 0.172421
+         GA_SVR_RBF evolutionary_optimized_ml 0.757456 0.375654 0.238439
+            SVR_RBF           conventional_ml 0.744675 0.385424 0.242404
+    PolynomialRidge           linear_baseline 0.738117 0.390343 0.258568
+     MultipleLinear           linear_baseline 0.732063 0.394829 0.259484
+     GWO_ExtraTrees evolutionary_optimized_ml 0.731052 0.395573 0.254337
+         DE_XGBoost evolutionary_optimized_ml 0.730221 0.396184 0.259372
+         ElasticNet           linear_baseline 0.729222 0.396917 0.262628
+              Ridge           linear_baseline 0.729213 0.396923 0.264029
+      BayesianRidge           linear_baseline 0.729190 0.396940 0.264024
+SplineRidge_GAMLike           linear_baseline 0.727991 0.397818 0.274220
+              Lasso           linear_baseline 0.726877 0.398631 0.264658
+           LightGBM           conventional_ml 0.726288 0.399061 0.273893
+DE_GradientBoosting evolutionary_optimized_ml 0.724414 0.400425 0.271030
+         ExtraTrees           conventional_ml 0.721562 0.402491 0.246351
+BENCHMARK_STATUS=PASS

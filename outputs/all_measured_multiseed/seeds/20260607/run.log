@@ -1,0 +1,152 @@
+
+=== run_memory_calibration_oof.R ===
+# A tibble: 2 x 9
+  Scope  Source     N CowCount    R2  RMSE   MAE    Bias ErrorSD
+  <chr>  <chr>  <int>    <int> <dbl> <dbl> <dbl>   <dbl>   <dbl>
+1 ALL    ALL      520       30 0.828 0.316 0.193 -0.0166   0.316
+2 SOURCE S01      520       30 0.828 0.316 0.193 -0.0166   0.316
+# A tibble: 5 x 7
+  FoldID Source     N    R2  RMSE   MAE    Bias
+   <int> <chr>  <int> <dbl> <dbl> <dbl>   <dbl>
+1      1 ALL      123 0.854 0.282 0.184 -0.0265
+2      2 ALL      114 0.757 0.374 0.199  0.0377
+3      3 ALL      100 0.799 0.345 0.228 -0.0983
+4      4 ALL       99 0.867 0.275 0.180 -0.0239
+5      5 ALL       84 0.870 0.287 0.171  0.0301
+# A tibble: 6 x 3
+  Check                              Status Detail                              
+  <chr>                              <chr>  <chr>                               
+1 dataset_scope                      PASS   Analysis rows: N=520; cattle=30.    
+2 same_outer_fold_for_two_components PASS   Thermal-memory and individual/sessi~
+3 fixed_component_weight             PASS   The component average is fixed at 0~
+4 component_fold_separation          PASS   Each component uses outer-training ~
+5 training_match_context             INFO   Exact training-feature matches: the~
+6 validation_scope                   INFO   Validation protocol: row-level with~
+During startup - Warning messages:
+1: Setting LC_COLLATE=C.UTF-8 failed 
+2: Setting LC_CTYPE=C.UTF-8 failed 
+3: Setting LC_MONETARY=C.UTF-8 failed 
+4: Setting LC_TIME=C.UTF-8 failed 
+memory/calibration average OOF fold 1/5
+bounded meta-fusion predictions in fold 4: 1/71 to outer-training response range [37.5, 40.8]
+individual/session calibration OOF fold 1
+memory/calibration average OOF fold 2/5
+bounded meta-fusion predictions in fold 1: 1/90 to outer-training response range [37.5, 40.8]
+individual/session calibration OOF fold 2
+memory/calibration average OOF fold 3/5
+bounded meta-fusion predictions in fold 3: 1/90 to outer-training response range [37.5, 41.5]
+individual/session calibration OOF fold 3
+memory/calibration average OOF fold 4/5
+bounded meta-fusion predictions in fold 1: 1/90 to outer-training response range [37.5, 41.5]
+bounded meta-fusion predictions in fold 3: 1/90 to outer-training response range [37.5, 41.5]
+bounded meta-fusion predictions in fold 4: 1/83 to outer-training response range [37.5, 40.7]
+individual/session calibration OOF fold 4
+memory/calibration average OOF fold 5/5
+bounded meta-fusion predictions in fold 5: 2/84 to outer-training response range [37.5, 41.5]
+bounded meta-fusion predictions in fold 3: 1/90 to outer-training response range [37.5, 41.2]
+individual/session calibration OOF fold 5
+There were 50 or more warnings (use warnings() to see the first 50)
+
+returncode=0 elapsed_seconds=124.547
+
+=== run_hierarchical_residual_oof.R ===
+# A tibble: 1 x 10
+  Dataset        FoldMode Model     N CowCount    R2  RMSE   MAE    Bias ErrorSD
+  <chr>          <chr>    <chr> <int>    <int> <dbl> <dbl> <dbl>   <dbl>   <dbl>
+1 all_measured_~ within_~ Stri~   520       30 0.844 0.301 0.173 -0.0151   0.301
+# A tibble: 1 x 9
+  Source Model                      N CowCount    R2  RMSE   MAE    Bias ErrorSD
+  <chr>  <chr>                  <int>    <int> <dbl> <dbl> <dbl>   <dbl>   <dbl>
+1 S01    StrictHierarchicalEBR~   520       30 0.844 0.301 0.173 -0.0151   0.301
+# A tibble: 5 x 8
+  FoldID Model                           Source     N    R2  RMSE   MAE     Bias
+   <int> <chr>                           <chr>  <int> <dbl> <dbl> <dbl>    <dbl>
+1      1 StrictHierarchicalEBResidualXGB ALL      123 0.871 0.265 0.156 -0.0135 
+2      2 StrictHierarchicalEBResidualXGB ALL      114 0.790 0.348 0.182  0.0390 
+3      3 StrictHierarchicalEBResidualXGB ALL      100 0.818 0.328 0.193 -0.0881 
+4      4 StrictHierarchicalEBResidualXGB ALL       99 0.898 0.242 0.162 -0.0221 
+5      5 StrictHierarchicalEBResidualXGB ALL       84 0.845 0.313 0.176  0.00415
+                    FoldID Source SelectionRegime
+choice$weights...1       1    S01     stable_cool
+choice$weights...2       1    S01      stable_hot
+choice$weights...3       2    S01     stable_cool
+choice$weights...4       2    S01      stable_hot
+choice$weights...5       3    S01     stable_cool
+choice$weights...6       3    S01      stable_hot
+choice$weights...7       4    S01     stable_cool
+choice$weights...8       4    S01      stable_hot
+choice$weights...9       5    S01     stable_cool
+choice$weights...10      5    S01      stable_hot
+                                                   ChosenModel InnerOOF_RMSE
+choice$weights...1     may_session_hour+eb_exact+tight_session     0.3142430
+choice$weights...2        tight_session+may_session+direct_xgb     0.3543938
+choice$weights...3   may_session_hour+direct_xgb+tight_session     0.2751565
+choice$weights...4        tight_session+may_session+direct_xgb     0.3500415
+choice$weights...5   may_session_hour+direct_xgb+tight_session     0.2949923
+choice$weights...6             tight_session+may_session+ridge     0.2990241
+choice$weights...7   may_session_hour+direct_xgb+tight_session     0.3041820
+choice$weights...8  tight_session+may_session+may_session_hour     0.3524981
+choice$weights...9        may_session_hour+eb_exact+direct_xgb     0.3131137
+choice$weights...10                              tight_session     0.3051780
+                    InnerOOF_N eb_exact eb_medium eb_coarse global_exact
+choice$weights...1         218      0.0         0         0            0
+choice$weights...2         179      0.0         0         0            0
+choice$weights...3         225      0.0         0         0            0
+choice$weights...4         181      0.0         0         0            0
+choice$weights...5         237      0.0         0         0            0
+choice$weights...6         183      0.0         0         0            0
+choice$weights...7         234      0.0         0         0            0
+choice$weights...8         187      0.0         0         0            0
+choice$weights...9         246      0.1         0         0            0
+choice$weights...10        190      0.0         0         0            0
+                    global_medium global_coarse may_session may_session_hour
+choice$weights...1              0             0        0.00             0.65
+choice$weights...2              0             0        0.10             0.00
+choice$weights...3              0             0        0.00             0.65
+choice$weights...4              0             0        0.05             0.00
+choice$weights...5              0             0        0.00             0.65
+choice$weights...6              0             0        0.00             0.00
+choice$weights...7              0             0        0.00             0.75
+choice$weights...8              0             0        0.25             0.05
+choice$weights...9              0             0        0.00             0.80
+choice$weights...10             0             0        0.00             0.00
+                    tight_session ridge xgb_residual direct_xgb
+choice$weights...1           0.35  0.00            0       0.00
+choice$weights...2           0.75  0.00            0       0.15
+choice$weights...3           0.25  0.00            0       0.10
+choice$weights...4           0.75  0.00            0       0.20
+choice$weights...5           0.30  0.00            0       0.05
+choice$weights...6           0.85  0.15            0       0.00
+choice$weights...7           0.25  0.00            0       0.00
+choice$weights...8           0.70  0.00            0       0.00
+choice$weights...9           0.00  0.00            0       0.10
+choice$weights...10          1.00  0.00            0       0.00
+                          Check Status
+1                 dataset_scope   PASS
+2      row_level_within_cow_oof   PASS
+3 no_test_reference_in_features   PASS
+4           inner_oof_selection   PASS
+5          algorithm_difference   PASS
+6                output_metrics   PASS
+                                                                                                                                        Detail
+1                                                                  Analysis rows after numeric and minimum-record filtering: N=520; cattle=30.
+2                                                                              Each outer-fold prediction is fitted from the other four folds.
+3 Reference-temperature group statistics and residual targets are recomputed within each split; held-out references are used only for scoring.
+4                Observable thermal-regime model and weight choices are selected by five-fold inner OOF evaluation within outer-training rows.
+5         Hierarchical empirical-Bayes cells, residual XGBoost, and ridge candidates are evaluated independently of the thermal-memory branch.
+6                                                                                                    R2=0.843897; RMSE=0.301369; MAE=0.173197.
+During startup - Warning messages:
+1: Setting LC_COLLATE=C.UTF-8 failed 
+2: Setting LC_CTYPE=C.UTF-8 failed 
+3: Setting LC_MONETARY=C.UTF-8 failed 
+4: Setting LC_TIME=C.UTF-8 failed 
+hierarchical residual outer fold 1/5
+hierarchical residual outer fold 2/5
+hierarchical residual outer fold 3/5
+hierarchical residual outer fold 4/5
+hierarchical residual outer fold 5/5
+Warning message:
+Use of .data in tidyselect expressions was deprecated in tidyselect 1.2.0.
+i Please use `all_of(var)` (or `any_of(var)`) instead of `.data[[var]]` 
+
+returncode=0 elapsed_seconds=87.156
