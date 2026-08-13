@@ -1,0 +1,30 @@
+{
+  "input_sha256": "deb5a59c823c9594324522b4bb61814ec43874a459a5e3614a87760713e5a2d2",
+  "runs": [
+    {
+      "seed": 20260523,
+      "status": "PASS",
+      "output": "outputs/all_measured_multiseed/seeds/20260523"
+    },
+    {
+      "seed": 20260607,
+      "status": "PASS",
+      "output": "outputs/all_measured_multiseed/seeds/20260607"
+    },
+    {
+      "seed": 20260701,
+      "status": "PASS",
+      "output": "outputs/all_measured_multiseed/seeds/20260701"
+    },
+    {
+      "seed": 20260811,
+      "status": "PASS",
+      "output": "outputs/all_measured_multiseed/seeds/20260811"
+    },
+    {
+      "seed": 20260903,
+      "status": "PASS",
+      "output": "outputs/all_measured_multiseed/seeds/20260903"
+    }
+  ]
+}

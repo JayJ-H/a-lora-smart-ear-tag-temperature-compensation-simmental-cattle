@@ -1,0 +1,35 @@
+{
+  "status": "PASS",
+  "method": "exact four-domain conditional Shapley replay per seed with formal rowwise-median seed selection",
+  "seed_ensemble": "rowwise_median",
+  "seeds": [
+    20260523,
+    20260607,
+    20260701,
+    20260811,
+    20260903
+  ],
+  "rows": 520,
+  "seed_level_rows": 2600,
+  "groups": [
+    "Ear_temperature",
+    "Ambient_temperature",
+    "Time_diurnal",
+    "Cow_identity"
+  ],
+  "coalitions_per_row_per_seed": 16,
+  "max_median_selection_difference_C": 0.0,
+  "max_official_prediction_difference_C": 0.0,
+  "max_additivity_difference_C": 6.394884621840902e-14,
+  "checks": {
+    "five_seed_runs_pass": true,
+    "seed_value_coverage": true,
+    "four_domain_coverage": true,
+    "median_selection_coverage": true,
+    "formal_value_coverage": true,
+    "selected_seed_prediction_is_formal_median": true,
+    "formal_prediction_identity": true,
+    "formal_conditional_additivity": true
+  },
+  "runs": []
+}

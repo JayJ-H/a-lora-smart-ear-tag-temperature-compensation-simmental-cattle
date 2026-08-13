@@ -1,0 +1,11 @@
+"FoldID","Source","SelectionRegime","ChosenModel","InnerOOF_RMSE","InnerOOF_N","eb_exact","eb_medium","eb_coarse","global_exact","global_medium","global_coarse","may_session","may_session_hour","tight_session","ridge","xgb_residual","direct_xgb"
+1,"S01","stable_cool","may_session_hour+eb_exact+may_session",0.329874417608744,221,0,0,0,0,0,0,0.3,0.7,0,0,0,0
+1,"S01","stable_hot","tight_session+may_session+may_session_hour",0.319297963373907,178,0,0,0,0,0,0,0,0.0499999999999999,0.95,0,0,0
+2,"S01","stable_cool","may_session_hour+tight_session+may_session",0.317014046024191,224,0,0,0,0,0,0,0,0.5,0.5,0,0,0
+2,"S01","stable_hot","tight_session+may_session+direct_xgb",0.340045752128709,181,0,0,0,0,0,0,0.05,0,0.75,0,0,0.2
+3,"S01","stable_cool","direct_xgb+may_session_hour+tight_session",0.337580046845778,230,0,0,0,0,0,0,0,0.45,0.3,0,0,0.25
+3,"S01","stable_hot","tight_session+may_session+may_session_hour",0.37122704089805,181,0,0,0,0,0,0,0.05,0.0999999999999999,0.85,0,0,0
+4,"S01","stable_cool","may_session_hour+direct_xgb+tight_session",0.292482599342775,240,0,0,0,0,0,0,0,0.7,0.3,0,0,0
+4,"S01","stable_hot","tight_session+may_session+may_session_hour",0.314805031008034,188,0,0,0,0,0,0,0.05,0.05,0.9,0,0,0
+5,"S01","stable_cool","may_session_hour+direct_xgb+eb_exact",0.264178662680774,245,0.0499999999999999,0,0,0,0,0,0,0.85,0,0,0,0.1
+5,"S01","stable_hot","tight_session+may_session+direct_xgb",0.301060605913019,192,0,0,0,0,0,0,0,0,0.85,0,0,0.15

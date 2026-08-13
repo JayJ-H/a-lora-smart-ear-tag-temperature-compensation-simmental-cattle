@@ -1,0 +1,2 @@
+"Dataset","FoldMode","Model","N","CowCount","R2","RMSE","MAE","Bias","ErrorSD"
+"all_measured_520_analysis_set","within_cow_random5","StrictHierarchicalEBResidualXGB",520,30,0.848732120566022,0.296664721657174,0.168968023805656,-0.00367430162784375,0.2969276117106

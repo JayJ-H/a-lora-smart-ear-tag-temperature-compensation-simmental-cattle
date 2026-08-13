@@ -1,0 +1,24 @@
+manuscript_figure,panel,title,output_stem,formats,generator,status
+10,b,Packet delivery ratio,Fig10b_PDR,PNG;SVG;PDF,fig10/code/plot_lora_communication_nature_style.py,PASS
+10,c,RSSI distribution,Fig10c_RSSI,PNG;SVG;PDF,fig10/code/plot_lora_communication_nature_style.py,PASS
+10,d,SNR distribution,Fig10d_SNR,PNG;SVG;PDF,fig10/code/plot_lora_communication_nature_style.py,PASS
+12,a,Before compensation,Fig12a_before_compensation,PNG;SVG;PDF;TIFF,fig12/code/plot_fig12_4panel_final.py,PASS
+12,b,After compensation,Fig12b_after_compensation,PNG;SVG;PDF;TIFF,fig12/code/plot_fig12_4panel_final.py,PASS
+12,c,Bland-Altman agreement,Fig12c_bland_altman,PNG;SVG;PDF;TIFF,fig12/code/plot_fig12_4panel_final.py,PASS
+12,d,Absolute-error ECDF,Fig12d_absolute_error_ecdf,PNG;SVG;PDF;TIFF,fig12/code/plot_fig12_4panel_final.py,PASS
+13,a,R2 comparison of 33 models,Fig13a_R2_33_models,PNG;SVG;PDF;TIFF,fig13/code/generate_th_shrc_figures.py,PASS
+13,b,RMSE comparison of 33 models,Fig13b_RMSE_33_models,PNG;SVG;PDF;TIFF,fig13/code/generate_th_shrc_figures.py,PASS
+13,c,MAE comparison of 33 models,Fig13c_MAE_33_models,PNG;SVG;PDF;TIFF,fig13/code/generate_th_shrc_figures.py,PASS
+14,a,DE-XGBoost OOF Hist and KDE,Fig14a_DE_XGBoost,PNG;SVG;PDF;TIFF,fig13/code/generate_th_shrc_figures.py,PASS
+14,b,Ear-only linear OOF Hist and KDE,Fig14b_Ear_only_linear,PNG;SVG;PDF;TIFF,fig13/code/generate_th_shrc_figures.py,PASS
+14,c,LightGBM OOF Hist and KDE,Fig14c_LightGBM,PNG;SVG;PDF;TIFF,fig13/code/generate_th_shrc_figures.py,PASS
+14,d,TH-SHRC OOF Hist and KDE,Fig14d_TH_SHRC,PNG;SVG;PDF;TIFF,fig13/code/generate_th_shrc_figures.py,PASS
+15,a,Component-combination ablation,Fig15a_component_combination_ablation,PNG;SVG;PDF;TIFF,analysis/figures/plot_fig15_17_public.py,PASS
+15,b,Layered performance comparison,Fig15b_nested_performance,PNG;SVG;PDF;TIFF,analysis/figures/plot_fig15_17_public.py,PASS
+16,single,Representative OOF trajectory,Fig16_representative_OOF_trajectory,PNG;SVG;PDF;TIFF,analysis/figures/plot_fig15_17_public.py,PASS
+17,single,Relative performance radar,Fig17_relative_performance_radar,PNG;SVG;PDF;TIFF,analysis/figures/plot_fig15_17_public.py,PASS
+18,a,Conditional SHAP heatmap,Fig18a_conditional_SHAP_heatmap,PNG;SVG;PDF;TIFF,fig18/code/reproduce_all_shap_figures.py,PASS
+18,b,Global SHAP contribution,Fig18b_global_SHAP_contribution,PNG;SVG;PDF;TIFF,fig18/code/reproduce_all_shap_figures.py,PASS
+19,a,Ear-temperature SHAP dependence,Fig19a_ear_temperature_dependence,PNG;SVG;PDF;TIFF,fig18/code/reproduce_all_shap_figures.py,PASS
+19,b,Ambient-temperature SHAP dependence,Fig19b_ambient_temperature_dependence,PNG;SVG;PDF;TIFF,fig18/code/reproduce_all_shap_figures.py,PASS
+19,c,Sampling-time SHAP dependence,Fig19c_sampling_time_dependence,PNG;SVG;PDF;TIFF,fig18/code/reproduce_all_shap_figures.py,PASS

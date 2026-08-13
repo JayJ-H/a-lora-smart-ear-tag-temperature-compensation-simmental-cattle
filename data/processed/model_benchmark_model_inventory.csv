@@ -1,0 +1,34 @@
+﻿Model,ModelFamily,BenchmarkGroup,FeatureSet,SeedCount,Aggregation,RunStatus,Notes
+AdaBoostTree,boosting ensemble,conventional_ml,raw_engineered_context,5,rowwise_median,done,AdaBoost over shallow regression trees.
+BaggedTree,bagging ensemble,conventional_ml,raw_engineered_context,5,rowwise_median,done,Bagged regression trees.
+BayesianRidge,regularized linear,linear_baseline,raw_engineered_context,5,rowwise_median,done,Bayesian regularized linear regression.
+DE_GradientBoosting,boosting ensemble,evolutionary_optimized_ml,raw_engineered_context,5,rowwise_median,done,Differential evolution tunes gradient-boosting tree parameters.
+DE_XGBoost,boosting ensemble,evolutionary_optimized_ml,raw_engineered_context,5,rowwise_median,done,Differential evolution tunes XGBoost hyperparameters.
+DecisionTree,tree,conventional_ml,raw_engineered_context,5,rowwise_median,done,Single regression tree.
+EarOnlyLinear,linear,linear_baseline,ear_only,5,rowwise_median,done,Single ear-surface temperature linear regression.
+ElasticNet,regularized linear,linear_baseline,raw_engineered_context,5,rowwise_median,done,L1/L2 regularized linear model.
+ExtraTrees,bagging ensemble,conventional_ml,raw_engineered_context,5,rowwise_median,done,Extremely randomized trees.
+GA_SVR_RBF,kernel method,evolutionary_optimized_ml,raw_engineered_context,5,rowwise_median,done,"Genetic algorithm tunes C, gamma, and epsilon for RBF-SVR."
+GWO_ExtraTrees,bagging ensemble,evolutionary_optimized_ml,raw_engineered_context,5,rowwise_median,done,Grey wolf optimizer tunes extremely randomized trees.
+GaussianProcess_RBF,Gaussian process,conventional_ml,raw_engineered_context,5,rowwise_median,done,RBF Gaussian process without hyperparameter optimization.
+GradientBoosting,boosting ensemble,conventional_ml,raw_engineered_context,5,rowwise_median,done,Gradient boosting regression trees.
+HistGradientBoosting,boosting ensemble,conventional_ml,raw_engineered_context,5,rowwise_median,done,Histogram gradient boosting.
+HuberRegressor,robust linear,linear_baseline,raw_engineered_context,5,rowwise_median,done,Robust linear regression.
+KNN_k5,nearest neighbor,conventional_ml,raw_engineered_context,5,rowwise_median,done,Distance-weighted k-nearest neighbors.
+KernelRidge_RBF,kernel method,conventional_ml,raw_engineered_context,5,rowwise_median,done,Kernel ridge regression with RBF kernel.
+Lasso,regularized linear,linear_baseline,raw_engineered_context,5,rowwise_median,done,L1-regularized linear model.
+LightGBM,boosting ensemble,conventional_ml,raw_engineered_context,5,rowwise_median,done,LightGBM gradient boosting.
+LinearSVR,kernel/linear margin,conventional_ml,raw_engineered_context,5,rowwise_median,done,Linear support vector regression.
+MLP,neural network,conventional_ml,raw_engineered_context,5,rowwise_median,done,Feed-forward neural network.
+MeanTrain,constant baseline,linear_baseline,no_features,5,rowwise_median,done,Training-fold mean body temperature.
+MultipleLinear,linear,linear_baseline,raw_engineered_context,5,rowwise_median,done,Ordinary least squares using numeric and context features.
+PSO_RandomForest,bagging ensemble,evolutionary_optimized_ml,raw_engineered_context,5,rowwise_median,done,"Particle swarm optimization tunes random-forest depth, leaf size, trees, and feature fraction."
+PolynomialRidge,nonlinear linear-basis,linear_baseline,polynomial_numeric_context,5,rowwise_median,done,Degree-2 numeric polynomial basis plus context one-hot features.
+RandomForest,bagging ensemble,conventional_ml,raw_engineered_context,5,rowwise_median,done,Random forest.
+Ridge,regularized linear,linear_baseline,raw_engineered_context,5,rowwise_median,done,L2-regularized linear model.
+SA_KNN,nearest neighbor,evolutionary_optimized_ml,raw_engineered_context,5,rowwise_median,done,"Simulated annealing tunes KNN k, distance metric, and weights."
+SGD_Huber,linear online,linear_baseline,raw_engineered_context,5,rowwise_median,done,Elastic-net online linear robust regressor.
+SVR_RBF,kernel method,conventional_ml,raw_engineered_context,5,rowwise_median,done,Support vector regression with RBF kernel.
+SplineRidge_GAMLike,GAM-like spline,linear_baseline,spline_numeric_context,5,rowwise_median,done,Spline additive approximation with ridge regularization.
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,five_seed_th_shrc_ensemble,5,rowwise_median,done,Reference model from fold-aligned single-seed TH-SHRC OOF predictions.
+XGBoost,boosting ensemble,conventional_ml,raw_engineered_context,5,rowwise_median,done,XGBoost gradient boosting.

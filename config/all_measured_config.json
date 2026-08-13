@@ -1,0 +1,15 @@
+{
+  "version": "1.0.0-all-measured",
+  "scenario": "all_measured_520",
+  "rows": 520,
+  "cattle": 30,
+  "measured_rows": 520,
+  "source": "S01",
+  "source_type": "measurement_group_1",
+  "ear_status": "measurement_status_1",
+  "source_weight": 1.0,
+  "seeds": [20260523, 20260607, 20260701, 20260811, 20260903],
+  "seed_ensemble_method": "rowwise_median",
+  "validation": "measurement-unit-grouped same-animal five-fold OOF",
+  "data_statement": "520 quality-controlled measured records from 30 cattle"
+}

@@ -1,0 +1,21 @@
+ARG NODE_IMAGE=docker.m.daocloud.io/library/node:24-alpine
+FROM ${NODE_IMAGE} AS deps
+
+WORKDIR /app
+RUN corepack enable && corepack prepare pnpm@8.15.9 --activate
+
+COPY package.json pnpm-lock.yaml ./
+RUN pnpm install --prod --frozen-lockfile --ignore-scripts
+
+FROM ${NODE_IMAGE}
+
+WORKDIR /app
+ENV NODE_ENV=production
+
+COPY --from=deps /app/node_modules ./node_modules
+COPY package.json ./
+COPY scripts/mqtt-replay-control-server.mjs ./scripts/mqtt-replay-control-server.mjs
+COPY standalone/mqtt-replay-control ./standalone/mqtt-replay-control
+
+EXPOSE 9194
+CMD ["node", "scripts/mqtt-replay-control-server.mjs"]

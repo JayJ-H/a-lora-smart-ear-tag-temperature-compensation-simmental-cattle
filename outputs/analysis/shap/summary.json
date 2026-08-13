@@ -1,0 +1,29 @@
+{
+  "status": "PASS",
+  "method": "exact linear SHAP per seed with fixed rowwise-median aggregation",
+  "model": "TH-SHRC three-branch nested ridge stack",
+  "seed_ensemble": {
+    "method": "rowwise_median",
+    "selection_uses_observed_target": false
+  },
+  "branches": [
+    "SourceMemoryPredicted",
+    "BatchSessionPredicted",
+    "HierarchicalResidualPredicted"
+  ],
+  "max_linear_additivity_difference_C": 1.4210854715202004e-14,
+  "max_frozen_prediction_difference_C": 7.105427357601002e-15,
+  "max_clip_adjustment_C": 1.4210854715202004e-14,
+  "max_ensemble_additivity_difference_C": 7.105427357601002e-15,
+  "max_official_ensemble_difference_C": 0.0,
+  "checks": {
+    "five_seed_record_coverage": true,
+    "three_branch_coverage": true,
+    "finite_shap_values": true,
+    "exact_linear_additivity": true,
+    "predictions_match_frozen": true,
+    "ensemble_additivity": true,
+    "median_selection_complete": true,
+    "ensemble_predictions_match_official": true
+  }
+}

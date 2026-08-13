@@ -1,0 +1,14 @@
+{
+  email admin@REDACTED_SERVER_HOST
+}
+
+REDACTED_SERVER_HOST {
+  encode zstd gzip
+  handle_path /control/* {
+    reverse_proxy mqtt-replay-control:9194
+  }
+  handle_path /control {
+    reverse_proxy mqtt-replay-control:9194
+  }
+  reverse_proxy web:80
+}

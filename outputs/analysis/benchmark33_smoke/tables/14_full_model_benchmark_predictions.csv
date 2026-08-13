@@ -1,0 +1,1561 @@
+﻿Model,ModelFamily,BenchmarkGroup,FeatureSet,RowID,FoldID,CowKey,Source,Actual,Predicted
+EarOnlyLinear,linear,linear_baseline,ear_only,1,4,C021,S01,38.3,38.63458321679335
+EarOnlyLinear,linear,linear_baseline,ear_only,2,4,C021,S01,38.3,38.665068234933074
+EarOnlyLinear,linear,linear_baseline,ear_only,3,3,C021,S01,38.2,38.7405398909027
+EarOnlyLinear,linear,linear_baseline,ear_only,4,1,C021,S01,38.4,38.844100489994055
+EarOnlyLinear,linear,linear_baseline,ear_only,5,1,C021,S01,38.1,38.85938780468679
+EarOnlyLinear,linear,linear_baseline,ear_only,6,5,C021,S01,38.3,38.487839102125655
+EarOnlyLinear,linear,linear_baseline,ear_only,7,2,C021,S01,38.3,38.53381299209381
+EarOnlyLinear,linear,linear_baseline,ear_only,8,3,C021,S01,38.2,38.55469575322836
+EarOnlyLinear,linear,linear_baseline,ear_only,9,1,C021,S01,38.0,38.538354196139345
+EarOnlyLinear,linear,linear_baseline,ear_only,10,1,C003,S01,39.0,38.75237660183764
+EarOnlyLinear,linear,linear_baseline,ear_only,11,2,C003,S01,38.8,38.881061173091524
+EarOnlyLinear,linear,linear_baseline,ear_only,12,4,C003,S01,38.7,38.771765798422074
+EarOnlyLinear,linear,linear_baseline,ear_only,13,3,C003,S01,38.4,38.910223668779274
+EarOnlyLinear,linear,linear_baseline,ear_only,14,5,C003,S01,38.5,38.86468580273115
+EarOnlyLinear,linear,linear_baseline,ear_only,15,4,C003,S01,38.4,38.908948380050795
+EarOnlyLinear,linear,linear_baseline,ear_only,16,5,C003,S01,38.5,38.85019169886171
+EarOnlyLinear,linear,linear_baseline,ear_only,17,1,C003,S01,38.3,38.943468035496835
+EarOnlyLinear,linear,linear_baseline,ear_only,18,1,C003,S01,38.5,39.134559469156024
+EarOnlyLinear,linear,linear_baseline,ear_only,19,2,C003,S01,39.0,38.768205514267265
+EarOnlyLinear,linear,linear_baseline,ear_only,20,4,C003,S01,38.6,38.78700830749194
+EarOnlyLinear,linear,linear_baseline,ear_only,21,1,C003,S01,38.0,38.9281807208041
+EarOnlyLinear,linear,linear_baseline,ear_only,22,5,C002,S01,38.2,38.83569759499227
+EarOnlyLinear,linear,linear_baseline,ear_only,23,1,C002,S01,39.5,38.706514657759435
+EarOnlyLinear,linear,linear_baseline,ear_only,24,2,C002,S01,39.1,38.86369876404164
+EarOnlyLinear,linear,linear_baseline,ear_only,25,4,C002,S01,38.5,38.95467590726037
+EarOnlyLinear,linear,linear_baseline,ear_only,26,5,C002,S01,39.3,39.07485030883806
+EarOnlyLinear,linear,linear_baseline,ear_only,27,2,C002,S01,39.2,38.83765515046681
+EarOnlyLinear,linear,linear_baseline,ear_only,28,1,C002,S01,38.8,38.943468035496835
+EarOnlyLinear,linear,linear_baseline,ear_only,29,3,C002,S01,39.0,39.120308346150274
+EarOnlyLinear,linear,linear_baseline,ear_only,30,4,C002,S01,38.9,39.091858488889095
+EarOnlyLinear,linear,linear_baseline,ear_only,31,1,C002,S01,40.0,38.9281807208041
+EarOnlyLinear,linear,linear_baseline,ear_only,32,3,C002,S01,39.7,38.82942186979043
+EarOnlyLinear,linear,linear_baseline,ear_only,33,4,C002,S01,39.6,38.87846336191108
+EarOnlyLinear,linear,linear_baseline,ear_only,34,2,C002,S01,39.2,38.898423582141405
+EarOnlyLinear,linear,linear_baseline,ear_only,35,3,C029,S01,38.1,38.76478043059935
+EarOnlyLinear,linear,linear_baseline,ear_only,36,4,C029,S01,38.1,39.068994725284306
+EarOnlyLinear,linear,linear_baseline,ear_only,37,1,C029,S01,38.0,38.867031462033154
+EarOnlyLinear,linear,linear_baseline,ear_only,38,2,C029,S01,38.2,38.86369876404164
+EarOnlyLinear,linear,linear_baseline,ear_only,39,5,C029,S01,38.1,38.85743875079643
+EarOnlyLinear,linear,linear_baseline,ear_only,40,2,C029,S01,38.5,39.1414973088398
+EarOnlyLinear,linear,linear_baseline,ear_only,41,1,C029,S01,38.5,38.92053706345773
+EarOnlyLinear,linear,linear_baseline,ear_only,42,3,C029,S01,38.5,39.02334618736366
+EarOnlyLinear,linear,linear_baseline,ear_only,43,5,C029,S01,38.5,38.85743875079643
+EarOnlyLinear,linear,linear_baseline,ear_only,44,2,C029,S01,38.4,38.70743708259266
+EarOnlyLinear,linear,linear_baseline,ear_only,45,4,C029,S01,38.4,38.79462956202686
+EarOnlyLinear,linear,linear_baseline,ear_only,46,3,C029,S01,38.9,38.79710115019489
+EarOnlyLinear,linear,linear_baseline,ear_only,47,2,C001,S01,38.0,38.57721901471852
+EarOnlyLinear,linear,linear_baseline,ear_only,48,5,C001,S01,38.9,38.37913332310484
+EarOnlyLinear,linear,linear_baseline,ear_only,49,4,C001,S01,39.2,38.870842107376156
+EarOnlyLinear,linear,linear_baseline,ear_only,50,3,C001,S01,38.3,38.72437953110493
+EarOnlyLinear,linear,linear_baseline,ear_only,51,5,C001,S01,38.0,38.763227075645055
+EarOnlyLinear,linear,linear_baseline,ear_only,52,1,C001,S01,38.0,38.767663916530374
+EarOnlyLinear,linear,linear_baseline,ear_only,53,2,C001,S01,38.2,38.881061173091524
+EarOnlyLinear,linear,linear_baseline,ear_only,54,3,C001,S01,38.0,38.76478043059935
+EarOnlyLinear,linear,linear_baseline,ear_only,55,1,C001,S01,38.4,38.79823854591585
+EarOnlyLinear,linear,linear_baseline,ear_only,56,4,C001,S01,38.1,38.931812143655584
+EarOnlyLinear,linear,linear_baseline,ear_only,57,3,C001,S01,38.2,38.65973809191385
+EarOnlyLinear,linear,linear_baseline,ear_only,58,2,C001,S01,38.3,38.559856605668635
+EarOnlyLinear,linear,linear_baseline,ear_only,59,2,C001,S01,38.1,38.646668650918066
+EarOnlyLinear,linear,linear_baseline,ear_only,60,4,C001,S01,38.1,38.672689489468
+EarOnlyLinear,linear,linear_baseline,ear_only,61,4,C027,S01,38.9,38.59647694411871
+EarOnlyLinear,linear,linear_baseline,ear_only,62,2,C027,S01,41.5,38.672712264492894
+EarOnlyLinear,linear,linear_baseline,ear_only,63,3,C027,S01,38.7,38.7405398909027
+EarOnlyLinear,linear,linear_baseline,ear_only,64,5,C027,S01,38.5,38.763227075645055
+EarOnlyLinear,linear,linear_baseline,ear_only,65,4,C027,S01,38.6,38.71841701667757
+EarOnlyLinear,linear,linear_baseline,ear_only,66,3,C027,S01,38.5,38.845582229588196
+EarOnlyLinear,linear,linear_baseline,ear_only,67,2,C027,S01,38.6,38.92446719571623
+EarOnlyLinear,linear,linear_baseline,ear_only,68,4,C027,S01,38.5,38.687931998537856
+EarOnlyLinear,linear,linear_baseline,ear_only,69,2,C027,S01,38.5,38.93314840024118
+EarOnlyLinear,linear,linear_baseline,ear_only,70,2,C027,S01,39.1,38.79424912784209
+EarOnlyLinear,linear,linear_baseline,ear_only,71,5,C027,S01,39.1,38.806709387253385
+EarOnlyLinear,linear,linear_baseline,ear_only,72,1,C027,S01,38.2,38.85174414734042
+EarOnlyLinear,linear,linear_baseline,ear_only,73,1,C026,S01,38.3,38.538354196139345
+EarOnlyLinear,linear,linear_baseline,ear_only,74,2,C026,S01,38.5,38.93314840024118
+EarOnlyLinear,linear,linear_baseline,ear_only,75,5,C026,S01,38.6,38.908168114339475
+EarOnlyLinear,linear,linear_baseline,ear_only,76,2,C026,S01,39.0,38.646668650918066
+EarOnlyLinear,linear,linear_baseline,ear_only,77,4,C026,S01,39.1,38.687931998537856
+EarOnlyLinear,linear,linear_baseline,ear_only,78,1,C026,S01,38.9,38.6912273430667
+EarOnlyLinear,linear,linear_baseline,ear_only,79,3,C026,S01,38.6,38.675898451711625
+EarOnlyLinear,linear,linear_baseline,ear_only,80,2,C016,S01,38.9,38.48172576494415
+EarOnlyLinear,linear,linear_baseline,ear_only,81,4,C016,S01,39.2,38.771765798422074
+EarOnlyLinear,linear,linear_baseline,ear_only,82,3,C016,S01,38.0,38.79710115019489
+EarOnlyLinear,linear,linear_baseline,ear_only,83,1,C016,S01,38.1,38.79059488856948
+EarOnlyLinear,linear,linear_baseline,ear_only,84,3,C016,S01,38.3,38.86174258938597
+EarOnlyLinear,linear,linear_baseline,ear_only,85,2,C016,S01,38.7,38.87237996856658
+EarOnlyLinear,linear,linear_baseline,ear_only,86,5,C016,S01,39.4,38.7777211795145
+EarOnlyLinear,linear,linear_baseline,ear_only,87,5,C016,S01,38.6,38.70525066016729
+EarOnlyLinear,linear,linear_baseline,ear_only,88,2,C016,S01,38.8,38.75084310521738
+EarOnlyLinear,linear,linear_baseline,ear_only,89,5,C022,S01,38.1,38.29216869988819
+EarOnlyLinear,linear,linear_baseline,ear_only,90,4,C022,S01,38.3,38.27638425365169
+EarOnlyLinear,linear,linear_baseline,ear_only,91,1,C022,S01,38.1,38.813525860608586
+EarOnlyLinear,linear,linear_baseline,ear_only,92,4,C022,S01,38.1,38.61171945318857
+EarOnlyLinear,linear,linear_baseline,ear_only,93,2,C022,S01,38.7,38.83765515046681
+EarOnlyLinear,linear,linear_baseline,ear_only,94,1,C022,S01,38.2,38.744732944491275
+EarOnlyLinear,linear,linear_baseline,ear_only,95,2,C022,S01,38.7,38.81161153689198
+EarOnlyLinear,linear,linear_baseline,ear_only,96,4,C022,S01,39.0,38.7260382712125
+EarOnlyLinear,linear,linear_baseline,ear_only,97,2,C022,S01,39.5,38.79424912784209
+EarOnlyLinear,linear,linear_baseline,ear_only,98,1,C022,S01,38.0,38.89760609141863
+EarOnlyLinear,linear,linear_baseline,ear_only,99,5,C022,S01,38.3,38.83569759499227
+EarOnlyLinear,linear,linear_baseline,ear_only,100,3,C022,S01,38.2,38.7405398909027
+EarOnlyLinear,linear,linear_baseline,ear_only,101,1,C022,S01,38.2,38.72944562979854
+EarOnlyLinear,linear,linear_baseline,ear_only,102,2,C022,S01,38.5,38.776886718792205
+EarOnlyLinear,linear,linear_baseline,ear_only,103,5,C014,S01,38.5,38.495086154060374
+EarOnlyLinear,linear,linear_baseline,ear_only,104,5,C014,S01,38.5,38.65452129662424
+EarOnlyLinear,linear,linear_baseline,ear_only,105,2,C014,S01,38.0,38.681393469017834
+EarOnlyLinear,linear,linear_baseline,ear_only,106,4,C014,S01,38.1,38.75652328935222
+EarOnlyLinear,linear,linear_baseline,ear_only,107,3,C014,S01,38.2,38.780940790397125
+EarOnlyLinear,linear,linear_baseline,ear_only,108,2,C014,S01,37.5,38.664031059967954
+EarOnlyLinear,linear,linear_baseline,ear_only,109,1,C014,S01,38.1,38.85174414734042
+EarOnlyLinear,linear,linear_baseline,ear_only,110,1,C014,S01,38.0,38.88996243407226
+EarOnlyLinear,linear,linear_baseline,ear_only,111,1,C014,S01,38.0,38.912893406111365
+EarOnlyLinear,linear,linear_baseline,ear_only,112,2,C014,S01,39.0,38.776886718792205
+EarOnlyLinear,linear,linear_baseline,ear_only,113,2,C014,S01,39.2,38.69875587806772
+EarOnlyLinear,linear,linear_baseline,ear_only,114,5,C014,S01,38.8,38.73423886790617
+EarOnlyLinear,linear,linear_baseline,ear_only,115,1,C014,S01,38.4,38.72180197245217
+EarOnlyLinear,linear,linear_baseline,ear_only,116,5,C023,S01,38.3,38.6762624524284
+EarOnlyLinear,linear,linear_baseline,ear_only,117,1,C023,S01,38.3,38.675940028373965
+EarOnlyLinear,linear,linear_baseline,ear_only,118,3,C023,S01,39.4,38.82942186979043
+EarOnlyLinear,linear,linear_baseline,ear_only,119,4,C023,S01,39.2,38.76414454388715
+EarOnlyLinear,linear,linear_baseline,ear_only,120,1,C023,S01,39.0,38.88996243407226
+EarOnlyLinear,linear,linear_baseline,ear_only,121,4,C023,S01,38.8,38.847978343771366
+EarOnlyLinear,linear,linear_baseline,ear_only,122,2,C023,S01,38.9,38.85501755951669
+EarOnlyLinear,linear,linear_baseline,ear_only,123,3,C023,S01,38.6,38.91830384867816
+EarOnlyLinear,linear,linear_baseline,ear_only,124,3,C023,S01,39.1,38.813261509992664
+EarOnlyLinear,linear,linear_baseline,ear_only,125,5,C023,S01,39.0,39.00962684142557
+EarOnlyLinear,linear,linear_baseline,ear_only,126,5,C023,S01,39.1,38.7777211795145
+EarOnlyLinear,linear,linear_baseline,ear_only,127,2,C023,S01,39.9,38.898423582141405
+EarOnlyLinear,linear,linear_baseline,ear_only,128,4,C023,S01,39.4,38.92419088912066
+EarOnlyLinear,linear,linear_baseline,ear_only,129,1,C023,S01,39.3,38.89760609141863
+EarOnlyLinear,linear,linear_baseline,ear_only,130,3,C011,S01,38.1,38.47389395423951
+EarOnlyLinear,linear,linear_baseline,ear_only,131,5,C011,S01,38.0,38.6400271927548
+EarOnlyLinear,linear,linear_baseline,ear_only,132,2,C011,S01,37.9,38.664031059967954
+EarOnlyLinear,linear,linear_baseline,ear_only,133,1,C011,S01,38.1,38.79059488856948
+EarOnlyLinear,linear,linear_baseline,ear_only,134,2,C011,S01,38.1,38.82029274141692
+EarOnlyLinear,linear,linear_baseline,ear_only,135,4,C011,S01,38.4,38.64982572586321
+EarOnlyLinear,linear,linear_baseline,ear_only,136,5,C011,S01,39.1,38.6762624524284
+EarOnlyLinear,linear,linear_baseline,ear_only,137,5,C011,S01,38.2,38.669015400493684
+EarOnlyLinear,linear,linear_baseline,ear_only,138,4,C011,S01,38.1,38.60409819865364
+EarOnlyLinear,linear,linear_baseline,ear_only,139,4,C004,S01,37.8,38.54312816237421
+EarOnlyLinear,linear,linear_baseline,ear_only,140,1,C004,S01,37.6,38.46191762267567
+EarOnlyLinear,linear,linear_baseline,ear_only,141,2,C004,S01,37.5,38.80293033236703
+EarOnlyLinear,linear,linear_baseline,ear_only,142,5,C004,S01,37.6,38.669015400493684
+EarOnlyLinear,linear,linear_baseline,ear_only,143,4,C004,S01,37.6,38.80987207109672
+EarOnlyLinear,linear,linear_baseline,ear_only,144,1,C004,S01,37.5,38.737089287144904
+EarOnlyLinear,linear,linear_baseline,ear_only,145,5,C004,S01,37.6,38.83569759499227
+EarOnlyLinear,linear,linear_baseline,ear_only,146,3,C004,S01,37.5,38.708219171307164
+EarOnlyLinear,linear,linear_baseline,ear_only,147,3,C004,S01,37.5,38.70013899140828
+EarOnlyLinear,linear,linear_baseline,ear_only,148,2,C004,S01,37.7,38.96787321834095
+EarOnlyLinear,linear,linear_baseline,ear_only,149,3,C004,S01,37.7,38.62741737231832
+EarOnlyLinear,linear,linear_baseline,ear_only,150,2,C004,S01,37.6,38.646668650918066
+EarOnlyLinear,linear,linear_baseline,ear_only,151,1,C028,S01,40.3,38.98932997957504
+EarOnlyLinear,linear,linear_baseline,ear_only,152,5,C028,S01,40.2,39.10383851657694
+EarOnlyLinear,linear,linear_baseline,ear_only,153,3,C028,S01,40.2,39.23343086473466
+EarOnlyLinear,linear,linear_baseline,ear_only,154,5,C028,S01,40.2,39.24877955527137
+EarOnlyLinear,linear,linear_baseline,ear_only,155,1,C028,S01,39.8,39.2339270146588
+EarOnlyLinear,linear,linear_baseline,ear_only,156,2,C028,S01,40.3,39.454020671737744
+EarOnlyLinear,linear,linear_baseline,ear_only,157,4,C028,S01,40.1,39.27476859772739
+EarOnlyLinear,linear,linear_baseline,ear_only,158,3,C028,S01,40.3,39.209190325038
+EarOnlyLinear,linear,linear_baseline,ear_only,159,2,C028,S01,40.1,39.18490333146452
+EarOnlyLinear,linear,linear_baseline,ear_only,160,3,C028,S01,40.1,39.20111014513912
+EarOnlyLinear,linear,linear_baseline,ear_only,161,4,C028,S01,40.2,39.290011106797245
+EarOnlyLinear,linear,linear_baseline,ear_only,162,2,C028,S01,40.3,39.21962814956429
+EarOnlyLinear,linear,linear_baseline,ear_only,163,2,C028,S01,40.3,39.06336646811532
+EarOnlyLinear,linear,linear_baseline,ear_only,164,3,C008,S01,38.3,38.910223668779274
+EarOnlyLinear,linear,linear_baseline,ear_only,165,4,C008,S01,38.2,38.7260382712125
+EarOnlyLinear,linear,linear_baseline,ear_only,166,3,C008,S01,38.1,38.78902097029601
+EarOnlyLinear,linear,linear_baseline,ear_only,167,2,C008,S01,38.1,38.87237996856658
+EarOnlyLinear,linear,linear_baseline,ear_only,168,3,C008,S01,38.1,39.15262906574581
+EarOnlyLinear,linear,linear_baseline,ear_only,169,1,C008,S01,38.1,38.89760609141863
+EarOnlyLinear,linear,linear_baseline,ear_only,170,1,C008,S01,38.1,38.974042664882305
+EarOnlyLinear,linear,linear_baseline,ear_only,171,2,C008,S01,38.2,39.07204767264026
+EarOnlyLinear,linear,linear_baseline,ear_only,172,2,C008,S01,38.2,39.02864165001555
+EarOnlyLinear,linear,linear_baseline,ear_only,173,1,C008,S01,38.2,38.98168632222867
+EarOnlyLinear,linear,linear_baseline,ear_only,174,1,C008,S01,38.3,38.767663916530374
+EarOnlyLinear,linear,linear_baseline,ear_only,175,4,C008,S01,38.2,38.908948380050795
+EarOnlyLinear,linear,linear_baseline,ear_only,176,2,C030,S01,40.1,38.40359492421967
+EarOnlyLinear,linear,linear_baseline,ear_only,177,1,C030,S01,40.2,38.645365398988496
+EarOnlyLinear,linear,linear_baseline,ear_only,178,2,C030,S01,40.3,38.768205514267265
+EarOnlyLinear,linear,linear_baseline,ear_only,179,1,C030,S01,40.3,38.6912273430667
+EarOnlyLinear,linear,linear_baseline,ear_only,180,5,C030,S01,40.3,38.69800360823257
+EarOnlyLinear,linear,linear_baseline,ear_only,181,3,C030,S01,40.3,38.65165791201497
+EarOnlyLinear,linear,linear_baseline,ear_only,182,2,C030,S01,40.2,38.74216190069244
+EarOnlyLinear,linear,linear_baseline,ear_only,183,2,C030,S01,40.2,38.95919201381601
+EarOnlyLinear,linear,linear_baseline,ear_only,184,5,C030,S01,40.2,38.806709387253385
+EarOnlyLinear,linear,linear_baseline,ear_only,185,1,C030,S01,40.2,38.85938780468679
+EarOnlyLinear,linear,linear_baseline,ear_only,186,4,C030,S01,40.2,38.802250816561795
+EarOnlyLinear,linear,linear_baseline,ear_only,187,5,C030,S01,40.2,38.78496823144922
+EarOnlyLinear,linear,linear_baseline,ear_only,188,3,C030,S01,40.1,38.66781827181274
+EarOnlyLinear,linear,linear_baseline,ear_only,189,3,C030,S01,40.2,38.44157323464397
+EarOnlyLinear,linear,linear_baseline,ear_only,190,1,C018,S01,38.8,38.675940028373965
+EarOnlyLinear,linear,linear_baseline,ear_only,191,2,C018,S01,38.8,38.79424912784209
+EarOnlyLinear,linear,linear_baseline,ear_only,192,5,C018,S01,38.8,38.68350950436312
+EarOnlyLinear,linear,linear_baseline,ear_only,193,4,C018,S01,38.8,38.83273583470151
+EarOnlyLinear,linear,linear_baseline,ear_only,194,5,C018,S01,38.8,38.83569759499227
+EarOnlyLinear,linear,linear_baseline,ear_only,195,3,C018,S01,38.8,38.853662409487086
+EarOnlyLinear,linear,linear_baseline,ear_only,196,2,C018,S01,38.8,38.82897394594186
+EarOnlyLinear,linear,linear_baseline,ear_only,197,5,C018,S01,38.8,38.98063863368669
+EarOnlyLinear,linear,linear_baseline,ear_only,198,1,C018,S01,38.8,39.103984839770554
+EarOnlyLinear,linear,linear_baseline,ear_only,199,4,C018,S01,38.8,38.710795762142645
+EarOnlyLinear,linear,linear_baseline,ear_only,200,1,C018,S01,38.8,38.82881317530132
+EarOnlyLinear,linear,linear_baseline,ear_only,201,4,C018,S01,38.8,38.94705465272544
+EarOnlyLinear,linear,linear_baseline,ear_only,202,2,C025,S01,39.4,38.52513178756887
+EarOnlyLinear,linear,linear_baseline,ear_only,203,3,C025,S01,39.5,38.57893629292501
+EarOnlyLinear,linear,linear_baseline,ear_only,204,3,C025,S01,39.5,38.7405398909027
+EarOnlyLinear,linear,linear_baseline,ear_only,205,4,C025,S01,39.4,38.7260382712125
+EarOnlyLinear,linear,linear_baseline,ear_only,206,5,C025,S01,39.4,38.763227075645055
+EarOnlyLinear,linear,linear_baseline,ear_only,207,2,C025,S01,39.4,38.57721901471852
+EarOnlyLinear,linear,linear_baseline,ear_only,208,5,C025,S01,39.4,38.72699181597145
+EarOnlyLinear,linear,linear_baseline,ear_only,209,4,C025,S01,39.5,38.733659525747434
+EarOnlyLinear,linear,linear_baseline,ear_only,210,1,C025,S01,39.4,38.645365398988496
+EarOnlyLinear,linear,linear_baseline,ear_only,211,1,C010,S01,38.7,39.02754826630688
+EarOnlyLinear,linear,linear_baseline,ear_only,212,3,C010,S01,38.6,39.225350684835774
+EarOnlyLinear,linear,linear_baseline,ear_only,213,2,C010,S01,38.7,39.27171537671395
+EarOnlyLinear,linear,linear_baseline,ear_only,214,4,C010,S01,38.6,39.05375221621445
+EarOnlyLinear,linear,linear_baseline,ear_only,215,1,C010,S01,38.7,39.28743261608338
+EarOnlyLinear,linear,linear_baseline,ear_only,216,3,C010,S01,38.6,39.24959122453242
+EarOnlyLinear,linear,linear_baseline,ear_only,217,3,C010,S01,38.7,39.395034462712346
+EarOnlyLinear,linear,linear_baseline,ear_only,218,5,C010,S01,38.6,39.27776776301025
+EarOnlyLinear,linear,linear_baseline,ear_only,219,3,C010,S01,38.7,39.30615248382462
+EarOnlyLinear,linear,linear_baseline,ear_only,220,2,C010,S01,38.6,39.28907778576383
+EarOnlyLinear,linear,linear_baseline,ear_only,221,4,C010,S01,38.6,39.183313543308245
+EarOnlyLinear,linear,linear_baseline,ear_only,222,5,C010,S01,38.6,39.15456788011999
+EarOnlyLinear,linear,linear_baseline,ear_only,223,2,C010,S01,38.7,39.228309354089234
+EarOnlyLinear,linear,linear_baseline,ear_only,224,2,C010,S01,38.7,39.34984621743843
+EarOnlyLinear,linear,linear_baseline,ear_only,225,4,C019,S01,39.5,38.74890203481729
+EarOnlyLinear,linear,linear_baseline,ear_only,226,1,C019,S01,39.5,39.16513409854149
+EarOnlyLinear,linear,linear_baseline,ear_only,227,5,C019,S01,39.4,39.11833262044639
+EarOnlyLinear,linear,linear_baseline,ear_only,228,4,C019,S01,39.5,39.312874870402034
+EarOnlyLinear,linear,linear_baseline,ear_only,229,3,C019,S01,39.4,39.055666906959196
+EarOnlyLinear,linear,linear_baseline,ear_only,230,1,C019,S01,39.5,39.08105386773145
+EarOnlyLinear,linear,linear_baseline,ear_only,231,3,C019,S01,39.6,39.193029965240235
+EarOnlyLinear,linear,linear_baseline,ear_only,232,4,C019,S01,39.5,38.94705465272544
+EarOnlyLinear,linear,linear_baseline,ear_only,233,1,C019,S01,39.5,39.073410210385084
+EarOnlyLinear,linear,linear_baseline,ear_only,234,2,C019,S01,39.5,38.73348069616749
+EarOnlyLinear,linear,linear_baseline,ear_only,235,5,C019,S01,39.5,39.01687389336029
+EarOnlyLinear,linear,linear_baseline,ear_only,236,2,C019,S01,39.4,39.13281610431486
+EarOnlyLinear,linear,linear_baseline,ear_only,237,5,C019,S01,39.5,39.3284971265533
+EarOnlyLinear,linear,linear_baseline,ear_only,238,3,C005,S01,37.8,38.59509665272278
+EarOnlyLinear,linear,linear_baseline,ear_only,239,5,C005,S01,37.8,38.92266221820892
+EarOnlyLinear,linear,linear_baseline,ear_only,240,4,C005,S01,37.9,39.04613096167952
+EarOnlyLinear,linear,linear_baseline,ear_only,241,4,C005,S01,37.8,39.091858488889095
+EarOnlyLinear,linear,linear_baseline,ear_only,242,2,C005,S01,37.9,39.323802603863605
+EarOnlyLinear,linear,linear_baseline,ear_only,243,1,C005,S01,37.8,39.340938217507954
+EarOnlyLinear,linear,linear_baseline,ear_only,244,3,C005,S01,38.2,38.96678492807147
+EarOnlyLinear,linear,linear_baseline,ear_only,245,1,C005,S01,38.0,39.16513409854149
+EarOnlyLinear,linear,linear_baseline,ear_only,246,3,C005,S01,37.8,39.055666906959196
+EarOnlyLinear,linear,linear_baseline,ear_only,247,1,C005,S01,38.2,38.99697363692141
+EarOnlyLinear,linear,linear_baseline,ear_only,248,2,C005,S01,37.8,38.90710478666635
+EarOnlyLinear,linear,linear_baseline,ear_only,249,2,C005,S01,38.0,38.95051080929106
+EarOnlyLinear,linear,linear_baseline,ear_only,250,4,C005,S01,37.8,38.939433398190516
+EarOnlyLinear,linear,linear_baseline,ear_only,251,3,C005,S01,37.8,38.813261509992664
+EarOnlyLinear,linear,linear_baseline,ear_only,252,2,C017,S01,40.1,38.97655442286589
+EarOnlyLinear,linear,linear_baseline,ear_only,253,2,C017,S01,38.9,38.72479949164255
+EarOnlyLinear,linear,linear_baseline,ear_only,254,1,C017,S01,39.4,39.26450164404427
+EarOnlyLinear,linear,linear_baseline,ear_only,255,1,C017,S01,39.2,39.111628497116925
+EarOnlyLinear,linear,linear_baseline,ear_only,256,5,C017,S01,39.0,39.219791347532485
+EarOnlyLinear,linear,linear_baseline,ear_only,257,4,C017,S01,39.3,39.137586016098666
+EarOnlyLinear,linear,linear_baseline,ear_only,258,4,C017,S01,39.1,39.08423723435416
+EarOnlyLinear,linear,linear_baseline,ear_only,259,2,C017,S01,39.6,39.17622212693958
+EarOnlyLinear,linear,linear_baseline,ear_only,260,3,C017,S01,39.4,39.160709245644696
+EarOnlyLinear,linear,linear_baseline,ear_only,261,2,C017,S01,39.9,39.07204767264026
+EarOnlyLinear,linear,linear_baseline,ear_only,262,5,C017,S01,39.3,39.06035620496862
+EarOnlyLinear,linear,linear_baseline,ear_only,263,1,C017,S01,39.4,39.14984678384876
+EarOnlyLinear,linear,linear_baseline,ear_only,264,4,C017,S01,40.0,39.03850970714459
+EarOnlyLinear,linear,linear_baseline,ear_only,265,3,C017,S01,39.5,39.120308346150274
+EarOnlyLinear,linear,linear_baseline,ear_only,266,3,C017,S01,39.8,39.00718582756589
+EarOnlyLinear,linear,linear_baseline,ear_only,267,5,C017,S01,39.4,39.038615049164456
+EarOnlyLinear,linear,linear_baseline,ear_only,268,5,C020,S01,39.6,38.770474127579774
+EarOnlyLinear,linear,linear_baseline,ear_only,269,3,C020,S01,38.6,39.09606780645362
+EarOnlyLinear,linear,linear_baseline,ear_only,270,4,C020,S01,39.2,39.07661597981924
+EarOnlyLinear,linear,linear_baseline,ear_only,271,2,C020,S01,38.8,39.13281610431486
+EarOnlyLinear,linear,linear_baseline,ear_only,272,1,C020,S01,39.1,39.2339270146588
+EarOnlyLinear,linear,linear_baseline,ear_only,273,4,C020,S01,39.1,39.137586016098666
+EarOnlyLinear,linear,linear_baseline,ear_only,274,2,C020,S01,39.5,39.202265740514406
+EarOnlyLinear,linear,linear_baseline,ear_only,275,1,C020,S01,40.2,39.1880650705806
+EarOnlyLinear,linear,linear_baseline,ear_only,276,3,C020,S01,39.5,39.28191194412796
+EarOnlyLinear,linear,linear_baseline,ear_only,277,4,C020,S01,39.6,39.0156459435398
+EarOnlyLinear,linear,linear_baseline,ear_only,278,5,C020,S01,38.6,39.10383851657694
+EarOnlyLinear,linear,linear_baseline,ear_only,279,1,C020,S01,40.4,39.203352385273334
+EarOnlyLinear,linear,linear_baseline,ear_only,280,3,C020,S01,39.5,38.982945287869235
+EarOnlyLinear,linear,linear_baseline,ear_only,281,5,C020,S01,40.2,39.132826724315834
+EarOnlyLinear,linear,linear_baseline,ear_only,282,2,C020,S01,39.5,38.93314840024118
+EarOnlyLinear,linear,linear_baseline,ear_only,283,3,C020,S01,40.2,39.120308346150274
+EarOnlyLinear,linear,linear_baseline,ear_only,284,2,C009,S01,40.4,38.776886718792205
+EarOnlyLinear,linear,linear_baseline,ear_only,285,1,C009,S01,39.3,39.111628497116925
+EarOnlyLinear,linear,linear_baseline,ear_only,286,4,C009,S01,39.4,39.183313543308245
+EarOnlyLinear,linear,linear_baseline,ear_only,287,1,C009,S01,39.5,39.35622553220069
+EarOnlyLinear,linear,linear_baseline,ear_only,288,1,C009,S01,39.5,39.111628497116925
+EarOnlyLinear,linear,linear_baseline,ear_only,289,3,C009,S01,40.5,39.13646870594804
+EarOnlyLinear,linear,linear_baseline,ear_only,290,5,C009,S01,38.7,39.11108556851167
+EarOnlyLinear,linear,linear_baseline,ear_only,291,1,C009,S01,40.8,38.905249748764994
+EarOnlyLinear,linear,linear_baseline,ear_only,292,5,C009,S01,40.6,38.95889747788252
+EarOnlyLinear,linear,linear_baseline,ear_only,293,5,C012,S01,40.3,38.92266221820892
+EarOnlyLinear,linear,linear_baseline,ear_only,294,4,C012,S01,39.1,39.16807103423838
+EarOnlyLinear,linear,linear_baseline,ear_only,295,4,C012,S01,39.0,39.137586016098666
+EarOnlyLinear,linear,linear_baseline,ear_only,296,1,C012,S01,39.0,39.24921432935154
+EarOnlyLinear,linear,linear_baseline,ear_only,297,1,C012,S01,39.7,39.28743261608338
+EarOnlyLinear,linear,linear_baseline,ear_only,298,2,C012,S01,39.5,39.36720862648832
+EarOnlyLinear,linear,linear_baseline,ear_only,299,5,C012,S01,39.5,39.16181493205472
+EarOnlyLinear,linear,linear_baseline,ear_only,300,2,C012,S01,39.5,39.263034172189
+EarOnlyLinear,linear,linear_baseline,ear_only,301,2,C012,S01,39.8,39.24567176313912
+EarOnlyLinear,linear,linear_baseline,ear_only,302,3,C012,S01,40.0,39.16878942554358
+EarOnlyLinear,linear,linear_baseline,ear_only,303,2,C012,S01,39.4,39.30644019481372
+EarOnlyLinear,linear,linear_baseline,ear_only,304,4,C012,S01,40.6,39.10710099795895
+EarOnlyLinear,linear,linear_baseline,ear_only,305,5,C012,S01,40.5,38.98788568562141
+EarOnlyLinear,linear,linear_baseline,ear_only,306,3,C006,S01,39.8,38.62741737231832
+EarOnlyLinear,linear,linear_baseline,ear_only,307,1,C006,S01,38.5,39.035191923653244
+EarOnlyLinear,linear,linear_baseline,ear_only,308,2,C006,S01,38.6,39.09809128621509
+EarOnlyLinear,linear,linear_baseline,ear_only,309,5,C006,S01,39.3,39.00962684142557
+EarOnlyLinear,linear,linear_baseline,ear_only,310,1,C006,S01,38.5,39.210996042619705
+EarOnlyLinear,linear,linear_baseline,ear_only,311,3,C006,S01,39.7,39.27383176422908
+EarOnlyLinear,linear,linear_baseline,ear_only,312,4,C006,S01,38.4,39.03850970714459
+EarOnlyLinear,linear,linear_baseline,ear_only,313,3,C006,S01,38.9,39.13646870594804
+EarOnlyLinear,linear,linear_baseline,ear_only,314,2,C006,S01,39.4,38.97655442286589
+EarOnlyLinear,linear,linear_baseline,ear_only,315,4,C006,S01,38.5,39.03850970714459
+EarOnlyLinear,linear,linear_baseline,ear_only,316,2,C006,S01,39.4,38.94182960476612
+EarOnlyLinear,linear,linear_baseline,ear_only,317,4,C006,S01,39.9,39.023267198074734
+EarOnlyLinear,linear,linear_baseline,ear_only,318,2,C006,S01,39.6,38.881061173091524
+EarOnlyLinear,linear,linear_baseline,ear_only,319,5,C006,S01,40.0,38.82845054305754
+EarOnlyLinear,linear,linear_baseline,ear_only,320,3,C015,S01,38.9,38.75670025070047
+EarOnlyLinear,linear,linear_baseline,ear_only,321,1,C015,S01,38.2,39.004617294267774
+EarOnlyLinear,linear,linear_baseline,ear_only,322,5,C015,S01,39.7,38.96614452981724
+EarOnlyLinear,linear,linear_baseline,ear_only,323,1,C015,S01,38.2,38.99697363692141
+EarOnlyLinear,linear,linear_baseline,ear_only,324,1,C015,S01,38.5,39.01990460896051
+EarOnlyLinear,linear,linear_baseline,ear_only,325,3,C015,S01,38.3,39.15262906574581
+EarOnlyLinear,linear,linear_baseline,ear_only,326,2,C015,S01,38.2,39.19358453598946
+EarOnlyLinear,linear,linear_baseline,ear_only,327,2,C015,S01,38.2,39.15885971788969
+EarOnlyLinear,linear,linear_baseline,ear_only,328,4,C015,S01,38.0,39.160449779703455
+EarOnlyLinear,linear,linear_baseline,ear_only,329,4,C015,S01,39.2,39.07661597981924
+EarOnlyLinear,linear,linear_baseline,ear_only,330,4,C015,S01,38.5,39.05375221621445
+EarOnlyLinear,linear,linear_baseline,ear_only,331,5,C015,S01,39.0,39.02412094529502
+EarOnlyLinear,linear,linear_baseline,ear_only,332,5,C015,S01,39.7,39.03136799722974
+EarOnlyLinear,linear,linear_baseline,ear_only,333,2,C015,S01,40.0,38.993916831915776
+EarOnlyLinear,linear,linear_baseline,ear_only,334,3,C015,S01,38.5,39.03142636726255
+EarOnlyLinear,linear,linear_baseline,ear_only,335,1,C015,S01,38.4,38.966399007535934
+EarOnlyLinear,linear,linear_baseline,ear_only,336,3,C015,S01,38.8,39.02334618736366
+EarOnlyLinear,linear,linear_baseline,ear_only,337,2,C015,S01,39.1,38.92446719571623
+EarOnlyLinear,linear,linear_baseline,ear_only,338,4,C007,S01,40.1,39.068994725284306
+EarOnlyLinear,linear,linear_baseline,ear_only,339,3,C007,S01,38.4,39.14454888584693
+EarOnlyLinear,linear,linear_baseline,ear_only,340,1,C007,S01,39.8,39.210996042619705
+EarOnlyLinear,linear,linear_baseline,ear_only,341,4,C007,S01,38.5,39.12996476156374
+EarOnlyLinear,linear,linear_baseline,ear_only,342,1,C007,S01,40.0,39.210996042619705
+EarOnlyLinear,linear,linear_baseline,ear_only,343,5,C007,S01,39.3,39.14007377625055
+EarOnlyLinear,linear,linear_baseline,ear_only,344,2,C007,S01,39.9,39.39325224006315
+EarOnlyLinear,linear,linear_baseline,ear_only,345,3,C007,S01,39.7,39.289992124026845
+EarOnlyLinear,linear,linear_baseline,ear_only,346,5,C007,S01,39.7,39.270520711075534
+EarOnlyLinear,linear,linear_baseline,ear_only,347,5,C007,S01,39.5,39.176309035924156
+EarOnlyLinear,linear,linear_baseline,ear_only,348,4,C007,S01,39.7,39.21379856144796
+EarOnlyLinear,linear,linear_baseline,ear_only,349,2,C007,S01,39.6,39.19358453598946
+EarOnlyLinear,linear,linear_baseline,ear_only,350,1,C007,S01,39.3,39.172777755887864
+EarOnlyLinear,linear,linear_baseline,ear_only,351,3,C007,S01,40.7,39.24151104463354
+EarOnlyLinear,linear,linear_baseline,ear_only,352,2,C007,S01,39.2,39.02864165001555
+EarOnlyLinear,linear,linear_baseline,ear_only,353,2,C007,S01,39.4,39.04600405906543
+EarOnlyLinear,linear,linear_baseline,ear_only,354,1,C007,S01,40.6,39.19570872792697
+EarOnlyLinear,linear,linear_baseline,ear_only,355,3,C007,S01,38.3,39.015266007464774
+EarOnlyLinear,linear,linear_baseline,ear_only,356,4,C007,S01,40.2,38.98516092540009
+EarOnlyLinear,linear,linear_baseline,ear_only,357,3,C013,S01,39.3,38.56277593312724
+EarOnlyLinear,linear,linear_baseline,ear_only,358,4,C013,S01,38.7,38.99278217993502
+EarOnlyLinear,linear,linear_baseline,ear_only,359,4,C013,S01,38.6,39.03088845260966
+EarOnlyLinear,linear,linear_baseline,ear_only,360,5,C013,S01,38.6,38.97339158175197
+EarOnlyLinear,linear,linear_baseline,ear_only,361,5,C013,S01,39.3,39.045862101099175
+EarOnlyLinear,linear,linear_baseline,ear_only,362,1,C013,S01,39.2,38.98932997957504
+EarOnlyLinear,linear,linear_baseline,ear_only,363,2,C013,S01,38.5,39.01127924096566
+EarOnlyLinear,linear,linear_baseline,ear_only,364,2,C013,S01,39.1,38.92446719571623
+EarOnlyLinear,linear,linear_baseline,ear_only,365,1,C013,S01,39.1,38.874675119379525
+EarOnlyLinear,linear,linear_baseline,ear_only,366,5,C013,S01,39.0,38.83569759499227
+EarOnlyLinear,linear,linear_baseline,ear_only,367,4,C024,S01,38.0,39.09947974342402
+EarOnlyLinear,linear,linear_baseline,ear_only,368,1,C024,S01,38.0,39.103984839770554
+EarOnlyLinear,linear,linear_baseline,ear_only,369,1,C024,S01,38.6,39.172777755887864
+EarOnlyLinear,linear,linear_baseline,ear_only,370,5,C024,S01,38.3,39.06035620496862
+EarOnlyLinear,linear,linear_baseline,ear_only,371,5,C024,S01,38.3,39.14007377625055
+EarOnlyLinear,linear,linear_baseline,ear_only,372,2,C024,S01,38.2,39.263034172189
+EarOnlyLinear,linear,linear_baseline,ear_only,373,3,C024,S01,38.4,39.28191194412796
+EarOnlyLinear,linear,linear_baseline,ear_only,374,3,C024,S01,38.7,39.24151104463354
+EarOnlyLinear,linear,linear_baseline,ear_only,375,2,C024,S01,38.2,39.17622212693958
+EarOnlyLinear,linear,linear_baseline,ear_only,376,1,C024,S01,38.9,39.24921432935154
+EarOnlyLinear,linear,linear_baseline,ear_only,377,4,C024,S01,40.4,39.04613096167952
+EarOnlyLinear,linear,linear_baseline,ear_only,378,4,C024,S01,38.4,39.12996476156374
+EarOnlyLinear,linear,linear_baseline,ear_only,379,2,C024,S01,39.2,39.29775899028878
+EarOnlyLinear,linear,linear_baseline,ear_only,380,5,C024,S01,41.2,39.0531091530339
+EarOnlyLinear,linear,linear_baseline,ear_only,381,2,C024,S01,38.5,39.1414973088398
+EarOnlyLinear,linear,linear_baseline,ear_only,382,1,C024,S01,40.5,39.042835580999615
+EarOnlyLinear,linear,linear_baseline,ear_only,383,3,C024,S01,40.2,38.94254438837481
+EarOnlyLinear,linear,linear_baseline,ear_only,384,2,C001,S01,38.2,38.759524309742325
+EarOnlyLinear,linear,linear_baseline,ear_only,385,3,C001,S01,38.3,38.675898451711625
+EarOnlyLinear,linear,linear_baseline,ear_only,386,1,C001,S01,38.3,38.836456832647684
+EarOnlyLinear,linear,linear_baseline,ear_only,387,4,C001,S01,38.2,39.03850970714459
+EarOnlyLinear,linear,linear_baseline,ear_only,388,5,C002,S01,39.0,39.11108556851167
+EarOnlyLinear,linear,linear_baseline,ear_only,389,2,C002,S01,39.0,38.95919201381601
+EarOnlyLinear,linear,linear_baseline,ear_only,390,1,C002,S01,39.0,38.905249748764994
+EarOnlyLinear,linear,linear_baseline,ear_only,391,3,C002,S01,39.0,39.00718582756589
+EarOnlyLinear,linear,linear_baseline,ear_only,392,3,C003,S01,38.5,38.845582229588196
+EarOnlyLinear,linear,linear_baseline,ear_only,393,5,C003,S01,38.6,38.92266221820892
+EarOnlyLinear,linear,linear_baseline,ear_only,394,4,C003,S01,38.5,38.8555995983063
+EarOnlyLinear,linear,linear_baseline,ear_only,395,5,C003,S01,38.5,38.770474127579774
+EarOnlyLinear,linear,linear_baseline,ear_only,396,1,C003,S01,38.6,39.004617294267774
+EarOnlyLinear,linear,linear_baseline,ear_only,397,2,C004,S01,37.6,38.559856605668635
+EarOnlyLinear,linear,linear_baseline,ear_only,398,1,C004,S01,37.7,38.714158315105806
+EarOnlyLinear,linear,linear_baseline,ear_only,399,1,C004,S01,37.7,38.55364151083208
+EarOnlyLinear,linear,linear_baseline,ear_only,400,4,C004,S01,37.5,38.45167310795506
+EarOnlyLinear,linear,linear_baseline,ear_only,401,5,C004,S01,37.6,38.7777211795145
+EarOnlyLinear,linear,linear_baseline,ear_only,402,5,C005,S01,37.8,38.70525066016729
+EarOnlyLinear,linear,linear_baseline,ear_only,403,5,C005,S01,37.7,39.045862101099175
+EarOnlyLinear,linear,linear_baseline,ear_only,404,1,C005,S01,37.9,39.142203126502395
+EarOnlyLinear,linear,linear_baseline,ear_only,405,2,C005,S01,37.7,39.1414973088398
+EarOnlyLinear,linear,linear_baseline,ear_only,406,5,C006,S01,39.5,38.87193285466587
+EarOnlyLinear,linear,linear_baseline,ear_only,407,3,C006,S01,39.6,38.56277593312724
+EarOnlyLinear,linear,linear_baseline,ear_only,408,1,C006,S01,39.4,38.99697363692141
+EarOnlyLinear,linear,linear_baseline,ear_only,409,2,C006,S01,38.7,39.00259803644072
+EarOnlyLinear,linear,linear_baseline,ear_only,410,5,C008,S01,38.2,38.92990927014364
+EarOnlyLinear,linear,linear_baseline,ear_only,411,5,C008,S01,38.2,38.908168114339475
+EarOnlyLinear,linear,linear_baseline,ear_only,412,2,C008,S01,38.1,38.60326262829335
+EarOnlyLinear,linear,linear_baseline,ear_only,413,5,C008,S01,38.1,38.87917990660059
+EarOnlyLinear,linear,linear_baseline,ear_only,414,4,C008,S01,38.2,38.87846336191108
+EarOnlyLinear,linear,linear_baseline,ear_only,415,5,C009,S01,39.7,39.0531091530339
+EarOnlyLinear,linear,linear_baseline,ear_only,416,1,C009,S01,40.4,39.012260951614145
+EarOnlyLinear,linear,linear_baseline,ear_only,417,5,C009,S01,40.4,39.038615049164456
+EarOnlyLinear,linear,linear_baseline,ear_only,418,2,C009,S01,40.5,38.82029274141692
+EarOnlyLinear,linear,linear_baseline,ear_only,419,1,C009,S01,39.6,39.073410210385084
+EarOnlyLinear,linear,linear_baseline,ear_only,420,4,C009,S01,39.6,39.09947974342402
+EarOnlyLinear,linear,linear_baseline,ear_only,421,1,C009,S01,39.5,39.39444381893252
+EarOnlyLinear,linear,linear_baseline,ear_only,422,1,C009,S01,39.7,39.172777755887864
+EarOnlyLinear,linear,linear_baseline,ear_only,423,4,C010,S01,38.7,38.939433398190516
+EarOnlyLinear,linear,linear_baseline,ear_only,424,1,C010,S01,38.6,39.09634118242419
+EarOnlyLinear,linear,linear_baseline,ear_only,425,1,C010,S01,38.8,39.11927215446329
+EarOnlyLinear,linear,linear_baseline,ear_only,426,5,C010,S01,38.7,38.951650425947804
+EarOnlyLinear,linear,linear_baseline,ear_only,427,5,C011,S01,38.3,38.71249771210201
+EarOnlyLinear,linear,linear_baseline,ear_only,428,5,C011,S01,38.3,38.58929782921175
+EarOnlyLinear,linear,linear_baseline,ear_only,429,4,C011,S01,38.4,38.71841701667757
+EarOnlyLinear,linear,linear_baseline,ear_only,430,3,C011,S01,38.1,38.433493054745085
+EarOnlyLinear,linear,linear_baseline,ear_only,431,5,C011,S01,38.2,38.56030962147287
+EarOnlyLinear,linear,linear_baseline,ear_only,432,2,C011,S01,38.2,38.59458142376841
+EarOnlyLinear,linear,linear_baseline,ear_only,433,1,C011,S01,38.1,38.706514657759435
+EarOnlyLinear,linear,linear_baseline,ear_only,434,2,C011,S01,38.1,38.94182960476612
+EarOnlyLinear,linear,linear_baseline,ear_only,435,2,C012,S01,39.5,39.210946945039346
+EarOnlyLinear,linear,linear_baseline,ear_only,436,4,C012,S01,40.2,39.068994725284306
+EarOnlyLinear,linear,linear_baseline,ear_only,437,5,C012,S01,40.3,39.02412094529502
+EarOnlyLinear,linear,linear_baseline,ear_only,438,5,C012,S01,40.4,38.82120349112282
+EarOnlyLinear,linear,linear_baseline,ear_only,439,5,C013,S01,39.0,39.00962684142557
+EarOnlyLinear,linear,linear_baseline,ear_only,440,1,C013,S01,39.1,38.9511116928432
+EarOnlyLinear,linear,linear_baseline,ear_only,441,2,C013,S01,38.7,39.05468526359038
+EarOnlyLinear,linear,linear_baseline,ear_only,442,2,C013,S01,39.1,38.993916831915776
+EarOnlyLinear,linear,linear_baseline,ear_only,443,1,C013,S01,39.1,38.98168632222867
+EarOnlyLinear,linear,linear_baseline,ear_only,444,5,C013,S01,39.1,38.92266221820892
+EarOnlyLinear,linear,linear_baseline,ear_only,445,3,C013,S01,39.1,38.49813449393616
+EarOnlyLinear,linear,linear_baseline,ear_only,446,5,C014,S01,38.0,38.59654488114647
+EarOnlyLinear,linear,linear_baseline,ear_only,447,2,C014,S01,38.3,38.637987446393126
+EarOnlyLinear,linear,linear_baseline,ear_only,448,4,C014,S01,38.3,38.86322085284122
+EarOnlyLinear,linear,linear_baseline,ear_only,449,3,C014,S01,38.3,38.845582229588196
+EarOnlyLinear,linear,linear_baseline,ear_only,450,2,C016,S01,38.6,38.96787321834095
+EarOnlyLinear,linear,linear_baseline,ear_only,451,5,C016,S01,38.7,38.87917990660059
+EarOnlyLinear,linear,linear_baseline,ear_only,452,5,C016,S01,38.7,38.669015400493684
+EarOnlyLinear,linear,linear_baseline,ear_only,453,2,C016,S01,38.8,38.681393469017834
+EarOnlyLinear,linear,linear_baseline,ear_only,454,2,C016,S01,38.7,38.38623251516978
+EarOnlyLinear,linear,linear_baseline,ear_only,455,4,C016,S01,38.7,38.710795762142645
+EarOnlyLinear,linear,linear_baseline,ear_only,456,3,C016,S01,38.8,38.708219171307164
+EarOnlyLinear,linear,linear_baseline,ear_only,457,1,C016,S01,38.6,38.706514657759435
+EarOnlyLinear,linear,linear_baseline,ear_only,458,1,C017,S01,39.0,39.02754826630688
+EarOnlyLinear,linear,linear_baseline,ear_only,459,5,C017,S01,39.4,39.29950891881442
+EarOnlyLinear,linear,linear_baseline,ear_only,460,3,C018,S01,38.8,38.675898451711625
+EarOnlyLinear,linear,linear_baseline,ear_only,461,2,C018,S01,38.8,38.82897394594186
+EarOnlyLinear,linear,linear_baseline,ear_only,462,3,C018,S01,38.8,38.82134168989155
+EarOnlyLinear,linear,linear_baseline,ear_only,463,2,C018,S01,38.8,38.94182960476612
+EarOnlyLinear,linear,linear_baseline,ear_only,464,1,C018,S01,38.8,38.874675119379525
+EarOnlyLinear,linear,linear_baseline,ear_only,465,2,C019,S01,39.4,39.18490333146452
+EarOnlyLinear,linear,linear_baseline,ear_only,466,3,C019,S01,39.5,39.055666906959196
+EarOnlyLinear,linear,linear_baseline,ear_only,467,2,C019,S01,39.5,39.236990558614174
+EarOnlyLinear,linear,linear_baseline,ear_only,468,1,C019,S01,39.5,38.98168632222867
+EarOnlyLinear,linear,linear_baseline,ear_only,469,5,C020,S01,40.2,39.234285451401924
+EarOnlyLinear,linear,linear_baseline,ear_only,470,2,C020,S01,39.6,38.83765515046681
+EarOnlyLinear,linear,linear_baseline,ear_only,471,2,C021,S01,38.3,38.655349855443006
+EarOnlyLinear,linear,linear_baseline,ear_only,472,3,C021,S01,38.3,38.61933719241943
+EarOnlyLinear,linear,linear_baseline,ear_only,473,1,C021,S01,38.3,38.4313429932902
+EarOnlyLinear,linear,linear_baseline,ear_only,474,4,C021,S01,38.2,38.71841701667757
+EarOnlyLinear,linear,linear_baseline,ear_only,475,4,C021,S01,38.2,38.75652328935222
+EarOnlyLinear,linear,linear_baseline,ear_only,476,3,C021,S01,38.3,38.853662409487086
+EarOnlyLinear,linear,linear_baseline,ear_only,477,1,C021,S01,38.2,38.78295123122311
+EarOnlyLinear,linear,linear_baseline,ear_only,478,1,C021,S01,38.2,38.79823854591585
+EarOnlyLinear,linear,linear_baseline,ear_only,479,1,C022,S01,38.4,38.836456832647684
+EarOnlyLinear,linear,linear_baseline,ear_only,480,2,C022,S01,38.4,38.655349855443006
+EarOnlyLinear,linear,linear_baseline,ear_only,481,5,C022,S01,38.4,38.299415751822906
+EarOnlyLinear,linear,linear_baseline,ear_only,482,3,C023,S01,38.9,38.92638402857705
+EarOnlyLinear,linear,linear_baseline,ear_only,483,5,C023,S01,38.9,39.11108556851167
+EarOnlyLinear,linear,linear_baseline,ear_only,484,5,C023,S01,39.1,38.74148591984089
+EarOnlyLinear,linear,linear_baseline,ear_only,485,1,C024,S01,39.0,39.28743261608338
+EarOnlyLinear,linear,linear_baseline,ear_only,486,5,C025,S01,39.4,38.444356790517325
+EarOnlyLinear,linear,linear_baseline,ear_only,487,1,C025,S01,39.4,38.63007808429576
+EarOnlyLinear,linear,linear_baseline,ear_only,488,1,C025,S01,39.4,38.76002025918401
+EarOnlyLinear,linear,linear_baseline,ear_only,489,1,C025,S01,39.4,38.714158315105806
+EarOnlyLinear,linear,linear_baseline,ear_only,490,2,C025,S01,39.3,38.73348069616749
+EarOnlyLinear,linear,linear_baseline,ear_only,491,2,C025,S01,39.5,38.672712264492894
+EarOnlyLinear,linear,linear_baseline,ear_only,492,4,C025,S01,39.5,38.71841701667757
+EarOnlyLinear,linear,linear_baseline,ear_only,493,3,C025,S01,39.4,38.73245971100381
+EarOnlyLinear,linear,linear_baseline,ear_only,494,3,C026,S01,38.6,38.78902097029601
+EarOnlyLinear,linear,linear_baseline,ear_only,495,1,C026,S01,38.7,38.477204937368406
+EarOnlyLinear,linear,linear_baseline,ear_only,496,2,C026,S01,38.7,39.02864165001555
+EarOnlyLinear,linear,linear_baseline,ear_only,497,5,C026,S01,38.7,38.806709387253385
+EarOnlyLinear,linear,linear_baseline,ear_only,498,2,C026,S01,38.7,38.71611828711761
+EarOnlyLinear,linear,linear_baseline,ear_only,499,4,C026,S01,38.7,38.58123443504885
+EarOnlyLinear,linear,linear_baseline,ear_only,500,1,C026,S01,38.6,38.76002025918401
+EarOnlyLinear,linear,linear_baseline,ear_only,501,3,C026,S01,38.6,38.71629935120605
+EarOnlyLinear,linear,linear_baseline,ear_only,502,1,C026,S01,38.7,38.50013590940751
+EarOnlyLinear,linear,linear_baseline,ear_only,503,2,C026,S01,38.6,38.97655442286589
+EarOnlyLinear,linear,linear_baseline,ear_only,504,1,C027,S01,39.0,38.767663916530374
+EarOnlyLinear,linear,linear_baseline,ear_only,505,4,C027,S01,39.0,38.70317450760771
+EarOnlyLinear,linear,linear_baseline,ear_only,506,2,C027,S01,38.6,38.60326262829335
+EarOnlyLinear,linear,linear_baseline,ear_only,507,3,C027,S01,39.8,38.805181330093774
+EarOnlyLinear,linear,linear_baseline,ear_only,508,5,C027,S01,38.8,38.66176834855896
+EarOnlyLinear,linear,linear_baseline,ear_only,509,1,C028,S01,40.3,38.905249748764994
+EarOnlyLinear,linear,linear_baseline,ear_only,510,5,C028,S01,40.2,39.10383851657694
+EarOnlyLinear,linear,linear_baseline,ear_only,511,4,C028,S01,40.2,39.08423723435416
+EarOnlyLinear,linear,linear_baseline,ear_only,512,1,C028,S01,40.2,39.21863969996607
+EarOnlyLinear,linear,linear_baseline,ear_only,513,2,C029,S01,38.3,38.95919201381601
+EarOnlyLinear,linear,linear_baseline,ear_only,514,5,C029,S01,38.4,38.95889747788252
+EarOnlyLinear,linear,linear_baseline,ear_only,515,2,C029,S01,38.3,39.18490333146452
+EarOnlyLinear,linear,linear_baseline,ear_only,516,1,C029,S01,38.3,39.02754826630688
+EarOnlyLinear,linear,linear_baseline,ear_only,517,3,C029,S01,38.3,39.11222816625139
+EarOnlyLinear,linear,linear_baseline,ear_only,518,4,C030,S01,40.3,38.63458321679335
+EarOnlyLinear,linear,linear_baseline,ear_only,519,1,C030,S01,40.2,38.6912273430667
+EarOnlyLinear,linear,linear_baseline,ear_only,520,4,C030,S01,40.3,38.80987207109672
+MeanTrain,constant baseline,linear_baseline,no_features,1,4,C021,S01,38.3,38.915116279069764
+MeanTrain,constant baseline,linear_baseline,no_features,2,4,C021,S01,38.3,38.915116279069764
+MeanTrain,constant baseline,linear_baseline,no_features,3,3,C021,S01,38.2,38.916744186046515
+MeanTrain,constant baseline,linear_baseline,no_features,4,1,C021,S01,38.4,38.92034739454095
+MeanTrain,constant baseline,linear_baseline,no_features,5,1,C021,S01,38.1,38.92034739454095
+MeanTrain,constant baseline,linear_baseline,no_features,6,5,C021,S01,38.3,38.89021479713604
+MeanTrain,constant baseline,linear_baseline,no_features,7,2,C021,S01,38.3,38.90954773869347
+MeanTrain,constant baseline,linear_baseline,no_features,8,3,C021,S01,38.2,38.916744186046515
+MeanTrain,constant baseline,linear_baseline,no_features,9,1,C021,S01,38.0,38.92034739454095
+MeanTrain,constant baseline,linear_baseline,no_features,10,1,C003,S01,39.0,38.92034739454095
+MeanTrain,constant baseline,linear_baseline,no_features,11,2,C003,S01,38.8,38.90954773869347
+MeanTrain,constant baseline,linear_baseline,no_features,12,4,C003,S01,38.7,38.915116279069764
+MeanTrain,constant baseline,linear_baseline,no_features,13,3,C003,S01,38.4,38.916744186046515
+MeanTrain,constant baseline,linear_baseline,no_features,14,5,C003,S01,38.5,38.89021479713604
+MeanTrain,constant baseline,linear_baseline,no_features,15,4,C003,S01,38.4,38.915116279069764
+MeanTrain,constant baseline,linear_baseline,no_features,16,5,C003,S01,38.5,38.89021479713604
+MeanTrain,constant baseline,linear_baseline,no_features,17,1,C003,S01,38.3,38.92034739454095
+MeanTrain,constant baseline,linear_baseline,no_features,18,1,C003,S01,38.5,38.92034739454095
+MeanTrain,constant baseline,linear_baseline,no_features,19,2,C003,S01,39.0,38.90954773869347
+MeanTrain,constant baseline,linear_baseline,no_features,20,4,C003,S01,38.6,38.915116279069764
+MeanTrain,constant baseline,linear_baseline,no_features,21,1,C003,S01,38.0,38.92034739454095
+MeanTrain,constant baseline,linear_baseline,no_features,22,5,C002,S01,38.2,38.89021479713604
+MeanTrain,constant baseline,linear_baseline,no_features,23,1,C002,S01,39.5,38.92034739454095
+MeanTrain,constant baseline,linear_baseline,no_features,24,2,C002,S01,39.1,38.90954773869347
+MeanTrain,constant baseline,linear_baseline,no_features,25,4,C002,S01,38.5,38.915116279069764
+MeanTrain,constant baseline,linear_baseline,no_features,26,5,C002,S01,39.3,38.89021479713604
+MeanTrain,constant baseline,linear_baseline,no_features,27,2,C002,S01,39.2,38.90954773869347
+MeanTrain,constant baseline,linear_baseline,no_features,28,1,C002,S01,38.8,38.92034739454095
+MeanTrain,constant baseline,linear_baseline,no_features,29,3,C002,S01,39.0,38.916744186046515
+MeanTrain,constant baseline,linear_baseline,no_features,30,4,C002,S01,38.9,38.915116279069764
+MeanTrain,constant baseline,linear_baseline,no_features,31,1,C002,S01,40.0,38.92034739454095
+MeanTrain,constant baseline,linear_baseline,no_features,32,3,C002,S01,39.7,38.916744186046515
+MeanTrain,constant baseline,linear_baseline,no_features,33,4,C002,S01,39.6,38.915116279069764
+MeanTrain,constant baseline,linear_baseline,no_features,34,2,C002,S01,39.2,38.90954773869347
+MeanTrain,constant baseline,linear_baseline,no_features,35,3,C029,S01,38.1,38.916744186046515
+MeanTrain,constant baseline,linear_baseline,no_features,36,4,C029,S01,38.1,38.915116279069764
+MeanTrain,constant baseline,linear_baseline,no_features,37,1,C029,S01,38.0,38.92034739454095
+MeanTrain,constant baseline,linear_baseline,no_features,38,2,C029,S01,38.2,38.90954773869347
+MeanTrain,constant baseline,linear_baseline,no_features,39,5,C029,S01,38.1,38.89021479713604
+MeanTrain,constant baseline,linear_baseline,no_features,40,2,C029,S01,38.5,38.90954773869347
+MeanTrain,constant baseline,linear_baseline,no_features,41,1,C029,S01,38.5,38.92034739454095
+MeanTrain,constant baseline,linear_baseline,no_features,42,3,C029,S01,38.5,38.916744186046515
+MeanTrain,constant baseline,linear_baseline,no_features,43,5,C029,S01,38.5,38.89021479713604
+MeanTrain,constant baseline,linear_baseline,no_features,44,2,C029,S01,38.4,38.90954773869347
+MeanTrain,constant baseline,linear_baseline,no_features,45,4,C029,S01,38.4,38.915116279069764
+MeanTrain,constant baseline,linear_baseline,no_features,46,3,C029,S01,38.9,38.916744186046515
+MeanTrain,constant baseline,linear_baseline,no_features,47,2,C001,S01,38.0,38.90954773869347
+MeanTrain,constant baseline,linear_baseline,no_features,48,5,C001,S01,38.9,38.89021479713604
+MeanTrain,constant baseline,linear_baseline,no_features,49,4,C001,S01,39.2,38.915116279069764
+MeanTrain,constant baseline,linear_baseline,no_features,50,3,C001,S01,38.3,38.916744186046515
+MeanTrain,constant baseline,linear_baseline,no_features,51,5,C001,S01,38.0,38.89021479713604
+MeanTrain,constant baseline,linear_baseline,no_features,52,1,C001,S01,38.0,38.92034739454095
+MeanTrain,constant baseline,linear_baseline,no_features,53,2,C001,S01,38.2,38.90954773869347
+MeanTrain,constant baseline,linear_baseline,no_features,54,3,C001,S01,38.0,38.916744186046515
+MeanTrain,constant baseline,linear_baseline,no_features,55,1,C001,S01,38.4,38.92034739454095
+MeanTrain,constant baseline,linear_baseline,no_features,56,4,C001,S01,38.1,38.915116279069764
+MeanTrain,constant baseline,linear_baseline,no_features,57,3,C001,S01,38.2,38.916744186046515
+MeanTrain,constant baseline,linear_baseline,no_features,58,2,C001,S01,38.3,38.90954773869347
+MeanTrain,constant baseline,linear_baseline,no_features,59,2,C001,S01,38.1,38.90954773869347
+MeanTrain,constant baseline,linear_baseline,no_features,60,4,C001,S01,38.1,38.915116279069764
+MeanTrain,constant baseline,linear_baseline,no_features,61,4,C027,S01,38.9,38.915116279069764
+MeanTrain,constant baseline,linear_baseline,no_features,62,2,C027,S01,41.5,38.90954773869347
+MeanTrain,constant baseline,linear_baseline,no_features,63,3,C027,S01,38.7,38.916744186046515
+MeanTrain,constant baseline,linear_baseline,no_features,64,5,C027,S01,38.5,38.89021479713604
+MeanTrain,constant baseline,linear_baseline,no_features,65,4,C027,S01,38.6,38.915116279069764
+MeanTrain,constant baseline,linear_baseline,no_features,66,3,C027,S01,38.5,38.916744186046515
+MeanTrain,constant baseline,linear_baseline,no_features,67,2,C027,S01,38.6,38.90954773869347
+MeanTrain,constant baseline,linear_baseline,no_features,68,4,C027,S01,38.5,38.915116279069764
+MeanTrain,constant baseline,linear_baseline,no_features,69,2,C027,S01,38.5,38.90954773869347
+MeanTrain,constant baseline,linear_baseline,no_features,70,2,C027,S01,39.1,38.90954773869347
+MeanTrain,constant baseline,linear_baseline,no_features,71,5,C027,S01,39.1,38.89021479713604
+MeanTrain,constant baseline,linear_baseline,no_features,72,1,C027,S01,38.2,38.92034739454095
+MeanTrain,constant baseline,linear_baseline,no_features,73,1,C026,S01,38.3,38.92034739454095
+MeanTrain,constant baseline,linear_baseline,no_features,74,2,C026,S01,38.5,38.90954773869347
+MeanTrain,constant baseline,linear_baseline,no_features,75,5,C026,S01,38.6,38.89021479713604
+MeanTrain,constant baseline,linear_baseline,no_features,76,2,C026,S01,39.0,38.90954773869347
+MeanTrain,constant baseline,linear_baseline,no_features,77,4,C026,S01,39.1,38.915116279069764
+MeanTrain,constant baseline,linear_baseline,no_features,78,1,C026,S01,38.9,38.92034739454095
+MeanTrain,constant baseline,linear_baseline,no_features,79,3,C026,S01,38.6,38.916744186046515
+MeanTrain,constant baseline,linear_baseline,no_features,80,2,C016,S01,38.9,38.90954773869347
+MeanTrain,constant baseline,linear_baseline,no_features,81,4,C016,S01,39.2,38.915116279069764
+MeanTrain,constant baseline,linear_baseline,no_features,82,3,C016,S01,38.0,38.916744186046515
+MeanTrain,constant baseline,linear_baseline,no_features,83,1,C016,S01,38.1,38.92034739454095
+MeanTrain,constant baseline,linear_baseline,no_features,84,3,C016,S01,38.3,38.916744186046515
+MeanTrain,constant baseline,linear_baseline,no_features,85,2,C016,S01,38.7,38.90954773869347
+MeanTrain,constant baseline,linear_baseline,no_features,86,5,C016,S01,39.4,38.89021479713604
+MeanTrain,constant baseline,linear_baseline,no_features,87,5,C016,S01,38.6,38.89021479713604
+MeanTrain,constant baseline,linear_baseline,no_features,88,2,C016,S01,38.8,38.90954773869347
+MeanTrain,constant baseline,linear_baseline,no_features,89,5,C022,S01,38.1,38.89021479713604
+MeanTrain,constant baseline,linear_baseline,no_features,90,4,C022,S01,38.3,38.915116279069764
+MeanTrain,constant baseline,linear_baseline,no_features,91,1,C022,S01,38.1,38.92034739454095
+MeanTrain,constant baseline,linear_baseline,no_features,92,4,C022,S01,38.1,38.915116279069764
+MeanTrain,constant baseline,linear_baseline,no_features,93,2,C022,S01,38.7,38.90954773869347
+MeanTrain,constant baseline,linear_baseline,no_features,94,1,C022,S01,38.2,38.92034739454095
+MeanTrain,constant baseline,linear_baseline,no_features,95,2,C022,S01,38.7,38.90954773869347
+MeanTrain,constant baseline,linear_baseline,no_features,96,4,C022,S01,39.0,38.915116279069764
+MeanTrain,constant baseline,linear_baseline,no_features,97,2,C022,S01,39.5,38.90954773869347
+MeanTrain,constant baseline,linear_baseline,no_features,98,1,C022,S01,38.0,38.92034739454095
+MeanTrain,constant baseline,linear_baseline,no_features,99,5,C022,S01,38.3,38.89021479713604
+MeanTrain,constant baseline,linear_baseline,no_features,100,3,C022,S01,38.2,38.916744186046515
+MeanTrain,constant baseline,linear_baseline,no_features,101,1,C022,S01,38.2,38.92034739454095
+MeanTrain,constant baseline,linear_baseline,no_features,102,2,C022,S01,38.5,38.90954773869347
+MeanTrain,constant baseline,linear_baseline,no_features,103,5,C014,S01,38.5,38.89021479713604
+MeanTrain,constant baseline,linear_baseline,no_features,104,5,C014,S01,38.5,38.89021479713604
+MeanTrain,constant baseline,linear_baseline,no_features,105,2,C014,S01,38.0,38.90954773869347
+MeanTrain,constant baseline,linear_baseline,no_features,106,4,C014,S01,38.1,38.915116279069764
+MeanTrain,constant baseline,linear_baseline,no_features,107,3,C014,S01,38.2,38.916744186046515
+MeanTrain,constant baseline,linear_baseline,no_features,108,2,C014,S01,37.5,38.90954773869347
+MeanTrain,constant baseline,linear_baseline,no_features,109,1,C014,S01,38.1,38.92034739454095
+MeanTrain,constant baseline,linear_baseline,no_features,110,1,C014,S01,38.0,38.92034739454095
+MeanTrain,constant baseline,linear_baseline,no_features,111,1,C014,S01,38.0,38.92034739454095
+MeanTrain,constant baseline,linear_baseline,no_features,112,2,C014,S01,39.0,38.90954773869347
+MeanTrain,constant baseline,linear_baseline,no_features,113,2,C014,S01,39.2,38.90954773869347
+MeanTrain,constant baseline,linear_baseline,no_features,114,5,C014,S01,38.8,38.89021479713604
+MeanTrain,constant baseline,linear_baseline,no_features,115,1,C014,S01,38.4,38.92034739454095
+MeanTrain,constant baseline,linear_baseline,no_features,116,5,C023,S01,38.3,38.89021479713604
+MeanTrain,constant baseline,linear_baseline,no_features,117,1,C023,S01,38.3,38.92034739454095
+MeanTrain,constant baseline,linear_baseline,no_features,118,3,C023,S01,39.4,38.916744186046515
+MeanTrain,constant baseline,linear_baseline,no_features,119,4,C023,S01,39.2,38.915116279069764
+MeanTrain,constant baseline,linear_baseline,no_features,120,1,C023,S01,39.0,38.92034739454095
+MeanTrain,constant baseline,linear_baseline,no_features,121,4,C023,S01,38.8,38.915116279069764
+MeanTrain,constant baseline,linear_baseline,no_features,122,2,C023,S01,38.9,38.90954773869347
+MeanTrain,constant baseline,linear_baseline,no_features,123,3,C023,S01,38.6,38.916744186046515
+MeanTrain,constant baseline,linear_baseline,no_features,124,3,C023,S01,39.1,38.916744186046515
+MeanTrain,constant baseline,linear_baseline,no_features,125,5,C023,S01,39.0,38.89021479713604
+MeanTrain,constant baseline,linear_baseline,no_features,126,5,C023,S01,39.1,38.89021479713604
+MeanTrain,constant baseline,linear_baseline,no_features,127,2,C023,S01,39.9,38.90954773869347
+MeanTrain,constant baseline,linear_baseline,no_features,128,4,C023,S01,39.4,38.915116279069764
+MeanTrain,constant baseline,linear_baseline,no_features,129,1,C023,S01,39.3,38.92034739454095
+MeanTrain,constant baseline,linear_baseline,no_features,130,3,C011,S01,38.1,38.916744186046515
+MeanTrain,constant baseline,linear_baseline,no_features,131,5,C011,S01,38.0,38.89021479713604
+MeanTrain,constant baseline,linear_baseline,no_features,132,2,C011,S01,37.9,38.90954773869347
+MeanTrain,constant baseline,linear_baseline,no_features,133,1,C011,S01,38.1,38.92034739454095
+MeanTrain,constant baseline,linear_baseline,no_features,134,2,C011,S01,38.1,38.90954773869347
+MeanTrain,constant baseline,linear_baseline,no_features,135,4,C011,S01,38.4,38.915116279069764
+MeanTrain,constant baseline,linear_baseline,no_features,136,5,C011,S01,39.1,38.89021479713604
+MeanTrain,constant baseline,linear_baseline,no_features,137,5,C011,S01,38.2,38.89021479713604
+MeanTrain,constant baseline,linear_baseline,no_features,138,4,C011,S01,38.1,38.915116279069764
+MeanTrain,constant baseline,linear_baseline,no_features,139,4,C004,S01,37.8,38.915116279069764
+MeanTrain,constant baseline,linear_baseline,no_features,140,1,C004,S01,37.6,38.92034739454095
+MeanTrain,constant baseline,linear_baseline,no_features,141,2,C004,S01,37.5,38.90954773869347
+MeanTrain,constant baseline,linear_baseline,no_features,142,5,C004,S01,37.6,38.89021479713604
+MeanTrain,constant baseline,linear_baseline,no_features,143,4,C004,S01,37.6,38.915116279069764
+MeanTrain,constant baseline,linear_baseline,no_features,144,1,C004,S01,37.5,38.92034739454095
+MeanTrain,constant baseline,linear_baseline,no_features,145,5,C004,S01,37.6,38.89021479713604
+MeanTrain,constant baseline,linear_baseline,no_features,146,3,C004,S01,37.5,38.916744186046515
+MeanTrain,constant baseline,linear_baseline,no_features,147,3,C004,S01,37.5,38.916744186046515
+MeanTrain,constant baseline,linear_baseline,no_features,148,2,C004,S01,37.7,38.90954773869347
+MeanTrain,constant baseline,linear_baseline,no_features,149,3,C004,S01,37.7,38.916744186046515
+MeanTrain,constant baseline,linear_baseline,no_features,150,2,C004,S01,37.6,38.90954773869347
+MeanTrain,constant baseline,linear_baseline,no_features,151,1,C028,S01,40.3,38.92034739454095
+MeanTrain,constant baseline,linear_baseline,no_features,152,5,C028,S01,40.2,38.89021479713604
+MeanTrain,constant baseline,linear_baseline,no_features,153,3,C028,S01,40.2,38.916744186046515
+MeanTrain,constant baseline,linear_baseline,no_features,154,5,C028,S01,40.2,38.89021479713604
+MeanTrain,constant baseline,linear_baseline,no_features,155,1,C028,S01,39.8,38.92034739454095
+MeanTrain,constant baseline,linear_baseline,no_features,156,2,C028,S01,40.3,38.90954773869347
+MeanTrain,constant baseline,linear_baseline,no_features,157,4,C028,S01,40.1,38.915116279069764
+MeanTrain,constant baseline,linear_baseline,no_features,158,3,C028,S01,40.3,38.916744186046515
+MeanTrain,constant baseline,linear_baseline,no_features,159,2,C028,S01,40.1,38.90954773869347
+MeanTrain,constant baseline,linear_baseline,no_features,160,3,C028,S01,40.1,38.916744186046515
+MeanTrain,constant baseline,linear_baseline,no_features,161,4,C028,S01,40.2,38.915116279069764
+MeanTrain,constant baseline,linear_baseline,no_features,162,2,C028,S01,40.3,38.90954773869347
+MeanTrain,constant baseline,linear_baseline,no_features,163,2,C028,S01,40.3,38.90954773869347
+MeanTrain,constant baseline,linear_baseline,no_features,164,3,C008,S01,38.3,38.916744186046515
+MeanTrain,constant baseline,linear_baseline,no_features,165,4,C008,S01,38.2,38.915116279069764
+MeanTrain,constant baseline,linear_baseline,no_features,166,3,C008,S01,38.1,38.916744186046515
+MeanTrain,constant baseline,linear_baseline,no_features,167,2,C008,S01,38.1,38.90954773869347
+MeanTrain,constant baseline,linear_baseline,no_features,168,3,C008,S01,38.1,38.916744186046515
+MeanTrain,constant baseline,linear_baseline,no_features,169,1,C008,S01,38.1,38.92034739454095
+MeanTrain,constant baseline,linear_baseline,no_features,170,1,C008,S01,38.1,38.92034739454095
+MeanTrain,constant baseline,linear_baseline,no_features,171,2,C008,S01,38.2,38.90954773869347
+MeanTrain,constant baseline,linear_baseline,no_features,172,2,C008,S01,38.2,38.90954773869347
+MeanTrain,constant baseline,linear_baseline,no_features,173,1,C008,S01,38.2,38.92034739454095
+MeanTrain,constant baseline,linear_baseline,no_features,174,1,C008,S01,38.3,38.92034739454095
+MeanTrain,constant baseline,linear_baseline,no_features,175,4,C008,S01,38.2,38.915116279069764
+MeanTrain,constant baseline,linear_baseline,no_features,176,2,C030,S01,40.1,38.90954773869347
+MeanTrain,constant baseline,linear_baseline,no_features,177,1,C030,S01,40.2,38.92034739454095
+MeanTrain,constant baseline,linear_baseline,no_features,178,2,C030,S01,40.3,38.90954773869347
+MeanTrain,constant baseline,linear_baseline,no_features,179,1,C030,S01,40.3,38.92034739454095
+MeanTrain,constant baseline,linear_baseline,no_features,180,5,C030,S01,40.3,38.89021479713604
+MeanTrain,constant baseline,linear_baseline,no_features,181,3,C030,S01,40.3,38.916744186046515
+MeanTrain,constant baseline,linear_baseline,no_features,182,2,C030,S01,40.2,38.90954773869347
+MeanTrain,constant baseline,linear_baseline,no_features,183,2,C030,S01,40.2,38.90954773869347
+MeanTrain,constant baseline,linear_baseline,no_features,184,5,C030,S01,40.2,38.89021479713604
+MeanTrain,constant baseline,linear_baseline,no_features,185,1,C030,S01,40.2,38.92034739454095
+MeanTrain,constant baseline,linear_baseline,no_features,186,4,C030,S01,40.2,38.915116279069764
+MeanTrain,constant baseline,linear_baseline,no_features,187,5,C030,S01,40.2,38.89021479713604
+MeanTrain,constant baseline,linear_baseline,no_features,188,3,C030,S01,40.1,38.916744186046515
+MeanTrain,constant baseline,linear_baseline,no_features,189,3,C030,S01,40.2,38.916744186046515
+MeanTrain,constant baseline,linear_baseline,no_features,190,1,C018,S01,38.8,38.92034739454095
+MeanTrain,constant baseline,linear_baseline,no_features,191,2,C018,S01,38.8,38.90954773869347
+MeanTrain,constant baseline,linear_baseline,no_features,192,5,C018,S01,38.8,38.89021479713604
+MeanTrain,constant baseline,linear_baseline,no_features,193,4,C018,S01,38.8,38.915116279069764
+MeanTrain,constant baseline,linear_baseline,no_features,194,5,C018,S01,38.8,38.89021479713604
+MeanTrain,constant baseline,linear_baseline,no_features,195,3,C018,S01,38.8,38.916744186046515
+MeanTrain,constant baseline,linear_baseline,no_features,196,2,C018,S01,38.8,38.90954773869347
+MeanTrain,constant baseline,linear_baseline,no_features,197,5,C018,S01,38.8,38.89021479713604
+MeanTrain,constant baseline,linear_baseline,no_features,198,1,C018,S01,38.8,38.92034739454095
+MeanTrain,constant baseline,linear_baseline,no_features,199,4,C018,S01,38.8,38.915116279069764
+MeanTrain,constant baseline,linear_baseline,no_features,200,1,C018,S01,38.8,38.92034739454095
+MeanTrain,constant baseline,linear_baseline,no_features,201,4,C018,S01,38.8,38.915116279069764
+MeanTrain,constant baseline,linear_baseline,no_features,202,2,C025,S01,39.4,38.90954773869347
+MeanTrain,constant baseline,linear_baseline,no_features,203,3,C025,S01,39.5,38.916744186046515
+MeanTrain,constant baseline,linear_baseline,no_features,204,3,C025,S01,39.5,38.916744186046515
+MeanTrain,constant baseline,linear_baseline,no_features,205,4,C025,S01,39.4,38.915116279069764
+MeanTrain,constant baseline,linear_baseline,no_features,206,5,C025,S01,39.4,38.89021479713604
+MeanTrain,constant baseline,linear_baseline,no_features,207,2,C025,S01,39.4,38.90954773869347
+MeanTrain,constant baseline,linear_baseline,no_features,208,5,C025,S01,39.4,38.89021479713604
+MeanTrain,constant baseline,linear_baseline,no_features,209,4,C025,S01,39.5,38.915116279069764
+MeanTrain,constant baseline,linear_baseline,no_features,210,1,C025,S01,39.4,38.92034739454095
+MeanTrain,constant baseline,linear_baseline,no_features,211,1,C010,S01,38.7,38.92034739454095
+MeanTrain,constant baseline,linear_baseline,no_features,212,3,C010,S01,38.6,38.916744186046515
+MeanTrain,constant baseline,linear_baseline,no_features,213,2,C010,S01,38.7,38.90954773869347
+MeanTrain,constant baseline,linear_baseline,no_features,214,4,C010,S01,38.6,38.915116279069764
+MeanTrain,constant baseline,linear_baseline,no_features,215,1,C010,S01,38.7,38.92034739454095
+MeanTrain,constant baseline,linear_baseline,no_features,216,3,C010,S01,38.6,38.916744186046515
+MeanTrain,constant baseline,linear_baseline,no_features,217,3,C010,S01,38.7,38.916744186046515
+MeanTrain,constant baseline,linear_baseline,no_features,218,5,C010,S01,38.6,38.89021479713604
+MeanTrain,constant baseline,linear_baseline,no_features,219,3,C010,S01,38.7,38.916744186046515
+MeanTrain,constant baseline,linear_baseline,no_features,220,2,C010,S01,38.6,38.90954773869347
+MeanTrain,constant baseline,linear_baseline,no_features,221,4,C010,S01,38.6,38.915116279069764
+MeanTrain,constant baseline,linear_baseline,no_features,222,5,C010,S01,38.6,38.89021479713604
+MeanTrain,constant baseline,linear_baseline,no_features,223,2,C010,S01,38.7,38.90954773869347
+MeanTrain,constant baseline,linear_baseline,no_features,224,2,C010,S01,38.7,38.90954773869347
+MeanTrain,constant baseline,linear_baseline,no_features,225,4,C019,S01,39.5,38.915116279069764
+MeanTrain,constant baseline,linear_baseline,no_features,226,1,C019,S01,39.5,38.92034739454095
+MeanTrain,constant baseline,linear_baseline,no_features,227,5,C019,S01,39.4,38.89021479713604
+MeanTrain,constant baseline,linear_baseline,no_features,228,4,C019,S01,39.5,38.915116279069764
+MeanTrain,constant baseline,linear_baseline,no_features,229,3,C019,S01,39.4,38.916744186046515
+MeanTrain,constant baseline,linear_baseline,no_features,230,1,C019,S01,39.5,38.92034739454095
+MeanTrain,constant baseline,linear_baseline,no_features,231,3,C019,S01,39.6,38.916744186046515
+MeanTrain,constant baseline,linear_baseline,no_features,232,4,C019,S01,39.5,38.915116279069764
+MeanTrain,constant baseline,linear_baseline,no_features,233,1,C019,S01,39.5,38.92034739454095
+MeanTrain,constant baseline,linear_baseline,no_features,234,2,C019,S01,39.5,38.90954773869347
+MeanTrain,constant baseline,linear_baseline,no_features,235,5,C019,S01,39.5,38.89021479713604
+MeanTrain,constant baseline,linear_baseline,no_features,236,2,C019,S01,39.4,38.90954773869347
+MeanTrain,constant baseline,linear_baseline,no_features,237,5,C019,S01,39.5,38.89021479713604
+MeanTrain,constant baseline,linear_baseline,no_features,238,3,C005,S01,37.8,38.916744186046515
+MeanTrain,constant baseline,linear_baseline,no_features,239,5,C005,S01,37.8,38.89021479713604
+MeanTrain,constant baseline,linear_baseline,no_features,240,4,C005,S01,37.9,38.915116279069764
+MeanTrain,constant baseline,linear_baseline,no_features,241,4,C005,S01,37.8,38.915116279069764
+MeanTrain,constant baseline,linear_baseline,no_features,242,2,C005,S01,37.9,38.90954773869347
+MeanTrain,constant baseline,linear_baseline,no_features,243,1,C005,S01,37.8,38.92034739454095
+MeanTrain,constant baseline,linear_baseline,no_features,244,3,C005,S01,38.2,38.916744186046515
+MeanTrain,constant baseline,linear_baseline,no_features,245,1,C005,S01,38.0,38.92034739454095
+MeanTrain,constant baseline,linear_baseline,no_features,246,3,C005,S01,37.8,38.916744186046515
+MeanTrain,constant baseline,linear_baseline,no_features,247,1,C005,S01,38.2,38.92034739454095
+MeanTrain,constant baseline,linear_baseline,no_features,248,2,C005,S01,37.8,38.90954773869347
+MeanTrain,constant baseline,linear_baseline,no_features,249,2,C005,S01,38.0,38.90954773869347
+MeanTrain,constant baseline,linear_baseline,no_features,250,4,C005,S01,37.8,38.915116279069764
+MeanTrain,constant baseline,linear_baseline,no_features,251,3,C005,S01,37.8,38.916744186046515
+MeanTrain,constant baseline,linear_baseline,no_features,252,2,C017,S01,40.1,38.90954773869347
+MeanTrain,constant baseline,linear_baseline,no_features,253,2,C017,S01,38.9,38.90954773869347
+MeanTrain,constant baseline,linear_baseline,no_features,254,1,C017,S01,39.4,38.92034739454095
+MeanTrain,constant baseline,linear_baseline,no_features,255,1,C017,S01,39.2,38.92034739454095
+MeanTrain,constant baseline,linear_baseline,no_features,256,5,C017,S01,39.0,38.89021479713604
+MeanTrain,constant baseline,linear_baseline,no_features,257,4,C017,S01,39.3,38.915116279069764
+MeanTrain,constant baseline,linear_baseline,no_features,258,4,C017,S01,39.1,38.915116279069764
+MeanTrain,constant baseline,linear_baseline,no_features,259,2,C017,S01,39.6,38.90954773869347
+MeanTrain,constant baseline,linear_baseline,no_features,260,3,C017,S01,39.4,38.916744186046515
+MeanTrain,constant baseline,linear_baseline,no_features,261,2,C017,S01,39.9,38.90954773869347
+MeanTrain,constant baseline,linear_baseline,no_features,262,5,C017,S01,39.3,38.89021479713604
+MeanTrain,constant baseline,linear_baseline,no_features,263,1,C017,S01,39.4,38.92034739454095
+MeanTrain,constant baseline,linear_baseline,no_features,264,4,C017,S01,40.0,38.915116279069764
+MeanTrain,constant baseline,linear_baseline,no_features,265,3,C017,S01,39.5,38.916744186046515
+MeanTrain,constant baseline,linear_baseline,no_features,266,3,C017,S01,39.8,38.916744186046515
+MeanTrain,constant baseline,linear_baseline,no_features,267,5,C017,S01,39.4,38.89021479713604
+MeanTrain,constant baseline,linear_baseline,no_features,268,5,C020,S01,39.6,38.89021479713604
+MeanTrain,constant baseline,linear_baseline,no_features,269,3,C020,S01,38.6,38.916744186046515
+MeanTrain,constant baseline,linear_baseline,no_features,270,4,C020,S01,39.2,38.915116279069764
+MeanTrain,constant baseline,linear_baseline,no_features,271,2,C020,S01,38.8,38.90954773869347
+MeanTrain,constant baseline,linear_baseline,no_features,272,1,C020,S01,39.1,38.92034739454095
+MeanTrain,constant baseline,linear_baseline,no_features,273,4,C020,S01,39.1,38.915116279069764
+MeanTrain,constant baseline,linear_baseline,no_features,274,2,C020,S01,39.5,38.90954773869347
+MeanTrain,constant baseline,linear_baseline,no_features,275,1,C020,S01,40.2,38.92034739454095
+MeanTrain,constant baseline,linear_baseline,no_features,276,3,C020,S01,39.5,38.916744186046515
+MeanTrain,constant baseline,linear_baseline,no_features,277,4,C020,S01,39.6,38.915116279069764
+MeanTrain,constant baseline,linear_baseline,no_features,278,5,C020,S01,38.6,38.89021479713604
+MeanTrain,constant baseline,linear_baseline,no_features,279,1,C020,S01,40.4,38.92034739454095
+MeanTrain,constant baseline,linear_baseline,no_features,280,3,C020,S01,39.5,38.916744186046515
+MeanTrain,constant baseline,linear_baseline,no_features,281,5,C020,S01,40.2,38.89021479713604
+MeanTrain,constant baseline,linear_baseline,no_features,282,2,C020,S01,39.5,38.90954773869347
+MeanTrain,constant baseline,linear_baseline,no_features,283,3,C020,S01,40.2,38.916744186046515
+MeanTrain,constant baseline,linear_baseline,no_features,284,2,C009,S01,40.4,38.90954773869347
+MeanTrain,constant baseline,linear_baseline,no_features,285,1,C009,S01,39.3,38.92034739454095
+MeanTrain,constant baseline,linear_baseline,no_features,286,4,C009,S01,39.4,38.915116279069764
+MeanTrain,constant baseline,linear_baseline,no_features,287,1,C009,S01,39.5,38.92034739454095
+MeanTrain,constant baseline,linear_baseline,no_features,288,1,C009,S01,39.5,38.92034739454095
+MeanTrain,constant baseline,linear_baseline,no_features,289,3,C009,S01,40.5,38.916744186046515
+MeanTrain,constant baseline,linear_baseline,no_features,290,5,C009,S01,38.7,38.89021479713604
+MeanTrain,constant baseline,linear_baseline,no_features,291,1,C009,S01,40.8,38.92034739454095
+MeanTrain,constant baseline,linear_baseline,no_features,292,5,C009,S01,40.6,38.89021479713604
+MeanTrain,constant baseline,linear_baseline,no_features,293,5,C012,S01,40.3,38.89021479713604
+MeanTrain,constant baseline,linear_baseline,no_features,294,4,C012,S01,39.1,38.915116279069764
+MeanTrain,constant baseline,linear_baseline,no_features,295,4,C012,S01,39.0,38.915116279069764
+MeanTrain,constant baseline,linear_baseline,no_features,296,1,C012,S01,39.0,38.92034739454095
+MeanTrain,constant baseline,linear_baseline,no_features,297,1,C012,S01,39.7,38.92034739454095
+MeanTrain,constant baseline,linear_baseline,no_features,298,2,C012,S01,39.5,38.90954773869347
+MeanTrain,constant baseline,linear_baseline,no_features,299,5,C012,S01,39.5,38.89021479713604
+MeanTrain,constant baseline,linear_baseline,no_features,300,2,C012,S01,39.5,38.90954773869347
+MeanTrain,constant baseline,linear_baseline,no_features,301,2,C012,S01,39.8,38.90954773869347
+MeanTrain,constant baseline,linear_baseline,no_features,302,3,C012,S01,40.0,38.916744186046515
+MeanTrain,constant baseline,linear_baseline,no_features,303,2,C012,S01,39.4,38.90954773869347
+MeanTrain,constant baseline,linear_baseline,no_features,304,4,C012,S01,40.6,38.915116279069764
+MeanTrain,constant baseline,linear_baseline,no_features,305,5,C012,S01,40.5,38.89021479713604
+MeanTrain,constant baseline,linear_baseline,no_features,306,3,C006,S01,39.8,38.916744186046515
+MeanTrain,constant baseline,linear_baseline,no_features,307,1,C006,S01,38.5,38.92034739454095
+MeanTrain,constant baseline,linear_baseline,no_features,308,2,C006,S01,38.6,38.90954773869347
+MeanTrain,constant baseline,linear_baseline,no_features,309,5,C006,S01,39.3,38.89021479713604
+MeanTrain,constant baseline,linear_baseline,no_features,310,1,C006,S01,38.5,38.92034739454095
+MeanTrain,constant baseline,linear_baseline,no_features,311,3,C006,S01,39.7,38.916744186046515
+MeanTrain,constant baseline,linear_baseline,no_features,312,4,C006,S01,38.4,38.915116279069764
+MeanTrain,constant baseline,linear_baseline,no_features,313,3,C006,S01,38.9,38.916744186046515
+MeanTrain,constant baseline,linear_baseline,no_features,314,2,C006,S01,39.4,38.90954773869347
+MeanTrain,constant baseline,linear_baseline,no_features,315,4,C006,S01,38.5,38.915116279069764
+MeanTrain,constant baseline,linear_baseline,no_features,316,2,C006,S01,39.4,38.90954773869347
+MeanTrain,constant baseline,linear_baseline,no_features,317,4,C006,S01,39.9,38.915116279069764
+MeanTrain,constant baseline,linear_baseline,no_features,318,2,C006,S01,39.6,38.90954773869347
+MeanTrain,constant baseline,linear_baseline,no_features,319,5,C006,S01,40.0,38.89021479713604
+MeanTrain,constant baseline,linear_baseline,no_features,320,3,C015,S01,38.9,38.916744186046515
+MeanTrain,constant baseline,linear_baseline,no_features,321,1,C015,S01,38.2,38.92034739454095
+MeanTrain,constant baseline,linear_baseline,no_features,322,5,C015,S01,39.7,38.89021479713604
+MeanTrain,constant baseline,linear_baseline,no_features,323,1,C015,S01,38.2,38.92034739454095
+MeanTrain,constant baseline,linear_baseline,no_features,324,1,C015,S01,38.5,38.92034739454095
+MeanTrain,constant baseline,linear_baseline,no_features,325,3,C015,S01,38.3,38.916744186046515
+MeanTrain,constant baseline,linear_baseline,no_features,326,2,C015,S01,38.2,38.90954773869347
+MeanTrain,constant baseline,linear_baseline,no_features,327,2,C015,S01,38.2,38.90954773869347
+MeanTrain,constant baseline,linear_baseline,no_features,328,4,C015,S01,38.0,38.915116279069764
+MeanTrain,constant baseline,linear_baseline,no_features,329,4,C015,S01,39.2,38.915116279069764
+MeanTrain,constant baseline,linear_baseline,no_features,330,4,C015,S01,38.5,38.915116279069764
+MeanTrain,constant baseline,linear_baseline,no_features,331,5,C015,S01,39.0,38.89021479713604
+MeanTrain,constant baseline,linear_baseline,no_features,332,5,C015,S01,39.7,38.89021479713604
+MeanTrain,constant baseline,linear_baseline,no_features,333,2,C015,S01,40.0,38.90954773869347
+MeanTrain,constant baseline,linear_baseline,no_features,334,3,C015,S01,38.5,38.916744186046515
+MeanTrain,constant baseline,linear_baseline,no_features,335,1,C015,S01,38.4,38.92034739454095
+MeanTrain,constant baseline,linear_baseline,no_features,336,3,C015,S01,38.8,38.916744186046515
+MeanTrain,constant baseline,linear_baseline,no_features,337,2,C015,S01,39.1,38.90954773869347
+MeanTrain,constant baseline,linear_baseline,no_features,338,4,C007,S01,40.1,38.915116279069764
+MeanTrain,constant baseline,linear_baseline,no_features,339,3,C007,S01,38.4,38.916744186046515
+MeanTrain,constant baseline,linear_baseline,no_features,340,1,C007,S01,39.8,38.92034739454095
+MeanTrain,constant baseline,linear_baseline,no_features,341,4,C007,S01,38.5,38.915116279069764
+MeanTrain,constant baseline,linear_baseline,no_features,342,1,C007,S01,40.0,38.92034739454095
+MeanTrain,constant baseline,linear_baseline,no_features,343,5,C007,S01,39.3,38.89021479713604
+MeanTrain,constant baseline,linear_baseline,no_features,344,2,C007,S01,39.9,38.90954773869347
+MeanTrain,constant baseline,linear_baseline,no_features,345,3,C007,S01,39.7,38.916744186046515
+MeanTrain,constant baseline,linear_baseline,no_features,346,5,C007,S01,39.7,38.89021479713604
+MeanTrain,constant baseline,linear_baseline,no_features,347,5,C007,S01,39.5,38.89021479713604
+MeanTrain,constant baseline,linear_baseline,no_features,348,4,C007,S01,39.7,38.915116279069764
+MeanTrain,constant baseline,linear_baseline,no_features,349,2,C007,S01,39.6,38.90954773869347
+MeanTrain,constant baseline,linear_baseline,no_features,350,1,C007,S01,39.3,38.92034739454095
+MeanTrain,constant baseline,linear_baseline,no_features,351,3,C007,S01,40.7,38.916744186046515
+MeanTrain,constant baseline,linear_baseline,no_features,352,2,C007,S01,39.2,38.90954773869347
+MeanTrain,constant baseline,linear_baseline,no_features,353,2,C007,S01,39.4,38.90954773869347
+MeanTrain,constant baseline,linear_baseline,no_features,354,1,C007,S01,40.6,38.92034739454095
+MeanTrain,constant baseline,linear_baseline,no_features,355,3,C007,S01,38.3,38.916744186046515
+MeanTrain,constant baseline,linear_baseline,no_features,356,4,C007,S01,40.2,38.915116279069764
+MeanTrain,constant baseline,linear_baseline,no_features,357,3,C013,S01,39.3,38.916744186046515
+MeanTrain,constant baseline,linear_baseline,no_features,358,4,C013,S01,38.7,38.915116279069764
+MeanTrain,constant baseline,linear_baseline,no_features,359,4,C013,S01,38.6,38.915116279069764
+MeanTrain,constant baseline,linear_baseline,no_features,360,5,C013,S01,38.6,38.89021479713604
+MeanTrain,constant baseline,linear_baseline,no_features,361,5,C013,S01,39.3,38.89021479713604
+MeanTrain,constant baseline,linear_baseline,no_features,362,1,C013,S01,39.2,38.92034739454095
+MeanTrain,constant baseline,linear_baseline,no_features,363,2,C013,S01,38.5,38.90954773869347
+MeanTrain,constant baseline,linear_baseline,no_features,364,2,C013,S01,39.1,38.90954773869347
+MeanTrain,constant baseline,linear_baseline,no_features,365,1,C013,S01,39.1,38.92034739454095
+MeanTrain,constant baseline,linear_baseline,no_features,366,5,C013,S01,39.0,38.89021479713604
+MeanTrain,constant baseline,linear_baseline,no_features,367,4,C024,S01,38.0,38.915116279069764
+MeanTrain,constant baseline,linear_baseline,no_features,368,1,C024,S01,38.0,38.92034739454095
+MeanTrain,constant baseline,linear_baseline,no_features,369,1,C024,S01,38.6,38.92034739454095
+MeanTrain,constant baseline,linear_baseline,no_features,370,5,C024,S01,38.3,38.89021479713604
+MeanTrain,constant baseline,linear_baseline,no_features,371,5,C024,S01,38.3,38.89021479713604
+MeanTrain,constant baseline,linear_baseline,no_features,372,2,C024,S01,38.2,38.90954773869347
+MeanTrain,constant baseline,linear_baseline,no_features,373,3,C024,S01,38.4,38.916744186046515
+MeanTrain,constant baseline,linear_baseline,no_features,374,3,C024,S01,38.7,38.916744186046515
+MeanTrain,constant baseline,linear_baseline,no_features,375,2,C024,S01,38.2,38.90954773869347
+MeanTrain,constant baseline,linear_baseline,no_features,376,1,C024,S01,38.9,38.92034739454095
+MeanTrain,constant baseline,linear_baseline,no_features,377,4,C024,S01,40.4,38.915116279069764
+MeanTrain,constant baseline,linear_baseline,no_features,378,4,C024,S01,38.4,38.915116279069764
+MeanTrain,constant baseline,linear_baseline,no_features,379,2,C024,S01,39.2,38.90954773869347
+MeanTrain,constant baseline,linear_baseline,no_features,380,5,C024,S01,41.2,38.89021479713604
+MeanTrain,constant baseline,linear_baseline,no_features,381,2,C024,S01,38.5,38.90954773869347
+MeanTrain,constant baseline,linear_baseline,no_features,382,1,C024,S01,40.5,38.92034739454095
+MeanTrain,constant baseline,linear_baseline,no_features,383,3,C024,S01,40.2,38.916744186046515
+MeanTrain,constant baseline,linear_baseline,no_features,384,2,C001,S01,38.2,38.90954773869347
+MeanTrain,constant baseline,linear_baseline,no_features,385,3,C001,S01,38.3,38.916744186046515
+MeanTrain,constant baseline,linear_baseline,no_features,386,1,C001,S01,38.3,38.92034739454095
+MeanTrain,constant baseline,linear_baseline,no_features,387,4,C001,S01,38.2,38.915116279069764
+MeanTrain,constant baseline,linear_baseline,no_features,388,5,C002,S01,39.0,38.89021479713604
+MeanTrain,constant baseline,linear_baseline,no_features,389,2,C002,S01,39.0,38.90954773869347
+MeanTrain,constant baseline,linear_baseline,no_features,390,1,C002,S01,39.0,38.92034739454095
+MeanTrain,constant baseline,linear_baseline,no_features,391,3,C002,S01,39.0,38.916744186046515
+MeanTrain,constant baseline,linear_baseline,no_features,392,3,C003,S01,38.5,38.916744186046515
+MeanTrain,constant baseline,linear_baseline,no_features,393,5,C003,S01,38.6,38.89021479713604
+MeanTrain,constant baseline,linear_baseline,no_features,394,4,C003,S01,38.5,38.915116279069764
+MeanTrain,constant baseline,linear_baseline,no_features,395,5,C003,S01,38.5,38.89021479713604
+MeanTrain,constant baseline,linear_baseline,no_features,396,1,C003,S01,38.6,38.92034739454095
+MeanTrain,constant baseline,linear_baseline,no_features,397,2,C004,S01,37.6,38.90954773869347
+MeanTrain,constant baseline,linear_baseline,no_features,398,1,C004,S01,37.7,38.92034739454095
+MeanTrain,constant baseline,linear_baseline,no_features,399,1,C004,S01,37.7,38.92034739454095
+MeanTrain,constant baseline,linear_baseline,no_features,400,4,C004,S01,37.5,38.915116279069764
+MeanTrain,constant baseline,linear_baseline,no_features,401,5,C004,S01,37.6,38.89021479713604
+MeanTrain,constant baseline,linear_baseline,no_features,402,5,C005,S01,37.8,38.89021479713604
+MeanTrain,constant baseline,linear_baseline,no_features,403,5,C005,S01,37.7,38.89021479713604
+MeanTrain,constant baseline,linear_baseline,no_features,404,1,C005,S01,37.9,38.92034739454095
+MeanTrain,constant baseline,linear_baseline,no_features,405,2,C005,S01,37.7,38.90954773869347
+MeanTrain,constant baseline,linear_baseline,no_features,406,5,C006,S01,39.5,38.89021479713604
+MeanTrain,constant baseline,linear_baseline,no_features,407,3,C006,S01,39.6,38.916744186046515
+MeanTrain,constant baseline,linear_baseline,no_features,408,1,C006,S01,39.4,38.92034739454095
+MeanTrain,constant baseline,linear_baseline,no_features,409,2,C006,S01,38.7,38.90954773869347
+MeanTrain,constant baseline,linear_baseline,no_features,410,5,C008,S01,38.2,38.89021479713604
+MeanTrain,constant baseline,linear_baseline,no_features,411,5,C008,S01,38.2,38.89021479713604
+MeanTrain,constant baseline,linear_baseline,no_features,412,2,C008,S01,38.1,38.90954773869347
+MeanTrain,constant baseline,linear_baseline,no_features,413,5,C008,S01,38.1,38.89021479713604
+MeanTrain,constant baseline,linear_baseline,no_features,414,4,C008,S01,38.2,38.915116279069764
+MeanTrain,constant baseline,linear_baseline,no_features,415,5,C009,S01,39.7,38.89021479713604
+MeanTrain,constant baseline,linear_baseline,no_features,416,1,C009,S01,40.4,38.92034739454095
+MeanTrain,constant baseline,linear_baseline,no_features,417,5,C009,S01,40.4,38.89021479713604
+MeanTrain,constant baseline,linear_baseline,no_features,418,2,C009,S01,40.5,38.90954773869347
+MeanTrain,constant baseline,linear_baseline,no_features,419,1,C009,S01,39.6,38.92034739454095
+MeanTrain,constant baseline,linear_baseline,no_features,420,4,C009,S01,39.6,38.915116279069764
+MeanTrain,constant baseline,linear_baseline,no_features,421,1,C009,S01,39.5,38.92034739454095
+MeanTrain,constant baseline,linear_baseline,no_features,422,1,C009,S01,39.7,38.92034739454095
+MeanTrain,constant baseline,linear_baseline,no_features,423,4,C010,S01,38.7,38.915116279069764
+MeanTrain,constant baseline,linear_baseline,no_features,424,1,C010,S01,38.6,38.92034739454095
+MeanTrain,constant baseline,linear_baseline,no_features,425,1,C010,S01,38.8,38.92034739454095
+MeanTrain,constant baseline,linear_baseline,no_features,426,5,C010,S01,38.7,38.89021479713604
+MeanTrain,constant baseline,linear_baseline,no_features,427,5,C011,S01,38.3,38.89021479713604
+MeanTrain,constant baseline,linear_baseline,no_features,428,5,C011,S01,38.3,38.89021479713604
+MeanTrain,constant baseline,linear_baseline,no_features,429,4,C011,S01,38.4,38.915116279069764
+MeanTrain,constant baseline,linear_baseline,no_features,430,3,C011,S01,38.1,38.916744186046515
+MeanTrain,constant baseline,linear_baseline,no_features,431,5,C011,S01,38.2,38.89021479713604
+MeanTrain,constant baseline,linear_baseline,no_features,432,2,C011,S01,38.2,38.90954773869347
+MeanTrain,constant baseline,linear_baseline,no_features,433,1,C011,S01,38.1,38.92034739454095
+MeanTrain,constant baseline,linear_baseline,no_features,434,2,C011,S01,38.1,38.90954773869347
+MeanTrain,constant baseline,linear_baseline,no_features,435,2,C012,S01,39.5,38.90954773869347
+MeanTrain,constant baseline,linear_baseline,no_features,436,4,C012,S01,40.2,38.915116279069764
+MeanTrain,constant baseline,linear_baseline,no_features,437,5,C012,S01,40.3,38.89021479713604
+MeanTrain,constant baseline,linear_baseline,no_features,438,5,C012,S01,40.4,38.89021479713604
+MeanTrain,constant baseline,linear_baseline,no_features,439,5,C013,S01,39.0,38.89021479713604
+MeanTrain,constant baseline,linear_baseline,no_features,440,1,C013,S01,39.1,38.92034739454095
+MeanTrain,constant baseline,linear_baseline,no_features,441,2,C013,S01,38.7,38.90954773869347
+MeanTrain,constant baseline,linear_baseline,no_features,442,2,C013,S01,39.1,38.90954773869347
+MeanTrain,constant baseline,linear_baseline,no_features,443,1,C013,S01,39.1,38.92034739454095
+MeanTrain,constant baseline,linear_baseline,no_features,444,5,C013,S01,39.1,38.89021479713604
+MeanTrain,constant baseline,linear_baseline,no_features,445,3,C013,S01,39.1,38.916744186046515
+MeanTrain,constant baseline,linear_baseline,no_features,446,5,C014,S01,38.0,38.89021479713604
+MeanTrain,constant baseline,linear_baseline,no_features,447,2,C014,S01,38.3,38.90954773869347
+MeanTrain,constant baseline,linear_baseline,no_features,448,4,C014,S01,38.3,38.915116279069764
+MeanTrain,constant baseline,linear_baseline,no_features,449,3,C014,S01,38.3,38.916744186046515
+MeanTrain,constant baseline,linear_baseline,no_features,450,2,C016,S01,38.6,38.90954773869347
+MeanTrain,constant baseline,linear_baseline,no_features,451,5,C016,S01,38.7,38.89021479713604
+MeanTrain,constant baseline,linear_baseline,no_features,452,5,C016,S01,38.7,38.89021479713604
+MeanTrain,constant baseline,linear_baseline,no_features,453,2,C016,S01,38.8,38.90954773869347
+MeanTrain,constant baseline,linear_baseline,no_features,454,2,C016,S01,38.7,38.90954773869347
+MeanTrain,constant baseline,linear_baseline,no_features,455,4,C016,S01,38.7,38.915116279069764
+MeanTrain,constant baseline,linear_baseline,no_features,456,3,C016,S01,38.8,38.916744186046515
+MeanTrain,constant baseline,linear_baseline,no_features,457,1,C016,S01,38.6,38.92034739454095
+MeanTrain,constant baseline,linear_baseline,no_features,458,1,C017,S01,39.0,38.92034739454095
+MeanTrain,constant baseline,linear_baseline,no_features,459,5,C017,S01,39.4,38.89021479713604
+MeanTrain,constant baseline,linear_baseline,no_features,460,3,C018,S01,38.8,38.916744186046515
+MeanTrain,constant baseline,linear_baseline,no_features,461,2,C018,S01,38.8,38.90954773869347
+MeanTrain,constant baseline,linear_baseline,no_features,462,3,C018,S01,38.8,38.916744186046515
+MeanTrain,constant baseline,linear_baseline,no_features,463,2,C018,S01,38.8,38.90954773869347
+MeanTrain,constant baseline,linear_baseline,no_features,464,1,C018,S01,38.8,38.92034739454095
+MeanTrain,constant baseline,linear_baseline,no_features,465,2,C019,S01,39.4,38.90954773869347
+MeanTrain,constant baseline,linear_baseline,no_features,466,3,C019,S01,39.5,38.916744186046515
+MeanTrain,constant baseline,linear_baseline,no_features,467,2,C019,S01,39.5,38.90954773869347
+MeanTrain,constant baseline,linear_baseline,no_features,468,1,C019,S01,39.5,38.92034739454095
+MeanTrain,constant baseline,linear_baseline,no_features,469,5,C020,S01,40.2,38.89021479713604
+MeanTrain,constant baseline,linear_baseline,no_features,470,2,C020,S01,39.6,38.90954773869347
+MeanTrain,constant baseline,linear_baseline,no_features,471,2,C021,S01,38.3,38.90954773869347
+MeanTrain,constant baseline,linear_baseline,no_features,472,3,C021,S01,38.3,38.916744186046515
+MeanTrain,constant baseline,linear_baseline,no_features,473,1,C021,S01,38.3,38.92034739454095
+MeanTrain,constant baseline,linear_baseline,no_features,474,4,C021,S01,38.2,38.915116279069764
+MeanTrain,constant baseline,linear_baseline,no_features,475,4,C021,S01,38.2,38.915116279069764
+MeanTrain,constant baseline,linear_baseline,no_features,476,3,C021,S01,38.3,38.916744186046515
+MeanTrain,constant baseline,linear_baseline,no_features,477,1,C021,S01,38.2,38.92034739454095
+MeanTrain,constant baseline,linear_baseline,no_features,478,1,C021,S01,38.2,38.92034739454095
+MeanTrain,constant baseline,linear_baseline,no_features,479,1,C022,S01,38.4,38.92034739454095
+MeanTrain,constant baseline,linear_baseline,no_features,480,2,C022,S01,38.4,38.90954773869347
+MeanTrain,constant baseline,linear_baseline,no_features,481,5,C022,S01,38.4,38.89021479713604
+MeanTrain,constant baseline,linear_baseline,no_features,482,3,C023,S01,38.9,38.916744186046515
+MeanTrain,constant baseline,linear_baseline,no_features,483,5,C023,S01,38.9,38.89021479713604
+MeanTrain,constant baseline,linear_baseline,no_features,484,5,C023,S01,39.1,38.89021479713604
+MeanTrain,constant baseline,linear_baseline,no_features,485,1,C024,S01,39.0,38.92034739454095
+MeanTrain,constant baseline,linear_baseline,no_features,486,5,C025,S01,39.4,38.89021479713604
+MeanTrain,constant baseline,linear_baseline,no_features,487,1,C025,S01,39.4,38.92034739454095
+MeanTrain,constant baseline,linear_baseline,no_features,488,1,C025,S01,39.4,38.92034739454095
+MeanTrain,constant baseline,linear_baseline,no_features,489,1,C025,S01,39.4,38.92034739454095
+MeanTrain,constant baseline,linear_baseline,no_features,490,2,C025,S01,39.3,38.90954773869347
+MeanTrain,constant baseline,linear_baseline,no_features,491,2,C025,S01,39.5,38.90954773869347
+MeanTrain,constant baseline,linear_baseline,no_features,492,4,C025,S01,39.5,38.915116279069764
+MeanTrain,constant baseline,linear_baseline,no_features,493,3,C025,S01,39.4,38.916744186046515
+MeanTrain,constant baseline,linear_baseline,no_features,494,3,C026,S01,38.6,38.916744186046515
+MeanTrain,constant baseline,linear_baseline,no_features,495,1,C026,S01,38.7,38.92034739454095
+MeanTrain,constant baseline,linear_baseline,no_features,496,2,C026,S01,38.7,38.90954773869347
+MeanTrain,constant baseline,linear_baseline,no_features,497,5,C026,S01,38.7,38.89021479713604
+MeanTrain,constant baseline,linear_baseline,no_features,498,2,C026,S01,38.7,38.90954773869347
+MeanTrain,constant baseline,linear_baseline,no_features,499,4,C026,S01,38.7,38.915116279069764
+MeanTrain,constant baseline,linear_baseline,no_features,500,1,C026,S01,38.6,38.92034739454095
+MeanTrain,constant baseline,linear_baseline,no_features,501,3,C026,S01,38.6,38.916744186046515
+MeanTrain,constant baseline,linear_baseline,no_features,502,1,C026,S01,38.7,38.92034739454095
+MeanTrain,constant baseline,linear_baseline,no_features,503,2,C026,S01,38.6,38.90954773869347
+MeanTrain,constant baseline,linear_baseline,no_features,504,1,C027,S01,39.0,38.92034739454095
+MeanTrain,constant baseline,linear_baseline,no_features,505,4,C027,S01,39.0,38.915116279069764
+MeanTrain,constant baseline,linear_baseline,no_features,506,2,C027,S01,38.6,38.90954773869347
+MeanTrain,constant baseline,linear_baseline,no_features,507,3,C027,S01,39.8,38.916744186046515
+MeanTrain,constant baseline,linear_baseline,no_features,508,5,C027,S01,38.8,38.89021479713604
+MeanTrain,constant baseline,linear_baseline,no_features,509,1,C028,S01,40.3,38.92034739454095
+MeanTrain,constant baseline,linear_baseline,no_features,510,5,C028,S01,40.2,38.89021479713604
+MeanTrain,constant baseline,linear_baseline,no_features,511,4,C028,S01,40.2,38.915116279069764
+MeanTrain,constant baseline,linear_baseline,no_features,512,1,C028,S01,40.2,38.92034739454095
+MeanTrain,constant baseline,linear_baseline,no_features,513,2,C029,S01,38.3,38.90954773869347
+MeanTrain,constant baseline,linear_baseline,no_features,514,5,C029,S01,38.4,38.89021479713604
+MeanTrain,constant baseline,linear_baseline,no_features,515,2,C029,S01,38.3,38.90954773869347
+MeanTrain,constant baseline,linear_baseline,no_features,516,1,C029,S01,38.3,38.92034739454095
+MeanTrain,constant baseline,linear_baseline,no_features,517,3,C029,S01,38.3,38.916744186046515
+MeanTrain,constant baseline,linear_baseline,no_features,518,4,C030,S01,40.3,38.915116279069764
+MeanTrain,constant baseline,linear_baseline,no_features,519,1,C030,S01,40.2,38.92034739454095
+MeanTrain,constant baseline,linear_baseline,no_features,520,4,C030,S01,40.3,38.915116279069764
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,1,4,C021,S01,38.3,38.28416427221576
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,2,4,C021,S01,38.3,38.21093954959255
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,3,3,C021,S01,38.2,38.20694050834256
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,4,1,C021,S01,38.4,38.23129467136931
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,5,1,C021,S01,38.1,38.23929410248645
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,6,5,C021,S01,38.3,38.27724646489007
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,7,2,C021,S01,38.3,38.20433290596486
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,8,3,C021,S01,38.2,38.21886090110894
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,9,1,C021,S01,38.0,38.30560490361327
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,10,1,C003,S01,39.0,38.58292610011341
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,11,2,C003,S01,38.8,38.5156461247023
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,12,4,C003,S01,38.7,38.48979091960168
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,13,3,C003,S01,38.4,38.50414862677029
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,14,5,C003,S01,38.5,38.46813750456423
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,15,4,C003,S01,38.4,38.4743731156197
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,16,5,C003,S01,38.5,38.46088448809713
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,17,1,C003,S01,38.3,38.507387714764256
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,18,1,C003,S01,38.5,38.51672752346851
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,19,2,C003,S01,39.0,38.54765214395943
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,20,4,C003,S01,38.6,38.72904687798025
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,21,1,C003,S01,38.0,38.65869163672343
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,22,5,C002,S01,38.2,39.170436211336025
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,23,1,C002,S01,39.5,39.073511974491176
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,24,2,C002,S01,39.1,39.09746256932901
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,25,4,C002,S01,38.5,39.05013981223831
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,26,5,C002,S01,39.3,39.0041435040158
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,27,2,C002,S01,39.2,38.98276202561772
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,28,1,C002,S01,38.8,38.96343423589258
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,29,3,C002,S01,39.0,38.96765243156107
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,30,4,C002,S01,38.9,39.060020492498175
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,31,1,C002,S01,40.0,39.31157385683492
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,32,3,C002,S01,39.7,39.44308144751518
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,33,4,C002,S01,39.6,39.13842601419907
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,34,2,C002,S01,39.2,39.24313682516733
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,35,3,C029,S01,38.1,38.35926735417609
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,36,4,C029,S01,38.1,38.357466023750014
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,37,1,C029,S01,38.0,38.29347688628634
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,38,2,C029,S01,38.2,38.24354742160877
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,39,5,C029,S01,38.1,38.28333990987672
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,40,2,C029,S01,38.5,38.26302899294267
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,41,1,C029,S01,38.5,38.30366147362218
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,42,3,C029,S01,38.5,38.27131593257995
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,43,5,C029,S01,38.5,38.42805913028835
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,44,2,C029,S01,38.4,38.41302490879323
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,45,4,C029,S01,38.4,38.549499402050174
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,46,3,C029,S01,38.9,38.37296306304822
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,47,2,C001,S01,38.0,38.29895847189211
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,48,5,C001,S01,38.9,38.45744118965826
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,49,4,C001,S01,39.2,38.42618408880692
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,50,3,C001,S01,38.3,38.1823605059202
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,51,5,C001,S01,38.0,38.19683613668098
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,52,1,C001,S01,38.0,38.172612603332055
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,53,2,C001,S01,38.2,38.23633069180352
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,54,3,C001,S01,38.0,38.19970126226653
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,55,1,C001,S01,38.4,38.180094739684506
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,56,4,C001,S01,38.1,38.17740666229396
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,57,3,C001,S01,38.2,38.370069073889056
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,58,2,C001,S01,38.3,38.28100076554769
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,59,2,C001,S01,38.1,38.25241565769213
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,60,4,C001,S01,38.1,38.19551840281464
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,61,4,C027,S01,38.9,38.93581047896491
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,62,2,C027,S01,41.5,38.87554600714214
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,63,3,C027,S01,38.7,39.85055968651551
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,64,5,C027,S01,38.5,38.833390420241
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,65,4,C027,S01,38.6,38.7880676614276
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,66,3,C027,S01,38.5,38.67149809482635
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,67,2,C027,S01,38.6,38.64057731733299
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,68,4,C027,S01,38.5,38.79326866424614
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,69,2,C027,S01,38.5,38.64817904889155
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,70,2,C027,S01,39.1,38.89238180551238
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,71,5,C027,S01,39.1,38.93842829220083
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,72,1,C027,S01,38.2,38.98296646937165
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,73,1,C026,S01,38.3,38.63622255658205
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,74,2,C026,S01,38.5,38.58768164121354
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,75,5,C026,S01,38.6,38.58485454538234
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,76,2,C026,S01,39.0,38.80053239483296
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,77,4,C026,S01,39.1,38.7807339741418
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,78,1,C026,S01,38.9,38.71566869791273
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,79,3,C026,S01,38.6,38.72976217911725
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,80,2,C016,S01,38.9,38.61125000060562
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,81,4,C016,S01,39.2,38.6344145942498
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,82,3,C016,S01,38.0,38.56706193054092
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,83,1,C016,S01,38.1,38.50381753607084
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,84,3,C016,S01,38.3,38.56427994485438
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,85,2,C016,S01,38.7,38.44277086512827
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,86,5,C016,S01,39.4,38.68907333177586
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,87,5,C016,S01,38.6,38.726858413235576
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,88,2,C016,S01,38.8,38.60804531175472
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,89,5,C022,S01,38.1,38.43789613056886
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,90,4,C022,S01,38.3,38.31303051914327
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,91,1,C022,S01,38.1,38.53440737872065
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,92,4,C022,S01,38.1,38.46240222470673
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,93,2,C022,S01,38.7,38.216369273187
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,94,1,C022,S01,38.2,38.70167025189206
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,95,2,C022,S01,38.7,38.22867548974611
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,96,4,C022,S01,39.0,38.4967021655775
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,97,2,C022,S01,39.5,38.25064043122265
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,98,1,C022,S01,38.0,38.71304021745307
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,99,5,C022,S01,38.3,38.42916081458157
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,100,3,C022,S01,38.2,38.4439702058008
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,101,1,C022,S01,38.2,38.47975080764999
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,102,2,C022,S01,38.5,38.27377778656785
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,103,5,C014,S01,38.5,38.36761263668617
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,104,5,C014,S01,38.5,38.20087259439819
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,105,2,C014,S01,38.0,38.2785524071048
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,106,4,C014,S01,38.1,38.09839879633854
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,107,3,C014,S01,38.2,38.07633875932123
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,108,2,C014,S01,37.5,38.137388678050456
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,109,1,C014,S01,38.1,38.13325831082927
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,110,1,C014,S01,38.0,38.18327733513486
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,111,1,C014,S01,38.0,38.22962410026031
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,112,2,C014,S01,39.0,38.38979468101156
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,113,2,C014,S01,39.2,38.38877362978383
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,114,5,C014,S01,38.8,38.40903837523655
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,115,1,C014,S01,38.4,38.66241983999719
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,116,5,C023,S01,38.3,39.05450813340512
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,117,1,C023,S01,38.3,39.16966388038293
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,118,3,C023,S01,39.4,38.733098270247154
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,119,4,C023,S01,39.2,38.926631084276366
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,120,1,C023,S01,39.0,38.95678631526064
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,121,4,C023,S01,38.8,38.92008145819941
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,122,2,C023,S01,38.9,38.880764448867694
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,123,3,C023,S01,38.6,38.95256401502939
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,124,3,C023,S01,39.1,38.93673420306828
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,125,5,C023,S01,39.0,38.92724126909148
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,126,5,C023,S01,39.1,39.29635044917148
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,127,2,C023,S01,39.9,39.04730436558757
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,128,4,C023,S01,39.4,39.10149930961575
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,129,1,C023,S01,39.3,39.25039444223087
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,130,3,C011,S01,38.1,38.24862764326663
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,131,5,C011,S01,38.0,38.06202738352256
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,132,2,C011,S01,37.9,38.125311975106186
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,133,1,C011,S01,38.1,38.096923693091
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,134,2,C011,S01,38.1,38.135184396877925
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,135,4,C011,S01,38.4,38.32401753785025
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,136,5,C011,S01,39.1,38.20874631756054
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,137,5,C011,S01,38.2,38.20297940126276
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,138,4,C011,S01,38.1,38.40348456843965
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,139,4,C004,S01,37.8,37.80184880923592
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,140,1,C004,S01,37.6,37.61415823078586
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,141,2,C004,S01,37.5,37.569599229375655
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,142,5,C004,S01,37.6,37.65194033105964
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,143,4,C004,S01,37.6,37.62034570034517
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,144,1,C004,S01,37.5,37.580196878709
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,145,5,C004,S01,37.6,37.66446148797612
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,146,3,C004,S01,37.5,37.60287634830955
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,147,3,C004,S01,37.5,37.58244516592115
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,148,2,C004,S01,37.7,37.7294708038184
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,149,3,C004,S01,37.7,37.75551913786274
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,150,2,C004,S01,37.6,37.7063816846527
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,151,1,C028,S01,40.3,40.27095233208143
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,152,5,C028,S01,40.2,40.16489906790218
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,153,3,C028,S01,40.2,40.17088992511788
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,154,5,C028,S01,40.2,40.16629816905835
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,155,1,C028,S01,39.8,39.85413892185714
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,156,2,C028,S01,40.3,40.23185814668927
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,157,4,C028,S01,40.1,40.08179818968688
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,158,3,C028,S01,40.3,40.216494608642655
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,159,2,C028,S01,40.1,40.030239397341184
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,160,3,C028,S01,40.1,40.081147496455024
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,161,4,C028,S01,40.2,40.23362252041602
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,162,2,C028,S01,40.3,40.24546410246548
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,163,2,C028,S01,40.3,40.243830907161104
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,164,3,C008,S01,38.3,38.35819768255289
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,165,4,C008,S01,38.2,38.20697429992499
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,166,3,C008,S01,38.1,38.14128359296226
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,167,2,C008,S01,38.1,38.10494164592907
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,168,3,C008,S01,38.1,38.13587849495269
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,169,1,C008,S01,38.1,38.14953260292553
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,170,1,C008,S01,38.1,38.1466552820554
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,171,2,C008,S01,38.2,38.17575348820145
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,172,2,C008,S01,38.2,38.173959850944335
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,173,1,C008,S01,38.2,38.250601284467805
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,174,1,C008,S01,38.3,38.32945351239316
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,175,4,C008,S01,38.2,38.18401196052071
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,176,2,C030,S01,40.1,40.089469696709536
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,177,1,C030,S01,40.2,40.0979315357637
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,178,2,C030,S01,40.3,40.24505025197847
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,179,1,C030,S01,40.3,40.24360554468014
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,180,5,C030,S01,40.3,40.26051576087279
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,181,3,C030,S01,40.3,40.22056839655188
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,182,2,C030,S01,40.2,40.15971831759683
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,183,2,C030,S01,40.2,40.11055827327088
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,184,5,C030,S01,40.2,40.15093238678946
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,185,1,C030,S01,40.2,40.09283456282336
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,186,4,C030,S01,40.2,40.15296876186318
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,187,5,C030,S01,40.2,40.16791451742757
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,188,3,C030,S01,40.1,39.99363384821096
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,189,3,C030,S01,40.2,40.10106298699491
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,190,1,C018,S01,38.8,38.80875806843834
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,191,2,C018,S01,38.8,38.77412610808983
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,192,5,C018,S01,38.8,38.79369030289951
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,193,4,C018,S01,38.8,38.78816464952538
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,194,5,C018,S01,38.8,38.75962426432223
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,195,3,C018,S01,38.8,38.78982878715553
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,196,2,C018,S01,38.8,38.75765095428644
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,197,5,C018,S01,38.8,38.75602854433555
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,198,1,C018,S01,38.8,38.78319353051002
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,199,4,C018,S01,38.8,38.79232473380617
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,200,1,C018,S01,38.8,38.75321638478604
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,201,4,C018,S01,38.8,38.762340538286495
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,202,2,C025,S01,39.4,39.36982026591805
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,203,3,C025,S01,39.5,39.360184740985765
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,204,3,C025,S01,39.5,39.36315615092318
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,205,4,C025,S01,39.4,39.37491937785762
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,206,5,C025,S01,39.4,39.37649767998922
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,207,2,C025,S01,39.4,39.35796162027185
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,208,5,C025,S01,39.4,39.36073172649691
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,209,4,C025,S01,39.5,39.34385276730011
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,210,1,C025,S01,39.4,39.40942921027592
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,211,1,C010,S01,38.7,38.72658419037585
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,212,3,C010,S01,38.6,38.6047603473753
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,213,2,C010,S01,38.7,38.62228578927549
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,214,4,C010,S01,38.6,38.58481784658938
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,215,1,C010,S01,38.7,38.694640609398135
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,216,3,C010,S01,38.6,38.60670728376768
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,217,3,C010,S01,38.7,38.70580121547667
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,218,5,C010,S01,38.6,38.56761261460678
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,219,3,C010,S01,38.7,38.71363214636845
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,220,2,C010,S01,38.6,38.61075797143451
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,221,4,C010,S01,38.6,38.61352999185327
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,222,5,C010,S01,38.6,38.5857755750245
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,223,2,C010,S01,38.7,38.69244686502952
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,224,2,C010,S01,38.7,38.8016020892489
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,225,4,C019,S01,39.5,39.50936915328578
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,226,1,C019,S01,39.5,39.41725056161663
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,227,5,C019,S01,39.4,39.389535138557896
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,228,4,C019,S01,39.5,39.49849831491226
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,229,3,C019,S01,39.4,39.39450106622145
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,230,1,C019,S01,39.5,39.492574722751606
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,231,3,C019,S01,39.6,39.47907877189032
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,232,4,C019,S01,39.5,39.47917344650761
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,233,1,C019,S01,39.5,39.552587840687686
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,234,2,C019,S01,39.5,39.52720212625098
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,235,5,C019,S01,39.5,39.4757213695417
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,236,2,C019,S01,39.4,39.357064090695374
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,237,5,C019,S01,39.5,39.48485521690173
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,238,3,C005,S01,37.8,37.8689122020367
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,239,5,C005,S01,37.8,37.76706965675713
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,240,4,C005,S01,37.9,37.9066833179771
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,241,4,C005,S01,37.8,37.75042707177471
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,242,2,C005,S01,37.9,37.88949673741956
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,243,1,C005,S01,37.8,37.78325315602556
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,244,3,C005,S01,38.2,38.24095196410684
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,245,1,C005,S01,38.0,37.96442219855848
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,246,3,C005,S01,37.8,37.8790108781637
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,247,1,C005,S01,38.2,38.14870811881373
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,248,2,C005,S01,37.8,37.80681886428551
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,249,2,C005,S01,38.0,37.97643185546335
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,250,4,C005,S01,37.8,37.79175739008574
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,251,3,C005,S01,37.8,37.87804225721428
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,252,2,C017,S01,40.1,39.7894801242316
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,253,2,C017,S01,38.9,39.06159938488245
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,254,1,C017,S01,39.4,39.16349730103806
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,255,1,C017,S01,39.2,39.080725891864006
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,256,5,C017,S01,39.0,39.3911874451227
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,257,4,C017,S01,39.3,39.429796518495806
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,258,4,C017,S01,39.1,39.42873132003534
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,259,2,C017,S01,39.6,39.29675933147359
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,260,3,C017,S01,39.4,39.39704928646441
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,261,2,C017,S01,39.9,39.77787182354234
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,262,5,C017,S01,39.3,39.46760581555915
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,263,1,C017,S01,39.4,39.361630517602144
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,264,4,C017,S01,40.0,39.90175592033354
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,265,3,C017,S01,39.5,39.31214472816798
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,266,3,C017,S01,39.8,39.98743421409492
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,267,5,C017,S01,39.4,39.37841186089983
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,268,5,C020,S01,39.6,39.57366777340908
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,269,3,C020,S01,38.6,38.88278026828253
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,270,4,C020,S01,39.2,39.1189466502948
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,271,2,C020,S01,38.8,38.79177569098229
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,272,1,C020,S01,39.1,39.164570050764205
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,273,4,C020,S01,39.1,39.13477694376816
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,274,2,C020,S01,39.5,39.13450673011752
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,275,1,C020,S01,40.2,40.00928048758544
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,276,3,C020,S01,39.5,39.12263924636501
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,277,4,C020,S01,39.6,39.54337776235703
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,278,5,C020,S01,38.6,39.54635224831982
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,279,1,C020,S01,40.4,40.05077107450011
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,280,3,C020,S01,39.5,39.58865970392274
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,281,5,C020,S01,40.2,40.23203860784987
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,282,2,C020,S01,39.5,39.58142535413806
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,283,3,C020,S01,40.2,40.2091687906316
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,284,2,C009,S01,40.4,40.43909333121791
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,285,1,C009,S01,39.3,39.60970071976953
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,286,4,C009,S01,39.4,39.57388161678675
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,287,1,C009,S01,39.5,39.62866406144987
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,288,1,C009,S01,39.5,39.700456742873534
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,289,3,C009,S01,40.5,40.470945474485646
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,290,5,C009,S01,38.7,39.71082047469985
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,291,1,C009,S01,40.8,40.39619379425756
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,292,5,C009,S01,40.6,40.46655643213742
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,293,5,C012,S01,40.3,40.31847977712556
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,294,4,C012,S01,39.1,39.09428793299073
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,295,4,C012,S01,39.0,39.090262879823584
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,296,1,C012,S01,39.0,39.172661128232654
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,297,1,C012,S01,39.7,39.52675447475752
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,298,2,C012,S01,39.5,39.654431955185984
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,299,5,C012,S01,39.5,39.84951272048889
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,300,2,C012,S01,39.5,39.663471485276965
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,301,2,C012,S01,39.8,39.75199718386023
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,302,3,C012,S01,40.0,39.63350844075694
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,303,2,C012,S01,39.4,39.69039950775877
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,304,4,C012,S01,40.6,40.33802686542325
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,305,5,C012,S01,40.5,40.316295944604185
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,306,3,C006,S01,39.8,39.580676735864415
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,307,1,C006,S01,38.5,39.32589010653198
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,308,2,C006,S01,38.6,38.66461638470103
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,309,5,C006,S01,39.3,39.12251582311919
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,310,1,C006,S01,38.5,38.92923409422977
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,311,3,C006,S01,39.7,39.050469018903605
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,312,4,C006,S01,38.4,39.25739062078396
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,313,3,C006,S01,38.9,39.72579531351439
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,314,2,C006,S01,39.4,39.63077531139514
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,315,4,C006,S01,38.5,39.25680483964722
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,316,2,C006,S01,39.4,39.68452386934459
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,317,4,C006,S01,39.9,38.99421357371559
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,318,2,C006,S01,39.6,39.70158420130021
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,319,5,C006,S01,40.0,39.563033318444
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,320,3,C015,S01,38.9,39.1151476322169
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,321,1,C015,S01,38.2,38.59186647519724
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,322,5,C015,S01,39.7,38.26244728214928
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,323,1,C015,S01,38.2,38.59383137032405
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,324,1,C015,S01,38.5,38.84081050176806
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,325,3,C015,S01,38.3,38.71172825518932
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,326,2,C015,S01,38.2,38.289383381944006
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,327,2,C015,S01,38.2,38.278872073472535
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,328,4,C015,S01,38.0,38.78769852198674
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,329,4,C015,S01,39.2,39.50847054028439
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,330,4,C015,S01,38.5,38.53258021761936
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,331,5,C015,S01,39.0,39.41477123671061
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,332,5,C015,S01,39.7,39.42882504107754
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,333,2,C015,S01,40.0,39.18232253530702
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,334,3,C015,S01,38.5,38.52123624309925
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,335,1,C015,S01,38.4,38.74390497960122
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,336,3,C015,S01,38.8,39.12599401207302
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,337,2,C015,S01,39.1,38.83679608358002
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,338,4,C007,S01,40.1,38.96929479467997
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,339,3,C007,S01,38.4,38.93965969742846
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,340,1,C007,S01,39.8,39.46679409920695
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,341,4,C007,S01,38.5,39.10928070149038
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,342,1,C007,S01,40.0,39.49700681569838
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,343,5,C007,S01,39.3,38.91477336094904
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,344,2,C007,S01,39.9,39.75937833255617
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,345,3,C007,S01,39.7,38.95584681034523
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,346,5,C007,S01,39.7,39.866586757985495
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,347,5,C007,S01,39.5,39.57164692505197
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,348,4,C007,S01,39.7,39.50099713290357
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,349,2,C007,S01,39.6,39.58949018517507
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,350,1,C007,S01,39.3,39.51060774939324
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,351,3,C007,S01,40.7,40.37818660830487
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,352,2,C007,S01,39.2,39.54086987367588
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,353,2,C007,S01,39.4,39.62129791080218
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,354,1,C007,S01,40.6,40.31415670152776
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,355,3,C007,S01,38.3,39.7221247513858
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,356,4,C007,S01,40.2,38.96480413442939
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,357,3,C013,S01,39.3,39.09801297972726
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,358,4,C013,S01,38.7,39.01983763531557
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,359,4,C013,S01,38.6,39.01736451853908
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,360,5,C013,S01,38.6,38.64404777801552
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,361,5,C013,S01,39.3,39.01708990789916
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,362,1,C013,S01,39.2,39.100021529772256
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,363,2,C013,S01,38.5,38.728866938761456
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,364,2,C013,S01,39.1,39.13374073271113
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,365,1,C013,S01,39.1,39.120409836339874
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,366,5,C013,S01,39.0,39.122243537529656
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,367,4,C024,S01,38.0,38.26117289313049
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,368,1,C024,S01,38.0,38.30657191724575
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,369,1,C024,S01,38.6,38.35141777920175
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,370,5,C024,S01,38.3,38.19101771100073
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,371,5,C024,S01,38.3,38.44680951903101
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,372,2,C024,S01,38.2,38.497932277388266
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,373,3,C024,S01,38.4,38.16455008100219
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,374,3,C024,S01,38.7,39.040790519434736
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,375,2,C024,S01,38.2,38.61916225371512
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,376,1,C024,S01,38.9,38.936372941125285
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,377,4,C024,S01,40.4,40.51916537220869
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,378,4,C024,S01,38.4,38.43736739670026
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,379,2,C024,S01,39.2,38.90191720949127
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,380,5,C024,S01,41.2,40.22481350097716
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,381,2,C024,S01,38.5,38.67471597449951
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,382,1,C024,S01,40.5,40.30081557489404
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,383,3,C024,S01,40.2,40.57563266480691
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,384,2,C001,S01,38.2,38.183518764359945
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,385,3,C001,S01,38.3,38.32140267582233
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,386,1,C001,S01,38.3,38.2813597016563
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,387,4,C001,S01,38.2,38.18326343921559
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,388,5,C002,S01,39.0,39.03227734761551
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,389,2,C002,S01,39.0,38.95951355710191
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,390,1,C002,S01,39.0,38.96399779046877
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,391,3,C002,S01,39.0,38.95758220743542
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,392,3,C003,S01,38.5,38.50022128059817
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,393,5,C003,S01,38.6,38.585994850464246
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,394,4,C003,S01,38.5,38.47848435006681
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,395,5,C003,S01,38.5,38.50530557281464
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,396,1,C003,S01,38.6,38.57121375293536
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,397,2,C004,S01,37.6,37.67012662701079
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,398,1,C004,S01,37.7,37.78229274902599
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,399,1,C004,S01,37.7,37.7377200299681
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,400,4,C004,S01,37.5,37.569745036362896
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,401,5,C004,S01,37.6,37.665932495406864
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,402,5,C005,S01,37.8,37.78639131195611
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,403,5,C005,S01,37.7,37.7728509770419
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,404,1,C005,S01,37.9,37.87738385916916
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,405,2,C005,S01,37.7,37.77627893594909
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,406,5,C006,S01,39.5,39.54109445534944
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,407,3,C006,S01,39.6,39.571320053979086
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,408,1,C006,S01,39.4,39.36649575737962
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,409,2,C006,S01,38.7,38.67563601814188
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,410,5,C008,S01,38.2,38.21330599051918
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,411,5,C008,S01,38.2,38.20354540229211
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,412,2,C008,S01,38.1,38.12551141736771
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,413,5,C008,S01,38.1,38.11317627994192
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,414,4,C008,S01,38.2,38.20815386503023
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,415,5,C009,S01,39.7,39.6476174607115
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,416,1,C009,S01,40.4,40.38670403911948
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,417,5,C009,S01,40.4,40.46398687718708
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,418,2,C009,S01,40.5,40.47327240537821
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,419,1,C009,S01,39.6,39.66370237363487
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,420,4,C009,S01,39.6,39.586477612330114
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,421,1,C009,S01,39.5,39.67070470375084
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,422,1,C009,S01,39.7,39.6266029777973
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,423,4,C010,S01,38.7,38.71278807029698
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,424,1,C010,S01,38.6,38.63162779542884
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,425,1,C010,S01,38.8,38.721431778456974
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,426,5,C010,S01,38.7,38.70433152852123
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,427,5,C011,S01,38.3,38.28015084836559
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,428,5,C011,S01,38.3,38.26454553547802
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,429,4,C011,S01,38.4,38.41163846223206
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,430,3,C011,S01,38.1,38.12491677552956
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,431,5,C011,S01,38.2,38.13819645449635
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,432,2,C011,S01,38.2,38.20502335125892
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,433,1,C011,S01,38.1,38.10245524025015
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,434,2,C011,S01,38.1,38.13764392504575
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,435,2,C012,S01,39.5,39.68511351630739
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,436,4,C012,S01,40.2,40.34131401840736
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,437,5,C012,S01,40.3,40.273516519762765
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,438,5,C012,S01,40.4,40.31431408447085
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,439,5,C013,S01,39.0,39.01195692869024
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,440,1,C013,S01,39.1,39.11522990154864
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,441,2,C013,S01,38.7,38.74349554940602
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,442,2,C013,S01,39.1,39.09223822383601
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,443,1,C013,S01,39.1,39.10188545904186
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,444,5,C013,S01,39.1,39.12693036271354
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,445,3,C013,S01,39.1,39.097245499625295
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,446,5,C014,S01,38.0,38.04087548852159
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,447,2,C014,S01,38.3,38.295683863169785
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,448,4,C014,S01,38.3,38.31448035667713
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,449,3,C014,S01,38.3,38.302043266263496
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,450,2,C016,S01,38.6,38.60937904863986
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,451,5,C016,S01,38.7,38.61761409519989
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,452,5,C016,S01,38.7,38.72921485802958
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,453,2,C016,S01,38.8,38.73503110295537
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,454,2,C016,S01,38.7,38.609823664562384
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,455,4,C016,S01,38.7,38.68833739370905
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,456,3,C016,S01,38.8,38.831725520041886
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,457,1,C016,S01,38.6,38.52659051248591
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,458,1,C017,S01,39.0,39.05850232596688
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,459,5,C017,S01,39.4,39.41398953446268
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,460,3,C018,S01,38.8,38.7987100242847
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,461,2,C018,S01,38.8,38.778986244929214
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,462,3,C018,S01,38.8,38.75831377596617
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,463,2,C018,S01,38.8,38.75124978936829
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,464,1,C018,S01,38.8,38.76988693725978
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,465,2,C019,S01,39.4,39.40938018194648
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,466,3,C019,S01,39.5,39.52406393746455
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,467,2,C019,S01,39.5,39.602484665449495
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,468,1,C019,S01,39.5,39.5156963958658
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,469,5,C020,S01,40.2,40.225043112702025
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,470,2,C020,S01,39.6,39.55824616667774
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,471,2,C021,S01,38.3,38.26689551140522
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,472,3,C021,S01,38.3,38.37224198404452
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,473,1,C021,S01,38.3,38.33107840863763
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,474,4,C021,S01,38.2,38.2110617613656
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,475,4,C021,S01,38.2,38.21616030439855
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,476,3,C021,S01,38.3,38.30943832204046
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,477,1,C021,S01,38.2,38.24777660425548
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,478,1,C021,S01,38.2,38.23593280560741
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,479,1,C022,S01,38.4,38.44996592101703
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,480,2,C022,S01,38.4,38.28899848185186
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,481,5,C022,S01,38.4,38.3974744240924
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,482,3,C023,S01,38.9,38.92887853713573
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,483,5,C023,S01,38.9,38.91648022193691
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,484,5,C023,S01,39.1,39.28265401959886
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,485,1,C024,S01,39.0,39.00626062029024
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,486,5,C025,S01,39.4,39.41341975175352
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,487,1,C025,S01,39.4,39.372495347533786
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,488,1,C025,S01,39.4,39.35945602653234
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,489,1,C025,S01,39.4,39.374731531548974
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,490,2,C025,S01,39.3,39.29335495821761
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,491,2,C025,S01,39.5,39.41963725270258
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,492,4,C025,S01,39.5,39.4100178052061
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,493,3,C025,S01,39.4,39.39299020882535
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,494,3,C026,S01,38.6,38.62498190118136
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,495,1,C026,S01,38.7,38.68686152471382
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,496,2,C026,S01,38.7,38.64425941806231
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,497,5,C026,S01,38.7,38.66943321313032
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,498,2,C026,S01,38.7,38.68759068265531
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,499,4,C026,S01,38.7,38.67825711067614
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,500,1,C026,S01,38.6,38.63233217489857
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,501,3,C026,S01,38.6,38.63072757828581
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,502,1,C026,S01,38.7,38.68411747717046
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,503,2,C026,S01,38.6,38.58830330395094
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,504,1,C027,S01,39.0,38.991240177406986
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,505,4,C027,S01,39.0,38.95315448724272
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,506,2,C027,S01,38.6,38.668974866132025
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,507,3,C027,S01,39.8,39.75758052767522
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,508,5,C027,S01,38.8,38.837732268653625
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,509,1,C028,S01,40.3,40.29181603158128
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,510,5,C028,S01,40.2,40.17387622224507
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,511,4,C028,S01,40.2,40.18758532938326
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,512,1,C028,S01,40.2,40.13952941504468
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,513,2,C029,S01,38.3,38.29216407007474
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,514,5,C029,S01,38.4,38.38195554764833
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,515,2,C029,S01,38.3,38.26716312279629
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,516,1,C029,S01,38.3,38.31593213631282
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,517,3,C029,S01,38.3,38.281265755076106
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,518,4,C030,S01,40.3,40.2368293436648
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,519,1,C030,S01,40.2,40.09707019696546
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,520,4,C030,S01,40.3,40.22176467969773

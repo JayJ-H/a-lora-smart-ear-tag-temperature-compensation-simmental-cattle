@@ -1,0 +1,147 @@
+{
+  "status": "PASS",
+  "stage": "full",
+  "data_dir": "data",
+  "checks": [
+    {
+      "check": "row_contract",
+      "status": "PASS",
+      "detail": "trace=520; five=520; input=520"
+    },
+    {
+      "check": "all_records_measured",
+      "status": "PASS",
+      "detail": "values=['measured']"
+    },
+    {
+      "check": "cattle_count",
+      "status": "PASS",
+      "detail": "cattle=30"
+    },
+    {
+      "check": "record_identity",
+      "status": "PASS",
+      "detail": "unique=520"
+    },
+    {
+      "check": "source_measurements_unchanged",
+      "status": "PASS",
+      "detail": "source_sha256=4856519501c224832b7080cfeca5ebd9a36335670aff0c432fa2c2fd0f558fc3"
+    },
+    {
+      "check": "five_column_projection",
+      "status": "PASS",
+      "detail": "five-column file is the ordered trace projection"
+    },
+    {
+      "check": "trace_model_values",
+      "status": "PASS",
+      "detail": "trace and model input values match in row order"
+    },
+    {
+      "check": "single_source",
+      "status": "PASS",
+      "detail": "values=['S01']"
+    },
+    {
+      "check": "unit_weights",
+      "status": "PASS",
+      "detail": "values=[np.float64(1.0)]"
+    },
+    {
+      "check": "signature_uniqueness",
+      "status": "PASS",
+      "detail": "groups=0"
+    },
+    {
+      "check": "triplet_uniqueness",
+      "status": "PASS",
+      "detail": "groups=0"
+    },
+    {
+      "check": "derived_features_recalculate",
+      "status": "PASS",
+      "detail": "all derived model features reproduce"
+    },
+    {
+      "check": "five_fixed_fold_columns",
+      "status": "PASS",
+      "detail": "columns=['OuterFold_20260523', 'OuterFold_20260607', 'OuterFold_20260701', 'OuterFold_20260811', 'OuterFold_20260903']"
+    },
+    {
+      "check": "multiseed_summary",
+      "status": "PASS",
+      "detail": "status=PASS"
+    },
+    {
+      "check": "seed_ensemble_recalculates",
+      "status": "PASS",
+      "detail": "maximum_difference=0.0"
+    },
+    {
+      "check": "frozen_oof_rows_match_public_table",
+      "status": "PASS",
+      "detail": "formal ensemble predictions match the public OOF table row by row"
+    },
+    {
+      "check": "formal_metrics_finite",
+      "status": "PASS",
+      "detail": "method=rowwise_median; R2=0.849451603205801; MAE=0.16102075834525345"
+    },
+    {
+      "check": "five_seed_three_branch_coverage",
+      "status": "PASS",
+      "detail": "rows=2600"
+    },
+    {
+      "check": "prediction_targets_match_input",
+      "status": "PASS",
+      "detail": "ensemble targets match model input"
+    },
+    {
+      "check": "measured_class_reporting",
+      "status": "PASS",
+      "detail": "rows=[{'DataClass': 'measured', 'N': 520, 'R2': 0.849451603205801, 'RMSE': 0.295958360438717, 'MAE': 0.16102075834525345, 'Bias': 0.0016091382182982792}]"
+    },
+    {
+      "check": "cross_cow_near_matches",
+      "status": "PASS",
+      "detail": "status=PASS"
+    },
+    {
+      "check": "benchmark33",
+      "status": "PASS",
+      "detail": "status=PASS"
+    },
+    {
+      "check": "benchmark33_complete",
+      "status": "PASS",
+      "detail": "completed=33"
+    },
+    {
+      "check": "analysis_ablation",
+      "status": "PASS",
+      "detail": "status=PASS"
+    },
+    {
+      "check": "analysis_overfitting_checks",
+      "status": "PASS",
+      "detail": "status=PASS"
+    },
+    {
+      "check": "analysis_shap",
+      "status": "PASS",
+      "detail": "status=PASS"
+    },
+    {
+      "check": "strict_mechanism_ablation",
+      "status": "PASS",
+      "detail": "mechanism routes disabled before downstream refitting; 10,000 paired record and cow-cluster replicates"
+    },
+    {
+      "check": "figure_qa",
+      "status": "PASS",
+      "detail": "report_status=manifest-only; panels=23; missing=[]"
+    }
+  ]
+}

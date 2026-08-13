@@ -1,0 +1,28 @@
+{
+  "status": "PASS",
+  "rows": 520,
+  "groups": 4,
+  "method": "schema-only mapping from native four-domain conditional SHAP output",
+  "value_mapping": {
+    "Ear_temperature": {
+      "source": "SHAP_Ear_temperature_C",
+      "plot_column": "SHAP_Ear"
+    },
+    "Ambient_temperature": {
+      "source": "SHAP_Ambient_temperature_C",
+      "plot_column": "SHAP_Air"
+    },
+    "Time_diurnal": {
+      "source": "SHAP_Time_diurnal_C",
+      "plot_column": "SHAP_Time"
+    },
+    "Cow_identity": {
+      "source": "SHAP_Cow_identity_C",
+      "plot_column": "SHAP_CowID"
+    }
+  },
+  "conditional_prediction_field": "FullPipelinePrediction_C",
+  "official_oof_field": "OfficialOOFPrediction_C",
+  "additivity_max_abs_difference_C": 6.394884621840903e-14,
+  "conditional_vs_official_max_abs_difference_C": 0.0
+}
