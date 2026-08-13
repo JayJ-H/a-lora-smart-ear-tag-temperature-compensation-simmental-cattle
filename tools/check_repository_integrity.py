@@ -115,6 +115,7 @@ def large_files() -> list[str]:
         f"{path.relative_to(ROOT).as_posix()}:{path.stat().st_size}"
         for path in ROOT.rglob("*")
         if path.is_file()
+        and ".git" not in path.relative_to(ROOT).parts
         and path.stat().st_size > 50 * 1024 * 1024
         and not allowed_large_artwork(path)
     ]
