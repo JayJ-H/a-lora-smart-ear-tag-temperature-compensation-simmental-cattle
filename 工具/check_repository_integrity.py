@@ -21,7 +21,7 @@ TEMP_PATH_PATTERNS = (
     re.compile(r"(?i)/(?:home|users)/[^/\s]+/"),
 )
 FINAL_ART_EXTENSIONS = {".ai", ".eps", ".opj", ".opju", ".pdf", ".png", ".svg", ".tif", ".tiff", ".jpg", ".jpeg"}
-REQUIRED = ['README.md', 'REPRODUCE.md', 'LICENSE_NOTICE.md', '数据/处理数据/th_shrc_oof_predictions.csv', '数据/处理数据/th_shrc_ablation_oof_predictions.csv', '数据/匿名质控数据/lora_packet_level_quality_controlled.csv', '分析/图件/plot_fig15_17_public.py', '固件/耳标/main/main.cpp', '固件/网关/main/main.cpp', '硬件/耳标/pcb/ear_tag_easyeda_project.epro2', '硬件/网关/pcb/gateway_easyeda_project.epro2', '管理系统/reference/schema.sql']
+REQUIRED = ['README.md', 'REPRODUCE.md', 'LICENSE_NOTICE.md', '数据/处理数据/th_shrc_oof_predictions.csv', '数据/处理数据/th_shrc_ablation_oof_predictions.csv', '数据/匿名质控数据/lora_packet_level_quality_controlled.csv', '分析/图件/plot_fig15_17_public.py', '固件/耳标/main/main.cpp', '固件/网关/main/main.cpp', '硬件/耳标/PCB/ear_tag_easyeda_project.epro2', '硬件/网关/PCB/gateway_easyeda_project.epro2', '管理系统/reference/schema.sql']
 
 
 def iter_text_files() -> list[Path]:
