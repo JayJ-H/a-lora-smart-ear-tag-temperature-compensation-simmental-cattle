@@ -1,4 +1,44 @@
-/** 节日动画控制。 */
+/**
+ * useCeremony - 节日庆祝管理
+ *
+ * 提供节日烟花效果和祝福文本展示功能，为系统增添节日氛围。
+ * 自动检测当前日期是否为节日，并在首次进入时播放烟花动画和显示祝福语。
+ *
+ * ## 主要功能
+ *
+ * 1. 节日检测 - 自动匹配当前日期与节日配置列表，支持单日和跨日期节日
+ * 2. 烟花动画 - 播放节日烟花特效，支持自定义图片和触发次数
+ * 3. 祝福文本 - 烟花结束后显示节日祝福文本
+ * 4. 状态管理 - 记录烟花播放状态，避免重复播放
+ * 5. 清理机制 - 提供清理方法，支持手动停止和重置
+ *
+ * ## 使用说明
+ *
+ * ```typescript
+ * // 在配置文件中定义节日
+ * // 单日节日
+ * {
+ *   date: '2024-12-25',
+ *   name: '圣诞节',
+ *   image: christmasImage,
+ *   count: 3 // 可选，不设置则使用默认值 3 次
+ *   scrollText: 'Merry Christmas!',
+ * }
+ *
+ * // 跨日期节日
+ * {
+ *   date: '2025-11-07',
+ *   endDate: '2025-11-10',
+ *   name: 'v3.0 测试阶段',
+ *   image: '',
+ *   count: 5 // 自定义烟花播放次数
+ *   scrollText: '系统 v3.0 测试阶段正式开启！',
+ * }
+ * ```
+ *
+ * @module useCeremony
+ * @author Art Design Pro Team
+ */
 
 import { useTimeoutFn, useIntervalFn, useDateFormat } from '@vueuse/core'
 import { storeToRefs } from 'pinia'
@@ -31,15 +71,23 @@ export function useCeremony() {
 
   let fireworksInterval: { pause: () => void } | null = null
 
+  /**
+   * 检查日期是否在节日范围内
+   * @param currentDate 当前日期
+   * @param festivalDate 节日开始日期
+   * @param festivalEndDate 节日结束日期（可选）
+   */
   const isDateInRange = (
     currentDate: string,
     festivalDate: string,
     festivalEndDate?: string
   ): boolean => {
     if (!festivalEndDate) {
+      // 单日节日
       return currentDate === festivalDate
     }
 
+    // 跨日期节日
     const current = new Date(currentDate)
     const start = new Date(festivalDate)
     const end = new Date(festivalEndDate)

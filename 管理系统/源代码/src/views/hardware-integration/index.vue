@@ -624,7 +624,7 @@
   import FcPanel from '@/components/business/fluent-console/FcPanel.vue'
   import FcEmptyState from '@/components/business/fluent-console/FcEmptyState.vue'
   import { hardwareApi } from '@/api/cow'
-  import * as databaseService from '@/services/database'
+  import * as databaseService from '@/services/数据库'
   import { useLazyGridRenderWindow } from '@/hooks'
   import { formatDateOnly } from '@/utils/date-display'
   import type {

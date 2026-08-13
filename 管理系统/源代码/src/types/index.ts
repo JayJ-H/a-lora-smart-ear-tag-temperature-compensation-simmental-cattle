@@ -7,7 +7,7 @@
  */
 
 /** 通用类型定义（基础类型、工具类型等） */
-export * from './common'
+export * from './通用模块'
 
 /** 组件相关类型定义 */
 export * from './component'

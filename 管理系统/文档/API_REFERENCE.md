@@ -1,7 +1,7 @@
-# API参考
+# API reference and evidence boundary
 
-后台提供身份认证、健康检查、版本、系统状态、数据库RPC和牛只业务接口。相邻CSV列出了源码中注册的顶层HTTP接口。
+The backend exposes explicit authentication, health, version, system-status, generic database-RPC, and cow-domain RPC routes. The adjacent CSV lists the registered top-level HTTP endpoints verified in source.
 
-MQTT数据接入由后台进程完成，包括温度主题解析、字段标准化、牛只与网关记录关联、传感器数据保存、MQTT消息记录和温度告警规则处理。
+MQTT ingestion is implemented inside the same backend process rather than as an HTTP endpoint. It parses configured temperature topics, normalizes payload keys, resolves/creates the cow reference, creates or resolves a gateway device, stores sensor readings, logs the MQTT message, and may generate a temperature alert.
 
-通用RPC接口采用表驱动方式实现。具体请求参数和字段定义见后台源码及前后端数据库契约文档。
+The full generic RPC method surface is large and table-driven. Refer to the sanitized backend source and the database frontend/管理系统 contract for exact request payloads. No passwords, database accounts, tokens, remote hosts, or private keys are included in this package.

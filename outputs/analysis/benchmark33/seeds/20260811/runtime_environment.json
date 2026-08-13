@@ -1,0 +1,20 @@
+{
+  "python": "3.12.13",
+  "implementation": "CPython",
+  "platform": {
+    "system": "Windows",
+    "release": "11",
+    "machine": "AMD64"
+  },
+  "packages": {
+    "numpy": "2.3.5",
+    "pandas": "3.0.1",
+    "scipy": "1.16.3",
+    "scikit-learn": "1.8.0",
+    "xgboost": "3.2.0",
+    "lightgbm": "4.6.0"
+  },
+  "random_seed": 20260811,
+  "outer_validation": "fold-seed-aligned same-cow random five-fold OOF",
+  "inner_evolution_search": "three-fold CV within each outer-training fold"
+}

@@ -332,7 +332,7 @@
   import { computed, nextTick, onMounted, onUnmounted, reactive, ref, watch } from 'vue'
   import { ElMessage } from 'element-plus'
   import * as echarts from 'echarts'
-  import * as databaseService from '@/services/database'
+  import * as databaseService from '@/services/数据库'
   import { predictiveApi } from '@/api/cow'
   import { useUserStore } from '@/store/modules/user'
   import { useLazyRenderWindow } from '@/hooks'
@@ -1127,7 +1127,7 @@
         alerts.push(
           makeDerivedAlert(cow, {
             id: `derived-ear-tag-${cowId}`,
-            alertType: 'ear_tag',
+            alertType: '耳标',
             severity: lowTemperatureDays >= 3 && lowMovement ? 'high' : 'medium',
             title: '耳标异常',
             description: '长期低温或活动量过低，疑似耳标脱落、未佩戴或设备异常',

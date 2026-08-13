@@ -1,4 +1,4 @@
 ﻿bit_range,width_bits,field,type,scale_or_mapping,notes
 23..18,6,device_code,unsigned,device_id - 51,Nominal firmware ID range 51..85
-17..9,9,temperature_1,unsigned,0.1 C,M1820Z channel; code clamps to 0.0..40.0 C
-8..0,9,temperature_2,unsigned,0.1 C,TMP117 channel; code clamps to 0.0..40.0 C
+17..9,9,temperature_1,unsigned,0.1 C,M1820Z channel; code clamps to 0.0..45.0 C
+8..0,9,temperature_2,unsigned,0.1 C,TMP117 channel; code clamps to 0.0..45.0 C

@@ -1,0 +1,125 @@
+services:
+  mysql:
+    image: ${MYSQL_IMAGE:-nzh-control-mysql:8.4}
+    container_name: cattle-prod-mysql
+    restart: unless-stopped
+    environment:
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD:?set MYSQL_ROOT_PASSWORD in .env.prod}
+      MYSQL_DATABASE: ${MYSQL_DATABASE:-cattle_management}
+      MYSQL_USER: ${MYSQL_USER:?set MYSQL_USER in .env.prod}
+      MYSQL_PASSWORD: ${MYSQL_PASSWORD:?set MYSQL_PASSWORD in .env.prod}
+      TZ: Asia/Shanghai
+    command:
+      - --character-set-server=utf8mb4
+      - --collation-server=utf8mb4_unicode_ci
+      - --explicit_defaults_for_timestamp=1
+    ports:
+      - "127.0.0.1:${MYSQL_HOST_PORT:-9193}:3306"
+    volumes:
+      - mysql_prod_data:/var/lib/mysql
+      - ../../数据库/mysql/init/001_init_schema.sql:/docker-entrypoint-initdb.d/001_init_schema.sql:ro
+      - ../../数据库/mysql/init/002_event_sync_triggers.sql:/docker-entrypoint-initdb.d/002_event_sync_triggers.sql:ro
+    healthcheck:
+      test: ["CMD-SHELL", "mysqladmin ping -uroot -p$${MYSQL_ROOT_PASSWORD} --silent"]
+      interval: 10s
+      timeout: 5s
+      retries: 12
+      start_period: 30s
+
+  api:
+    image: ${API_IMAGE:-nzh-control-api:latest}
+    build:
+      context: ../..
+      dockerfile: 运维/生产配置/Dockerfile.api
+      args:
+        NODE_IMAGE: ${NODE_IMAGE:-node:24-alpine}
+    container_name: cattle-prod-api
+    restart: unless-stopped
+    environment:
+      NODE_ENV: production
+      TZ: Asia/Shanghai
+      MYSQL_HOST: mysql
+      MYSQL_PORT: 3306
+      MYSQL_USER: ${MYSQL_USER:?set MYSQL_USER in .env.prod}
+      MYSQL_PASSWORD: ${MYSQL_PASSWORD:?set MYSQL_PASSWORD in .env.prod}
+      MYSQL_DATABASE: ${MYSQL_DATABASE:-cattle_management}
+      MYSQL_POOL_LIMIT: ${MYSQL_POOL_LIMIT:-10}
+      MYSQL_API_PORT: 9192
+      AUTH_MODE: ${AUTH_MODE:-strict}
+      ADMIN_USER: ${ADMIN_USER:?set ADMIN_USER in .env.prod}
+      ADMIN_PASSWORD: ${ADMIN_PASSWORD:?set ADMIN_PASSWORD in .env.prod}
+      AUTH_SESSION_TTL_MS: ${AUTH_SESSION_TTL_MS:-43200000}
+      MQTT_ENABLED: ${MQTT_ENABLED:-true}
+      MQTT_HOST: ${MQTT_HOST:-0.0.0.0}
+      MQTT_PORT: ${MQTT_PORT:-1883}
+      MQTT_TOPIC: ${MQTT_TOPIC:-cattle/+/temperature}
+      MQTT_USERNAME: ${MQTT_USERNAME:?set MQTT_USERNAME in .env.prod}
+      MQTT_PASSWORD: ${MQTT_PASSWORD:?set MQTT_PASSWORD in .env.prod}
+      OMICS_SERVICE_URL: ${OMICS_SERVICE_URL:-http://127.0.0.1:8090}
+      SKIP_STARTUP_DB_ENSURE: ${SKIP_STARTUP_DB_ENSURE:-true}
+    command: ["node", "脚本/mysql-backend-server.mjs"]
+    depends_on:
+      mysql:
+        condition: service_healthy
+    ports:
+      - "${API_HOST_PORT:-9192}:9192"
+      - "${MQTT_HOST_PORT:-9195}:1883"
+    healthcheck:
+      test: ["CMD-SHELL", "node -e \"fetch('http://127.0.0.1:9192/api/health').then(r=>process.exit(r.ok?0:1)).catch(()=>process.exit(1))\""]
+      interval: 30s
+      timeout: 5s
+      retries: 5
+      start_period: 20s
+
+  web:
+    image: ${WEB_IMAGE:-nzh-control-web:latest}
+    build:
+      context: ../..
+      dockerfile: 运维/生产配置/Dockerfile.web
+      args:
+        NODE_IMAGE: ${NODE_IMAGE:-node:24-alpine}
+        NGINX_IMAGE: ${NGINX_IMAGE:-nginx:1.27-alpine}
+    container_name: cattle-prod-web
+    restart: unless-stopped
+    ports:
+      - "127.0.0.1:${WEB_HOST_PORT:-19191}:80"
+    depends_on:
+      api:
+        condition: service_healthy
+    healthcheck:
+      test: ["CMD-SHELL", "wget -qO- http://127.0.0.1/health >/dev/null || exit 1"]
+      interval: 30s
+      timeout: 5s
+      retries: 5
+      start_period: 10s
+
+  mqtt-replay-control:
+    image: ${CONTROL_IMAGE:-nzh-control-control:latest}
+    build:
+      context: ../..
+      dockerfile: 运维/生产配置/Dockerfile.control
+      args:
+        NODE_IMAGE: ${NODE_IMAGE:-node:24-alpine}
+    container_name: cattle-prod-mqtt-replay-control
+    restart: unless-stopped
+    environment:
+      NODE_ENV: production
+      TZ: Asia/Shanghai
+      MQTT_REPLAY_CONTROL_PORT: 9194
+      MQTT_REPLAY_BACKEND_URL: http://api:9192
+      MQTT_REPLAY_ADMIN_USER: ${ADMIN_USER:?set ADMIN_USER in .env.prod}
+      MQTT_REPLAY_ADMIN_PASSWORD: ${ADMIN_PASSWORD:?set ADMIN_PASSWORD in .env.prod}
+    depends_on:
+      api:
+        condition: service_healthy
+    ports:
+      - "${MQTT_REPLAY_CONTROL_PORT:-9194}:9194"
+    healthcheck:
+      test: ["CMD-SHELL", "node -e \"fetch('http://127.0.0.1:9194/api/status',{method:'POST',headers:{'Content-Type':'application/json'},body:'{}'}).then(r=>process.exit(r.ok?0:1)).catch(()=>process.exit(1))\""]
+      interval: 30s
+      timeout: 5s
+      retries: 5
+      start_period: 15s
+
+volumes:
+  mysql_prod_data:

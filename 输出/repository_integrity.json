@@ -1,0 +1,12 @@
+{
+  "ok": true,
+  "checks": {
+    "compiled_artifacts": [],
+    "temporary_paths": [],
+    "broken_markdown_links": [],
+    "structured_file_errors": [],
+    "archive_errors": [],
+    "files_over_50_mib": [],
+    "missing_required_files": []
+  }
+}

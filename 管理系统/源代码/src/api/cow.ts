@@ -17,8 +17,8 @@ import type {
 } from '@/types/api/cow'
 import http from '@/utils/http'
 
-const accessMode = String(import.meta.env.VITE_ACCESS_MODE || 'backend').toLowerCase()
-const isBackendMode = accessMode === 'backend'
+const accessMode = String(import.meta.env.VITE_ACCESS_MODE || '管理系统').toLowerCase()
+const isBackendMode = accessMode === '管理系统'
 
 export type FrontendDataSource = 'real' | 'empty' | 'error'
 
@@ -127,7 +127,7 @@ export const statisticsApi: StatisticsApi = selectProductionApi<StatisticsApi>('
 export const exportApi: ExportApi = selectProductionApi<ExportApi>('export')
 export const economicApi: EconomicApi = selectProductionApi<EconomicApi>('economic')
 export const predictiveApi: PredictiveApi = selectProductionApi<PredictiveApi>('predictive')
-export const hardwareApi: HardwareApi = selectProductionApi<HardwareApi>('hardware')
+export const hardwareApi: HardwareApi = selectProductionApi<HardwareApi>('硬件')
 export const kpiApi: KPIApi = selectProductionApi<KPIApi>('kpi')
 export const automationApi: AutomationApi = selectProductionApi<AutomationApi>('automation')
 

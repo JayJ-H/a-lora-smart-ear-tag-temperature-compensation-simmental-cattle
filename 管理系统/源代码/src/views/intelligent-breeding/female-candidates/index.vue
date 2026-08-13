@@ -283,7 +283,7 @@
     persistBreedingDecisionRun,
     rankedCandidateSnapshot,
     traitParameterSnapshot
-  } from '../decision-records'
+  } from '../decision-audit'
   import { BREEDING_BASELINE_ALGORITHM, buildCandidateTraceSummary } from '../algorithm-metadata'
 
   const snapshot = ref<PlatformSnapshot>({

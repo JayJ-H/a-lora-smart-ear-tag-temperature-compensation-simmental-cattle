@@ -1,12 +1,18 @@
-# MySQL配置
+# MySQL setup
 
-从仓库根目录创建 `.env` 并启动 MySQL：
+Create `.env` from the repository-level `.env.example`, set the required
+passwords, and start MySQL from the repository root:
 
 ```powershell
 Copy-Item .env.example .env
-docker compose --env-file .env -f 管理系统/源代码/数据库/mysql/docker-compose.local.yml up -d
+docker compose --env-file .env -f 数据库/mysql/docker-compose.local.yml up -d
 ```
 
-首次启动执行 `init/001_init_schema.sql` 和 `init/002_event_sync_triggers.sql`。
-规范动物表为 `animal`，`cows` 为兼容投影；规范事实表为
-`milk_measurement`、`sensor_reading` 和 `operation_audit_log`。
+The first start applies `init/001_init_schema.sql` and
+`init/002_event_sync_triggers.sql`. The public compose files do not contain
+default credentials or seed cattle records.
+
+The canonical animal table is `animal`; `cows` remains a compatibility
+projection for older frontend and RPC paths. Canonical fact tables use the
+singular names `milk_measurement`, `sensor_reading`, and
+`operation_audit_log`.

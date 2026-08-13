@@ -1,4 +1,7 @@
-# 图1复现
+# Fig. 1 provenance
 
-- 素材：STEP/3ds Max模型、渲染组件和矢量源文件。
-- 可编辑母版：`分析/论文图源/图源文件/fig01/fig01_final_editable.svg`。
+Status: `manual_only` final composition. The public trace contains the supplied
+STEP/3ds Max model sources, rendered components, and the lightweight vector
+revision. The final page is the Illustrator source in
+`../图源文件/fig01/fig01_illustrator_source.ai`; no surviving Python/R
+plot generator exists for this CAD/Illustrator figure.

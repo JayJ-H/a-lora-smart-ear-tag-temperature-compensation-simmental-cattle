@@ -1,10 +1,10 @@
 <template>
-  <ArtBarChart height="100%" :data="data" :xAxisData="labels" :showAxisLine="false" />
+  <ArtBarChart height="100%" :data="数据" :xAxisData="labels" :showAxisLine="false" />
 </template>
 
 <script setup lang="ts">
   import { onMounted, ref } from 'vue'
-  import * as databaseService from '@/services/database'
+  import * as databaseService from '@/services/数据库'
   import { loadUnifiedMilkRecords } from '@/services/unified-records'
 
   defineOptions({ name: 'ProductionEfficiencyChart' })

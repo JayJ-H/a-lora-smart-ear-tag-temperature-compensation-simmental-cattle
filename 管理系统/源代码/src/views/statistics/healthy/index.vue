@@ -286,7 +286,7 @@
   import type { CowBasic, ExtendedSensorData } from '@/types'
   import { getCowApiDataSource, type FrontendDataSource } from '@/api/cow'
   import * as echarts from 'echarts'
-  import * as databaseService from '@/services/database'
+  import * as databaseService from '@/services/数据库'
   import { useLazyGridRenderWindow } from '@/hooks'
   import { buildUnifiedDataContext } from '@/services/unified-records'
   import { normalizeStatus } from '@/views/breeding-platform/platform-data'

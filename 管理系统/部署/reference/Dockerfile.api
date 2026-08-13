@@ -1,0 +1,34 @@
+ARG NODE_IMAGE=docker.m.daocloud.io/library/node:24-alpine
+ARG BUILD_VERSION
+ARG BUILD_REF=unknown
+ARG BUILD_SOURCE=production-api
+FROM ${NODE_IMAGE} AS deps
+
+WORKDIR /app
+RUN corepack enable && corepack prepare pnpm@8.15.9 --activate
+
+COPY package.json pnpm-lock.yaml ./
+RUN pnpm install --prod --frozen-lockfile --ignore-scripts
+
+FROM ${NODE_IMAGE}
+ARG BUILD_VERSION
+ARG BUILD_REF=unknown
+ARG BUILD_SOURCE=production-api
+
+WORKDIR /app
+ENV NODE_ENV=production
+ENV APP_BUILD_VERSION=${BUILD_VERSION}
+ENV APP_BUILD_REF=${BUILD_REF}
+ENV APP_BUILD_SOURCE=${BUILD_SOURCE}
+ENV APP_BUILD_INFO_FILE=/app/build-info.json
+
+COPY --from=deps /app/node_modules ./node_modules
+COPY package.json ./
+COPY .env.production ./
+COPY scripts/mysql-backend-server.mjs ./scripts/mysql-backend-server.mjs
+COPY scripts/seed-production-min-config.mjs ./scripts/seed-production-min-config.mjs
+COPY database/mysql/migrations ./database/mysql/migrations
+RUN node --input-type=module -e 'import { createHash } from "node:crypto"; import { readdir, readFile, stat, writeFile } from "node:fs/promises"; import path from "node:path"; const root = "/app"; const pkg = JSON.parse(await readFile("/app/package.json", "utf8")); async function readText(file, fallback = "") { try { return await readFile(file, "utf8"); } catch { return fallback; } } function envValue(text, key) { const row = text.split(/\r?\n/).find((line) => line.trim().startsWith(`${key}`)); if (!row || !row.includes("=")) return ""; return row.slice(row.indexOf("=") + 1).trim().replace(/^["]|["]$/g, ""); } const envText = await readText("/app/.env.production"); const includeRoots = ["package.json", ".env.production", "scripts/mysql-backend-server.mjs", "scripts/seed-production-min-config.mjs", "database/mysql/migrations"]; async function listFiles(target) { const fullPath = path.join(root, target); const entryStat = await stat(fullPath); if (entryStat.isFile()) return [fullPath]; const entries = await readdir(fullPath, { withFileTypes: true }); const files = []; for (const entry of entries) { const rel = path.join(target, entry.name); if (entry.isDirectory()) files.push(...await listFiles(rel)); else if (entry.isFile()) files.push(path.join(root, rel)); } return files; } const allFiles = (await Promise.all(includeRoots.map((item) => listFiles(item)))).flat().map((file) => ({ file, rel: path.relative(root, file).split(path.sep).join("/") })).sort((a, b) => a.rel.localeCompare(b.rel)); const manifest = []; const treeHash = createHash("sha256"); for (const item of allFiles) { const bytes = await readFile(item.file); const fileHash = createHash("sha256").update(bytes).digest("hex"); const fileStat = await stat(item.file); manifest.push({ path: item.rel, bytes: fileStat.size, sha256: fileHash }); treeHash.update(`${item.rel}\0${fileHash}\0${fileStat.size}\n`); } const apiHash = treeHash.digest("hex"); const createdAt = new Date().toISOString(); const buildVersion = process.env.APP_BUILD_VERSION || envValue(envText, "VITE_VERSION") || pkg.version || "0.0.0"; const metadata = { name: pkg.name || "nzh-control-platform", version: buildVersion, build: { target: "api", source: process.env.APP_BUILD_SOURCE || "production-api", ref: process.env.APP_BUILD_REF || "unknown", createdAt }, hash: apiHash, buildHash: apiHash, builtAt: createdAt, hashAlgorithm: "sha256-api-runtime-inputs-v1", files: manifest.length, bytes: manifest.reduce((sum, item) => sum + item.bytes, 0) }; await writeFile(process.env.APP_BUILD_INFO_FILE || "/app/build-info.json", `${JSON.stringify(metadata, null, 2)}\n`);'
+
+EXPOSE 9192
+CMD ["sh", "-c", "node scripts/seed-production-min-config.mjs && node scripts/mysql-backend-server.mjs"]

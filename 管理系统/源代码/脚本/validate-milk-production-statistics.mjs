@@ -1,4 +1,4 @@
-import path from 'node:path'
+﻿import path from 'node:path'
 import { fileURLToPath } from 'node:url'
 import dotenv from 'dotenv'
 import mysql from 'mysql2/promise'
@@ -179,7 +179,7 @@ async function runScenario(connection) {
         id, animal_number, breed, sex, birth_date, entry_date, status,
         lactation_start_date, reported_parity_no, reported_days_in_milk,
         reported_milk_305, reported_avg_daily_milk, created_at, updated_at
-      ) VALUES (?, ?, '西门塔尔牛', '母', '2022-01-01', '2024-01-01', 'active', '2025-05-01', 1, 5, 2460, 8.1, NOW(3), NOW(3))
+      ) VALUES (?, ?, '广西水牛', '母', '2022-01-01', '2024-01-01', 'active', '2025-05-01', 1, 5, 2460, 8.1, NOW(3), NOW(3))
     `,
     [cowId, cowNumber]
   )
@@ -189,7 +189,7 @@ async function runScenario(connection) {
         id, animal_number, breed, sex, birth_date, entry_date, status,
         lactation_start_date, reported_parity_no, reported_days_in_milk,
         reported_parity_yield, reported_milk_305, reported_avg_daily_milk, created_at, updated_at
-      ) VALUES (?, ?, '西门塔尔牛', '母', '2021-03-01', '2024-02-01', 'active',
+      ) VALUES (?, ?, '广西水牛', '母', '2021-03-01', '2024-02-01', 'active',
         '2025-06-01', 2, 10, 92.5, 2500, 9.25, NOW(3), NOW(3))
     `,
     [summaryCowId, summaryCowNumber]
@@ -199,7 +199,7 @@ async function runScenario(connection) {
       INSERT INTO animal (
         id, animal_number, breed, sex, birth_date, entry_date, status,
         created_at, updated_at
-      ) VALUES (?, ?, '西门塔尔牛', '母', '2020-01-01', '2023-01-01', 'active', NOW(3), NOW(3))
+      ) VALUES (?, ?, '广西水牛', '母', '2020-01-01', '2023-01-01', 'active', NOW(3), NOW(3))
     `,
     [parityCowId, parityCowNumber]
   )
@@ -207,7 +207,7 @@ async function runScenario(connection) {
     `
       INSERT INTO cows (
         id, cow_number, breed, gender, birth_date, cow_type, status, created_at, updated_at
-      ) VALUES (?, ?, '西门塔尔牛', '母', '2022-01-01', '泌乳', '在群', NOW(3), NOW(3))
+      ) VALUES (?, ?, '广西水牛', '母', '2022-01-01', '泌乳', '在群', NOW(3), NOW(3))
     `,
     [cowId, cowNumber]
   )
@@ -215,7 +215,7 @@ async function runScenario(connection) {
     `
       INSERT INTO cows (
         id, cow_number, breed, gender, birth_date, cow_type, status, created_at, updated_at
-      ) VALUES (?, ?, '西门塔尔牛', '母', '2021-03-01', '泌乳', '在群', NOW(3), NOW(3))
+      ) VALUES (?, ?, '广西水牛', '母', '2021-03-01', '泌乳', '在群', NOW(3), NOW(3))
     `,
     [summaryCowId, summaryCowNumber]
   )
@@ -223,7 +223,7 @@ async function runScenario(connection) {
     `
       INSERT INTO cows (
         id, cow_number, breed, gender, birth_date, cow_type, status, created_at, updated_at
-      ) VALUES (?, ?, '西门塔尔牛', '母', '2020-01-01', '泌乳', '在群', NOW(3), NOW(3))
+      ) VALUES (?, ?, '广西水牛', '母', '2020-01-01', '泌乳', '在群', NOW(3), NOW(3))
     `,
     [parityCowId, parityCowNumber]
   )
@@ -407,3 +407,4 @@ function dateKey(value) {
   }
   return String(value || '').slice(0, 10)
 }
+

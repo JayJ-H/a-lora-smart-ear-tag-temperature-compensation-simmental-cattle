@@ -435,7 +435,7 @@
   import { computed, onMounted, reactive, ref } from 'vue'
   import { ElMessage } from 'element-plus'
   import type { FormInstance, FormRules } from 'element-plus'
-  import * as databaseService from '@/services/database'
+  import * as databaseService from '@/services/数据库'
   import { useLazyRenderWindow } from '@/hooks'
   import CowNumberAutocomplete from '@/components/business/cow/CowNumberAutocomplete.vue'
   import RecentEventRecords from '../components/RecentEventRecords.vue'

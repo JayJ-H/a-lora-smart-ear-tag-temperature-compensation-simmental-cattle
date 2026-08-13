@@ -255,7 +255,7 @@
   import { onMounted, reactive, ref } from 'vue'
   import { ElMessage } from 'element-plus'
   import type { FormInstance, FormRules } from 'element-plus'
-  import * as databaseService from '@/services/database'
+  import * as databaseService from '@/services/数据库'
   import { useLazyRenderWindow } from '@/hooks'
   import { formatDateOnly } from '@/utils/date-display'
   import { ensureBreedDictionary } from '@/services/platform-dictionary'

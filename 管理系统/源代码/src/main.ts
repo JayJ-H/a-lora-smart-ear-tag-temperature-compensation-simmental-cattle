@@ -8,7 +8,7 @@ import '@styles/index.scss'                         // 样式
 import '@utils/sys/console.ts'                      // 控制台输出内容
 import { setupGlobDirectives } from './directives'
 import { setupErrorHandle } from './utils/sys/error-handle'
-import { initDatabaseService } from './services/database' // 数据库服务
+import { initDatabaseService } from './services/数据库' // 数据库服务
 
 document.addEventListener(
   'touchstart',

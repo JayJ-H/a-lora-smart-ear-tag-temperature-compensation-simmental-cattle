@@ -1963,12 +1963,12 @@ function readPackageVersionFallback() {
   try {
     const pkg = JSON.parse(fsSync.readFileSync(path.join(projectRoot, 'package.json'), 'utf8'))
     return {
-      name: pkg.name || 'cattle-management-platform',
+      name: pkg.name || 'nzh-control-platform',
       version: pkg.version || '0.0.0'
     }
   } catch {
     return {
-      name: 'cattle-management-platform',
+      name: 'nzh-control-platform',
       version: '0.0.0'
     }
   }
@@ -1980,7 +1980,7 @@ async function readApiBuildInfo() {
   if (fileBuildInfo && typeof fileBuildInfo === 'object') {
     const buildHash = fileBuildInfo.buildHash || fileBuildInfo.hash || fileBuildInfo.apiHash || ''
     return {
-      name: fileBuildInfo.name || 'cattle-management-platform',
+      name: fileBuildInfo.name || 'nzh-control-platform',
       version: fileBuildInfo.version || process.env.APP_BUILD_VERSION || '0.0.0',
       buildHash,
       builtAt: fileBuildInfo.builtAt || fileBuildInfo.build?.createdAt || null,
@@ -10582,6 +10582,7 @@ function buildLoginAudit(req, { userName, status, message }) {
   }
 }
 
+// TODO(security): Route non-RPC import actions through backend auditOperation once those flows leave client-side table writes.
 function isRpcDdlMutation(method) {
   return RPC_DDL_METHOD_RE.test(String(method || ''))
 }

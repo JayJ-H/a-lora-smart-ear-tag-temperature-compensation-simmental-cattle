@@ -27,7 +27,7 @@ class Result:
 def encode(device_id: int, ear: int, ambient: int) -> bytes:
     if not 51 <= device_id <= 85:
         raise ValueError("device id outside public range")
-    if not 0 <= ear <= 400 or not 0 <= ambient <= 400:
+    if not 0 <= ear <= 450 or not 0 <= ambient <= 450:
         raise ValueError("temperature code outside public range")
     packed = ((device_id - 51) << 18) | (ear << 9) | ambient
     return packed.to_bytes(3, "big")
@@ -51,24 +51,6 @@ def sha256(path: Path) -> str:
     return h.hexdigest()
 
 
-def matches_manifest(path: Path, expected_size: int, expected_hash: str) -> bool:
-    data = path.read_bytes()
-    candidates = [data]
-    if b"\x00" not in data:
-        try:
-            data.decode("utf-8-sig")
-        except UnicodeDecodeError:
-            pass
-        else:
-            lf_data = data.replace(b"\r\n", b"\n").replace(b"\r", b"\n")
-            candidates.extend([lf_data, lf_data.replace(b"\n", b"\r\n")])
-    return any(
-        len(candidate) == expected_size
-        and hashlib.sha256(candidate).hexdigest() == expected_hash
-        for candidate in candidates
-    )
-
-
 def normalized(path: Path) -> str:
     text = path.read_text(encoding="utf-8")
     text = re.sub(r"/\*.*?\*/", "", text, flags=re.S)
@@ -86,17 +68,17 @@ def run(results: list[Result], test_id: str, fn: Callable[[], str]) -> None:
 
 
 def known_vectors() -> str:
-    vectors = [(51, 0, 0, "000000"), (83, 386, 398, "83058e"), (85, 400, 400, "8b2190")]
+    vectors = [(51, 0, 0, "000000"), (83, 386, 398, "83058e"), (85, 400, 400, "8b2190"), (85, 450, 450, "8b85c2")]
     for device, ear, ambient, expected in vectors:
         if encode(device, ear, ambient).hex() != expected:
             raise AssertionError(f"vector mismatch: {device}")
         if decode(bytes.fromhex(expected)) != (device, ear, ambient):
             raise AssertionError(f"decode mismatch: {device}")
-    return "3 个固定向量一致"
+    return "4 fixed vectors matched"
 
 
 def roundtrips() -> str:
-    values = [0, 1, 37, 123, 250, 399, 400]
+    values = [0, 1, 37, 123, 250, 400, 449, 450]
     n = 0
     for device in range(51, 86):
         for ear in values:
@@ -104,7 +86,7 @@ def roundtrips() -> str:
                 if decode(encode(device, ear, ambient)) != (device, ear, ambient):
                     raise AssertionError("roundtrip mismatch")
                 n += 1
-    return f"{n} 次往返编码一致"
+    return f"{n} roundtrips matched"
 
 
 def radio_alignment() -> str:
@@ -117,7 +99,7 @@ def radio_alignment() -> str:
     for source, signature in signatures:
         if signature not in source or "setCRC(true)" not in source or "explicitHeader()" not in source:
             raise AssertionError("radio parameter mismatch")
-    return "频率、带宽、扩频因子、编码率、同步字、前导码、报头和 CRC 一致"
+    return "frequency bandwidth spreading factor coding rate sync preamble header and CRC agree"
 
 
 def firmware_boundary() -> str:
@@ -126,6 +108,8 @@ def firmware_boundary() -> str:
         raise AssertionError("example device ID 51 missing")
     if not re.search(r"^#define\s+WAKEUP_SEC\s+\d+\b", source, flags=re.M):
         raise AssertionError("wake interval constant missing")
+    if not re.search(r"^#define\s+TEMP_TENTHS_MAX\s+450\b", source, flags=re.M):
+        raise AssertionError("45.0 C protocol limit missing")
     required = [
         ROOT / "固件/耳标/CMakeLists.txt",
         ROOT / "固件/耳标/main/CMakeLists.txt",
@@ -134,7 +118,25 @@ def firmware_boundary() -> str:
     ]
     if any(not path.is_file() for path in required):
         raise AssertionError("ESP-IDF project files missing")
-    return "耳标与网关 ESP-IDF 源码及配置常量验证通过"
+    return "ear-tag and gateway ESP-IDF sources and configuration constants verified"
+
+def exclusions() -> str:
+    blocked_names = {".env", ".env.prod", "sdkconfig", "minimal_tx.cpp", "minimal_rx.cpp"}
+    blocked_suffixes = {".db", ".dump", ".log", ".sqlite", ".step", ".max", ".psd"}
+    violations = []
+    for folder in ("硬件", "固件", "管理系统"):
+        for path in (ROOT / folder).rglob("*"):
+            relative_parts = path.relative_to(ROOT).parts
+            manufacturing_source = "制造文件" in relative_parts
+            blocked_type = path.suffix.lower() in blocked_suffixes
+            if manufacturing_source and path.suffix.lower() in {".max", ".step", ".stp"}:
+                blocked_type = False
+            if path.is_file() and (path.name in blocked_names or blocked_type):
+                violations.append(path.relative_to(ROOT).as_posix())
+    if violations:
+        raise AssertionError("blocked files: " + ", ".join(violations[:5]))
+    return "blocked runtime and proprietary files absent"
+
 
 def asset_manifest() -> str:
     manifest = ROOT / "system_asset_manifest.csv"
@@ -150,15 +152,9 @@ def asset_manifest() -> str:
         raise AssertionError("asset manifest coverage mismatch")
     for row in rows:
         path = ROOT / row["path"]
-        expected_size = int(row["bytes"])
-        expected_hash = row["sha256"]
-        if not matches_manifest(path, expected_size, expected_hash):
-            raise AssertionError(
-                f"asset hash mismatch: {row['path']} "
-                f"actual_bytes={path.stat().st_size} expected_bytes={expected_size} "
-                f"actual_sha256={sha256(path)} expected_sha256={expected_hash}"
-            )
-    return f"{len(rows)} 个资产哈希验证通过"
+        if int(row["bytes"]) != path.stat().st_size or row["sha256"] != sha256(path):
+            raise AssertionError(f"asset hash mismatch: {row['path']}")
+    return f"{len(rows)} asset hashes verified"
 
 
 def backend_reference() -> str:
@@ -179,7 +175,7 @@ def backend_reference() -> str:
     for table in tables:
         if f"CREATE TABLE {table}" not in schema:
             raise AssertionError(f"missing table: {table}")
-    return "后台表结构及接口文件验证通过"
+    return "scoped backend schema and interface files verified"
 
 
 
@@ -192,7 +188,7 @@ def backend_platform() -> str:
         "管理系统/源代码/脚本/mysql-backend-server.mjs",
         "管理系统/源代码/脚本/th-shrc-runtime.mjs",
         "管理系统/源代码/脚本/validate-th-shrc-runtime.mjs",
-        "管理系统/源代码/脚本/assets/th-shrc/runtime-model-v2-exact.json",
+        "管理系统/源代码/脚本/assets/th-shrc/runtime-model-v3-exact.json",
         "管理系统/源代码/数据库/mysql/init/001_init_schema.sql",
         "管理系统/源代码/数据库/mysql/init/002_event_sync_triggers.sql",
         "管理系统/源代码/运维/生产配置/docker-compose.prod.yml",
@@ -201,7 +197,7 @@ def backend_platform() -> str:
     missing = [relative for relative in required if not (ROOT / relative).is_file()]
     if missing:
         raise AssertionError("missing platform files: " + ", ".join(missing))
-    return f"{len(required)} 个完整平台源码入口验证通过"
+    return f"{len(required)} full-platform source entry points verified"
 
 
 def mysql_bootstrap() -> str:
@@ -209,7 +205,9 @@ def mysql_bootstrap() -> str:
     sql_files = sorted(path.name for path in init_dir.glob("*.sql"))
     expected_sql = {
         "001_init_schema.sql",
+        "001_init_schema_niushuju.sql",
         "002_event_sync_triggers.sql",
+        "002_event_sync_triggers_niushuju.sql",
     }
     if set(sql_files) != expected_sql:
         raise AssertionError(f"unexpected bootstrap SQL files: {sql_files}")
@@ -220,7 +218,7 @@ def mysql_bootstrap() -> str:
     compose = (ROOT / "管理系统/源代码/数据库/mysql/docker-compose.local.yml").read_text(encoding="utf-8")
     if "./init:/docker-entrypoint-initdb.d:ro" not in compose:
         raise AssertionError("local MySQL bootstrap mount missing")
-    return "cattle_management 数据库初始化链验证通过"
+    return "single cattle_management bootstrap chain verified"
 
 
 def node_syntax() -> str:
@@ -247,7 +245,7 @@ def node_syntax() -> str:
         if completed.returncode != 0:
             detail = (completed.stderr or completed.stdout).strip()
             raise AssertionError(f"{script.relative_to(source_root)}: {detail[:300]}")
-    return f"{len(scripts)} 个文件通过 Node 语法检查"
+    return f"Node syntax passed for {len(scripts)} files"
 
 
 def runtime_timezone() -> str:
@@ -272,7 +270,7 @@ def runtime_timezone() -> str:
         if completed.returncode != 0:
             detail = (completed.stderr or completed.stdout).strip()
             raise AssertionError(f"runtime validation failed in {timezone}: {detail[:400]}")
-    return "TH-SHRC 运行时在 UTC 和 Asia/Shanghai 时区验证通过"
+    return "TH-SHRC runtime validation passed in UTC and Asia/Shanghai"
 
 
 def package_scripts() -> str:
@@ -283,7 +281,7 @@ def package_scripts() -> str:
     root = package_path.parent
     missing = []
     pattern = re.compile(r"(?:(?:scripts|ops|database|src|public)[/\\][^\s\"']+)")
-    for name, command in payload.get("scripts", {}).items():
+    for name, command in payload.get("脚本", {}).items():
         for token in pattern.findall(command):
             normalized_token = token.replace("\\\\", "/").rstrip(";,)")
             if normalized_token.endswith(".env.prod"):
@@ -292,7 +290,7 @@ def package_scripts() -> str:
                 missing.append(f"{name}:{normalized_token}")
     if missing:
         raise AssertionError("missing package-script paths: " + ", ".join(missing[:10]))
-    return f"已检查 {len(payload.get('scripts', {}))} 个 package 脚本"
+    return f"{len(payload.get('脚本', {}))} package scripts checked"
 
 
 def production_template() -> str:
@@ -300,7 +298,9 @@ def production_template() -> str:
     caddy = (root / "运维/生产配置/Caddyfile").read_text(encoding="utf-8")
     if "{$PUBLIC_HOST:localhost}" not in caddy:
         raise AssertionError("Caddy host is not environment-configurable")
-    return "部署配置验证通过"
+    if (root / "脚本/migrate-events-to-cow-events.mjs").exists():
+        raise AssertionError("stale event migration script remains")
+    return "public deployment templates and stale-script cleanup verified"
 
 def write_reports(results: list[Result]) -> None:
     OUTPUT.mkdir(parents=True, exist_ok=True)
@@ -309,7 +309,7 @@ def write_reports(results: list[Result]) -> None:
     with (OUTPUT / "system_test_results.csv").open("w", encoding="utf-8", newline="") as f:
         writer = csv.DictWriter(f, fieldnames=["test_id", "status", "required", "detail"], lineterminator="\n")
         writer.writeheader(); writer.writerows(asdict(r) for r in results)
-    lines = ["# 系统静态检查", "", f"总体：**{'PASS' if payload['ok'] else 'FAIL'}**", "", "| 检查项 | 状态 | 说明 |", "|---|---|---|"]
+    lines = ["# System static checks", "", f"Overall: **{'PASS' if payload['ok'] else 'FAIL'}**", "", "| Check | Status | Detail |", "|---|---|---|"]
     for r in results:
         lines.append(f"| `{r.test_id}` | {r.status} | {r.detail.replace('|', '\\|')} |")
     (OUTPUT / "system_test_report.md").write_text("\n".join(lines) + "\n", encoding="utf-8")
@@ -321,7 +321,8 @@ def main() -> int:
         ("protocol_known_vectors", known_vectors),
         ("protocol_roundtrips", roundtrips),
         ("radio_parameter_alignment", radio_alignment),
-        ("firmware_sources", firmware_boundary),
+        ("firmware_release_boundary", firmware_boundary),
+        ("release_exclusions", exclusions),
         ("system_asset_manifest", asset_manifest),
         ("backend_reference", backend_reference),
         ("backend_platform", backend_platform),
@@ -334,8 +335,6 @@ def main() -> int:
         run(results, test_id, fn)
     write_reports(results)
     ok = all(r.status == "PASS" for r in results if r.required)
-    for result in results:
-        print(f"[{result.status}] {result.test_id}: {result.detail}")
     print(json.dumps({"ok": ok, "pass": sum(r.status == 'PASS' for r in results), "fail": sum(r.status == 'FAIL' for r in results)}, indent=2))
     return 0 if ok else 1
 

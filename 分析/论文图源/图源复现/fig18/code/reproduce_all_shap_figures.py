@@ -17,6 +17,13 @@ DISPLAY = {
     "Air": "Local ambient temperature",
 }
 
+COMPACT_DISPLAY = {
+    "Time": "Temporal state",
+    "Ear": "Ear T",
+    "CowID_raw": "Cow ID",
+    "Air": "Ambient T",
+}
+
 SHAP_COLUMN = {
     "Time": "SHAP_Time",
     "Ear": "SHAP_Ear",
@@ -29,6 +36,12 @@ VALUE_COLUMN = {
     "Ear": "Ear",
     "Air": "Air",
 }
+PUBLICATION_LAYOUT = False
+COMPACT_ARTWORK = False
+
+
+def mm_size(width_mm: float, height_mm: float) -> tuple[float, float]:
+    return width_mm / 25.4, height_mm / 25.4
 
 
 def configure_style() -> None:
@@ -51,6 +64,17 @@ def configure_style() -> None:
             "ps.fonttype": 42,
         }
     )
+    if COMPACT_ARTWORK:
+        plt.rcParams.update(
+            {
+                "font.size": 7,
+                "axes.labelsize": 7.5,
+                "axes.titlesize": 7.5,
+                "xtick.labelsize": 7,
+                "ytick.labelsize": 7,
+                "axes.linewidth": 0.7,
+            }
+        )
 
 
 def clean_axes(ax: plt.Axes, grid_axis: str | None = None) -> None:
@@ -67,27 +91,28 @@ def clean_axes(ax: plt.Axes, grid_axis: str | None = None) -> None:
 
 def save_all(fig: plt.Figure, output_dir: Path, stem: str) -> None:
     output_dir.mkdir(parents=True, exist_ok=True)
+    bbox = None if PUBLICATION_LAYOUT else "tight"
     fig.savefig(
         output_dir / f"{stem}.png",
         dpi=600,
-        bbox_inches="tight",
+        bbox_inches=bbox,
         facecolor="white",
     )
     fig.savefig(
         output_dir / f"{stem}.tiff",
         dpi=600,
-        bbox_inches="tight",
+        bbox_inches=bbox,
         facecolor="white",
         pil_kwargs={"compression": "tiff_lzw"},
     )
     fig.savefig(
         output_dir / f"{stem}.svg",
-        bbox_inches="tight",
+        bbox_inches=bbox,
         facecolor="white",
     )
     fig.savefig(
         output_dir / f"{stem}.pdf",
-        bbox_inches="tight",
+        bbox_inches=bbox,
         facecolor="white",
     )
     plt.close(fig)
@@ -115,7 +140,7 @@ def load_data(package_root: Path):
         index_col="TargetRowID",
     )
     summary = pd.read_csv(data_dir / "SHAP_summary.csv")
-    audit = pd.read_csv(
+    check = pd.read_csv(
         data_dir / "SHAP_additivity_check.csv",
         index_col="TargetRowID",
     )
@@ -125,20 +150,20 @@ def load_data(package_root: Path):
     )
 
     shap = shap.reindex(rows.index)
-    audit = audit.reindex(rows.index)
+    check = check.reindex(rows.index)
 
     if shap.isna().any().any():
         raise ValueError("SHAP data contain missing values after alignment.")
-    if audit["FullPipelinePrediction_C"].isna().any():
-        raise ValueError("Prediction audit contains missing values.")
+    if check["FullPipelinePrediction_C"].isna().any():
+        raise ValueError("Prediction check contains missing values.")
 
-    return shap, summary, audit, rows
+    return shap, summary, check, rows
 
 
 def make_heatmap(
     shap: pd.DataFrame,
     summary: pd.DataFrame,
-    audit: pd.DataFrame,
+    check: pd.DataFrame,
     rows: pd.DataFrame,
     output_dir: Path,
 ) -> None:
@@ -158,7 +183,7 @@ def make_heatmap(
             "Cow": cow_code,
             "Time": pd.to_numeric(rows["Time"], errors="coerce"),
             "Prediction": pd.to_numeric(
-                audit["FullPipelinePrediction_C"],
+                check["FullPipelinePrediction_C"],
                 errors="coerce",
             ),
         },
@@ -174,7 +199,7 @@ def make_heatmap(
         feature_order,
     ].T.to_numpy(float)
 
-    predicted = audit.loc[
+    predicted = check.loc[
         ordered_index,
         "FullPipelinePrediction_C",
     ].to_numpy(float)
@@ -182,7 +207,11 @@ def make_heatmap(
     max_abs = float(np.nanmax(np.abs(heat_matrix)))
     x = np.arange(len(ordered_index))
 
-    fig = plt.figure(figsize=(11.2, 5.6))
+    fig = plt.figure(figsize=mm_size(190, 85.7) if PUBLICATION_LAYOUT else (11.2, 5.6))
+    if COMPACT_ARTWORK:
+        fig.subplots_adjust(left=0.16, right=0.91, bottom=0.14, top=0.97)
+    elif PUBLICATION_LAYOUT:
+        fig.subplots_adjust(left=0.24, right=0.88, bottom=0.19, top=0.84)
     grid = fig.add_gridspec(
         2,
         1,
@@ -191,11 +220,10 @@ def make_heatmap(
     )
 
     ax_top = fig.add_subplot(grid[0, 0])
-    ax_top.plot(x, predicted, linewidth=1.15, color="black")
-    ax_top.set_ylabel("Predicted core\nT (°C)")
-    ax_top.set_title(
-        "Conditional SHAP heatmap across 503 out-of-fold samples"
-    )
+    ax_top.plot(x, predicted, linewidth=0.8 if COMPACT_ARTWORK else 1.15, color="black")
+    ax_top.set_ylabel("Core T\n(°C)" if COMPACT_ARTWORK else "Predicted core\nT (°C)")
+    if not COMPACT_ARTWORK:
+        ax_top.set_title(f"Conditional SHAP heatmap across {len(rows)} out-of-fold samples")
     ax_top.tick_params(axis="x", labelbottom=False)
     ax_top.grid(alpha=0.14, linewidth=0.5)
     clean_axes(ax_top)
@@ -211,12 +239,10 @@ def make_heatmap(
     )
     ax_heat.set_yticks(
         np.arange(len(feature_order)),
-        [DISPLAY[name] for name in feature_order],
+        [(COMPACT_DISPLAY if COMPACT_ARTWORK else DISPLAY)[name] for name in feature_order],
     )
-    ax_heat.set_xlabel(
-        "Instances ordered by cattle identity and sampling time"
-    )
-    ax_heat.set_ylabel("Feature group")
+    ax_heat.set_xlabel("Ordered samples" if COMPACT_ARTWORK else "Instances ordered by cattle identity and sampling time")
+    ax_heat.set_ylabel("Feature" if COMPACT_ARTWORK else "Feature group")
     clean_axes(ax_heat)
 
     colorbar = fig.colorbar(
@@ -225,9 +251,9 @@ def make_heatmap(
         fraction=0.025,
         pad=0.018,
     )
-    colorbar.set_label("Conditional SHAP value (°C)")
+    colorbar.set_label("SHAP (°C)" if COMPACT_ARTWORK else "Conditional SHAP value (°C)")
 
-    save_all(fig, output_dir, "Fig15a_SHAP_heatmap")
+    save_all(fig, output_dir, "Fig18a_conditional_SHAP_heatmap")
 
 
 def make_global_contribution(
@@ -254,7 +280,11 @@ def make_global_contribution(
         for name in feature_order
     ]
 
-    fig, ax_bar = plt.subplots(figsize=(9.4, 5.6))
+    fig, ax_bar = plt.subplots(figsize=mm_size(190, 119.5) if PUBLICATION_LAYOUT else (9.4, 5.6))
+    if COMPACT_ARTWORK:
+        fig.subplots_adjust(left=0.16, right=0.90, bottom=0.13, top=0.91)
+    elif PUBLICATION_LAYOUT:
+        fig.subplots_adjust(left=0.24, right=0.86, bottom=0.16, top=0.84)
     ax_shap = ax_bar.twiny()
 
     y_positions = np.arange(len(feature_order))
@@ -268,20 +298,17 @@ def make_global_contribution(
         alpha=0.58,
     )
     ax_bar.set_xlim(0, max(bar_values) * 1.22)
-    ax_bar.set_xlabel("Mean |conditional SHAP value| (°C)")
+    ax_bar.set_xlabel("Mean |SHAP| (°C)" if COMPACT_ARTWORK else "Mean |conditional SHAP value| (°C)")
     ax_bar.set_yticks(
         y_positions,
-        [DISPLAY[name] for name in feature_order],
+        [(COMPACT_DISPLAY if COMPACT_ARTWORK else DISPLAY)[name] for name in feature_order],
     )
     ax_bar.invert_yaxis()
     clean_axes(ax_bar, "x")
 
     ax_shap.set_xlim(-x_limit, x_limit)
     ax_shap.set_ylim(ax_bar.get_ylim())
-    ax_shap.set_xlabel(
-        "Conditional SHAP value "
-        "(impact on predicted core temperature, °C)"
-    )
+    ax_shap.set_xlabel("SHAP value (°C)" if COMPACT_ARTWORK else "Conditional SHAP value (impact on predicted core temperature, °C)")
     ax_shap.axvline(
         0,
         linestyle="--",
@@ -309,7 +336,7 @@ def make_global_contribution(
             f"{bar_values[row_number]:.3f}",
             va="center",
             ha="left",
-            fontsize=8.5,
+            fontsize=7 if COMPACT_ARTWORK else 8.5,
         )
 
         shap_values = rows[
@@ -327,8 +354,8 @@ def make_global_contribution(
             ax_shap.scatter(
                 shap_values,
                 y_values,
-                s=18,
-                alpha=0.56,
+                s=5 if COMPACT_ARTWORK else 18,
+                alpha=0.48 if COMPACT_ARTWORK else 0.56,
                 linewidths=0,
                 color="gray",
                 rasterized=True,
@@ -343,15 +370,14 @@ def make_global_contribution(
                 c=scale_01(raw_values),
                 cmap=cmap,
                 norm=norm,
-                s=18,
-                alpha=0.74,
+                s=5 if COMPACT_ARTWORK else 18,
+                alpha=0.58 if COMPACT_ARTWORK else 0.74,
                 linewidths=0,
                 rasterized=True,
             )
 
-    ax_bar.set_title(
-        "Global SHAP contribution and sample-level effect distribution"
-    )
+    if not COMPACT_ARTWORK:
+        ax_bar.set_title("Global SHAP contribution and sample-level effect distribution")
 
     colorbar = fig.colorbar(
         mappable,
@@ -359,24 +385,17 @@ def make_global_contribution(
         fraction=0.030,
         pad=0.025,
     )
-    colorbar.set_label("Continuous feature value")
+    colorbar.set_label("Feature value" if COMPACT_ARTWORK else "Continuous feature value")
     colorbar.set_ticks([0, 1])
     colorbar.set_ticklabels(["Low", "High"])
 
-    ax_bar.text(
-        0.99,
-        0.02,
-        "Cattle identity is categorical and is shown in gray.",
-        transform=ax_bar.transAxes,
-        ha="right",
-        va="bottom",
-        fontsize=8.5,
-    )
+    if not COMPACT_ARTWORK:
+        ax_bar.text(0.99, 0.02, "Cattle identity is categorical and is shown in gray.", transform=ax_bar.transAxes, ha="right", va="bottom", fontsize=8.5)
 
     save_all(
         fig,
         output_dir,
-        "Fig15b_global_SHAP_contribution",
+        "Fig18b_global_SHAP_contribution",
     )
 
 
@@ -408,14 +427,14 @@ def make_dependence_panel(
         return_sorted=True,
     )
 
-    fig, ax = plt.subplots(figsize=(6.3, 5.0))
+    fig, ax = plt.subplots(figsize=mm_size(63.333, 70) if PUBLICATION_LAYOUT else (6.3, 5.0))
     scatter = ax.scatter(
         x,
         y,
         c=color,
         cmap="coolwarm",
-        s=22,
-        alpha=0.62,
+        s=5 if COMPACT_ARTWORK else 22,
+        alpha=0.48 if COMPACT_ARTWORK else 0.62,
         linewidths=0,
         rasterized=True,
     )
@@ -423,7 +442,7 @@ def make_dependence_panel(
         smooth[:, 0],
         smooth[:, 1],
         color="crimson",
-        linewidth=2.5,
+        linewidth=0.9 if COMPACT_ARTWORK else 2.5,
     )
     ax.axhline(
         0,
@@ -431,22 +450,54 @@ def make_dependence_panel(
         linestyle="--",
         linewidth=0.8,
     )
-    ax.set_xlabel(x_label)
+    if COMPACT_ARTWORK and x_label.startswith("Ear-surface"):
+        x_label = "Ear T (°C)"
+    elif COMPACT_ARTWORK and x_label.startswith("Local ambient"):
+        x_label = "Ambient T (°C)"
+    elif PUBLICATION_LAYOUT and x_label.startswith("Ear-surface"):
+        x_label = "Ear-surface\ntemperature (°C)"
+    elif PUBLICATION_LAYOUT and x_label.startswith("Local ambient"):
+        x_label = "Local ambient\ntemperature (°C)"
+    ax.set_xlabel(x_label, fontsize=7.5 if COMPACT_ARTWORK else (9 if PUBLICATION_LAYOUT else None))
     ax.set_ylabel(
-        "Conditional SHAP value\n"
-        "(impact on predicted core temperature, °C)"
+        "SHAP (°C)"
+        if COMPACT_ARTWORK
+        else "SHAP value (°C)"
+        if PUBLICATION_LAYOUT
+        else "Conditional SHAP value\n(impact on predicted core\ntemperature, °C)"
     )
-    ax.set_title(title, pad=8)
+    if not COMPACT_ARTWORK:
+        ax.set_title(title, pad=8, fontsize=10 if PUBLICATION_LAYOUT else None)
     ax.grid(alpha=0.14, linewidth=0.5)
     clean_axes(ax)
 
     colorbar = fig.colorbar(
         scatter,
         ax=ax,
-        fraction=0.045,
-        pad=0.025,
+        fraction=0.065 if PUBLICATION_LAYOUT else 0.045,
+        pad=0.04 if PUBLICATION_LAYOUT else 0.025,
     )
-    colorbar.set_label(color_label)
+    if COMPACT_ARTWORK:
+        compact_color_labels = {
+            "Ear–ambient thermal gradient (°C)": "T gap (°C)",
+            "Sampling time (h)": "Time (h)",
+            "Local ambient temperature (°C)": "Ambient T (°C)",
+        }
+        colorbar.set_label(compact_color_labels.get(color_label, color_label), fontsize=7)
+    elif PUBLICATION_LAYOUT:
+        compact_color_labels = {
+            "Ear–ambient thermal gradient (°C)": "Ear–ambient\ngradient (°C)",
+            "Sampling time (h)": "Sampling\ntime (h)",
+            "Local ambient temperature (°C)": "Ambient\ntemperature (°C)",
+        }
+        colorbar.set_label(compact_color_labels.get(color_label, color_label), fontsize=8)
+    else:
+        colorbar.set_label(color_label)
+
+    if COMPACT_ARTWORK:
+        fig.subplots_adjust(left=0.18, right=0.82, bottom=0.18, top=0.97)
+    elif PUBLICATION_LAYOUT:
+        fig.subplots_adjust(left=0.20, right=0.79, bottom=0.22, top=0.83)
 
     save_all(fig, output_dir, stem)
 
@@ -507,10 +558,10 @@ def make_combined_figures(
     from PIL import Image, ImageDraw, ImageFont
 
     fig15a = Image.open(
-        output_dir / "Fig15a_SHAP_heatmap.png"
+        output_dir / "Fig18a_conditional_SHAP_heatmap.png"
     ).convert("RGB")
     fig15b = Image.open(
-        output_dir / "Fig15b_global_SHAP_contribution.png"
+        output_dir / "Fig18b_global_SHAP_contribution.png"
     ).convert("RGB")
 
     target_width = max(fig15a.width, fig15b.width)
@@ -546,6 +597,8 @@ def make_combined_figures(
     )
 
     font_candidates = [
+        r"C:\Windows\Fonts\timesbd.ttf",
+        r"C:\Windows\Fonts\arialbd.ttf",
         "/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf",
         "/usr/share/fonts/truetype/liberation2/LiberationSans-Bold.ttf",
     ]
@@ -559,32 +612,32 @@ def make_combined_figures(
         else ImageFont.load_default()
     )
     draw = ImageDraw.Draw(canvas)
-    draw.text((25, 25), "(a)", fill="black", font=font)
+    draw.text((25, 25), "a", fill="black", font=font)
     draw.text(
         (25, margin + fig15a.height + gap + 10),
-        "(b)",
+        "b",
         fill="black",
         font=font,
     )
 
     canvas.save(
-        output_dir / "Fig15_global_SHAP_analysis.png",
+        output_dir / "Fig18_group_SHAP_analysis.png",
         dpi=(600, 600),
     )
     canvas.save(
-        output_dir / "Fig15_global_SHAP_analysis.tiff",
+        output_dir / "Fig18_group_SHAP_analysis.tiff",
         dpi=(600, 600),
         compression="tiff_lzw",
     )
     canvas.save(
-        output_dir / "Fig15_global_SHAP_analysis.pdf",
+        output_dir / "Fig18_group_SHAP_analysis.pdf",
         resolution=600,
     )
 
     panel_files = [
-        output_dir / "Fig16a_ear_temperature_dependence.png",
-        output_dir / "Fig16b_ambient_temperature_dependence.png",
-        output_dir / "Fig16c_sampling_time_dependence.png",
+        output_dir / "Fig19a_ear_temperature_dependence.png",
+        output_dir / "Fig19b_ambient_temperature_dependence.png",
+        output_dir / "Fig19c_sampling_time_dependence.png",
     ]
     panels = [
         Image.open(path).convert("RGB")
@@ -617,21 +670,28 @@ def make_combined_figures(
     )
 
     x_cursor = margin
-    for panel in resized:
+    draw = ImageDraw.Draw(dependence_canvas)
+    panel_font = (
+        ImageFont.truetype(font_path, 76)
+        if font_path
+        else ImageFont.load_default()
+    )
+    for label, panel in zip(("a", "b", "c"), resized):
         dependence_canvas.paste(panel, (x_cursor, margin))
+        draw.text((x_cursor + 8, 8), label, fill="black", font=panel_font)
         x_cursor += panel.width + gap
 
     dependence_canvas.save(
-        output_dir / "Fig16_SHAP_dependence_analysis.png",
+        output_dir / "Fig19_SHAP_dependence_analysis.png",
         dpi=(600, 600),
     )
     dependence_canvas.save(
-        output_dir / "Fig16_SHAP_dependence_analysis.tiff",
+        output_dir / "Fig19_SHAP_dependence_analysis.tiff",
         dpi=(600, 600),
         compression="tiff_lzw",
     )
     dependence_canvas.save(
-        output_dir / "Fig16_SHAP_dependence_analysis.pdf",
+        output_dir / "Fig19_SHAP_dependence_analysis.pdf",
         resolution=600,
     )
 
@@ -652,7 +712,21 @@ def main() -> None:
         default=None,
         help="Output figure directory. Defaults to <package-root>/figures_reproduced.",
     )
+    parser.add_argument(
+        "--publication-layout",
+        action="store_true",
+        help="Export Fig. 18 at 190 mm and Fig. 19 panels at 63.333 mm widths.",
+    )
+    parser.add_argument(
+        "--compact-artwork",
+        action="store_true",
+        help="Remove titles and use compact 7 pt publication styling.",
+    )
     args = parser.parse_args()
+
+    global PUBLICATION_LAYOUT, COMPACT_ARTWORK
+    PUBLICATION_LAYOUT = args.publication_layout
+    COMPACT_ARTWORK = args.compact_artwork
 
     package_root = args.package_root.resolve()
     output_dir = (
@@ -663,15 +737,15 @@ def main() -> None:
     output_dir.mkdir(parents=True, exist_ok=True)
 
     configure_style()
-    shap, summary, audit, rows = load_data(package_root)
+    shap, summary, check, rows = load_data(package_root)
 
-    make_heatmap(shap, summary, audit, rows, output_dir)
+    make_heatmap(shap, summary, check, rows, output_dir)
     make_global_contribution(summary, rows, output_dir)
 
     make_dependence_panel(
         rows,
         output_dir,
-        "Fig16a_ear_temperature_dependence",
+        "Fig19a_ear_temperature_dependence",
         "Ear",
         "SHAP_Ear",
         "EarAirGap",
@@ -683,7 +757,7 @@ def main() -> None:
     make_dependence_panel(
         rows,
         output_dir,
-        "Fig16b_ambient_temperature_dependence",
+        "Fig19b_ambient_temperature_dependence",
         "Air",
         "SHAP_Air",
         "Time",
@@ -695,7 +769,7 @@ def main() -> None:
     make_dependence_panel(
         rows,
         output_dir,
-        "Fig16c_sampling_time_dependence",
+        "Fig19c_sampling_time_dependence",
         "Time",
         "SHAP_Time",
         "Air",
@@ -705,11 +779,10 @@ def main() -> None:
         0.34,
     )
 
-    make_importance_bar(summary, output_dir)
     make_combined_figures(package_root, output_dir)
 
     max_diff = float(
-        audit["AdditivityDifference_C"].abs().max()
+        check["AdditivityDifference_C"].abs().max()
     )
     print(f"Figures written to: {output_dir}")
     print(f"Maximum SHAP additivity difference: {max_diff:.12g} °C")

@@ -1,61 +1,21 @@
 {
-  "ok": true,
-  "passed": 9,
-  "failed": 0,
+  "status": "PASS",
   "checks": [
     {
-      "label": "temperature_selection_trace",
-      "command": "python \u811a\u672c/verify_temperature_selection.py",
-      "returncode": 0,
-      "status": "PASS"
+      "check": "scientific_results",
+      "returncode": 0
     },
     {
-      "label": "temperature_stack_reproduction",
-      "command": "python \u811a\u672c/run_temperature_analysis.py --verify-docs",
-      "returncode": 0,
-      "status": "PASS"
+      "check": "repository",
+      "returncode": 0
     },
     {
-      "label": "mechanism_ablation_reproduction",
-      "command": "python \u5206\u6790/\u6d88\u878d/run_ablation.py",
-      "returncode": 0,
-      "status": "PASS"
+      "check": "system_tests",
+      "returncode": 0
     },
     {
-      "label": "benchmark_fixed_choice_refit",
-      "command": "python \u5206\u6790/\u57fa\u51c6\u6a21\u578b/replay_benchmark.py",
-      "returncode": 0,
-      "status": "PASS"
-    },
-    {
-      "label": "native_stack_shap",
-      "command": "python \u5206\u6790/\u53ef\u89e3\u91ca\u6027/run_native_stack_shap.py",
-      "returncode": 0,
-      "status": "PASS"
-    },
-    {
-      "label": "conditional_shap_verification",
-      "command": "python \u5206\u6790/\u53ef\u89e3\u91ca\u6027/verify_conditional_shap.py",
-      "returncode": 0,
-      "status": "PASS"
-    },
-    {
-      "label": "fig15_17_generation",
-      "command": "python \u5206\u6790/\u56fe\u4ef6/plot_fig15_17_public.py",
-      "returncode": 0,
-      "status": "PASS"
-    },
-    {
-      "label": "unified_result_verification",
-      "command": "python \u811a\u672c/verify_results.py",
-      "returncode": 0,
-      "status": "PASS"
-    },
-    {
-      "label": "system_software_static_tests",
-      "command": "python \u7cfb\u7edf\u6d4b\u8bd5/run_system_tests.py",
-      "returncode": 0,
-      "status": "PASS"
+      "check": "repository_integrity",
+      "returncode": 0
     }
   ]
 }

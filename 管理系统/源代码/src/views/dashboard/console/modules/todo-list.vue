@@ -29,7 +29,7 @@
 
 <script setup lang="ts">
   import { computed, onMounted, reactive } from 'vue'
-  import * as databaseService from '@/services/database'
+  import * as databaseService from '@/services/数据库'
   import { loadUnifiedReproductionEvents } from '@/services/unified-records'
   import { formatDateOnly } from '@/utils/date-display'
 

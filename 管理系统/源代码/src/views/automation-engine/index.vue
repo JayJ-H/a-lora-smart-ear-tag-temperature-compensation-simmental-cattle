@@ -225,7 +225,7 @@
   import { computed, onMounted, reactive, ref } from 'vue'
   import { ElMessage } from 'element-plus'
   import { automationApi } from '@/api/cow'
-  import * as databaseService from '@/services/database'
+  import * as databaseService from '@/services/数据库'
   import { useLazyGridRenderWindow, useLazyRenderWindow } from '@/hooks'
   import { formatDateOnly } from '@/utils/date-display'
 

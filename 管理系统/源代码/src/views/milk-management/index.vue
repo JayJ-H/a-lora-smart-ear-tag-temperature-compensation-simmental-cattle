@@ -396,7 +396,7 @@
   import FcPanel from '@/components/business/fluent-console/FcPanel.vue'
   import FcEmptyState from '@/components/business/fluent-console/FcEmptyState.vue'
   import FcDataTableShell from '@/components/business/fluent-console/FcDataTableShell.vue'
-  import * as databaseService from '@/services/database'
+  import * as databaseService from '@/services/数据库'
   import { buildUnifiedDataContext, loadUnifiedMilkRecords } from '@/services/unified-records'
   import { useLazyRenderWindow } from '@/hooks'
   import { formatDateOnly } from '@/utils/date-display'

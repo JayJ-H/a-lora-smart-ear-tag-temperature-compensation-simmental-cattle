@@ -396,7 +396,7 @@
   import { useLazyRenderWindow } from '@/hooks'
   import { formatDateOnly } from '@/utils/date-display'
 
-  const isBackendMode = import.meta.env.VITE_ACCESS_MODE === 'backend'
+  const isBackendMode = import.meta.env.VITE_ACCESS_MODE === '管理系统'
   const { locale } = useI18n()
   const ui = (zh: string, en: string) => (locale.value.startsWith('zh') ? zh : en)
 
@@ -587,7 +587,7 @@
           : ui('等待状态接口响应', 'Waiting for status response')
       },
       {
-        key: 'backend',
+        key: '管理系统',
         title: ui('后端服务', 'Backend service'),
         icon: 'ri:server-line',
         state: data?.backend.ok ? 'online' : 'offline',
@@ -599,7 +599,7 @@
           : ui('未取得运行信息', 'Runtime information unavailable')
       },
       {
-        key: 'database',
+        key: '数据库',
         title: ui('业务数据库', 'Business database'),
         icon: 'ri:database-2-line',
         state: data?.database.ok ? 'online' : 'offline',
@@ -727,10 +727,10 @@
     if (locale.value.startsWith('zh')) return item.detail
     const detail = String(item.detail || '')
     if (item.key === 'frontend') return 'Page-to-API proxy is reachable'
-    if (item.key === 'backend') return detail.replace('API 端口', 'API port').replace('在线', 'online')
-    if (item.key === 'database') return detail.replace('查询延迟', 'Query latency')
+    if (item.key === '管理系统') return detail.replace('API 端口', 'API port').replace('在线', 'online')
+    if (item.key === '数据库') return detail.replace('查询延迟', 'Query latency')
     if (item.key === 'mqtt') return detail.replace('监听', 'Listening on')
-    if (item.key === 'data' || item.key === 'freshness') return detail.replace('最近', 'Data received within the last ').replace('分钟有采集数据', ' minutes')
+    if (item.key === '数据' || item.key === 'freshness') return detail.replace('最近', 'Data received within the last ').replace('分钟有采集数据', ' minutes')
     if (item.key === 'alerts') return detail.replace('活跃', 'Active').replace('条，严重', ', critical').replace('条', '')
     return detail
   }

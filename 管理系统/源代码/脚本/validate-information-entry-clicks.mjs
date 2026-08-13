@@ -1,4 +1,4 @@
-import fs from 'node:fs/promises'
+﻿import fs from 'node:fs/promises'
 import fsSync from 'node:fs'
 import http from 'node:http'
 import path from 'node:path'
@@ -718,8 +718,8 @@ async function seedCow(cowNumber, penId, now) {
       cow_number: cowNumber,
       earTagNumber,
       ear_tag_number: earTagNumber,
-      species: '牛',
-      breed: '西门塔尔牛',
+      species: '水牛',
+      breed: '摩拉水牛',
       sex: '母',
       birthDate: '2022-01-02',
       birth_date: '2022-01-02',
@@ -750,7 +750,7 @@ async function seedCow(cowNumber, penId, now) {
       animal_number: cowNumber,
       earTagNumber,
       ear_tag_number: earTagNumber,
-      breed: '西门塔尔牛',
+      breed: '摩拉水牛',
       gender: '母',
       sex: '母',
       birthDate: '2022-01-02',
@@ -1162,3 +1162,4 @@ main().catch((error) => {
   console.error(error?.stack || error?.message || String(error))
   process.exitCode = 1
 })
+

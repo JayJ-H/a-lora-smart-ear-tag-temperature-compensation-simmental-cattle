@@ -25,7 +25,7 @@
  * 1. 直接数组: [item1, item2, ...]
  * 2. 标准对象: { records: [], total: 100 }
  * 3. 嵌套data: { data: { list: [], total: 100 } }
- * 4. 多种字段名: list/data/records/items/result/rows
+ * 4. 多种字段名: list/数据/records/items/result/rows
  *
  * ## 核心功能
  *
@@ -144,7 +144,7 @@ export const defaultResponseAdapter = <T>(response: unknown): ApiResponse<T> => 
   pagination = extractPagination(res)
 
   // 如果没有找到，检查嵌套data
-  if (records.length === 0 && 'data' in res && typeof res.data === 'object') {
+  if (records.length === 0 && '数据' in res && typeof res.data === 'object') {
     const data = res.data as Record<string, unknown>
     records = extractRecords(data, ['list', 'records', 'items'])
     total = extractTotal(data, records, tableConfig.totalFields)

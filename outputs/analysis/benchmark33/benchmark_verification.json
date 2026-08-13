@@ -1,0 +1,34 @@
+{
+  "status": "PASS",
+  "validation_design": "five fixed measurement-unit-grouped same-animal five-fold OOF partitions",
+  "formal_aggregation": "rowwise_median",
+  "benchmark_scope": "modeling-strategy comparison; feature information budgets differ because TH-SHRC includes lag and acquisition-session features",
+  "seeds": [
+    20260523,
+    20260607,
+    20260701,
+    20260811,
+    20260903
+  ],
+  "expected_model_count": 33,
+  "retrained_model_count": 33,
+  "rows_per_model": 520,
+  "seed_level_prediction_rows": 85800,
+  "formal_prediction_rows": 17160,
+  "failed_models": [],
+  "incomplete_models": [],
+  "max_rowwise_median_difference_C": 0.0,
+  "max_th_shrc_official_difference_C": 0.0,
+  "checks": {
+    "five_fixed_seeds": true,
+    "all_seed_runs_pass": true,
+    "seed_prediction_coverage": true,
+    "formal_prediction_coverage": true,
+    "model_count": true,
+    "metadata_invariant_across_seeds": true,
+    "rowwise_median_recalculates": true,
+    "th_shrc_matches_formal_ensemble": true,
+    "inventory_complete": true,
+    "fold_metric_coverage": true
+  }
+}

@@ -577,7 +577,7 @@ const SAMPLE_STATUS_OPTIONS = [
   '已废弃',
   'stored',
   'pending',
-  'testing',
+  '测试记录',
   'tested',
   'discarded'
 ]
@@ -617,7 +617,7 @@ const DEVICE_TYPE_OPTIONS = [
   '环境传感器',
   'milking_parlor',
   'collar',
-  'ear_tag',
+  '耳标',
   'scale',
   'environment'
 ]

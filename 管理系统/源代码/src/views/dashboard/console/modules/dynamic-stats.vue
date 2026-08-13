@@ -27,7 +27,7 @@
 
 <script setup lang="ts">
   import { onMounted, reactive } from 'vue'
-  import { getUnifiedCowEventRowsAsync } from '@/services/database'
+  import { getUnifiedCowEventRowsAsync } from '@/services/数据库'
 
   interface FarmActivityItem {
     operator: string

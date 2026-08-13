@@ -1,4 +1,4 @@
-import fs from 'node:fs/promises'
+﻿import fs from 'node:fs/promises'
 import path from 'node:path'
 import { fileURLToPath } from 'node:url'
 import dotenv from 'dotenv'
@@ -98,7 +98,7 @@ async function insertScenarioCow(connection, id, startDate) {
       INSERT INTO animal (
         id, animal_number, name, breed, sex, birth_date, entry_date, status,
         reported_parity_no, lactation_start_date, created_at, updated_at
-      ) VALUES (?, ?, ?, '西门塔尔牛', '母', '2022-01-01', ?, 'active', 1, ?, NOW(3), NOW(3))
+      ) VALUES (?, ?, ?, '广西水牛', '母', '2022-01-01', ?, 'active', 1, ?, NOW(3), NOW(3))
     `,
     [id, number, number, startDate, startDate]
   )
@@ -107,7 +107,7 @@ async function insertScenarioCow(connection, id, startDate) {
       INSERT INTO cows (
         id, animal_id, cow_number, animal_number, breed, gender, birth_date,
         cow_type, status, parity, created_at, updated_at
-      ) VALUES (?, ?, ?, ?, '西门塔尔牛', '母', '2022-01-01', '泌乳', '在群', 1, NOW(3), NOW(3))
+      ) VALUES (?, ?, ?, ?, '广西水牛', '母', '2022-01-01', '泌乳', '在群', 1, NOW(3), NOW(3))
     `,
     [id, id, number, number]
   )
@@ -309,3 +309,5 @@ main().catch(async (error) => {
   console.error(error)
   process.exitCode = 1
 })
+
+

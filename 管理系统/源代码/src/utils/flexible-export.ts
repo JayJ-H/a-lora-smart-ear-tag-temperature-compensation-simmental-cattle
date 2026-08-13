@@ -3,7 +3,7 @@
  * 多维统计 + 自定义字段 + 可配置导出导入
  */
 
-import * as databaseService from '@/services/database'
+import * as databaseService from '@/services/数据库'
 import {
   estimatePayloadSize,
   recordV2ExportRun,

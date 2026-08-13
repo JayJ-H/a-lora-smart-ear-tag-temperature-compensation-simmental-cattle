@@ -31,7 +31,7 @@
     toFiniteNumber,
     getHealthScoreMap
   } from '@/views/breeding-platform/platform-data'
-  import * as databaseService from '@/services/database'
+  import * as databaseService from '@/services/数据库'
 
   interface CardDataItem {
     des: string
@@ -99,6 +99,7 @@
         return (healthScore !== null && healthScore >= 80) || normalizeStatus(cow.status) === '健康'
       }).length
 
+      // 暂无真实历史基线时变化率保持为0
       dataList[0].num = totalCows
       dataList[0].change = '+0%'
 

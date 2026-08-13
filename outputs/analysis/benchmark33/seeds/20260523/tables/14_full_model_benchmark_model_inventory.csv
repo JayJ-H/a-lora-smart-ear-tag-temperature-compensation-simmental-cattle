@@ -1,0 +1,34 @@
+﻿Model,ModelFamily,BenchmarkGroup,FeatureSet,RunStatus,Notes
+AdaBoostTree,boosting ensemble,conventional_ml,raw_engineered_context,done,AdaBoost over shallow regression trees.
+BaggedTree,bagging ensemble,conventional_ml,raw_engineered_context,done,Bagged regression trees.
+DecisionTree,tree,conventional_ml,raw_engineered_context,done,Single regression tree.
+ExtraTrees,bagging ensemble,conventional_ml,raw_engineered_context,done,Extremely randomized trees.
+GaussianProcess_RBF,Gaussian process,conventional_ml,raw_engineered_context,done,RBF Gaussian process without hyperparameter optimization.
+GradientBoosting,boosting ensemble,conventional_ml,raw_engineered_context,done,Gradient boosting regression trees.
+HistGradientBoosting,boosting ensemble,conventional_ml,raw_engineered_context,done,Histogram gradient boosting.
+KNN_k5,nearest neighbor,conventional_ml,raw_engineered_context,done,Distance-weighted k-nearest neighbors.
+KernelRidge_RBF,kernel method,conventional_ml,raw_engineered_context,done,Kernel ridge regression with RBF kernel.
+LightGBM,boosting ensemble,conventional_ml,raw_engineered_context,done,LightGBM gradient boosting.
+LinearSVR,kernel/linear margin,conventional_ml,raw_engineered_context,done,Linear support vector regression.
+MLP,neural network,conventional_ml,raw_engineered_context,done,Feed-forward neural network.
+RandomForest,bagging ensemble,conventional_ml,raw_engineered_context,done,Random forest.
+SVR_RBF,kernel method,conventional_ml,raw_engineered_context,done,Support vector regression with RBF kernel.
+XGBoost,boosting ensemble,conventional_ml,raw_engineered_context,done,XGBoost gradient boosting.
+DE_GradientBoosting,boosting ensemble,evolutionary_optimized_ml,raw_engineered_context,done,Differential evolution tunes gradient-boosting tree parameters.
+DE_XGBoost,boosting ensemble,evolutionary_optimized_ml,raw_engineered_context,done,Differential evolution tunes XGBoost hyperparameters.
+GA_SVR_RBF,kernel method,evolutionary_optimized_ml,raw_engineered_context,done,"Genetic algorithm tunes C, gamma, and epsilon for RBF-SVR."
+GWO_ExtraTrees,bagging ensemble,evolutionary_optimized_ml,raw_engineered_context,done,Grey wolf optimizer tunes extremely randomized trees.
+PSO_RandomForest,bagging ensemble,evolutionary_optimized_ml,raw_engineered_context,done,"Particle swarm optimization tunes random-forest depth, leaf size, trees, and feature fraction."
+SA_KNN,nearest neighbor,evolutionary_optimized_ml,raw_engineered_context,done,"Simulated annealing tunes KNN k, distance metric, and weights."
+BayesianRidge,regularized linear,linear_baseline,raw_engineered_context,done,Bayesian regularized linear regression.
+EarOnlyLinear,linear,linear_baseline,ear_only,done,Single ear-surface temperature linear regression.
+ElasticNet,regularized linear,linear_baseline,raw_engineered_context,done,L1/L2 regularized linear model.
+HuberRegressor,robust linear,linear_baseline,raw_engineered_context,done,Robust linear regression.
+Lasso,regularized linear,linear_baseline,raw_engineered_context,done,L1-regularized linear model.
+MeanTrain,constant baseline,linear_baseline,no_features,done,Training-fold mean body temperature.
+MultipleLinear,linear,linear_baseline,raw_engineered_context,done,Ordinary least squares using numeric and context features.
+PolynomialRidge,nonlinear linear-basis,linear_baseline,polynomial_numeric_context,done,Degree-2 numeric polynomial basis plus context one-hot features.
+Ridge,regularized linear,linear_baseline,raw_engineered_context,done,L2-regularized linear model.
+SGD_Huber,linear online,linear_baseline,raw_engineered_context,done,Elastic-net online linear robust regressor.
+SplineRidge_GAMLike,GAM-like spline,linear_baseline,spline_numeric_context,done,Spline additive approximation with ridge regularization.
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,done,Reference model from fold-aligned single-seed TH-SHRC OOF predictions.

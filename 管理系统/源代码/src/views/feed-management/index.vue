@@ -235,7 +235,7 @@
 <script setup lang="ts">
   import { computed, nextTick, onBeforeUnmount, onMounted, reactive, ref, watch } from 'vue'
   import * as echarts from 'echarts'
-  import * as databaseService from '@/services/database'
+  import * as databaseService from '@/services/数据库'
   import { loadUnifiedMilkRecords } from '@/services/unified-records'
   import { useLazyGridRenderWindow, useLazyRenderWindow } from '@/hooks'
   import { formatDateOnly } from '@/utils/date-display'

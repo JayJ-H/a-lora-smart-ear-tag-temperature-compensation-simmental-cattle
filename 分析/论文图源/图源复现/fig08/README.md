@@ -1,4 +1,7 @@
-# 图8复现
+# Fig. 8 provenance
 
-- 素材：个体温度监测、MQTT通信界面截图和可编辑源文件。
-- 面板：图8a、图8b。
+Status: `manual_only` authenticated browser capture plus Illustrator. The
+temperature-monitoring, gateway-status, and MQTT-uplink screenshots are
+retained as panel components. The capture itself is not a numerical plot
+generator and requires the management platform state used for the original
+screen capture.

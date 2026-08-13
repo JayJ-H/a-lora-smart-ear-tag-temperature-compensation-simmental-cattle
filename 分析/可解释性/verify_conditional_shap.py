@@ -11,11 +11,20 @@ import pandas as pd
 
 
 SHARED_ROOT = Path(__file__).resolve().parents[2]
-DEFAULT_VALUES = SHARED_ROOT / "数据" / "处理数据" / "th_shrc_shap_values.csv"
-DEFAULT_SUMMARY = SHARED_ROOT / "数据" / "处理数据" / "th_shrc_shap_summary.csv"
-DEFAULT_PAIRED = SHARED_ROOT / "数据" / "处理数据" / "paired_temperature_records.csv"
-DEFAULT_OOF = SHARED_ROOT / "数据" / "处理数据" / "th_shrc_oof_predictions.csv"
-DEFAULT_OUTPUT = SHARED_ROOT / "输出" / "分析" / "可解释性" / "条件SHAP"
+PUBLIC_DATA = (
+    SHARED_ROOT / "数据" / "处理数据"
+    if (SHARED_ROOT / "数据").is_dir()
+    else SHARED_ROOT / "data" / "processed"
+)
+DEFAULT_VALUES = PUBLIC_DATA / "th_shrc_shap_values.csv"
+DEFAULT_SUMMARY = PUBLIC_DATA / "th_shrc_shap_summary.csv"
+DEFAULT_PAIRED = PUBLIC_DATA / "paired_temperature_records.csv"
+DEFAULT_OOF = SHARED_ROOT / "outputs" / "all_measured_multiseed" / "ensemble_oof_predictions.csv"
+DEFAULT_OUTPUT = (
+    SHARED_ROOT / "输出" / "分析" / "可解释性" / "条件SHAP"
+    if (SHARED_ROOT / "输出").is_dir()
+    else SHARED_ROOT / "outputs" / "analysis" / "interpretability" / "conditional_shap"
+)
 GROUP_COLUMNS = {
     "Ear_temperature": "SHAP_Ear_temperature_C",
     "Ambient_temperature": "SHAP_Ambient_temperature_C",
@@ -66,8 +75,8 @@ def verify(
     missing = sorted(required - set(values.columns))
     if missing:
         raise RuntimeError(f"SHAP values are missing required fields: {missing}")
-    if len(values) != 503 or values["RecordID"].nunique() != 503:
-        raise RuntimeError("Conditional SHAP input must contain 503 unique records")
+    if len(values) != 520 or values["RecordID"].nunique() != 520:
+        raise RuntimeError("Conditional SHAP input must contain 520 unique records")
     if "CowID_raw" in values.columns or "CowID_raw" in paired.columns or "CowID_raw" in oof.columns:
         raise RuntimeError("Public SHAP verification inputs must not contain CowID_raw")
 
@@ -151,16 +160,16 @@ def verify(
         )
         for column in summary_metric_columns
     )
-    audit = values[[
+    check = values[[
         "RecordID",
         "RowID",
         "TechnicalBaselinePrediction_C",
         "ConditionalFullPipelinePrediction_C",
         "OfficialOOFPrediction_C",
     ]].copy()
-    audit["ReproducedPrediction_C"] = reconstructed
-    audit["ReproducedAdditivityDifference_C"] = reconstructed - conditional
-    audit["ConditionalVsOfficialDifference_C"] = conditional - official
+    check["ReproducedPrediction_C"] = reconstructed
+    check["ReproducedAdditivityDifference_C"] = reconstructed - conditional
+    check["ConditionalVsOfficialDifference_C"] = conditional - official
 
     checks = {
         "record_metadata": metadata_max_difference <= 1e-12,
@@ -170,11 +179,11 @@ def verify(
         "stored_additivity": stored_additivity_max_difference <= 1e-12,
         "stored_conditional_boundary": stored_boundary_max_difference <= 1e-12,
         "summary": summary_max_difference <= 1e-12,
-        "conditional_is_not_official_oof": conditional_boundary_max_difference > 0.1,
+        "conditional_matches_official_oof": conditional_boundary_max_difference <= 1e-12,
     }
     result: dict[str, object] = {
         "status": "PASS" if all(checks.values()) else "FAIL",
-        "method": "four-group conditional Shapley values with source and row-order state fixed in the technical baseline",
+        "method": "five-seed four-group conditional Shapley values with formal rowwise-median seed selection",
         "rows": len(values),
         "groups": len(GROUP_COLUMNS),
         "checks": checks,
@@ -185,7 +194,7 @@ def verify(
         "conditional_vs_official_max_abs_difference_C": conditional_boundary_max_difference,
         "top_group": reproduced_summary.iloc[0]["FeatureGroup"],
     }
-    return reproduced_summary, audit, result
+    return reproduced_summary, check, result
 
 
 def parse_args() -> argparse.Namespace:
@@ -202,14 +211,14 @@ def main() -> int:
     args = parse_args()
     output_dir = args.output_dir.resolve()
     output_dir.mkdir(parents=True, exist_ok=True)
-    summary, audit, result = verify(
+    summary, check, result = verify(
         pd.read_csv(args.values.resolve()),
         pd.read_csv(args.summary.resolve()),
         pd.read_csv(args.paired.resolve()),
         pd.read_csv(args.oof.resolve()),
     )
     summary.to_csv(output_dir / "conditional_shap_summary_reproduced.csv", index=False, lineterminator="\n")
-    audit.to_csv(output_dir / "conditional_shap_additivity_check.csv", index=False, lineterminator="\n")
+    check.to_csv(output_dir / "conditional_shap_additivity_check.csv", index=False, lineterminator="\n")
     (output_dir / "conditional_shap_verification.json").write_text(
         json.dumps(result, indent=2, ensure_ascii=True) + "\n", encoding="utf-8"
     )

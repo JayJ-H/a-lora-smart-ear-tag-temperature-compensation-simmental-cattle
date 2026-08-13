@@ -1,0 +1,124 @@
+{
+  "status": "PASS",
+  "validation": "five-seed OOF stability and leakage checks",
+  "ensemble_metrics": {
+    "N": 520,
+    "R2": 0.849451603205801,
+    "RMSE": 0.295958360438717,
+    "MAE": 0.16102075834525345,
+    "Bias": 0.0016091382182982792
+  },
+  "leave_one_seed_r2_range": [
+    0.8454683783648883,
+    0.850780350083613
+  ],
+  "leave_one_seed_mae_range": [
+    0.1609531311163968,
+    0.16302660001180022
+  ],
+  "seed_ensemble": {
+    "method": "rowwise_median"
+  },
+  "permutation_count": 10000,
+  "cow_level_permutation_p_value": 9.999000099990002e-05,
+  "bootstrap_count": 5000,
+  "cow_bootstrap_95_interval": {
+    "R2": {
+      "Lower95": 0.7346491115007704,
+      "Median": 0.8481584994091006,
+      "Upper95": 0.9187103274702897
+    },
+    "RMSE": {
+      "Lower95": 0.22404977989392894,
+      "Median": 0.2933876898914232,
+      "Upper95": 0.36358734955820843
+    },
+    "MAE": {
+      "Lower95": 0.11982253456213741,
+      "Median": 0.16082507333643303,
+      "Upper95": 0.20418669264642328
+    },
+    "Bias": {
+      "Lower95": -0.009164636023905616,
+      "Median": 0.0017058793442909454,
+      "Upper95": 0.012359541928132834
+    }
+  },
+  "measurement_unit_fold_leakage_groups": 0,
+  "record_fold_coverage_failures": 0,
+  "integrity_failures": [],
+  "global_duplicate_groups": 0,
+  "inherited_signature_groups_spanning_folds": [
+    {
+      "Seed": 20260523,
+      "InheritedSignatureGroups": 0,
+      "GroupsSpanningMultipleFolds": 0
+    },
+    {
+      "Seed": 20260607,
+      "InheritedSignatureGroups": 0,
+      "GroupsSpanningMultipleFolds": 0
+    },
+    {
+      "Seed": 20260701,
+      "InheritedSignatureGroups": 0,
+      "GroupsSpanningMultipleFolds": 0
+    },
+    {
+      "Seed": 20260811,
+      "InheritedSignatureGroups": 0,
+      "GroupsSpanningMultipleFolds": 0
+    },
+    {
+      "Seed": 20260903,
+      "InheritedSignatureGroups": 0,
+      "GroupsSpanningMultipleFolds": 0
+    }
+  ],
+  "guard_events": [
+    {
+      "Seed": 20260523,
+      "GuardEvents": 10,
+      "GuardedPredictionsAcrossOuterAndInnerFits": 11,
+      "EvaluatedPredictionsAcrossOuterAndInnerFits": 867
+    },
+    {
+      "Seed": 20260607,
+      "GuardEvents": 8,
+      "GuardedPredictionsAcrossOuterAndInnerFits": 9,
+      "EvaluatedPredictionsAcrossOuterAndInnerFits": 688
+    },
+    {
+      "Seed": 20260701,
+      "GuardEvents": 8,
+      "GuardedPredictionsAcrossOuterAndInnerFits": 10,
+      "EvaluatedPredictionsAcrossOuterAndInnerFits": 666
+    },
+    {
+      "Seed": 20260811,
+      "GuardEvents": 9,
+      "GuardedPredictionsAcrossOuterAndInnerFits": 9,
+      "EvaluatedPredictionsAcrossOuterAndInnerFits": 798
+    },
+    {
+      "Seed": 20260903,
+      "GuardEvents": 9,
+      "GuardedPredictionsAcrossOuterAndInnerFits": 11,
+      "EvaluatedPredictionsAcrossOuterAndInnerFits": 848
+    }
+  ],
+  "input_sha256": "deb5a59c823c9594324522b4bb61814ec43874a459a5e3614a87760713e5a2d2",
+  "checks": {
+    "integrity_gate_passes": true,
+    "five_complete_seed_runs": true,
+    "measurement_unit_fold_leakage_zero": true,
+    "record_fold_coverage_complete": true,
+    "global_duplicate_groups_zero": true,
+    "leave_one_seed_r2_span_at_most_0_05": true,
+    "leave_one_seed_mae_span_at_most_0_05_C": true,
+    "ensemble_metrics_finite": true,
+    "permutation_p_at_most_0_001": true,
+    "finite_branch_predictions": true,
+    "guard_checks_available": true
+  }
+}

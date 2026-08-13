@@ -220,7 +220,7 @@
   import { ref, onMounted, onBeforeUnmount, nextTick } from 'vue'
   import type { CowBasic, ExtendedSensorData } from '@/types'
   import * as echarts from 'echarts'
-  import * as databaseService from '@/services/database'
+  import * as databaseService from '@/services/数据库'
   import { useLazyGridRenderWindow } from '@/hooks'
   import { buildUnifiedDataContext } from '@/services/unified-records'
   import { normalizeStatus } from '@/views/breeding-platform/platform-data'

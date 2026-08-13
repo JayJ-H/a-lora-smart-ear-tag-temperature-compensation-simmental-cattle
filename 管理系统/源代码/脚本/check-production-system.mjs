@@ -465,7 +465,7 @@ function validateProductionOperationsChain({
   })
   const milkRevenue = revenueItems.filter((item) => {
     const amount = Number(field(item, 'amount') || 0)
-    return amount > 0 && textIncludesAny(item, ['milk_sales', 'milk', '鲜奶', '牛奶'])
+    return amount > 0 && textIncludesAny(item, ['milk_sales', 'milk', '鲜奶', '水牛奶'])
   })
   const profitableAnalyses = economicAnalyses.filter((analysis) => {
     const summary = parseJsonLike(field(analysis, 'summary'), {})
@@ -602,7 +602,7 @@ function validateProductionBaselineManifest(manifests) {
   const rows = manifests.filter(
     (row) =>
       String(field(row, 'sourceType', 'source_type') || '') === 'deterministic_production_seed' &&
-      String(field(row, 'deterministicSeed', 'deterministic_seed') || '') === 'cattle-production-v1'
+      String(field(row, 'deterministicSeed', 'deterministic_seed') || '') === 'water-buffalo-production-v1'
   )
   const domains = new Set(rows.map((row) => String(field(row, 'domain') || '')))
   const missingDomains = requiredDomains.filter((domain) => !domains.has(domain))
@@ -611,7 +611,7 @@ function validateProductionBaselineManifest(manifests) {
   return {
     rows: rows.length,
     sourceType: 'deterministic_production_seed',
-    deterministicSeed: 'cattle-production-v1',
+    deterministicSeed: 'water-buffalo-production-v1',
     domains: [...domains],
     missingDomains
   }

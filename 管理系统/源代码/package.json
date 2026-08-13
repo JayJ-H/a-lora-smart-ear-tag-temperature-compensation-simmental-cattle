@@ -1,12 +1,12 @@
 {
-  "name": "cattle-management-platform",
-  "version": "1.0.0",
+  "name": "nzh-control-platform",
+  "version": "1.0.1",
   "type": "module",
   "engines": {
     "node": ">=20.19.0",
     "pnpm": ">=8.8.0"
   },
-  "scripts": {
+  "脚本": {
     "dev": "vite --open",
     "dev:web": "vite --host 127.0.0.1 --port 9191",
     "dev:local": "powershell -ExecutionPolicy Bypass -File 脚本/start-local-platform.ps1",
@@ -16,6 +16,8 @@
     "db:local": "docker compose -f 数据库/mysql/docker-compose.local.yml up -d",
     "check:local": "node 脚本/check-local-system.mjs",
     "check:prod": "node 脚本/check-production-system.mjs",
+    "audit:db": "node 脚本/audit-real-db-coverage.mjs",
+    "audit:relationships": "node 脚本/audit-data-relationship-integrity.mjs",
     "test:acceptance": "node 脚本/validate-production-acceptance.mjs",
     "test:security": "node 脚本/validate-security-permissions.mjs",
     "test:traceability": "node 脚本/validate-page-db-traceability.mjs",
@@ -42,6 +44,7 @@
     "lint:lint-staged": "lint-staged",
     "prepare": "husky",
     "commit": "git-cz",
+    "clean:dev": "tsx 脚本/clean-dev.ts",
     "test:th-shrc-runtime": "node 脚本/validate-th-shrc-exact-reference.mjs && node 脚本/validate-th-shrc-runtime.mjs"
   },
   "config": {

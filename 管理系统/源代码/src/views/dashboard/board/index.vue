@@ -179,7 +179,7 @@
   import { useI18n } from 'vue-i18n'
   import { useRouter } from 'vue-router'
   import { useEChartsManager } from '@/hooks'
-  import * as databaseService from '@/services/database'
+  import * as databaseService from '@/services/数据库'
   import { buildUnifiedDataContext } from '@/services/unified-records'
   import { loadUnifiedSensorData, normalizeStatus } from '@/views/breeding-platform/platform-data'
   import { formatDateOnly } from '@/utils/date-display'

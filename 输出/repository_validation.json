@@ -1,0 +1,135 @@
+{
+  "status": "PASS",
+  "language": "zh",
+  "root": ".",
+  "manual_artwork": "present",
+  "expected": {
+    "rows": 520,
+    "cattle": 30,
+    "r2": 0.849451603205801,
+    "rmse": 0.295958360438717,
+    "mae": 0.16102075834525345
+  },
+  "checks": [
+    {
+      "check": "quality_controlled_public_data",
+      "status": "PASS",
+      "detail": "files=['lora_packet_level_quality_controlled.csv', 'paired_temperature_quality_controlled_anonymized.csv']; legacy_raw_exists=False"
+    },
+    {
+      "check": "temperature_protocol_45C",
+      "status": "PASS",
+      "detail": "two 9-bit temperature channels retain the 3-byte frame and accept 0.0-45.0 C"
+    },
+    {
+      "check": "measurement_contract",
+      "status": "PASS",
+      "detail": "rows=520, cattle=30"
+    },
+    {
+      "check": "session_aware_processed_input",
+      "status": "PASS",
+      "detail": "processed measurement table is byte-identical to the formal session-aware model input"
+    },
+    {
+      "check": "acquisition_session_definition",
+      "status": "PASS",
+      "detail": "AcquisitionSession is documented as an anonymized within-session ordering identifier"
+    },
+    {
+      "check": "cross_cow_independence_check",
+      "status": "PASS",
+      "detail": "report_exists=True, status=PASS, pairs=435, exact_groups=0, ear_core_time_groups=0, maximum_pair_matches=2, limit=4"
+    },
+    {
+      "check": "independent_measurements",
+      "status": "PASS",
+      "detail": "four_field_groups=0, ear_core_time_groups=0"
+    },
+    {
+      "check": "formal_oof_metrics",
+      "status": "PASS",
+      "detail": "{\"mae\": 0.16102075834525345, \"r2\": 0.849451603205801, \"rmse\": 0.295958360438717, \"rows\": 520}"
+    },
+    {
+      "check": "frozen_oof_rows",
+      "status": "PASS",
+      "detail": "formal ensemble and public OOF predictions match row by row"
+    },
+    {
+      "check": "benchmark_33_models",
+      "status": "PASS",
+      "detail": "models=33, rows_per_model=[520]"
+    },
+    {
+      "check": "strict_ablation",
+      "status": "PASS",
+      "detail": "configurations=4, rows=520"
+    },
+    {
+      "check": "conditional_shap",
+      "status": "PASS",
+      "detail": "rows=520, groups=4"
+    },
+    {
+      "check": "program_panels",
+      "status": "PASS",
+      "detail": "panels=23, missing=[]"
+    },
+    {
+      "check": "fig12_small_panel_geometry",
+      "status": "PASS",
+      "detail": "[{\"panel\": \"Fig12a_before_compensation\", \"pixels\": [2244, 1889], \"dpi\": [599.999, 599.999]}, {\"panel\": \"Fig12b_after_compensation\", \"pixels\": [2244, 1889], \"dpi\": [599.999, 599.999]}, {\"panel\": \"Fig12c_bland_altman\", \"pixels\": [2244, 1889], \"dpi\": [599.999, 599.999]}, {\"panel\": \"Fig12d_absolute_error_ecdf\", \"pixels\": [2244, 1889], \"dpi\": [599.999, 599.999]}]"
+    },
+    {
+      "check": "final_artwork_spelling",
+      "status": "PASS",
+      "detail": "findings=[]"
+    },
+    {
+      "check": "manual_final_artwork_complete",
+      "status": "PASS",
+      "detail": "populated_figures=[10, 11, 12, 13, 14, 15, 16, 17, 18, 19], missing_figures=[]"
+    },
+    {
+      "check": "manuscript_scope_fig1_to_fig19",
+      "status": "PASS",
+      "detail": "fig20_files=[]"
+    },
+    {
+      "check": "management_runtime_520",
+      "status": "PASS",
+      "detail": "version=th-shrc-runtime-v3-all-measured-520, rows=520, sources=['S01']"
+    },
+    {
+      "check": "root_reproduction_commands",
+      "status": "PASS",
+      "detail": "commands=['run_all_checks.py', 'run_analysis_pipeline.py', 'plot_manuscript_panels.py']"
+    },
+    {
+      "check": "portable_generated_reports",
+      "status": "PASS",
+      "detail": "absolute_path_reports=[]"
+    },
+    {
+      "check": "portable_seed_run_manifest",
+      "status": "PASS",
+      "detail": "outputs=['outputs/all_measured_multiseed/seeds/20260523', 'outputs/all_measured_multiseed/seeds/20260607', 'outputs/all_measured_multiseed/seeds/20260701', 'outputs/all_measured_multiseed/seeds/20260811', 'outputs/all_measured_multiseed/seeds/20260903']"
+    },
+    {
+      "check": "portable_seed_run_metadata",
+      "status": "PASS",
+      "detail": "files=10, machine_local=[]"
+    },
+    {
+      "check": "release_output_hygiene",
+      "status": "PASS",
+      "detail": "obsolete_quantile_output=False, obsolete_shap_weights=False, machine_local_benchmark_metadata=[]"
+    },
+    {
+      "check": "english_release_paths_ascii",
+      "status": "PASS",
+      "detail": "non_ascii_path_count=1293"
+    }
+  ]
+}

@@ -229,7 +229,7 @@
 <script setup lang="ts">
   import { computed, onMounted, reactive, ref } from 'vue'
   import { ElMessage } from 'element-plus'
-  import * as databaseService from '@/services/database'
+  import * as databaseService from '@/services/数据库'
   import FcPageShell from '@/components/business/fluent-console/FcPageShell.vue'
   import FcMetricTile from '@/components/business/fluent-console/FcMetricTile.vue'
   import FcPanel from '@/components/business/fluent-console/FcPanel.vue'

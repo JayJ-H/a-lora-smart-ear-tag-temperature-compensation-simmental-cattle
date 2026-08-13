@@ -130,7 +130,7 @@
 <script setup lang="ts">
   import { ref, reactive, onMounted } from 'vue'
   import type { FormInstance, FormRules } from 'element-plus'
-  import * as databaseService from '@/services/database'
+  import * as databaseService from '@/services/数据库'
   import { estimatePayloadSize, recordV2ExportRun } from '@/services/v2-export'
   import { useLazyRenderWindow } from '@/hooks'
   import type { CowBasic } from '@/types'

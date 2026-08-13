@@ -3,7 +3,7 @@
  * 支持：Excel/CSV 格式、嵌套对象自动扁平化、自定义列选择
  */
 
-import * as databaseService from '@/services/database'
+import * as databaseService from '@/services/数据库'
 import { estimatePayloadSize, recordV2ExportRun } from '@/services/v2-export'
 import * as XLSX from 'xlsx'
 import { ElMessage } from 'element-plus'

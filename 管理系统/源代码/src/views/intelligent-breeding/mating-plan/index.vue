@@ -250,7 +250,7 @@
     matingCowIds,
     matingRankingSnapshot,
     persistBreedingDecisionRun
-  } from '../decision-records'
+  } from '../decision-audit'
   import { MATING_RULE_ALGORITHM, buildMatingTraceSummary } from '../algorithm-metadata'
 
   const snapshot = ref<PlatformSnapshot>({

@@ -1,4 +1,4 @@
-import * as databaseService from '@/services/database'
+import * as databaseService from '@/services/数据库'
 
 export interface V2ExportPeriodInput {
   periodType: string

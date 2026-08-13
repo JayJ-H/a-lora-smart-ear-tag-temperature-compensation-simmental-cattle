@@ -1,11 +1,9 @@
 {
-  "status": "source_record",
+  "status": "sanitized_provenance_record",
   "capture_mode": "direct Playwright page viewport screenshot; no composition or element cropping",
+  "source_host": "<production-host-redacted>",
   "capture_time_local": "2026-07-21 22:59-23:01 CST",
-  "viewport": {
-    "width": 1920,
-    "height": 1080
-  },
+  "viewport": {"width": 1920, "height": 1080},
   "panels": [
     {
       "panel": "dashboard_overview",

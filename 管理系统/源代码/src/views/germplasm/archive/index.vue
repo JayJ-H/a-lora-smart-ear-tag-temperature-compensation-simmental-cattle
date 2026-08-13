@@ -230,7 +230,7 @@
   import CowNumberAutocomplete from '@/components/business/cow/CowNumberAutocomplete.vue'
   import { useLazyRenderWindow } from '@/hooks'
   import { useUserStore } from '@/store/modules/user'
-  import * as databaseService from '@/services/database'
+  import * as databaseService from '@/services/数据库'
   import { formatDateOnly } from '@/utils/date-display'
   import { normalizeCattleBreedOrDefault } from '@/utils/cattle-breeds'
   import {

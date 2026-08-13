@@ -1,4 +1,4 @@
-import * as databaseService from '@/services/database'
+import * as databaseService from '@/services/数据库'
 import { buildCowReferenceContext, resolveCowRef } from '@/utils/cow-reference'
 
 type AnyRow = Record<string, any>

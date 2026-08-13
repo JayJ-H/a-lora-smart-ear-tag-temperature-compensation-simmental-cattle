@@ -1,5 +1,5 @@
 <template>
-  <ArtBarChart height="100%" :data="data" :xAxisData="labels" :showAxisLine="false" />
+  <ArtBarChart height="100%" :data="数据" :xAxisData="labels" :showAxisLine="false" />
 </template>
 
 <script setup lang="ts">

@@ -1,4 +1,6 @@
-# 图5复现
+# Fig. 5 provenance
 
-- 素材：TH-SHRC结构图组件和矢量源文件，包含特征、三个分支、堆叠和输出模块。
-- 可编辑母版：`分析/论文图源/图源文件/fig05/fig05_final_editable.svg`。
+Status: `manual_only` asset workflow. The cattle cutouts, feature-icon panel,
+and vector revision are provided. The final TH-SHRC diagram combines generated
+or edited bitmap assets with Illustrator; no pixel-equivalent Python/R script
+survives in the public work tree.

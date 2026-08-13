@@ -1,4 +1,4 @@
-﻿import * as databaseService from '@/services/database'
+﻿import * as databaseService from '@/services/数据库'
 import type { CowBasic, ExtendedSensorData, MilkRecord } from '@/types/cow'
 import {
   buildUnifiedDataContext,

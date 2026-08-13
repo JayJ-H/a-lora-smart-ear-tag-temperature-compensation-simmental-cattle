@@ -1,4 +1,5 @@
-# 图6复现
+# Fig. 6 provenance
 
-- 素材：两张现场照片。
-- 可编辑母版：`分析/论文图源/图源文件/fig06/fig06_final_editable.svg`。
+Status: `manual_only` photograph workflow. The two source photographs are
+provided; cropping, labels, and the final two-panel export are preserved in
+the editable Illustrator source. No separate plotting generator is applicable.

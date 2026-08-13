@@ -1,4 +1,6 @@
-# 图7复现
+# Fig. 7 provenance
 
-- 素材：牛群监测总览、牛只档案界面截图和可编辑源文件。
-- 面板：图7a、图7b。
+Status: `manual_only` authenticated browser capture plus Illustrator. The
+dashboard and cattle-profile screenshots are the panels assigned to Fig. 7 by
+content. The original capture manifest contained a workstation path, so the
+public `capture_manifest.json` is a sanitized relative-path record.

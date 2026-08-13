@@ -1,5 +1,0 @@
-matplotlib>=3.8
-numpy>=1.26
-pandas>=2.1
-Pillow>=10.0
-statsmodels>=0.14

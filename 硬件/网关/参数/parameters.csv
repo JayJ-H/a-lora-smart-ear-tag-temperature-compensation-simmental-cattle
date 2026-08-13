@@ -1,9 +1,9 @@
 parameter,value,unit,evidence_status,notes
-MCU,ESP32-S3,model,SOURCE,ESP-IDF target and source
-LoRa radio,Ai-Thinker Ra-02 / SX1278,model,SOURCE,433 MHz receiver
-Cellular module,ML307R-DC,model,SOURCE,4G MQTT uplink
-Power input,5,V,DOCUMENTED,5 V supply
-Network upload,4G + MQTT,,SOURCE,4G MQTT uplink
-Offline storage,USB mass-storage CSV/event logging,,SOURCE,Local CSV and event logging
+MCU,ESP32-S3,model,SOURCE VERIFIED,ESP-IDF target and source
+LoRa radio,Ai-Thinker Ra-02 / SX1278,model,SOURCE VERIFIED,433 MHz receiver
+Cellular module,ML307R-DC,model,SOURCE VERIFIED,4G MQTT uplink
+Power input,5,V,DOCUMENTED,Adapter model and current rating are not included
+Network upload,4G + MQTT,,SOURCE VERIFIED,Credentials are excluded
+Offline storage,USB mass-storage CSV/event logging,,SOURCE VERIFIED,Controlled outage and replay logs are not included
 Wi-Fi,Not used,,NOT APPLICABLE,
 Ethernet,Not used,,NOT APPLICABLE,

@@ -261,7 +261,7 @@ export interface WorkflowTemplate {
   id: string
   name: string
   description: string
-  category: 'health' | 'reproduction' | 'production' | 'maintenance'
+  category: 'health' | 'reproduction' | '生产配置' | 'maintenance'
   triggerType: 'manual' | 'scheduled' | 'event' | 'condition'
   triggerCondition: {
     eventType?: string
@@ -478,7 +478,7 @@ export interface KPIMetric {
   name: string
   displayName: string
   description: string
-  category: 'production' | 'reproduction' | 'health' | 'economic' | 'efficiency'
+  category: '生产配置' | 'reproduction' | 'health' | 'economic' | 'efficiency'
   unit: string
   targetValue?: number
   warningThreshold?: number
@@ -511,7 +511,7 @@ export interface KPIDashboard {
   id: string
   name: string
   description: string
-  category: 'overview' | 'production' | 'reproduction' | 'health' | 'economic'
+  category: 'overview' | '生产配置' | 'reproduction' | 'health' | 'economic'
   metrics: string[] // KPI指标ID列表
   layout: {
     type: 'grid' | 'custom'
@@ -693,7 +693,7 @@ export interface PredictiveModel {
   id: string
   name: string
   description: string
-  type: 'production' | 'health' | 'economic' | 'reproduction'
+  type: '生产配置' | 'health' | 'economic' | 'reproduction'
   algorithm: 'linear_regression' | 'random_forest' | 'neural_network' | 'time_series'
   targetVariable: string
   featureVariables: string[]
@@ -995,7 +995,7 @@ export interface ModelTrainingJob {
   }
 }
 
-// 健康预警系统接口
+// AI健康预警系统接口
 export interface HealthScore {
   id: string
   cowId: string

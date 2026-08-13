@@ -405,7 +405,7 @@
 <script setup lang="ts">
   import { computed, onMounted, reactive, ref, watch } from 'vue'
   import { ElMessage } from 'element-plus'
-  import * as databaseService from '@/services/database'
+  import * as databaseService from '@/services/数据库'
   import { useLazyGridRenderWindow, useLazyRenderWindow } from '@/hooks'
   import { formatDateOnly } from '@/utils/date-display'
   import { normalizeCattleBreedOrDefault } from '@/utils/cattle-breeds'

@@ -327,7 +327,7 @@
         </ElFormItem>
         <ElFormItem label="类型" prop="type">
           <ElSelect v-model="createModelForm.type" class="w-full">
-            <ElOption label="生产" value="production" />
+            <ElOption label="生产" value="生产配置" />
             <ElOption label="健康" value="health" />
             <ElOption label="经营" value="economic" />
             <ElOption label="繁殖" value="reproduction" />
@@ -460,7 +460,7 @@
   const defaultModelPayload = (): CreateModelPayload => ({
     name: '',
     description: '',
-    type: 'production',
+    type: '生产配置',
     algorithm: 'linear_regression',
     targetVariable: '',
     featureVariables: ['feed_intake', 'temperature', 'activity_index'],

@@ -1,6 +1,6 @@
 /**
  * 数据库服务
- * 统一管理所有业务数据，支持 backend/frontend 两种模式：
+ * 统一管理所有业务数据，支持 管理系统/frontend 两种模式：
  * - backend: 通过 /api/db/rpc 访问后端数据库
  * - frontend: 使用 IndexedDB + Dexie
  */
@@ -217,7 +217,7 @@ for (const table of V2_DATABASE_TABLES) {
   tableNameMap[table.key] = table.key
 }
 
-const isBackendMode = import.meta.env.VITE_ACCESS_MODE === 'backend'
+const isBackendMode = import.meta.env.VITE_ACCESS_MODE === '管理系统'
 
 const DEFAULT_TABLES = Array.from(
   new Set(
@@ -2160,8 +2160,8 @@ function rowMatchesEditableCow(row: EditableCowEvent, cowRef: ReturnType<typeof 
 
 function eventGroupMatches(value: string, expected: string) {
   const map: Record<string, string> = {
-    生产: 'production',
-    production: 'production',
+    生产: '生产配置',
+    production: '生产配置',
     繁殖: 'reproduction',
     reproduction: 'reproduction',
     健康: 'health',
@@ -2853,7 +2853,7 @@ function eventGroupOf(eventCode: string): string {
       'dry_off'
     ].includes(eventCode)
   )
-    return 'production'
+    return '生产配置'
   if (['sample_collection'].includes(eventCode)) return 'sample'
   if (
     ['sensor_alert', 'device_maintenance', 'device_assignment', 'device_unassignment'].includes(
@@ -3502,7 +3502,7 @@ async function ensureAnimalRecordForEvent(input: {
   })
 
   await writeAnimalIdentifier(animalId, 'animal_number', animalNumber, true)
-  if (earTagNumber) await writeAnimalIdentifier(animalId, 'ear_tag', earTagNumber)
+  if (earTagNumber) await writeAnimalIdentifier(animalId, '耳标', earTagNumber)
   await writeAnimalParentage(
     animalId,
     fatherNumber,
@@ -3748,7 +3748,7 @@ async function ensureCalvesForCalving(input: {
       updated_at: now
     })
     await writeAnimalIdentifier(calfId, 'animal_number', calfNumber, true)
-    if (calf.earTagNumber) await writeAnimalIdentifier(calfId, 'ear_tag', calf.earTagNumber)
+    if (calf.earTagNumber) await writeAnimalIdentifier(calfId, '耳标', calf.earTagNumber)
     await writeAnimalParentage(
       calfId,
       inferredSire,
@@ -5672,9 +5672,831 @@ export async function initDatabaseService() {
     isInitialized = true
     console.log('✅ IndexedDB 数据库服务初始化成功')
 
+    // 初始化基础字典：为空表时插入最小可用业务字典
+    await seedDatabaseIfEmpty()
   } catch (error) {
     console.error('❌ 数据库初始化失败:', error)
     throw error
+  }
+}
+
+/** 种子数据初始化：为空表插入演示数据 */
+async function seedDatabaseIfEmpty() {
+  const seedPromises: Promise<void>[] = []
+
+  // 人员数据
+  if ((dataCache['persons'] || []).length === 0) {
+    seedPromises.push(
+      db
+        .transaction('rw', db.persons, async () => {
+          await db.persons.bulkAdd([
+            {
+              id: 'seed-person-1',
+              name: '王牧',
+              department: '生产管理',
+              role: '管理员',
+              phone: '',
+              email: '',
+              status: '正常',
+              hireDate: '2024-01-01',
+              notes: '平台管理员',
+              isActive: true,
+              createdAt: new Date().toISOString(),
+              updatedAt: new Date().toISOString()
+            },
+            {
+              id: 'seed-person-2',
+              name: '李医',
+              department: '健康管理',
+              role: '兽医',
+              phone: '',
+              email: '',
+              status: '正常',
+              hireDate: '2024-01-01',
+              notes: '健康事件记录',
+              isActive: true,
+              createdAt: new Date().toISOString(),
+              updatedAt: new Date().toISOString()
+            },
+            {
+              id: 'seed-person-3',
+              name: '张饲',
+              department: '生产管理',
+              role: '饲养员',
+              phone: '',
+              email: '',
+              status: '正常',
+              hireDate: '2024-01-01',
+              notes: '生产事件记录',
+              isActive: true,
+              createdAt: new Date().toISOString(),
+              updatedAt: new Date().toISOString()
+            }
+          ] as any[])
+        })
+        .then(() => {
+          dataCache['persons'] = db.persons.toArray() as any
+        })
+    )
+  }
+
+  // 圈舍数据
+  if ((dataCache['pens'] || []).length === 0) {
+    seedPromises.push(
+      db
+        .transaction('rw', db.pens, async () => {
+          await db.pens.bulkAdd([
+            {
+              id: 'seed-pen-1',
+              name: 'A01 育成舍',
+              category: '育成舍',
+              capacity: 50,
+              area: 200,
+              manager: '张饲',
+              status: '正常',
+              isActive: true,
+              createdAt: new Date().toISOString(),
+              updatedAt: new Date().toISOString()
+            },
+            {
+              id: 'seed-pen-2',
+              name: 'B01 配种舍',
+              category: '配种舍',
+              capacity: 32,
+              area: 150,
+              manager: '张饲',
+              status: '正常',
+              isActive: true,
+              createdAt: new Date().toISOString(),
+              updatedAt: new Date().toISOString()
+            },
+            {
+              id: 'seed-pen-3',
+              name: 'D01 产房',
+              category: '产房',
+              capacity: 18,
+              area: 96,
+              manager: '李医',
+              status: '正常',
+              isActive: true,
+              createdAt: new Date().toISOString(),
+              updatedAt: new Date().toISOString()
+            },
+            {
+              id: 'seed-pen-4',
+              name: 'F01 备用舍',
+              category: '备用舍',
+              capacity: 20,
+              area: 120,
+              manager: '张饲',
+              status: '正常',
+              isActive: true,
+              createdAt: new Date().toISOString(),
+              updatedAt: new Date().toISOString()
+            }
+          ])
+        })
+        .then(() => {
+          dataCache['pens'] = db.pens.toArray() as any
+        })
+    )
+  }
+
+  // 疾病数据
+  if ((dataCache['diseases'] || []).length === 0) {
+    seedPromises.push(
+      db
+        .transaction('rw', db.diseases, async () => {
+          await db.diseases.bulkAdd([
+            {
+              id: 'seed-disease-1',
+              name: '牛结节性皮肤病',
+              category: '传染病',
+              severity: '重度',
+              contagious: true,
+              symptoms: '发热、皮肤结节、淋巴结肿大',
+              treatment: '隔离观察，执行免疫与消毒流程',
+              status: '启用',
+              isActive: true,
+              createdAt: new Date().toISOString(),
+              updatedAt: new Date().toISOString()
+            },
+            {
+              id: 'seed-disease-2',
+              name: '瘤胃积食',
+              category: '代谢病',
+              severity: '中度',
+              contagious: false,
+              symptoms: '采食下降、瘤胃胀满、反刍减少',
+              treatment: '调整日粮，必要时进行瘤胃处理',
+              status: '启用',
+              isActive: true,
+              createdAt: new Date().toISOString(),
+              updatedAt: new Date().toISOString()
+            }
+          ])
+        })
+        .then(() => {
+          dataCache['diseases'] = db.diseases.toArray() as any
+        })
+    )
+  }
+
+  // 药品数据
+  if ((dataCache['medicines'] || []).length === 0) {
+    seedPromises.push(
+      db
+        .transaction('rw', db.medicines, async () => {
+          await db.medicines.bulkAdd([
+            {
+              id: 'seed-medicine-1',
+              name: '阿莫西林注射液',
+              category: '抗生素',
+              dosage: '按体重核算',
+              unit: 'mL',
+              usage: '遵医嘱用于呼吸道和软组织感染',
+              storage: '阴凉干燥处保存',
+              status: '启用',
+              isActive: true,
+              createdAt: new Date().toISOString(),
+              updatedAt: new Date().toISOString()
+            },
+            {
+              id: 'seed-medicine-2',
+              name: '伊维菌素',
+              category: '驱虫药',
+              dosage: '按体重核算',
+              unit: 'mL',
+              usage: '用于体内外寄生虫防治',
+              storage: '避光常温保存',
+              status: '启用',
+              isActive: true,
+              createdAt: new Date().toISOString(),
+              updatedAt: new Date().toISOString()
+            },
+            {
+              id: 'seed-medicine-3',
+              name: '口蹄疫疫苗',
+              category: '疫苗',
+              dosage: '按说明书',
+              unit: '头份',
+              usage: '按免疫程序接种',
+              storage: '2-8 摄氏度冷藏',
+              status: '启用',
+              isActive: true,
+              createdAt: new Date().toISOString(),
+              updatedAt: new Date().toISOString()
+            }
+          ])
+        })
+        .then(() => {
+          dataCache['medicines'] = db.medicines.toArray() as any
+        })
+    )
+  }
+
+  // 转群原因
+  if ((dataCache['transfer-reasons'] || []).length === 0) {
+    seedPromises.push(
+      db
+        .transaction('rw', db['transfer-reasons'], async () => {
+          await db['transfer-reasons'].bulkAdd([
+            {
+              id: 'seed-reason-0b',
+              name: '购入入群',
+              category: '生产管理',
+              frequency: '低频',
+              description: '外购或引种牛只入群',
+              status: '启用',
+              isActive: true,
+              createdAt: new Date().toISOString(),
+              updatedAt: new Date().toISOString()
+            },
+            {
+              id: 'seed-reason-0c',
+              name: '胚胎移植入群',
+              category: '生产管理',
+              frequency: '低频',
+              description: '胚胎移植来源个体进入本场管理',
+              status: '启用',
+              isActive: true,
+              createdAt: new Date().toISOString(),
+              updatedAt: new Date().toISOString()
+            },
+            {
+              id: 'seed-reason-1',
+              name: '断奶转群',
+              category: '生产管理',
+              frequency: '高频',
+              description: '犊牛达到断奶条件后转入育成舍',
+              status: '启用',
+              isActive: true,
+              createdAt: new Date().toISOString(),
+              updatedAt: new Date().toISOString()
+            },
+            {
+              id: 'seed-reason-2',
+              name: '妊娠转群',
+              category: '生产管理',
+              frequency: '中频',
+              description: '确认妊娠后转入妊娠舍',
+              status: '启用',
+              isActive: true,
+              createdAt: new Date().toISOString(),
+              updatedAt: new Date().toISOString()
+            },
+            {
+              id: 'seed-reason-3',
+              name: '疾病隔离',
+              category: '健康管理',
+              frequency: '中频',
+              description: '异常牛只进入隔离舍观察和处置',
+              status: '启用',
+              isActive: true,
+              createdAt: new Date().toISOString(),
+              updatedAt: new Date().toISOString()
+            },
+            {
+              id: 'seed-reason-14',
+              name: '淘汰离群',
+              category: '其他',
+              frequency: '低频',
+              description: '生产或健康原因淘汰离群',
+              status: '启用',
+              isActive: true,
+              createdAt: new Date().toISOString(),
+              updatedAt: new Date().toISOString()
+            },
+            {
+              id: 'seed-reason-15',
+              name: '出售离群',
+              category: '其他',
+              frequency: '低频',
+              description: '牛只出售后离群',
+              status: '启用',
+              isActive: true,
+              createdAt: new Date().toISOString(),
+              updatedAt: new Date().toISOString()
+            },
+            {
+              id: 'seed-reason-16',
+              name: '死亡离群',
+              category: '健康管理',
+              frequency: '低频',
+              description: '死亡事件形成离群记录',
+              status: '启用',
+              isActive: true,
+              createdAt: new Date().toISOString(),
+              updatedAt: new Date().toISOString()
+            },
+            {
+              id: 'seed-reason-17',
+              name: '转场离群',
+              category: '其他',
+              frequency: '临时',
+              description: '跨牧场调拨或外转',
+              status: '启用',
+              isActive: true,
+              createdAt: new Date().toISOString(),
+              updatedAt: new Date().toISOString()
+            }
+          ])
+        })
+        .then(() => {
+          dataCache['transfer-reasons'] = db['transfer-reasons'].toArray() as any
+        })
+    )
+  }
+
+  // 品种类型
+  if ((dataCache['breed-types'] || []).length === 0) {
+    seedPromises.push(
+      db
+        .transaction('rw', db['breed-types'], async () => {
+          await db['breed-types'].bulkAdd([
+            {
+              id: 'seed-breed-simmental',
+              name: '西门塔尔牛',
+              category: '肉乳兼用',
+              isActive: true,
+              createdAt: new Date().toISOString()
+            },
+            {
+              id: 'seed-breed-huaxi',
+              name: '华西牛',
+              category: '肉用',
+              isActive: true,
+              createdAt: new Date().toISOString()
+            }
+          ])
+        })
+        .then(() => {
+          dataCache['breed-types'] = db['breed-types'].toArray() as any
+        })
+    )
+  }
+
+  // 奶质标准
+  if ((dataCache['milk-quality-standards'] || []).length === 0) {
+    seedPromises.push(
+      db
+        .transaction('rw', db['milk-quality-standards'], async () => {
+          await db['milk-quality-standards'].bulkAdd([
+            {
+              id: 'seed-standard-a',
+              name: '欧盟A级标准',
+              fat: { min: 4.0, max: 6.0 },
+              protein: { min: 3.2, max: 4.0 },
+              lactose: { min: 4.4, max: 5.0 },
+              scc: { max: 400000 },
+              urea: { max: 50 },
+              freezingPoint: { min: -0.515, max: -0.53 },
+              description: '欧盟优质奶标准',
+              isActive: true
+            },
+            {
+              id: 'seed-standard-b',
+              name: '国内B级标准',
+              fat: { min: 3.5, max: 5.5 },
+              protein: { min: 2.9, max: 3.8 },
+              lactose: { min: 4.2, max: 4.9 },
+              scc: { max: 500000 },
+              urea: { max: 60 },
+              freezingPoint: { min: -0.51, max: -0.535 },
+              description: '国内合格奶标准',
+              isActive: true
+            }
+          ])
+        })
+        .then(() => {
+          dataCache['milk-quality-standards'] = db['milk-quality-standards'].toArray() as any
+        })
+    )
+  }
+
+  // 饲料配方
+  if ((dataCache['feed-formulas'] || []).length === 0) {
+    seedPromises.push(
+      db
+        .transaction('rw', db['feed-formulas'], async () => {
+          await db['feed-formulas'].bulkAdd([
+            {
+              id: 'seed-formula-1',
+              name: '泌乳牛TMR配方',
+              description: '适合泌乳期奶牛的完全混合日粮',
+              targetGroup: 'lactating',
+              nutritionalContent: {
+                energy: 1.75,
+                protein: 16.5,
+                fiber: 18.0,
+                calcium: 0.85,
+                phosphorus: 0.45,
+                vitamins: { A: 80000, D3: 20000, E: 600 },
+                minerals: { sodium: 0.18, magnesium: 0.25, zinc: 55, copper: 15 }
+              },
+              totalCost: 2.85,
+              expectedProduction: 15,
+              isActive: true,
+              createdAt: new Date().toISOString()
+            },
+            {
+              id: 'seed-formula-2',
+              name: '干奶期配方',
+              description: '适合干奶期的低能量配方',
+              targetGroup: 'dry',
+              nutritionalContent: {
+                energy: 1.45,
+                protein: 12.0,
+                fiber: 25.0,
+                calcium: 0.7,
+                phosphorus: 0.35,
+                vitamins: { A: 60000, D3: 15000, E: 400 },
+                minerals: { sodium: 0.15, magnesium: 0.2, zinc: 45, copper: 12 }
+              },
+              totalCost: 2.1,
+              expectedProduction: 0,
+              isActive: true,
+              createdAt: new Date().toISOString()
+            },
+            {
+              id: 'seed-formula-3',
+              name: '育成牛配方',
+              description: '适合育成期牛只的生长配方',
+              targetGroup: 'heifer',
+              nutritionalContent: {
+                energy: 1.55,
+                protein: 14.0,
+                fiber: 20.0,
+                calcium: 0.75,
+                phosphorus: 0.4,
+                vitamins: { A: 70000, D3: 18000, E: 500 },
+                minerals: { sodium: 0.16, magnesium: 0.22, zinc: 50, copper: 14 }
+              },
+              totalCost: 2.4,
+              expectedProduction: 0,
+              isActive: true,
+              createdAt: new Date().toISOString()
+            }
+          ] as any[])
+        })
+        .then(() => {
+          dataCache['feed-formulas'] = db['feed-formulas'].toArray() as any
+        })
+    )
+  }
+
+  // 饲料库存
+  if ((dataCache['feed-inventory'] || []).length === 0) {
+    seedPromises.push(
+      db
+        .transaction('rw', db['feed-inventory'], async () => {
+          await db['feed-inventory'].bulkAdd([
+            {
+              id: 'seed-inv-1',
+              feedId: 'corn-silage',
+              feedName: '玉米青贮',
+              currentStock: 50000,
+              minimumStock: 10000,
+              unitCost: 0.8,
+              supplier: 'XX农场',
+              expiryDate: '2026-12-31',
+              qualityGrade: 'A',
+              lastUpdated: new Date().toISOString()
+            },
+            {
+              id: 'seed-inv-2',
+              feedId: 'alfalfa-hay',
+              feedName: '苜蓿草',
+              currentStock: 20000,
+              minimumStock: 5000,
+              unitCost: 2.5,
+              supplier: 'XX草业',
+              expiryDate: '2026-09-30',
+              qualityGrade: 'A',
+              lastUpdated: new Date().toISOString()
+            },
+            {
+              id: 'seed-inv-3',
+              feedId: 'corn-grain',
+              feedName: '玉米粒',
+              currentStock: 30000,
+              minimumStock: 8000,
+              unitCost: 2.2,
+              supplier: 'XX粮贸',
+              expiryDate: '2027-03-31',
+              qualityGrade: 'A',
+              lastUpdated: new Date().toISOString()
+            },
+            {
+              id: 'seed-inv-4',
+              feedId: 'soybean-meal',
+              feedName: '豆粕',
+              currentStock: 15000,
+              minimumStock: 3000,
+              unitCost: 3.5,
+              supplier: 'XX油脂',
+              expiryDate: '2026-08-31',
+              qualityGrade: 'A',
+              lastUpdated: new Date().toISOString()
+            },
+            {
+              id: 'seed-inv-5',
+              feedId: 'cottonseed-meal',
+              feedName: '棉籽粕',
+              currentStock: 8000,
+              minimumStock: 2000,
+              unitCost: 2.8,
+              supplier: 'XX棉业',
+              expiryDate: '2026-10-31',
+              qualityGrade: 'B',
+              lastUpdated: new Date().toISOString()
+            }
+          ] as any[])
+        })
+        .then(() => {
+          dataCache['feed-inventory'] = db['feed-inventory'].toArray() as any
+        })
+    )
+  }
+
+  // 工作流模板
+  if ((dataCache['workflow-templates'] || []).length === 0) {
+    seedPromises.push(
+      db
+        .transaction('rw', db['workflow-templates'], async () => {
+          await db['workflow-templates'].bulkAdd([
+            {
+              id: 'seed-wf-1',
+              name: '自动温度预警',
+              description: '当体温超过阈值时自动创建预警',
+              category: 'health',
+              triggerType: 'condition',
+              triggerCondition: { condition: 'sensor.temperature > 39.5' },
+              steps: [
+                {
+                  id: 'step1',
+                  name: '创建预警',
+                  description: '创建健康预警',
+                  stepType: 'notification',
+                  config: {
+                    notification: {
+                      recipients: ['兽医'],
+                      message: '体温异常',
+                      urgency: 'high',
+                      channels: ['app']
+                    }
+                  },
+                  dependencies: [],
+                  timeout: 30,
+                  retryCount: 2,
+                  onFailure: 'retry'
+                }
+              ],
+              isActive: true,
+              priority: 'high',
+              createdAt: new Date().toISOString(),
+              updatedAt: new Date().toISOString()
+            },
+            {
+              id: 'seed-wf-2',
+              name: '产奶量异常检测',
+              description: '产奶量连续3天下降超过10%时触发',
+              category: '生产配置',
+              triggerType: 'condition',
+              triggerCondition: { condition: 'milk.decline > 10% for 3 days' },
+              steps: [
+                {
+                  id: 'step1',
+                  name: '通知管理员',
+                  description: '发送产奶量下降通知',
+                  stepType: 'notification',
+                  config: {
+                    notification: {
+                      recipients: ['管理员'],
+                      message: '产奶量异常',
+                      urgency: 'medium',
+                      channels: ['app']
+                    }
+                  },
+                  dependencies: [],
+                  timeout: 30,
+                  retryCount: 2,
+                  onFailure: 'retry'
+                }
+              ],
+              isActive: true,
+              priority: 'medium',
+              createdAt: new Date().toISOString(),
+              updatedAt: new Date().toISOString()
+            }
+          ])
+        })
+        .then(() => {
+          dataCache['workflow-templates'] = db['workflow-templates'].toArray() as any
+        })
+    )
+  }
+
+  // 自动化动作
+  if ((dataCache['automated-actions'] || []).length === 0) {
+    seedPromises.push(
+      db
+        .transaction('rw', db['automated-actions'], async () => {
+          await db['automated-actions'].bulkAdd([
+            {
+              id: 'seed-action-1',
+              name: '高温自动预警',
+              description: '体温超过39.5度时自动创建预警',
+              actionType: 'notification',
+              triggerCondition: {
+                sensorThreshold: { metric: 'temperature', operator: '>', value: 39.5, duration: 10 }
+              },
+              targetConfig: {
+                notification: { recipients: ['兽医'], template: '体温异常预警', priority: 'high' }
+              },
+              isActive: true,
+              priority: 'high',
+              cooldown: 60,
+              executionCount: 0,
+              successRate: 1,
+              createdAt: new Date().toISOString()
+            },
+            {
+              id: 'seed-action-2',
+              name: '自动转群-产前',
+              description: '预产前7天自动转入待产区',
+              actionType: 'transfer',
+              triggerCondition: { customCondition: 'pregnancy_days >= 273' },
+              targetConfig: {
+                transfer: { targetPen: '待产区', reason: '产前准备', autoConfirm: true }
+              },
+              isActive: true,
+              priority: 'medium',
+              cooldown: 1440,
+              executionCount: 0,
+              successRate: 1,
+              createdAt: new Date().toISOString()
+            },
+            {
+              id: 'seed-action-3',
+              name: '自动转群-产后',
+              description: '产后自动转入泌乳区',
+              actionType: 'transfer',
+              triggerCondition: { customCondition: 'days_since_calving >= 1' },
+              targetConfig: {
+                transfer: { targetPen: '泌乳区', reason: '产后恢复', autoConfirm: true }
+              },
+              isActive: true,
+              priority: 'medium',
+              cooldown: 1440,
+              executionCount: 0,
+              successRate: 1,
+              createdAt: new Date().toISOString()
+            }
+          ])
+        })
+        .then(() => {
+          dataCache['automated-actions'] = db['automated-actions'].toArray() as any
+        })
+    )
+  }
+
+  // 智能转群规则
+  if ((dataCache['smart-transfer-rules'] || []).length === 0) {
+    seedPromises.push(
+      db
+        .transaction('rw', db['smart-transfer-rules'], async () => {
+          await db['smart-transfer-rules'].bulkAdd([
+            {
+              id: 'seed-rule-1',
+              name: '断奶转群',
+              description: '犊牛满180天自动转入育成区',
+              triggerCondition: { eventType: 'calving_due', parameters: { ageDays: 180 } },
+              sourcePens: ['犊牛区'],
+              targetPen: '育成区',
+              transferReason: '断奶',
+              autoExecute: false,
+              requiresApproval: true,
+              priority: 'medium',
+              isActive: true,
+              executionCount: 0,
+              createdAt: new Date().toISOString()
+            },
+            {
+              id: 'seed-rule-2',
+              name: '妊娠转群',
+              description: '妊娠确认后自动转入待产区',
+              triggerCondition: { eventType: 'pregnancy_confirmed' },
+              sourcePens: ['泌乳区', '育成区'],
+              targetPen: '待产区',
+              transferReason: '待产',
+              autoExecute: false,
+              requiresApproval: true,
+              priority: 'high',
+              isActive: true,
+              executionCount: 0,
+              createdAt: new Date().toISOString()
+            },
+            {
+              id: 'seed-rule-3',
+              name: '疾病隔离',
+              description: '健康异常自动转入隔离区',
+              triggerCondition: { eventType: 'health_alert' },
+              sourcePens: [],
+              targetPen: '隔离区',
+              transferReason: '健康异常',
+              autoExecute: true,
+              requiresApproval: false,
+              priority: 'high',
+              isActive: true,
+              executionCount: 0,
+              createdAt: new Date().toISOString()
+            }
+          ])
+        })
+        .then(() => {
+          dataCache['smart-transfer-rules'] = db['smart-transfer-rules'].toArray() as any
+        })
+    )
+  }
+
+  // 提醒规则
+  if ((dataCache['reminder-rules'] || []).length === 0) {
+    seedPromises.push(
+      db
+        .transaction('rw', db['reminder-rules'], async () => {
+          await db['reminder-rules'].bulkAdd([
+            {
+              id: 'seed-reminder-1',
+              name: '疫苗到期提醒',
+              description: '疫苗接种到期前7天提醒',
+              reminderType: 'vaccination',
+              targetCondition: { cowType: ['成母牛', '青年牛'] },
+              schedule: { type: 'relative', relativeTo: 'last_vaccination', offset: 365 - 7 },
+              notification: {
+                recipients: ['兽医'],
+                message: '疫苗接种即将到期',
+                priority: 'high',
+                channels: ['app'],
+                advanceNotice: 7
+              },
+              actions: { autoCreateTask: true, assignTo: '兽医', deadline: 7 },
+              isActive: true,
+              lastTriggered: undefined,
+              triggerCount: 0,
+              createdAt: new Date().toISOString()
+            },
+            {
+              id: 'seed-reminder-2',
+              name: '配种计划提醒',
+              description: '配种计划前3天提醒',
+              reminderType: 'pregnancy_check',
+              targetCondition: { pregnancyStatus: ['待妊检'] },
+              schedule: { type: 'conditional', offset: 3 },
+              notification: {
+                recipients: ['育种员'],
+                message: '妊检计划即将到期',
+                priority: 'medium',
+                channels: ['app'],
+                advanceNotice: 3
+              },
+              actions: { autoCreateTask: true, assignTo: '育种员', deadline: 3 },
+              isActive: true,
+              lastTriggered: undefined,
+              triggerCount: 0,
+              createdAt: new Date().toISOString()
+            },
+            {
+              id: 'seed-reminder-3',
+              name: '饲料库存预警',
+              description: '饲料库存低于安全线时提醒',
+              reminderType: 'inspection',
+              targetCondition: {},
+              schedule: { type: 'fixed', offset: 0 },
+              notification: {
+                recipients: ['管理员'],
+                message: '饲料库存不足',
+                priority: 'high',
+                channels: ['app'],
+                advanceNotice: 1
+              },
+              actions: { autoCreateTask: true, assignTo: '管理员', deadline: 1 },
+              isActive: true,
+              lastTriggered: undefined,
+              triggerCount: 0,
+              createdAt: new Date().toISOString()
+            }
+          ])
+        })
+        .then(() => {
+          dataCache['reminder-rules'] = db['reminder-rules'].toArray() as any
+        })
+    )
+  }
+
+  if (seedPromises.length > 0) {
+    await Promise.all(seedPromises)
+    console.log(`✅ 种子数据初始化完成，共 ${seedPromises.length} 个表`)
   }
 }
 

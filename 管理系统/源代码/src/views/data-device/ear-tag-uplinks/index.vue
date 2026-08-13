@@ -311,7 +311,7 @@
   import { useI18n } from 'vue-i18n'
   import { ElMessage } from 'element-plus'
   import { hardwareApi } from '@/api/cow'
-  import * as databaseService from '@/services/database'
+  import * as databaseService from '@/services/数据库'
   import { formatDateOnly } from '@/utils/date-display'
 
   const { t } = useI18n()

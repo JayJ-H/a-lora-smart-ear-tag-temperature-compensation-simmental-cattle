@@ -1,6 +1,6 @@
 # 犇牛智能健康预警系统
 
-技术栈：Vue 3/TypeScript、Node.js/Express、MySQL、MQTT和TH-SHRC温度补偿运行时。
+本目录包含管理平台完整源码。平台由 Vue 3/TypeScript 前端、Node.js/Express API、MySQL、MQTT 和 TH-SHRC 温度补偿运行时组成。
 
 ## 环境
 
@@ -52,7 +52,9 @@ cp 运维/生产配置/.env.prod.example 运维/生产配置/.env.prod
 corepack pnpm run prod:up
 ```
 
-## 目录
+生产配置文件使用环境变量占位符，不包含真实数据库、域名或凭据。
+
+## 主要目录
 
 ```text
 src/                         Vue/TypeScript 前端

@@ -421,7 +421,7 @@
   import { computed, ref, reactive, onMounted } from 'vue'
   import type { SensorStatus, DataQualityCheck, SensorCalibration, CowBasic } from '@/types'
   import { sensorApi } from '@/api/cow'
-  import * as databaseService from '@/services/database'
+  import * as databaseService from '@/services/数据库'
   import { loadUnifiedMilkRecords } from '@/services/unified-records'
   import { useEChartsManager, useLazyRenderWindow } from '@/hooks'
   import { formatDateOnly } from '@/utils/date-display'

@@ -2483,7 +2483,7 @@ packages:
       vue: ^3.5.0
     dependencies:
       '@types/web-bluetooth': 0.0.21
-      '@vueuse/metadata': 13.9.0
+      '@vueuse/元数据': 13.9.0
       '@vueuse/shared': 13.9.0(vue@3.5.34)
       vue: 3.5.34(typescript@5.6.3)
 
@@ -2493,7 +2493,7 @@ packages:
       vue: ^3.5.0
     dependencies:
       '@types/web-bluetooth': 0.0.21
-      '@vueuse/metadata': 14.3.0
+      '@vueuse/元数据': 14.3.0
       '@vueuse/shared': 14.3.0(vue@3.5.34)
       vue: 3.5.34(typescript@5.6.3)
     dev: false

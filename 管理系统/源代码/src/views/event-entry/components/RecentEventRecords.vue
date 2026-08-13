@@ -51,7 +51,7 @@
   import { computed, onMounted, ref, watch } from 'vue'
   import FcEmptyState from '@/components/business/fluent-console/FcEmptyState.vue'
   import { useLazyRenderWindow } from '@/hooks'
-  import * as databaseService from '@/services/database'
+  import * as databaseService from '@/services/数据库'
   import { formatDateOnly } from '@/utils/date-display'
 
   interface RecentEventItem {

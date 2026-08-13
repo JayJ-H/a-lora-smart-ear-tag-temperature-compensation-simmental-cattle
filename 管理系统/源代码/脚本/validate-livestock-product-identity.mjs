@@ -11,11 +11,15 @@ const checkedRoots = [
 ]
 const excludedDirs = new Set(['node_modules', 'dist'])
 const selfFile = path.normalize('脚本/validate-livestock-product-identity.mjs')
-const productionName = '牛只健康管理系统'
+const productionName = '水牛畜牧管理系统'
 const forbiddenPatterns = [
   ['prototype/web', 'production sources must not reference the deprecated static prototype archive'],
   ['prototype\\\\web', 'production sources must not reference the deprecated static prototype archive'],
   ['\u5b98\u7f51', 'production sources must not use website/official-site positioning'],
+  ['Agent \u5e02\u573a', 'production sources must not use agent marketplace positioning'],
+  ['Agents \u5e02\u573a', 'production sources must not use agent marketplace positioning'],
+  ['agents\u5e02\u573a', 'production sources must not use agent marketplace positioning'],
+  ['agentTiles', 'production sources must not keep agent marketplace prototype identifiers'],
   ['market-workflow', 'production sources must not keep marketplace prototype screenshots'],
   ['\u515c\u552e', 'production sources must not use marketing-sales wording'],
   ['\u6f5c\u5728\u7528\u6237', 'production sources must not use website marketing audience wording'],
@@ -23,6 +27,7 @@ const forbiddenPatterns = [
   ['\u6570\u636e\u7ba1\u7406\u5e73\u53f0', 'product identity must be livestock management, not only data management platform'],
   ['\u79d1\u7814\u5e73\u53f0', 'visible seed/config identity must be livestock management, not research platform'],
   ['\u80b2\u79cd\u5e73\u53f0\u6982\u89c8\u770b\u677f', 'dashboard naming must use livestock production identity'],
+  ['\u6c34\u725b\u80b2\u79cd\u5e73\u53f0', 'production product identity must use livestock management system name']
 ]
 
 function fail(message) {

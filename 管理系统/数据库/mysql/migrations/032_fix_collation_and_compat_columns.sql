@@ -1,4 +1,4 @@
--- Minimal production DB convergence migration for Cattle Management.
+-- Minimal production DB convergence migration for NZH-control.
 -- This migration is intentionally idempotent and non-destructive.
 -- Scope:
 --   1. Ensure schema_version_metadata exists for deployment consistency checks.

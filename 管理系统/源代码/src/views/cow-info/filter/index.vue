@@ -399,7 +399,7 @@
   import FcEmptyState from '@/components/business/fluent-console/FcEmptyState.vue'
   import FcDataTableShell from '@/components/business/fluent-console/FcDataTableShell.vue'
   import CowNumberAutocomplete from '@/components/business/cow/CowNumberAutocomplete.vue'
-  import * as databaseService from '@/services/database'
+  import * as databaseService from '@/services/数据库'
   import { useLazyGridRenderWindow, useLazyRenderWindow } from '@/hooks'
   import { formatDateOnly } from '@/utils/date-display'
   import {

@@ -13,13 +13,13 @@ export const informationEntryRoutes: AppRouteRecord = {
   },
   children: [
     {
-      path: 'production',
+      path: '生产配置',
       name: 'InformationEntryProduction',
       component: '/data-import/information/index',
       meta: {
         title: 'menus.informationEntry.productionEvent',
         keepAlive: false,
-        activePath: '/information-entry/production',
+        activePath: '/information-entry/生产配置',
         eventGroup: '生产'
       }
     },
@@ -175,13 +175,13 @@ export const informationEditRoutes: AppRouteRecord = {
   },
   children: [
     {
-      path: 'production',
+      path: '生产配置',
       name: 'InformationEditProduction',
       component: '/data-edit/information/index',
       meta: {
         title: 'menus.informationEdit.productionEvent',
         keepAlive: false,
-        activePath: '/information-edit/production',
+        activePath: '/information-edit/生产配置',
         eventGroup: '生产'
       }
     },
@@ -296,7 +296,7 @@ export const germplasmRoutes: AppRouteRecord = {
     },
     {
       path: 'individual-filter',
-      alias: ['/cow-info/filter', '/production/smart-alert'],
+      alias: ['/cow-info/filter', '/生产配置/smart-alert'],
       name: 'IndividualFilter',
       component: '/cow-info/filter/index',
       meta: {
@@ -345,7 +345,7 @@ export const germplasmRoutes: AppRouteRecord = {
     },
     {
       path: 'breeding-records',
-      alias: '/production/reproduction-tracking',
+      alias: '/生产配置/reproduction-tracking',
       name: 'BreedingRecords',
       component: '/reproduction-tracking/index',
       meta: {
@@ -355,7 +355,7 @@ export const germplasmRoutes: AppRouteRecord = {
     },
     {
       path: 'legacy-feed-management',
-      alias: '/production/feed-management',
+      alias: '/生产配置/feed-management',
       name: 'FeedManagementLegacy',
       component: '/feed-management/index',
       meta: {
@@ -367,7 +367,7 @@ export const germplasmRoutes: AppRouteRecord = {
     },
     {
       path: 'legacy-milk-management',
-      alias: ['/production/milk-management', '/milk-management'],
+      alias: ['/生产配置/milk-management', '/milk-management'],
       name: 'MilkManagementLegacy',
       component: '/milk-management/index',
       meta: {
@@ -645,7 +645,7 @@ export const dataDeviceRoutes: AppRouteRecord = {
       path: 'data-analysis',
       alias: '/data-device/data-analysis',
       name: 'DataAnalysis',
-      component: '/database/index',
+      component: '/数据库/index',
       meta: {
         title: 'menus.dataDevice.dataAnalysis',
         keepAlive: false
@@ -707,10 +707,10 @@ export const dataDeviceRoutes: AppRouteRecord = {
       }
     },
     {
-      path: 'database',
-      alias: '/database',
+      path: '数据库',
+      alias: '/数据库',
       name: 'Database',
-      component: '/database/index',
+      component: '/数据库/index',
       meta: {
         title: 'menus.dataDevice.database',
         keepAlive: false
@@ -737,7 +737,7 @@ export const dataDeviceRoutes: AppRouteRecord = {
         title: 'menus.legacy.automationEngine',
         keepAlive: false,
         isHide: true,
-        activePath: '/data-and-devices/database'
+        activePath: '/data-and-devices/数据库'
       }
     }
   ]

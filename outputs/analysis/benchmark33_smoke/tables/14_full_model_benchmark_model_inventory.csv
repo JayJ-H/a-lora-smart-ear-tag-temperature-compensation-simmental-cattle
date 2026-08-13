@@ -1,0 +1,4 @@
+﻿Model,ModelFamily,BenchmarkGroup,FeatureSet,RunStatus,Notes
+EarOnlyLinear,linear,linear_baseline,ear_only,done,Single ear-surface temperature linear regression.
+MeanTrain,constant baseline,linear_baseline,no_features,done,Training-fold mean body temperature.
+TH-SHRC,three-branch stacked compensation,proposed_model_reference,fold_aligned_th_shrc_prediction,done,Reference model from fold-aligned single-seed TH-SHRC OOF predictions.

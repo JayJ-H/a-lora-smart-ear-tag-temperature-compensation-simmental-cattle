@@ -1,0 +1,35 @@
+{
+  "status": "PASS",
+  "validation_design": "fold-seed-aligned same-cow random five-fold OOF",
+  "rows_per_model": 520,
+  "expected_model_count": 3,
+  "retrained_model_count": 3,
+  "model_sets_match": true,
+  "failed_models": [],
+  "incomplete_models": [],
+  "proposed_row_ids_match": true,
+  "proposed_prediction_max_abs_difference_C": 0.0,
+  "per_model_completeness": [
+    {
+      "Model": "EarOnlyLinear",
+      "Rows": 520,
+      "UniqueRowIDs": 520,
+      "FiniteActual": true,
+      "FinitePredicted": true
+    },
+    {
+      "Model": "MeanTrain",
+      "Rows": 520,
+      "UniqueRowIDs": 520,
+      "FiniteActual": true,
+      "FinitePredicted": true
+    },
+    {
+      "Model": "TH-SHRC",
+      "Rows": 520,
+      "UniqueRowIDs": 520,
+      "FiniteActual": true,
+      "FinitePredicted": true
+    }
+  ]
+}

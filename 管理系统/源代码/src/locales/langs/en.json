@@ -322,7 +322,7 @@
       "description": "More configurations"
     }
   },
-  "common": {
+  "通用模块": {
     "tips": "Prompt",
     "cancel": "Cancel",
     "confirm": "Confirm",
@@ -581,7 +581,7 @@
       "cowEventsExport": "Event Data Export",
       "phenotypeExport": "Phenotype Data Export",
       "informationExport": "Information Export",
-      "database": "Database",
+      "数据库": "Database",
       "flexibleAnalysis": "Flexible Statistical Analysis"
     },
     "platformManagement": {

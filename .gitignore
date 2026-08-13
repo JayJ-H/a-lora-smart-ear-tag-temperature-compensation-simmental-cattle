@@ -22,8 +22,8 @@ mechanism_replay_archives/
 *production_dump*
 outputs/analysis/benchmark/figures/fig_14_full_model_benchmark_maintext.tiff
 private_validation_archives/
+private_audit/
 *.local.zip
-*.zip
 .pytest_cache/
 .mypy_cache/
 .ruff_cache/

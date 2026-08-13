@@ -1,7 +1,7 @@
 <template>
   <ArtLineChart
     height="100%"
-    :data="data"
+    :data="数据"
     :xAxisData="labels"
     :showAreaColor="true"
     :showAxisLine="false"
@@ -10,7 +10,7 @@
 
 <script setup lang="ts">
   import { onMounted, ref } from 'vue'
-  import * as databaseService from '@/services/database'
+  import * as databaseService from '@/services/数据库'
   import { loadUnifiedMilkRecords, loadUnifiedReproductionEvents } from '@/services/unified-records'
 
   defineOptions({ name: 'ComprehensiveDashboard' })

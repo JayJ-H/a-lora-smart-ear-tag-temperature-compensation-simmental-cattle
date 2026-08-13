@@ -1,4 +1,4 @@
-import * as databaseService from '@/services/database'
+import * as databaseService from '@/services/数据库'
 import { buildCowReferenceContext, resolveCowRef } from '@/utils/cow-reference'
 
 interface FactRecord {
@@ -303,7 +303,7 @@ export async function rebuildProductionFacts(options: { reason?: string } = {}) 
 }
 
 function isBackendAccessMode() {
-  return import.meta.env.VITE_ACCESS_MODE === 'backend'
+  return import.meta.env.VITE_ACCESS_MODE === '管理系统'
 }
 
 async function readTable(tableName: string) {

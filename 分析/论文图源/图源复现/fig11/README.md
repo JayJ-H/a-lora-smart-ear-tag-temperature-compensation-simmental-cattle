@@ -1,5 +1,3 @@
-# 图11复现
+# Fig. 11
 
-- 工程：`components/fig11_origin_project.opju`。
-- 输入：`data/Fig11_true3D_plot_data.csv`。
-- 输出：三维温度分布图和预览图。
+`数据/`提供520行Origin输入；作者的可编辑Illustrator底稿已随包提供，最终Origin导出仍由作者确认。

@@ -1,7 +1,3 @@
-# 图13复现
+# Fig. 13
 
-- 命令：`code/generate_th_shrc_figures.py`。
-- 输入：基准模型数据表。
-- 输出指标：33个候选模型的R²、RMSE和MAE。
-
-- 可编辑母版：`分析/论文图源/图源文件/fig13/fig13_final_editable.svg`。
+本目录提供数据、程序和独立小图；最终Illustrator拼图由作者完成。

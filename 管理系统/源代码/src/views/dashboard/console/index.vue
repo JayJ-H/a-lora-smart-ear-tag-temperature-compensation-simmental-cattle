@@ -111,7 +111,7 @@
   import FcPageShell from '@/components/business/fluent-console/FcPageShell.vue'
   import FcMetricTile from '@/components/business/fluent-console/FcMetricTile.vue'
   import FcPanel from '@/components/business/fluent-console/FcPanel.vue'
-  import * as databaseService from '@/services/database'
+  import * as databaseService from '@/services/数据库'
   import {
     buildUnifiedDataContext,
     loadUnifiedMilkRecords,

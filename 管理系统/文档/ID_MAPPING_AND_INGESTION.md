@@ -1,13 +1,13 @@
-# 标识映射与数据接入
+# ID mapping and ingestion flow
 
-## 耳标与牛只映射
+## Ear-tag/cow mapping
 
-前端通过`source_code/frontend/src/utils/cow-reference.ts`统一处理牛只引用字段。MQTT数据接入时先规范化牛只标识，再解析已有动物和牛只记录；缺少映射时生成待复核记录。网关使用6 bit设备编码，并按照固件中的映射规则还原配置设备号。
+The frontend normalizes multiple candidate cow-reference fields through `源代码/frontend/src/utils/cow-reference.ts`. MQTT ingestion normalizes the payload cow number, checks existing animal and cow records, and creates a review-required MQTT-origin record only when no existing mapping is found. The gateway itself encodes a six-bit device code and reconstructs the configured device ID by adding 51; a manuscript-facing mapping from that firmware device ID to the farm cow identifier still requires author confirmation.
 
-## 温度数据接入
+## Raw ear-surface temperature ingestion
 
-后台兼容耳温、体温/参考温度、环境温度、信号质量和发送时间等字段别名，并保存规范化传感器记录、MQTT主题、原始载荷元数据、服务器接收时间、RSSI和SNR。
+The backend parses MQTT JSON/text payloads, accepts aliases for ear, rectal/body, ambient, signal, and sender time fields, records raw MQTT metadata, and writes normalized sensor readings. The server receive time is retained separately from any sender time supplied in the payload.
 
-## 分析标识
+## CowKey
 
-公开科研数据使用匿名`CowKey`。平台牛只标识、牛场业务标识与匿名分析标识分别管理。
+The validation package uses `CowKey` as an 分析/source identifier. The production platform uses several cow/animal identifiers and normalization helpers. A single formally documented mapping table among firmware device ID, ear-tag number, platform cow ID, farm cow number, and analytical CowKey was not located.

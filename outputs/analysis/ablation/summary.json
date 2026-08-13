@@ -1,0 +1,38 @@
+{
+  "status": "PASS",
+  "analysis": "strict mechanism-level ablation",
+  "validation": "five fixed measurement-unit-grouped same-animal OOF repeats",
+  "seed_ensemble": {
+    "method": "rowwise_median"
+  },
+  "mechanisms": {
+    "A": "thermal-state memory/retrieval; removal disables lookup, EB, and session-memory routes and retains direct Ridge/XGBoost routes",
+    "B": "individual/session calibration; removal retains non-cow-conditioned pure memory and global thermal cells",
+    "C": "hierarchical residual correction; removal refits the final learner using A and B only"
+  },
+  "bootstrap": {
+    "replicates": 10000,
+    "published_figure_unit": "paired record",
+    "dependence_robustness_unit": "paired cow cluster"
+  },
+  "full_metrics": {
+    "N": 520,
+    "R2": 0.849451603205801,
+    "RMSE_C": 0.295958360438717,
+    "MAE_C": 0.16102075834525345,
+    "Bias_C": 0.0016091382182982792,
+    "MedianAE_C": 0.0629414508693813,
+    "P95_AE_C": 0.6949797583169921,
+    "Within_0_2C": 0.7384615384615385,
+    "Within_0_3C": 0.8384615384615385,
+    "Within_0_5C": 0.9230769230769231
+  },
+  "max_full_ensemble_difference_C": 0.0,
+  "checks": {
+    "five_seed_four_configuration_coverage": true,
+    "strict_routes_finite": true,
+    "full_ensemble_matches_frozen": true,
+    "row_bootstrap_complete": true,
+    "cow_cluster_bootstrap_complete": true
+  }
+}

@@ -121,7 +121,7 @@
   import CryptoJS from 'crypto-js'
   import { useUserStore } from '@/store/modules/user'
   import { mittBus } from '@/utils/sys'
-  import defaultAvatar from '@/assets/images/user/avatar-cattle.svg'
+  import defaultAvatar from '@/assets/images/user/avatar-buffalo.svg'
 
   // 国际化
   const { t } = useI18n()

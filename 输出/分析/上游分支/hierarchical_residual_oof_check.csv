@@ -1,7 +1,0 @@
-"Check","Status","Detail"
-"dataset_scope","PASS","Analysis rows after numeric and minimum-record filtering: N=503; cattle=30."
-"row_level_within_cow_oof","PASS","Each outer-fold prediction is fitted from the other four folds."
-"no_test_reference_in_features","PASS","Reference-temperature group statistics and residual targets are recomputed within each split; held-out references are used only for scoring."
-"inner_oof_selection","PASS","Source-level model and weight choices are selected by five-fold inner OOF evaluation within outer-training rows."
-"algorithm_difference","PASS","Hierarchical empirical-Bayes cells, residual XGBoost, and ridge candidates are evaluated independently of the thermal-memory branch."
-"reference_comparison","PASS","R2=0.843634; RMSE=0.261767; thermal-memory reference R2=0.83890921111252; RMSE=0.265692376504112."

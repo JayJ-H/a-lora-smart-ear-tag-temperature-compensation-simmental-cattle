@@ -1,11 +1,5 @@
-# 论文图件源文件
+# 论文图件
 
-本目录保存Fig. 1–19的图件材料。
-
-- `图源文件/`：Illustrator、SVG、Origin、CAD等可编辑源文件；
-- `图源复现/`：仓库相对路径输入、绘图脚本、组成素材和生成面板；
-- `editable_source_manifest.csv`：可编辑图源及校验值；
-- `figure_source_manifest.csv`：图件与源文件映射；
-- `figure_reproduction_manifest.csv`：数据、脚本和组成素材映射。
-
-`figure_reproduction_manifest.csv`记录各图的数据、脚本、组件和输出；`editable_source_manifest.csv`记录可编辑源文件。
+Fig.1-19最终可编辑文件和渲染文件位于`图源文件/`，出图数据、代码和程序小图位于
+`图源复现/`。小图和组合图物理尺寸见`PANEL_SIZE_MANIFEST.csv`与
+`COMPOSITE_SIZE_GUIDE.csv`。

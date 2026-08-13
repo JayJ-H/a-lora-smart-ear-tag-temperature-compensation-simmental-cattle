@@ -67,7 +67,7 @@ export function buildCowReferenceContext<TCow extends Record<string, any>>(
       ['main', 'primary', 'cow_number', 'animal_number', 'number', '主编号', '牛号'].includes(type)
     )
       byNumber.set(value, cow)
-    if (['ear_tag', 'ear_tag_number', '电子耳标', '耳标', '耳号', 'rfid'].includes(type))
+    if (['耳标', 'ear_tag_number', '电子耳标', '耳标', '耳号', 'rfid'].includes(type))
       byEarTag.set(value, cow)
   })
 
@@ -98,7 +98,7 @@ export function resolveCowRef<TCow extends Record<string, any>>(
       resolvedBy: 'cowNumber',
       identifierType: 'number'
     },
-    { cow: context.byEarTag.get(originalEarTag), resolvedBy: 'earTag', identifierType: 'ear_tag' },
+    { cow: context.byEarTag.get(originalEarTag), resolvedBy: 'earTag', identifierType: '耳标' },
     {
       cow: context.byIdentifier.get(originalIdentifier),
       resolvedBy: 'identifier',

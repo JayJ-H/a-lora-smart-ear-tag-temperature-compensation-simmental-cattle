@@ -50,7 +50,7 @@ static_assert((DEVICE_ID_MAX - DEVICE_ID_MIN) <= DEVICE_CODE_MASK,
 
 #define LORA_BINARY_PACKET_LEN 3
 #define TEMP_TENTHS_MIN 0
-#define TEMP_TENTHS_MAX 400
+#define TEMP_TENTHS_MAX 450
 
 /* ========== RadioLib 引脚 ========== */
 #define LORA_SCK    GPIO_NUM_11     // SCK
@@ -408,7 +408,7 @@ static void encode_lora_packet(uint8_t* out, uint8_t device_id, uint16_t temp1_t
     out[2] = (uint8_t)(packed & 0xFF);
 }
 
-/* ========== 1-Wire / M1820Z 接口 ========== */
+/* ========== 你的 1-Wire / M1820Z 函数（一字不改） ========== */
 static void ow_gpio_init(void) {
     gpio_config_t io_conf = {
         .pin_bit_mask = (1ULL << ONE_WIRE_GPIO),
@@ -511,7 +511,7 @@ extern "C" void app_main(void) {
     bool radio_ready = false;
     int state = RADIOLIB_ERR_UNKNOWN;
 
-    // 使用接收端参数初始化，保持链路配置一致
+    // 按 lora14pro 接收端使用的参数初始化，确保链路参数一致
     state = radio.begin(
         433.0,     // 频率 MHz
         31.25,     // BW kHz

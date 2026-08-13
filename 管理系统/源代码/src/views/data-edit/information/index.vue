@@ -281,7 +281,7 @@
   import FcPanel from '@/components/business/fluent-console/FcPanel.vue'
   import FcEmptyState from '@/components/business/fluent-console/FcEmptyState.vue'
   import { useLazyRenderWindow } from '@/hooks'
-  import * as databaseService from '@/services/database'
+  import * as databaseService from '@/services/数据库'
   import {
     ensureInformationEntryEventDictionary,
     ensureInformationEntryOptionDictionaries,
@@ -313,7 +313,7 @@
   const userStore = useUserStore()
 
   const editGroups: EditGroup[] = [
-    { path: 'production', label: '生产修改', eventGroup: '生产', icon: 'ri:drop-line' },
+    { path: '生产配置', label: '生产修改', eventGroup: '生产', icon: 'ri:drop-line' },
     { path: 'reproduction', label: '繁殖修改', eventGroup: '繁殖', icon: 'ri:heart-pulse-line' },
     { path: 'health', label: '健康修改', eventGroup: '健康', icon: 'ri:first-aid-kit-line' },
     { path: 'movement', label: '转群修改', eventGroup: '转群', icon: 'ri:arrow-left-right-line' },
@@ -370,7 +370,7 @@
   const pedigreeReason = ref('')
 
   const activePath = computed(
-    () => String(route.path).split('/').filter(Boolean).pop() || 'production'
+    () => String(route.path).split('/').filter(Boolean).pop() || '生产配置'
   )
   const activeGroup = computed(
     () => editGroups.find((item) => item.path === activePath.value) || editGroups[0]

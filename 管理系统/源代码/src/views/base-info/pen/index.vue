@@ -22,7 +22,7 @@
     normalizePenCategory,
     PEN_CATEGORY_OPTIONS
   } from '@/utils/base-info-normalizers'
-  import * as databaseService from '@/services/database'
+  import * as databaseService from '@/services/数据库'
 
   const categoryDescriptions: Record<string, string> = {
     犊牛舍: '出生至断奶阶段牛只管理',

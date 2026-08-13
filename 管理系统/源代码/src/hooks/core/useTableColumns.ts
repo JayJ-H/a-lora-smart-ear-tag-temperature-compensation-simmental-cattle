@@ -110,9 +110,9 @@ export interface DynamicColumnConfig<T = any> {
     updates?: Partial<ColumnOption<T>>
   ) => void
   /**
-   * 批量更新列（兼容别名；请使用 updateColumn 的数组参数）
+   * 批量更新列（兼容旧版本，推荐使用 updateColumn 的数组模式）
    * @param updates 列更新配置
-   * @deprecated 请使用 updateColumn 的数组参数
+   * @deprecated 推荐使用 updateColumn 的数组模式
    */
   batchUpdateColumns: (updates: Array<{ prop: string; updates: Partial<ColumnOption<T>> }>) => void
   /**
@@ -266,8 +266,8 @@ export function useTableColumns<T = any>(
     },
 
     /**
-     * 批量更新列兼容别名
-     * @deprecated 请使用 updateColumn 的数组参数
+     * 批量更新列（兼容旧版本）
+     * @deprecated 推荐使用 updateColumn 的数组模式
      */
     batchUpdateColumns: (updates) =>
       setDynamicColumns((cols) => {

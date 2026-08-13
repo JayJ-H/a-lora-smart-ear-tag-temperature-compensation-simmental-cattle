@@ -1,4 +1,6 @@
-# 图2复现
+# Fig. 2 provenance
 
-- 素材：PCB正反面图、佩戴照片、工作流程源文件和矢量输出。
-- 可编辑母版：`分析/论文图源/图源文件/fig02/fig02_final_editable.svg`。
+Status: `manual_only` vector assembly. PCB sides, wearing photograph, flowchart
+source, and the recovered editable SVG are retained. The historical generator
+named in old notes was not found in the local work tree, so the editable SVG,
+not an invented script, is the reproducible source boundary.

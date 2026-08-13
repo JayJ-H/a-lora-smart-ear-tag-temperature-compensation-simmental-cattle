@@ -479,7 +479,7 @@
 <script setup lang="ts">
   import { ref, reactive, onMounted, nextTick } from 'vue'
   import { ElMessage, ElMessageBox } from 'element-plus'
-  import * as databaseService from '@/services/database'
+  import * as databaseService from '@/services/数据库'
   import type { EconomicAnalysis, CostItem, RevenueItem, BudgetPlan } from '@/types/cow'
   import { economicApi } from '@/api/cow'
   import { useEChartsManager, useLazyRenderWindow } from '@/hooks'

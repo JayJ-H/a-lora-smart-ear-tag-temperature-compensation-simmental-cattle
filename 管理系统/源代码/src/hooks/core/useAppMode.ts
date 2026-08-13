@@ -30,7 +30,7 @@ export function useAppMode() {
    * 是否为后端控制模式
    * 后端模式：权限由后端接口返回的菜单数据控制
    */
-  const isBackendMode = computed(() => accessMode === 'backend')
+  const isBackendMode = computed(() => accessMode === '管理系统')
 
   /**
    * 当前应用模式

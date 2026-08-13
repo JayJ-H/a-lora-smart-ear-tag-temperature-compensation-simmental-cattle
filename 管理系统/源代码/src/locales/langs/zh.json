@@ -322,7 +322,7 @@
       "description": "等更多配置"
     }
   },
-  "common": {
+  "通用模块": {
     "tips": "提示",
     "cancel": "取消",
     "confirm": "确定",
@@ -581,7 +581,7 @@
       "cowEventsExport": "牛只事件导出",
       "phenotypeExport": "表型数据导出",
       "informationExport": "信息导出",
-      "database": "数据库",
+      "数据库": "数据库",
       "flexibleAnalysis": "灵活统计分析"
     },
     "platformManagement": {

@@ -1,4 +1,6 @@
-# 图4复现
+# Fig. 4 provenance
 
-- 素材：后台架构图组件。
-- 可编辑母版：`分析/论文图源/图源文件/fig04/fig04_final_editable.svg`。
+Status: `manual_only` architecture drawing. The vector and raster evidence is
+included beside the final Illustrator source. The previously mentioned
+`make_Fig4_backend_layered_architecture_final.executed.py` was not located in
+the available local files and is therefore not claimed as public code.

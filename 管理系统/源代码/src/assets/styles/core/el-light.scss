@@ -1,7 +1,7 @@
-// https://github.com/element-plus/element-plus/blob/dev/packages/theme-chalk/src/common/var.scss
+// https://github.com/element-plus/element-plus/blob/dev/packages/theme-chalk/src/通用模块/var.scss
 // 自定义Element 亮色主题
 
-@forward 'element-plus/theme-chalk/src/common/var.scss' with (
+@forward 'element-plus/theme-chalk/src/通用模块/var.scss' with (
   $colors: (
     'white': #ffffff,
     'black': #000000,

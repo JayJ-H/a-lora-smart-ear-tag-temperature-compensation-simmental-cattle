@@ -63,7 +63,7 @@
   import { computed, onMounted, ref, watch } from 'vue'
   import { buildUnifiedDataContext } from '@/services/unified-records'
   import { getHealthScoreMap } from '@/views/breeding-platform/platform-data'
-  import * as databaseService from '@/services/database'
+  import * as databaseService from '@/services/数据库'
 
   interface CowTableItem {
     cowNumber: string

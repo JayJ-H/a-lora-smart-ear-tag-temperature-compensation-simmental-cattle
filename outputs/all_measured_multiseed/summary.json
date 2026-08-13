@@ -1,0 +1,62 @@
+{
+  "status": "PASS",
+  "model": "TH-SHRC",
+  "validation": "measurement-unit-grouped same-animal five-fold OOF",
+  "seed_ensemble": {
+    "method": "rowwise_median",
+    "seeds": [
+      20260523,
+      20260607,
+      20260701,
+      20260811,
+      20260903
+    ]
+  },
+  "input_sha256": "deb5a59c823c9594324522b4bb61814ec43874a459a5e3614a87760713e5a2d2",
+  "ensemble": {
+    "N": 520,
+    "R2": 0.849451603205801,
+    "RMSE": 0.295958360438717,
+    "MAE": 0.16102075834525345,
+    "Bias": 0.0016091382182982792
+  },
+  "by_data_class": [
+    {
+      "DataClass": "measured",
+      "N": 520,
+      "R2": 0.849451603205801,
+      "RMSE": 0.295958360438717,
+      "MAE": 0.16102075834525345,
+      "Bias": 0.0016091382182982792
+    }
+  ],
+  "checks": {
+    "five_seeds_complete": true,
+    "three_branch_weights_present": true,
+    "formal_metrics_finite": true,
+    "fixed_median_declared": true
+  },
+  "branch_weight_summary": [
+    {
+      "Branch": "WeightSourceMemory",
+      "mean": 0.06194516992882198,
+      "std": 0.08657611386834801,
+      "min": -0.0654452466915245,
+      "max": 0.2127407022362604
+    },
+    {
+      "Branch": "WeightBatchSession",
+      "mean": 0.2691499240168196,
+      "std": 0.20531588071820317,
+      "min": -0.3539274391660001,
+      "max": 0.4804951383994194
+    },
+    {
+      "Branch": "WeightHierarchicalResidual",
+      "mean": 0.6891903384985926,
+      "std": 0.2708644779514109,
+      "min": 0.3846258935373043,
+      "max": 1.435558080964256
+    }
+  ]
+}

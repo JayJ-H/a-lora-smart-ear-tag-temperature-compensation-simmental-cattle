@@ -92,7 +92,7 @@
         <ElFormItem label="分类" prop="category">
           <ElSelect v-model="createForm.category" placeholder="选择分类">
             <ElOption label="育种总览" value="overview" />
-            <ElOption label="泌乳性状" value="production" />
+            <ElOption label="泌乳性状" value="生产配置" />
             <ElOption label="繁殖评估" value="reproduction" />
             <ElOption label="健康监测" value="health" />
             <ElOption label="组学分析" value="economic" />
@@ -139,7 +139,7 @@
   import { ref, reactive, onMounted } from 'vue'
   import { ElMessage } from 'element-plus'
   import KPIWidget from './components/KPIWidget.vue'
-  import * as databaseService from '@/services/database'
+  import * as databaseService from '@/services/数据库'
   import type { KPIDashboard, KPIDashboardData } from '@/types/cow'
   type DetailLine = { label: string; value: string }
 

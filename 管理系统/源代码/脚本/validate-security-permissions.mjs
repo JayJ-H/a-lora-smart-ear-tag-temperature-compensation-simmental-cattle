@@ -334,7 +334,7 @@ function getCaseBlock(text, method) {
 
 function scanDangerousRpcStaticGuards() {
   const handlerText = extractRpcHandlerText()
-  const methods = ['resetDatabase', 'clearTableData', 'updateTableData', 'importVirtualCattleDataset']
+  const methods = ['resetDatabase', 'clearTableData', 'updateTableData', 'importVirtualBuffaloDataset']
   return methods
     .map((method) => {
       const block = getCaseBlock(handlerText, method)

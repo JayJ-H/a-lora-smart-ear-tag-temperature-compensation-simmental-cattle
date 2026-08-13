@@ -52,7 +52,7 @@
   import { ElMessageBox } from 'element-plus'
   import { useUserStore } from '@/store/modules/user'
   import { mittBus } from '@/utils/sys'
-  import defaultAvatar from '@/assets/images/user/avatar-cattle.svg'
+  import defaultAvatar from '@/assets/images/user/avatar-buffalo.svg'
 
   defineOptions({ name: 'ArtUserMenu' })
 

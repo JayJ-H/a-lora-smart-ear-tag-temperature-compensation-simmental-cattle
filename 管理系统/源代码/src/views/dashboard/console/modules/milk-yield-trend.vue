@@ -10,7 +10,7 @@
     </div>
     <ArtLineChart
       height="calc(100% - 40px)"
-      :data="data"
+      :data="数据"
       :xAxisData="xAxisData"
       :showAreaColor="true"
       :showAxisLine="false"

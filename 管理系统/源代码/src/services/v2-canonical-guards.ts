@@ -1,4 +1,4 @@
-import * as databaseService from '@/services/database'
+import * as databaseService from '@/services/数据库'
 import {
   CATTLE_SPECIES_NAME,
   DEFAULT_CATTLE_BREED,

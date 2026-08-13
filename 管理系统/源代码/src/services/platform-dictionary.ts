@@ -1,4 +1,4 @@
-import * as databaseService from '@/services/database'
+import * as databaseService from '@/services/数据库'
 import { EVENT_OPTIONS } from '@/services/import-templates'
 import type { CustomField } from '@/utils/flexible-export'
 import { SUPPORTED_CATTLE_BREEDS, normalizeCattleBreed } from '@/utils/cattle-breeds'

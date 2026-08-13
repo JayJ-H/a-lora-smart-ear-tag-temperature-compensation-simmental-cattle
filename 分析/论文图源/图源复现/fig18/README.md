@@ -1,5 +1,3 @@
-# 图18复现
+# Fig. 18
 
-- 命令：`code/reproduce_all_shap_figures.py`。
-- 输入：本目录`data/`中的SHAP表。
-- 输出：SVG、PDF和PNG图件。
+本目录提供数据、程序和独立小图；最终Illustrator拼图由作者完成。

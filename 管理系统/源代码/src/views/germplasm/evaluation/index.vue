@@ -551,7 +551,7 @@
           <ElButton :disabled="!dmuFiles.dirText" @click="downloadDmuFile('dir')"
             >下载 DIR</ElButton
           >
-          <ElButton :disabled="!dmuFiles.dataText" @click="downloadDmuFile('data')"
+          <ElButton :disabled="!dmuFiles.dataText" @click="downloadDmuFile('数据')"
             >下载 DAT</ElButton
           >
           <ElUpload
@@ -587,7 +587,7 @@
   import { computed, reactive, ref, watch } from 'vue'
   import { ElMessage } from 'element-plus'
   import type { UploadFile } from 'element-plus'
-  import * as databaseService from '@/services/database'
+  import * as databaseService from '@/services/数据库'
   import {
     buildDmuFiles,
     isDmuExecutorConfigured,
@@ -2093,10 +2093,10 @@
     return map[role]
   }
 
-  function downloadDmuFile(kind: 'dir' | 'data') {
+  function downloadDmuFile(kind: 'dir' | '数据') {
     if (kind === 'dir')
       downloadText(dmuFiles.dirFileName, dmuFiles.dirText, 'text/plain;charset=utf-8;')
-    if (kind === 'data')
+    if (kind === '数据')
       downloadText(dmuFiles.dataFileName, dmuFiles.dataText, 'text/plain;charset=utf-8;')
   }
 

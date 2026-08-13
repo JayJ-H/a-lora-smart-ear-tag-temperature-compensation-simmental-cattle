@@ -1,0 +1,187 @@
+{
+  "status": "PASS",
+  "rows": 520,
+  "cattle": 30,
+  "pair_count": 435,
+  "tolerance_C": 0.2,
+  "exact_duplicate_rows": 0,
+  "exact_duplicate_groups": 0,
+  "ear_core_time_triplet_groups": 0,
+  "maximum_pair_match_count": 2,
+  "rank10_match_count": 1,
+  "top_pairs": [
+    {
+      "Rank": 1,
+      "CowA": "C023",
+      "CowB": "C027",
+      "NearMatchCount": 2,
+      "ExactEarCount": 0,
+      "ExactCoreCount": 2,
+      "ExactAmbientCount": 2,
+      "MeanMaxDelta_C": 0.15,
+      "MeanSumDelta_C": 0.15
+    },
+    {
+      "Rank": 2,
+      "CowA": "C014",
+      "CowB": "C023",
+      "NearMatchCount": 2,
+      "ExactEarCount": 2,
+      "ExactCoreCount": 0,
+      "ExactAmbientCount": 2,
+      "MeanMaxDelta_C": 0.15,
+      "MeanSumDelta_C": 0.15
+    },
+    {
+      "Rank": 3,
+      "CowA": "C003",
+      "CowB": "C014",
+      "NearMatchCount": 1,
+      "ExactEarCount": 0,
+      "ExactCoreCount": 1,
+      "ExactAmbientCount": 1,
+      "MeanMaxDelta_C": 0.1,
+      "MeanSumDelta_C": 0.1
+    },
+    {
+      "Rank": 4,
+      "CowA": "C003",
+      "CowB": "C023",
+      "NearMatchCount": 1,
+      "ExactEarCount": 0,
+      "ExactCoreCount": 0,
+      "ExactAmbientCount": 1,
+      "MeanMaxDelta_C": 0.1,
+      "MeanSumDelta_C": 0.2
+    },
+    {
+      "Rank": 5,
+      "CowA": "C023",
+      "CowB": "C029",
+      "NearMatchCount": 1,
+      "ExactEarCount": 0,
+      "ExactCoreCount": 0,
+      "ExactAmbientCount": 1,
+      "MeanMaxDelta_C": 0.1,
+      "MeanSumDelta_C": 0.2
+    },
+    {
+      "Rank": 6,
+      "CowA": "C001",
+      "CowB": "C003",
+      "NearMatchCount": 1,
+      "ExactEarCount": 1,
+      "ExactCoreCount": 0,
+      "ExactAmbientCount": 1,
+      "MeanMaxDelta_C": 0.2,
+      "MeanSumDelta_C": 0.2
+    },
+    {
+      "Rank": 7,
+      "CowA": "C011",
+      "CowB": "C021",
+      "NearMatchCount": 1,
+      "ExactEarCount": 0,
+      "ExactCoreCount": 1,
+      "ExactAmbientCount": 1,
+      "MeanMaxDelta_C": 0.2,
+      "MeanSumDelta_C": 0.2
+    },
+    {
+      "Rank": 8,
+      "CowA": "C014",
+      "CowB": "C027",
+      "NearMatchCount": 1,
+      "ExactEarCount": 0,
+      "ExactCoreCount": 0,
+      "ExactAmbientCount": 1,
+      "MeanMaxDelta_C": 0.2,
+      "MeanSumDelta_C": 0.3
+    },
+    {
+      "Rank": 9,
+      "CowA": "C027",
+      "CowB": "C029",
+      "NearMatchCount": 1,
+      "ExactEarCount": 0,
+      "ExactCoreCount": 0,
+      "ExactAmbientCount": 1,
+      "MeanMaxDelta_C": 0.2,
+      "MeanSumDelta_C": 0.3
+    },
+    {
+      "Rank": 10,
+      "CowA": "C016",
+      "CowB": "C018",
+      "NearMatchCount": 1,
+      "ExactEarCount": 0,
+      "ExactCoreCount": 0,
+      "ExactAmbientCount": 0,
+      "MeanMaxDelta_C": 0.2,
+      "MeanSumDelta_C": 0.4
+    },
+    {
+      "Rank": 11,
+      "CowA": "C022",
+      "CowB": "C029",
+      "NearMatchCount": 1,
+      "ExactEarCount": 0,
+      "ExactCoreCount": 0,
+      "ExactAmbientCount": 1,
+      "MeanMaxDelta_C": 0.2,
+      "MeanSumDelta_C": 0.4
+    },
+    {
+      "Rank": 12,
+      "CowA": "C001",
+      "CowB": "C014",
+      "NearMatchCount": 1,
+      "ExactEarCount": 0,
+      "ExactCoreCount": 0,
+      "ExactAmbientCount": 0,
+      "MeanMaxDelta_C": 0.2,
+      "MeanSumDelta_C": 0.4
+    },
+    {
+      "Rank": 13,
+      "CowA": "C002",
+      "CowB": "C023",
+      "NearMatchCount": 1,
+      "ExactEarCount": 0,
+      "ExactCoreCount": 0,
+      "ExactAmbientCount": 1,
+      "MeanMaxDelta_C": 0.2,
+      "MeanSumDelta_C": 0.3
+    },
+    {
+      "Rank": 14,
+      "CowA": "C003",
+      "CowB": "C027",
+      "NearMatchCount": 1,
+      "ExactEarCount": 0,
+      "ExactCoreCount": 0,
+      "ExactAmbientCount": 1,
+      "MeanMaxDelta_C": 0.2,
+      "MeanSumDelta_C": 0.3
+    },
+    {
+      "Rank": 15,
+      "CowA": "C014",
+      "CowB": "C016",
+      "NearMatchCount": 1,
+      "ExactEarCount": 0,
+      "ExactCoreCount": 0,
+      "ExactAmbientCount": 1,
+      "MeanMaxDelta_C": 0.2,
+      "MeanSumDelta_C": 0.4
+    }
+  ],
+  "thresholds": {
+    "max_pair_matches": 4
+  },
+  "checks": {
+    "four_field_signatures_unique": true,
+    "ear_core_time_triplets_unique": true,
+    "pair_match_counts_bounded": true
+  }
+}

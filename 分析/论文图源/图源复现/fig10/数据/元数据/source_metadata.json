@@ -89,6 +89,7 @@
     "Packet delivery ratio is calculated as received packets divided by transmitted packets.",
     "The PDR error bars in panel b are 95% confidence intervals across the eight direction-level PDR values at each distance.",
     "The workbook records the test date as 2026-01-01.",
+    "The workbook summary records transmit power as '22db'; the manuscript currently states 20 dBm. This discrepancy must be resolved before publication.",
     "Rows marked 是否接收=否 are excluded from RSSI and SNR calculations."
   ]
 }

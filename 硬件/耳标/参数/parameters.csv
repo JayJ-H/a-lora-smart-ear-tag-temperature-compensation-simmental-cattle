@@ -1,8 +1,8 @@
 parameter,value,unit,evidence_status,notes
-MCU,ESP32-S3,model,SOURCE,ESP-IDF target and source
+MCU,ESP32-S3,model,SOURCE VERIFIED,ESP-IDF target and source
 Primary temperature sensor,M1820Z,model,DOCUMENTED,Study sensor and interface present in the supplied sources
-Secondary temperature sensor,TMP117,model,SOURCE,Additional local-temperature channel in firmware
-LoRa module,Ai-Thinker Ra-02 / SX1278,model,SOURCE,Module and driver identifiers
+Secondary temperature sensor,TMP117,model,SOURCE VERIFIED,Additional local-temperature channel in firmware
+LoRa module,Ai-Thinker Ra-02 / SX1278,model,SOURCE VERIFIED,Module and driver identifiers agree
 Power-management device,HCZZ0032-2,model,DOCUMENTED,Listed in the engineering record
 Battery capacity,200,mAh,DOCUMENTED,Engineering specification
 Housing dimensions,43.25 x 36.25 x 10.5,mm,DOCUMENTED,Supplied engineering record

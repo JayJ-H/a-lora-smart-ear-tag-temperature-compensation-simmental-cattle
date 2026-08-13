@@ -1,5 +1,5 @@
 import * as XLSX from 'xlsx'
-import * as databaseService from '@/services/database'
+import * as databaseService from '@/services/数据库'
 import { buildCowReferenceContext, resolveCowRef, sourceRecordKey } from '@/utils/cow-reference'
 import {
   CATTLE_SPECIES_NAME,
@@ -23,7 +23,7 @@ import {
   getTemplateDictionaryValueOptions,
   resolveTemplateDictionaryValue
 } from './import-template-dictionaries'
-import { createImportJobId, hashFile, recordImportAudit, type ImportRowError } from './import-records'
+import { createImportJobId, hashFile, recordImportAudit, type ImportRowError } from './import-audit'
 import { scheduleProductionFactRebuild } from './production-facts'
 import {
   ensureAnimalForV2Fk,

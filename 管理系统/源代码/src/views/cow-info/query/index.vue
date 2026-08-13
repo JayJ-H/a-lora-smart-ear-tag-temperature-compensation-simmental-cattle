@@ -309,7 +309,7 @@
   import { useI18n } from 'vue-i18n'
   import * as echarts from 'echarts'
   import { getCowApiDataSource, type FrontendDataSource } from '@/api/cow'
-  import * as databaseService from '@/services/database'
+  import * as databaseService from '@/services/数据库'
   import CowNumberAutocomplete from '@/components/business/cow/CowNumberAutocomplete.vue'
   import { useLazyGridRenderWindow, useLazyRenderWindow } from '@/hooks'
   import { formatDateOnly } from '@/utils/date-display'
